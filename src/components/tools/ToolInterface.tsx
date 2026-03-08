@@ -85,10 +85,15 @@ const ImageBlurTool = safeLazy(() => import("./ImageBlurTool"));
 const ImageRotateTool = safeLazy(() => import("./ImageRotateTool"));
 const ImageFlipTool = safeLazy(() => import("./ImageFlipTool"));
 const PdfToJpgTool = safeLazy(() => import("./PdfToJpgTool"));
+const MergePdfTool = safeLazy(() => import("./MergePdfTool"));
+const SplitPdfTool = safeLazy(() => import("./SplitPdfTool"));
 const PdfPageCounterTool = safeLazy(() => import("./PdfPageCounterTool"));
 const PdfMetadataViewerTool = safeLazy(() => import("./PdfMetadataViewerTool"));
 const PdfReaderTool = safeLazy(() => import("./PdfReaderTool"));
 const PdfPageRotatorTool = safeLazy(() => import("./PdfPageRotatorTool"));
+const ImageToTextTool = safeLazy(() => import("./ImageToTextTool"));
+const FaviconGeneratorTool = safeLazy(() => import("./FaviconGeneratorTool"));
+const ColorPaletteGeneratorTool = safeLazy(() => import("./ColorPaletteGeneratorTool"));
 const WordCounterTool = safeLazy(() => import("./WordCounterTool"));
 const CharacterCounterTool = safeLazy(() => import("./CharacterCounterTool"));
 const TextCaseConverterTool = safeLazy(() => import("./TextCaseConverterTool"));
@@ -158,10 +163,15 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "image-rotate": ImageRotateTool,
   "image-flip": ImageFlipTool,
   "pdf-to-jpg": PdfToJpgTool,
+  "merge-pdf": MergePdfTool,
+  "split-pdf": SplitPdfTool,
   "pdf-page-counter": PdfPageCounterTool,
   "pdf-metadata-viewer": PdfMetadataViewerTool,
   "pdf-reader": PdfReaderTool,
   "pdf-page-rotator": PdfPageRotatorTool,
+  "image-to-text": ImageToTextTool,
+  "favicon-generator": FaviconGeneratorTool,
+  "color-palette-generator": ColorPaletteGeneratorTool,
   "word-counter": WordCounterTool,
   "character-counter": CharacterCounterTool,
   "text-case-converter": TextCaseConverterTool,
