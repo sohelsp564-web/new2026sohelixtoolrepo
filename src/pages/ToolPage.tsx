@@ -170,16 +170,20 @@ const ToolPage = () => {
             </Card>
 
             {/* FAQ */}
-            <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
+            <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl" itemScope itemType="https://schema.org/FAQPage">
               <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>Frequently Asked Questions</h2>
-              <div className="space-y-5">
+              <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, i) => (
-                  <div key={i}>
-                    <h3 className="font-semibold mb-1.5">{faq.q}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
-                  </div>
+                  <AccordionItem key={i} value={`faq-${i}`} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                    <AccordionTrigger className="text-left font-semibold text-sm sm:text-base">
+                      <span itemProp="name">{faq.q}</span>
+                    </AccordionTrigger>
+                    <AccordionContent itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                      <p itemProp="text" className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </div>
+              </Accordion>
             </Card>
           </div>
 
