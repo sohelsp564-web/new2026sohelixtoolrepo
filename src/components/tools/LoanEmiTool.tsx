@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { PieChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts";
 
 const LoanEmiTool = () => {
   const [principal, setPrincipal] = useState("100000");
@@ -16,6 +17,13 @@ const LoanEmiTool = () => {
     setResult({ emi: Math.round(emi * 100) / 100, total: Math.round(total * 100) / 100, interest: Math.round((total - p) * 100) / 100 });
   };
 
+  const chartData = result
+    ? [
+        { name: "Principal", value: parseFloat(principal) },
+        { name: "Interest", value: result.interest },
+      ]
+    : [];
+
   return (
     <div className="space-y-4">
       <div><label className="text-sm font-medium mb-1 block">Loan Amount</label><Input type="number" value={principal} onChange={e => setPrincipal(e.target.value)} /></div>
@@ -25,14 +33,28 @@ const LoanEmiTool = () => {
       </div>
       <Button onClick={calculate} className="w-full">Calculate EMI</Button>
       {result && (
-        <div className="grid grid-cols-3 gap-3">
-          {[["Monthly EMI", result.emi], ["Total Payment", result.total], ["Total Interest", result.interest]].map(([l, v]) => (
-            <div key={l as string} className="rounded-lg bg-muted p-3 text-center">
-              <div className="text-lg font-bold text-primary">₹{(v as number).toLocaleString()}</div>
-              <div className="text-xs text-muted-foreground">{l}</div>
-            </div>
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-3 gap-3">
+            {([["Monthly EMI", result.emi], ["Total Payment", result.total], ["Total Interest", result.interest]] as const).map(([l, v]) => (
+              <div key={l} className="rounded-lg bg-muted p-3 text-center">
+                <div className="text-lg font-bold text-primary">${v.toLocaleString()}</div>
+                <div className="text-xs text-muted-foreground">{l}</div>
+              </div>
+            ))}
+          </div>
+          <div className="rounded-lg bg-muted p-4">
+            <h4 className="text-sm font-semibold text-muted-foreground mb-2 text-center">Principal vs Interest</h4>
+            <ResponsiveContainer width="100%" height={220}>
+              <PieChart>
+                <Pie data={chartData} cx="50%" cy="50%" innerRadius={50} outerRadius={80} dataKey="value" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}>
+                  <Cell fill="hsl(var(--primary))" />
+                  <Cell fill="hsl(var(--muted-foreground))" />
+                </Pie>
+                <Tooltip formatter={(val: number) => `$${val.toLocaleString()}`} />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </>
       )}
     </div>
   );

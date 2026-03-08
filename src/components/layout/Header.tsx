@@ -58,6 +58,7 @@ const Header = () => {
             { to: "/categories", label: "Categories" },
             { to: "/about", label: "About" },
             { to: "/contact", label: "Contact" },
+            { to: "/blog", label: "Blog" },
           ].map(link => (
             <Link
               key={link.to}
@@ -124,9 +125,9 @@ const Header = () => {
             )}
           </div>
           <nav className="flex flex-col gap-1">
-            {["/", "/categories", "/about", "/contact"].map((path, i) => (
+            {["/", "/categories", "/about", "/contact", "/blog"].map((path, i) => (
               <Link key={path} to={path} className="rounded-xl px-3 py-2.5 text-sm font-medium hover:bg-muted transition-colors" onClick={() => setIsOpen(false)}>
-                {["Home", "Categories", "About", "Contact"][i]}
+                {["Home", "Categories", "About", "Contact", "Blog"][i]}
               </Link>
             ))}
           </nav>
