@@ -5,11 +5,16 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import QRCodeStyling, {
   type DotType,
   type CornerSquareType,
   type CornerDotType,
 } from "qr-code-styling";
+import QrFrameOverlay, { type FrameConfig } from "./qr/QrFrameOverlay";
+import QrBackgroundOptions, { type BgMode, type GradientConfig } from "./qr/QrBackgroundOptions";
+import QrHistory, { saveQrToHistory } from "./qr/QrHistory";
+import QrBatchGenerator from "./qr/QrBatchGenerator";
 
 type QrType = "url" | "text" | "email" | "phone" | "wifi" | "sms" | "whatsapp" | "location";
 
@@ -28,11 +33,14 @@ const QrCodeTool = () => {
 
   const [fgColor, setFgColor] = useState("#000000");
   const [bgColor, setBgColor] = useState("#ffffff");
+  const [bgMode, setBgMode] = useState<BgMode>("plain");
+  const [gradient, setGradient] = useState<GradientConfig>({ from: "#3b82f6", to: "#8b5cf6" });
   const [dotStyle, setDotStyle] = useState<DotType>("square");
   const [cornerStyle, setCornerStyle] = useState<CornerSquareType>("square");
   const [cornerDotStyle, setCornerDotStyle] = useState<CornerDotType>("square");
   const [size, setSize] = useState(300);
   const [logo, setLogo] = useState<string | undefined>();
+  const [frame, setFrame] = useState<FrameConfig>({ template: "none", customText: "" });
 
   const ref = useRef<HTMLDivElement>(null);
   const qrRef = useRef<QRCodeStyling | null>(null);
@@ -51,13 +59,17 @@ const QrCodeTool = () => {
     }
   }, [qrType, text, email, phone, wifiSsid, wifiPass, wifiEnc, smsBody, waMessage, lat, lng]);
 
+  const effectiveBg = bgMode === "transparent" ? "#00000000" : bgMode === "plain" ? bgColor : bgColor;
+
   useEffect(() => {
     const qr = new QRCodeStyling({
       width: size,
       height: size,
       data: getData(),
       dotsOptions: { color: fgColor, type: dotStyle },
-      backgroundOptions: { color: bgColor },
+      backgroundOptions: bgMode === "gradient"
+        ? { color: gradient.from }
+        : { color: effectiveBg },
       cornersSquareOptions: { type: cornerStyle },
       cornersDotOptions: { type: cornerDotStyle },
       imageOptions: { crossOrigin: "anonymous", margin: 6 },
@@ -68,7 +80,7 @@ const QrCodeTool = () => {
       ref.current.innerHTML = "";
       qr.append(ref.current);
     }
-  }, [getData, fgColor, bgColor, dotStyle, cornerStyle, cornerDotStyle, size, logo]);
+  }, [getData, fgColor, effectiveBg, bgMode, gradient, dotStyle, cornerStyle, cornerDotStyle, size, logo]);
 
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -78,8 +90,21 @@ const QrCodeTool = () => {
     reader.readAsDataURL(file);
   };
 
-  const download = (ext: "png" | "svg" | "jpeg") => {
+  const download = async (ext: "png" | "svg" | "jpeg") => {
     qrRef.current?.download({ extension: ext, name: "qrcode" });
+    // Save to history
+    const raw = await qrRef.current?.getRawData("png");
+    if (raw) {
+      const blob = raw instanceof Blob ? raw : new Blob([raw as unknown as BlobPart]);
+      const reader = new FileReader();
+      reader.onload = () => saveQrToHistory(getData(), reader.result as string);
+      reader.readAsDataURL(blob);
+    }
+  };
+
+  const handleRegenerate = (data: string) => {
+    setQrType("url");
+    setText(data);
   };
 
   const dotStyles: DotType[] = ["square", "dots", "rounded", "extra-rounded", "classy", "classy-rounded"];
@@ -139,74 +164,103 @@ const QrCodeTool = () => {
         </TabsContent>
       </Tabs>
 
-      {/* Customization */}
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div className="space-y-3">
-          <Label>QR Color</Label>
-          <div className="flex items-center gap-2">
-            <input type="color" value={fgColor} onChange={e => setFgColor(e.target.value)} className="h-9 w-12 rounded border border-input cursor-pointer" />
-            <Input value={fgColor} onChange={e => setFgColor(e.target.value)} className="flex-1" />
-          </div>
-        </div>
-        <div className="space-y-3">
-          <Label>Background Color</Label>
-          <div className="flex items-center gap-2">
-            <input type="color" value={bgColor} onChange={e => setBgColor(e.target.value)} className="h-9 w-12 rounded border border-input cursor-pointer" />
-            <Input value={bgColor} onChange={e => setBgColor(e.target.value)} className="flex-1" />
-          </div>
-        </div>
-        <div className="space-y-3">
-          <Label>Dot Style</Label>
-          <Select value={dotStyle} onValueChange={v => setDotStyle(v as DotType)}>
-            <SelectTrigger><SelectValue /></SelectTrigger>
-            <SelectContent>
-              {dotStyles.map(s => <SelectItem key={s} value={s} className="capitalize">{s}</SelectItem>)}
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="space-y-3">
-          <Label>Eye Style</Label>
-          <Select value={cornerStyle} onValueChange={v => setCornerStyle(v as CornerSquareType)}>
-            <SelectTrigger><SelectValue /></SelectTrigger>
-            <SelectContent>
-              {cornerStyles.map(s => <SelectItem key={s} value={s} className="capitalize">{s}</SelectItem>)}
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="space-y-3">
-          <Label>Eye Dot Style</Label>
-          <Select value={cornerDotStyle} onValueChange={v => setCornerDotStyle(v as CornerDotType)}>
-            <SelectTrigger><SelectValue /></SelectTrigger>
-            <SelectContent>
-              {cornerDotStyles.map(s => <SelectItem key={s} value={s} className="capitalize">{s}</SelectItem>)}
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="space-y-3">
-          <Label>Logo Image</Label>
-          <Input type="file" accept="image/*" onChange={handleLogoUpload} />
-          {logo && <Button variant="ghost" size="sm" onClick={() => setLogo(undefined)}>Remove logo</Button>}
-        </div>
-      </div>
+      {/* Customization Accordion */}
+      <Accordion type="multiple" defaultValue={["style", "frame", "background", "logo", "size"]} className="w-full">
+        <AccordionItem value="style">
+          <AccordionTrigger className="text-sm font-semibold">Style</AccordionTrigger>
+          <AccordionContent>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="space-y-3">
+                <Label>QR Color</Label>
+                <div className="flex items-center gap-2">
+                  <input type="color" value={fgColor} onChange={e => setFgColor(e.target.value)} className="h-9 w-12 rounded border border-input cursor-pointer" />
+                  <Input value={fgColor} onChange={e => setFgColor(e.target.value)} className="flex-1" />
+                </div>
+              </div>
+              <div className="space-y-3">
+                <Label>Dot Style</Label>
+                <Select value={dotStyle} onValueChange={v => setDotStyle(v as DotType)}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    {dotStyles.map(s => <SelectItem key={s} value={s} className="capitalize">{s}</SelectItem>)}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-3">
+                <Label>Eye Style</Label>
+                <Select value={cornerStyle} onValueChange={v => setCornerStyle(v as CornerSquareType)}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    {cornerStyles.map(s => <SelectItem key={s} value={s} className="capitalize">{s}</SelectItem>)}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="space-y-3">
+                <Label>Eye Dot Style</Label>
+                <Select value={cornerDotStyle} onValueChange={v => setCornerDotStyle(v as CornerDotType)}>
+                  <SelectTrigger><SelectValue /></SelectTrigger>
+                  <SelectContent>
+                    {cornerDotStyles.map(s => <SelectItem key={s} value={s} className="capitalize">{s}</SelectItem>)}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
 
-      {/* Size */}
-      <div className="space-y-3">
-        <Label>Size: {size}px</Label>
-        <div className="flex items-center gap-3">
-          <div className="flex gap-1.5">
-            {sizePresets.map(p => (
-              <Button key={p.label} variant={size === p.value ? "default" : "outline"} size="sm" onClick={() => setSize(p.value)}>
-                {p.label}
-              </Button>
-            ))}
-          </div>
-          <Slider value={[size]} min={100} max={600} step={10} onValueChange={v => setSize(v[0])} className="flex-1" />
-        </div>
-      </div>
+        <AccordionItem value="background">
+          <AccordionTrigger className="text-sm font-semibold">Background</AccordionTrigger>
+          <AccordionContent>
+            <QrBackgroundOptions bgMode={bgMode} bgColor={bgColor} gradient={gradient} onBgModeChange={setBgMode} onBgColorChange={setBgColor} onGradientChange={setGradient} />
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="frame">
+          <AccordionTrigger className="text-sm font-semibold">Frame</AccordionTrigger>
+          <AccordionContent>
+            <QrFrameOverlay frame={frame} onChange={setFrame} />
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="logo">
+          <AccordionTrigger className="text-sm font-semibold">Logo</AccordionTrigger>
+          <AccordionContent>
+            <div className="space-y-3">
+              <Input type="file" accept="image/*" onChange={handleLogoUpload} />
+              {logo && <Button variant="ghost" size="sm" onClick={() => setLogo(undefined)}>Remove logo</Button>}
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="size">
+          <AccordionTrigger className="text-sm font-semibold">Size: {size}px</AccordionTrigger>
+          <AccordionContent>
+            <div className="flex items-center gap-3">
+              <div className="flex gap-1.5">
+                {sizePresets.map(p => (
+                  <Button key={p.label} variant={size === p.value ? "default" : "outline"} size="sm" onClick={() => setSize(p.value)}>
+                    {p.label}
+                  </Button>
+                ))}
+              </div>
+              <Slider value={[size]} min={100} max={600} step={10} onValueChange={v => setSize(v[0])} className="flex-1" />
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
 
       {/* Preview */}
-      <div className="flex flex-col items-center gap-6">
-        <div ref={ref} className="rounded-2xl bg-card border border-border p-4 shadow-card flex items-center justify-center" />
+      <div className="flex flex-col items-center gap-4">
+        <div className="relative rounded-2xl bg-card border border-border p-4 shadow-card flex flex-col items-center justify-center"
+          style={bgMode === "gradient" ? { background: `linear-gradient(135deg, ${gradient.from}, ${gradient.to})` } : undefined}
+        >
+          <div ref={ref} />
+          {frame.template !== "none" && frame.customText && (
+            <div className="mt-2 px-4 py-1.5 rounded-lg bg-foreground text-background text-sm font-semibold text-center">
+              {frame.customText}
+            </div>
+          )}
+        </div>
 
         {/* Download */}
         <div className="flex flex-wrap gap-2">
@@ -215,6 +269,12 @@ const QrCodeTool = () => {
           <Button onClick={() => download("jpeg")} variant="outline">Download JPG</Button>
         </div>
       </div>
+
+      {/* History */}
+      <QrHistory onRegenerate={handleRegenerate} />
+
+      {/* Batch Generator */}
+      <QrBatchGenerator />
     </div>
   );
 };
