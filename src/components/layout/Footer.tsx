@@ -18,6 +18,8 @@ const Footer = () => (
             <li><Link to="/categories" className="hover:text-foreground transition-colors">Categories</Link></li>
             <li><Link to="/about" className="hover:text-foreground transition-colors">About</Link></li>
             <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
+            <li><Link to="/faq" className="hover:text-foreground transition-colors">FAQ</Link></li>
+            <li><Link to="/request-tool" className="hover:text-foreground transition-colors">Request Tool</Link></li>
           </ul>
         </div>
         <div>
@@ -32,7 +34,8 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold mb-3" style={{ fontFamily: 'Space Grotesk' }}>Legal</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
+            <li><Link to="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link></li>
+            <li><Link to="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link></li>
             <li><Link to="/disclaimer" className="hover:text-foreground transition-colors">Disclaimer</Link></li>
           </ul>
         </div>
