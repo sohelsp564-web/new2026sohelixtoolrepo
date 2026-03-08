@@ -5,8 +5,11 @@
     "meta_title": "Free Image Compressor Online — Sohelix Tools",
     "meta_description": "Reduce image file size instantly with this free browser-based image compressor. No uploads required.",
     "faqs": [
-      { "q": "Is this tool free?", "a": "Yes, completely free." },
-      { "q": "Does it upload files?", "a": "No. Everything runs locally in your browser." }
+      { "q": "What does the Image Compressor do?", "a": "This tool reduces the file size of your images while maintaining visual quality. It processes everything directly in your browser — no server uploads needed." },
+      { "q": "Is this tool free to use?", "a": "Yes, the Image Compressor is completely free. You can compress unlimited images without creating an account or paying anything." },
+      { "q": "Are my images uploaded to a server?", "a": "No. All image compression happens locally in your browser. Your files never leave your device, ensuring complete privacy." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Since the tool runs entirely in your browser using client-side JavaScript, your images remain private and are never transmitted over the internet." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on all modern browsers including Chrome, Edge, Firefox, and Safari on both desktop and mobile devices." }
     ]
   },
   "image-resizer": {
@@ -15,8 +18,11 @@
     "meta_title": "Free Image Resizer Online — Sohelix Tools",
     "meta_description": "Resize images to any dimension instantly. Free browser-based tool, no uploads.",
     "faqs": [
-      { "q": "Is this tool free?", "a": "Yes, completely free." },
-      { "q": "Does it upload files?", "a": "No. Everything runs locally." }
+      { "q": "What does the Image Resizer do?", "a": "This tool lets you resize images to any custom width and height. You can maintain aspect ratio or set exact dimensions as needed." },
+      { "q": "Is this tool free to use?", "a": "Yes, the Image Resizer is completely free with no limits on the number of images you can resize." },
+      { "q": "Are my images uploaded to a server?", "a": "No. All resizing happens locally in your browser. Your images stay on your device and are never uploaded anywhere." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool processes everything client-side, so your files remain completely private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "image-cropper": {
@@ -25,7 +31,11 @@
     "meta_title": "Free Image Cropper Online — Sohelix Tools",
     "meta_description": "Crop images to any size online. Free and runs in your browser.",
     "faqs": [
-      { "q": "Is this tool free?", "a": "Yes, completely free." }
+      { "q": "What does the Image Cropper do?", "a": "This tool lets you select and crop any area of your image. You can freely adjust the crop region to get exactly the portion you need." },
+      { "q": "Is this tool free to use?", "a": "Yes, the Image Cropper is 100% free. No sign-up, no limits, no watermarks." },
+      { "q": "Are my images uploaded to a server?", "a": "No. All cropping is done locally in your browser. Your images never leave your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Since it runs entirely in your browser, your files remain private and secure at all times." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "png-to-jpg": {
@@ -34,7 +44,11 @@
     "meta_title": "Free PNG to JPG Converter Online — Sohelix Tools",
     "meta_description": "Convert PNG images to JPG format instantly. Free online converter.",
     "faqs": [
-      { "q": "Is this tool free?", "a": "Yes." }
+      { "q": "What does the PNG to JPG Converter do?", "a": "This tool converts PNG images to JPG format instantly in your browser. It's useful for reducing file size since JPG uses lossy compression." },
+      { "q": "Is this tool free to use?", "a": "Yes, this converter is completely free with no limits on the number of conversions." },
+      { "q": "Are my files uploaded to a server?", "a": "No. The conversion happens entirely in your browser. Your files never leave your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. All processing is client-side, so your images stay private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "jpg-to-png": {
@@ -43,7 +57,11 @@
     "meta_title": "Free JPG to PNG Converter Online — Sohelix Tools",
     "meta_description": "Convert JPG to PNG with transparency support. Free online tool.",
     "faqs": [
-      { "q": "Will it support transparency?", "a": "Yes, PNG supports transparency." }
+      { "q": "What does the JPG to PNG Converter do?", "a": "This tool converts JPG images to PNG format, which supports transparency and lossless compression." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited conversions. No account required." },
+      { "q": "Are my files uploaded to a server?", "a": "No. All conversion happens locally in your browser. Your files are never uploaded." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, ensuring your files remain private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "webp-to-jpg": {
@@ -52,7 +70,11 @@
     "meta_title": "Free WebP to JPG Converter Online — Sohelix Tools",
     "meta_description": "Convert WebP images to JPG format. Free online converter.",
     "faqs": [
-      { "q": "Is this tool free?", "a": "Yes." }
+      { "q": "What does the WebP to JPG Converter do?", "a": "This tool converts WebP images to the widely-supported JPG format, making them compatible with all image viewers and editors." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits on conversions." },
+      { "q": "Are my files uploaded to a server?", "a": "No. All processing happens locally in your browser. Your images never leave your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Since it runs entirely in your browser, your files remain completely private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "jpg-to-webp": {
@@ -61,7 +83,11 @@
     "meta_title": "Free JPG to WebP Converter Online — Sohelix Tools",
     "meta_description": "Convert JPG to WebP for better web performance. Free online tool.",
     "faqs": [
-      { "q": "Why use WebP?", "a": "WebP offers better compression for the web." }
+      { "q": "What does the JPG to WebP Converter do?", "a": "This tool converts JPG images to WebP format, which offers superior compression and smaller file sizes ideal for web use." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free. No registration or payment required." },
+      { "q": "Are my files uploaded to a server?", "a": "No. The conversion runs entirely in your browser. Your files are never sent to any server." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. All processing is client-side, keeping your images private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "image-to-base64": {
@@ -70,7 +96,11 @@
     "meta_title": "Free Image to Base64 Converter — Sohelix Tools",
     "meta_description": "Convert images to Base64 encoded strings. Free browser-based tool.",
     "faqs": [
-      { "q": "What is Base64?", "a": "A text encoding format for binary data." }
+      { "q": "What does the Image to Base64 tool do?", "a": "This tool converts any image into a Base64 encoded text string that you can embed directly in HTML, CSS, or use in APIs." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits. No account needed." },
+      { "q": "Are my files uploaded to a server?", "a": "No. The conversion happens entirely in your browser. Your images are never uploaded anywhere." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Since it runs client-side, your files remain private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "base64-to-image": {
@@ -79,7 +109,11 @@
     "meta_title": "Free Base64 to Image Converter — Sohelix Tools",
     "meta_description": "Convert Base64 strings back to downloadable images. Free tool.",
     "faqs": [
-      { "q": "Is this tool free?", "a": "Yes." }
+      { "q": "What does the Base64 to Image tool do?", "a": "This tool converts Base64 encoded strings back into downloadable image files. Simply paste the Base64 string and preview or download the image." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
+      { "q": "Are my files uploaded to a server?", "a": "No. All decoding happens locally in your browser. Nothing is sent to any server." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely in your browser, ensuring complete privacy." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "image-color-picker": {
@@ -88,7 +122,11 @@
     "meta_title": "Free Image Color Picker Online — Sohelix Tools",
     "meta_description": "Pick any color from an uploaded image. Get HEX, RGB, and HSL values.",
     "faqs": [
-      { "q": "What formats are supported?", "a": "HEX, RGB, and HSL." }
+      { "q": "What does the Image Color Picker do?", "a": "This tool lets you pick any color from an uploaded image and gives you the color value in HEX, RGB, and HSL formats." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No sign-up required." },
+      { "q": "Are my images uploaded to a server?", "a": "No. All processing happens locally in your browser. Your images never leave your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your files remain private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "image-watermark": {
@@ -97,8 +135,11 @@
     "meta_title": "Free Image Watermark Tool — Sohelix Tools",
     "meta_description": "Add text watermarks to images online. Free browser-based tool.",
     "faqs": [
-      { "q": "Can I customize the watermark?", "a": "Yes, you can change text, size, and opacity." },
-      { "q": "Does it upload my image?", "a": "No, everything runs locally in your browser." }
+      { "q": "What does the Image Watermark Tool do?", "a": "This tool lets you add customizable text watermarks to your images. You can adjust text, font size, opacity, and position." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits on the number of images you can watermark." },
+      { "q": "Are my images uploaded to a server?", "a": "No. Everything runs locally in your browser. Your images never leave your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Since the tool runs entirely in your browser, your files remain private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "image-blur": {
@@ -107,7 +148,11 @@
     "meta_title": "Free Image Blur Tool Online — Sohelix Tools",
     "meta_description": "Apply blur effects to images online. Adjust blur radius freely.",
     "faqs": [
-      { "q": "Can I control the blur amount?", "a": "Yes, use the radius slider." }
+      { "q": "What does the Image Blur Tool do?", "a": "This tool applies a Gaussian blur effect to your images. You can control the blur intensity using a radius slider." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited use. No account required." },
+      { "q": "Are my images uploaded to a server?", "a": "No. All processing happens locally in your browser. Your images stay on your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, keeping your files private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "image-rotate": {
@@ -116,7 +161,11 @@
     "meta_title": "Free Image Rotate Tool — Sohelix Tools",
     "meta_description": "Rotate images by 90°, 180°, or 270° online. Free tool.",
     "faqs": [
-      { "q": "What angles are supported?", "a": "90°, 180°, and 270°." }
+      { "q": "What does the Image Rotate Tool do?", "a": "This tool rotates your images by 90°, 180°, or 270° with a single click. The rotated image can be downloaded instantly." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits." },
+      { "q": "Are my images uploaded to a server?", "a": "No. All rotation is done locally in your browser. Your images never leave your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Since it runs entirely in your browser, your files remain private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "image-flip": {
@@ -125,7 +174,11 @@
     "meta_title": "Free Image Flip Tool — Sohelix Tools",
     "meta_description": "Flip images horizontally or vertically online. Free tool.",
     "faqs": [
-      { "q": "Can I flip both ways?", "a": "Yes, horizontal and vertical." }
+      { "q": "What does the Image Flip Tool do?", "a": "This tool flips your images horizontally (mirror) or vertically (upside down) with one click." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free. No registration needed." },
+      { "q": "Are my images uploaded to a server?", "a": "No. All processing happens locally in your browser. Your images never leave your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your files remain private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "images-to-pdf": {
@@ -134,7 +187,11 @@
     "meta_title": "Free Images to PDF Converter — Sohelix Tools",
     "meta_description": "Combine multiple images into a single PDF file. Free online tool.",
     "faqs": [
-      { "q": "How many images?", "a": "As many as you want." }
+      { "q": "What does the Images to PDF tool do?", "a": "This tool combines multiple images into a single PDF document. You can arrange the image order before generating the PDF." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits on the number of images." },
+      { "q": "Are my files uploaded to a server?", "a": "No. The PDF is generated entirely in your browser. Your images never leave your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. All processing happens client-side, keeping your files private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "pdf-to-jpg": {
@@ -143,7 +200,11 @@
     "meta_title": "Free PDF to JPG Converter — Sohelix Tools",
     "meta_description": "Convert PDF pages to high-quality JPG images. Free online tool.",
     "faqs": [
-      { "q": "Is quality preserved?", "a": "Yes, high quality output." }
+      { "q": "What does the PDF to JPG tool do?", "a": "This tool converts each page of a PDF file into a high-quality JPG image that you can download." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited conversions." },
+      { "q": "Are my files uploaded to a server?", "a": "No. All conversion happens locally in your browser. Your PDF never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Since the tool runs entirely in your browser, your files remain private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "pdf-page-counter": {
@@ -152,7 +213,11 @@
     "meta_title": "Free PDF Page Counter — Sohelix Tools",
     "meta_description": "Count the number of pages in any PDF file instantly.",
     "faqs": [
-      { "q": "Is it accurate?", "a": "Yes, 100% accurate." }
+      { "q": "What does the PDF Page Counter do?", "a": "This tool instantly counts the number of pages in any PDF file you upload, without opening or reading the content." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no restrictions." },
+      { "q": "Are my files uploaded to a server?", "a": "No. The page counting happens entirely in your browser. Your PDF is never uploaded." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. All processing is client-side, so your files stay private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "pdf-metadata-viewer": {
@@ -161,7 +226,11 @@
     "meta_title": "Free PDF Metadata Viewer — Sohelix Tools",
     "meta_description": "View author, title, creation date and other PDF metadata.",
     "faqs": [
-      { "q": "What metadata is shown?", "a": "Author, title, creation date, etc." }
+      { "q": "What does the PDF Metadata Viewer do?", "a": "This tool displays metadata from PDF files including author, title, creation date, modification date, and more." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my files uploaded to a server?", "a": "No. All metadata extraction happens locally in your browser. Your PDF never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, ensuring your files remain private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "pdf-reader": {
@@ -170,7 +239,11 @@
     "meta_title": "Free Online PDF Reader — Sohelix Tools",
     "meta_description": "Read PDF files directly in your browser. No downloads needed.",
     "faqs": [
-      { "q": "Is it free?", "a": "Yes." }
+      { "q": "What does the PDF Reader do?", "a": "This tool lets you open and read PDF files directly in your browser without needing to download any software." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No account required." },
+      { "q": "Are my files uploaded to a server?", "a": "No. The PDF is rendered locally in your browser. Your file never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. All processing happens client-side, keeping your documents private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "pdf-page-rotator": {
@@ -179,7 +252,11 @@
     "meta_title": "Free PDF Page Rotator — Sohelix Tools",
     "meta_description": "Rotate individual PDF pages easily. Free browser-based tool.",
     "faqs": [
-      { "q": "Can I rotate individual pages?", "a": "Yes." }
+      { "q": "What does the PDF Page Rotator do?", "a": "This tool lets you rotate individual pages within a PDF file by 90°, 180°, or 270° and download the updated PDF." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no restrictions." },
+      { "q": "Are my files uploaded to a server?", "a": "No. All rotation happens locally in your browser. Your PDF never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Since the tool runs entirely in your browser, your files remain private and secure." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "word-counter": {
@@ -188,7 +265,11 @@
     "meta_title": "Free Word Counter Online — Sohelix Tools",
     "meta_description": "Count words, characters, sentences and paragraphs instantly.",
     "faqs": [
-      { "q": "Is this tool free?", "a": "Yes." }
+      { "q": "What does the Word Counter do?", "a": "This tool counts the number of words, characters, sentences, and paragraphs in any text you type or paste." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free. No sign-up or limits." },
+      { "q": "Are my texts uploaded to a server?", "a": "No. All counting happens locally in your browser. Your text is never sent anywhere." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool processes text entirely client-side, so your content remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "character-counter": {
@@ -197,7 +278,11 @@
     "meta_title": "Free Character Counter Online — Sohelix Tools",
     "meta_description": "Count characters with and without spaces. Track character limits.",
     "faqs": [
-      { "q": "Does it count spaces?", "a": "It shows both with and without spaces." }
+      { "q": "What does the Character Counter do?", "a": "This tool counts the total number of characters in your text, showing counts both with and without spaces." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
+      { "q": "Are my texts uploaded to a server?", "a": "No. All processing happens locally in your browser. Your text never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, ensuring your content stays private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "text-case-converter": {
@@ -206,7 +291,11 @@
     "meta_title": "Free Text Case Converter — Sohelix Tools",
     "meta_description": "Convert text to uppercase, lowercase, title case and more.",
     "faqs": [
-      { "q": "What cases are supported?", "a": "Upper, lower, title, sentence, and more." }
+      { "q": "What does the Text Case Converter do?", "a": "This tool converts your text between different cases including uppercase, lowercase, title case, sentence case, and more." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my texts uploaded to a server?", "a": "No. All conversion happens locally in your browser. Your text is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your content remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "remove-duplicate-lines": {
@@ -215,7 +304,11 @@
     "meta_title": "Free Remove Duplicate Lines Tool — Sohelix Tools",
     "meta_description": "Remove duplicate lines from text instantly. Free online tool.",
     "faqs": [
-      { "q": "Is it case-sensitive?", "a": "You can toggle case sensitivity." }
+      { "q": "What does the Remove Duplicate Lines tool do?", "a": "This tool removes all duplicate lines from your text, leaving only unique lines. You can toggle case sensitivity." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No account needed." },
+      { "q": "Are my texts uploaded to a server?", "a": "No. All processing happens locally in your browser. Your text never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Since it runs entirely in your browser, your content remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "text-sorter": {
@@ -224,7 +317,11 @@
     "meta_title": "Free Text Sorter Online — Sohelix Tools",
     "meta_description": "Sort lines of text alphabetically or numerically. Free tool.",
     "faqs": [
-      { "q": "Can I sort numerically?", "a": "Yes." }
+      { "q": "What does the Text Sorter do?", "a": "This tool sorts lines of text alphabetically (A-Z or Z-A) or numerically. Great for organizing lists." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited use." },
+      { "q": "Are my texts uploaded to a server?", "a": "No. All sorting happens locally in your browser. Your text is never sent anywhere." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your content private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "lorem-ipsum-generator": {
@@ -233,7 +330,11 @@
     "meta_title": "Free Lorem Ipsum Generator — Sohelix Tools",
     "meta_description": "Generate placeholder Lorem Ipsum text for your designs.",
     "faqs": [
-      { "q": "What is Lorem Ipsum?", "a": "Standard placeholder text used in design." }
+      { "q": "What does the Lorem Ipsum Generator do?", "a": "This tool generates placeholder Lorem Ipsum text in customizable paragraph counts, useful for design mockups and development." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. Generate as much text as you need." },
+      { "q": "Are my inputs uploaded to a server?", "a": "No. The text is generated entirely in your browser. Nothing is sent to any server." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so there's no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "random-text-generator": {
@@ -242,7 +343,11 @@
     "meta_title": "Free Random Text Generator — Sohelix Tools",
     "meta_description": "Generate random text strings for testing. Free tool.",
     "faqs": [
-      { "q": "Is it truly random?", "a": "Yes, using browser crypto API." }
+      { "q": "What does the Random Text Generator do?", "a": "This tool generates random text strings of customizable length, useful for testing, filling placeholders, or generating sample data." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my inputs uploaded to a server?", "a": "No. All generation happens locally in your browser using the crypto API." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so nothing is transmitted." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "text-compare": {
@@ -251,7 +356,11 @@
     "meta_title": "Free Text Compare Tool — Sohelix Tools",
     "meta_description": "Compare two texts side by side and find differences highlighted.",
     "faqs": [
-      { "q": "Does it show line-by-line diff?", "a": "Yes, changed lines are highlighted." }
+      { "q": "What does the Text Compare Tool do?", "a": "This tool compares two blocks of text side by side and highlights the differences between them, line by line." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited comparisons." },
+      { "q": "Are my texts uploaded to a server?", "a": "No. All comparison happens locally in your browser. Your text is never sent anywhere." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your content remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "text-reverse": {
@@ -260,7 +369,11 @@
     "meta_title": "Free Text Reverse Tool — Sohelix Tools",
     "meta_description": "Reverse text characters or words instantly. Free online tool.",
     "faqs": [
-      { "q": "Can I reverse words too?", "a": "Yes, both character and word reversal." }
+      { "q": "What does the Text Reverse Tool do?", "a": "This tool reverses the characters or words in your text. You can choose between character-level or word-level reversal." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits." },
+      { "q": "Are my texts uploaded to a server?", "a": "No. All processing happens locally in your browser. Your text never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your content private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "remove-extra-spaces": {
@@ -269,7 +382,11 @@
     "meta_title": "Free Remove Extra Spaces Tool — Sohelix Tools",
     "meta_description": "Remove extra spaces, tabs, and blank lines from text.",
     "faqs": [
-      { "q": "Does it remove all spaces?", "a": "No, only extra/duplicate spaces." }
+      { "q": "What does the Remove Extra Spaces tool do?", "a": "This tool removes extra whitespace, duplicate spaces, unnecessary tabs, and blank lines from your text while preserving normal spacing." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No sign-up required." },
+      { "q": "Are my texts uploaded to a server?", "a": "No. All processing happens locally in your browser. Your text is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your content remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "random-word-generator": {
@@ -278,7 +395,11 @@
     "meta_title": "Free Random Word Generator — Sohelix Tools",
     "meta_description": "Generate random words for brainstorming or testing.",
     "faqs": [
-      { "q": "Are the words real?", "a": "Yes, they are real English words." }
+      { "q": "What does the Random Word Generator do?", "a": "This tool generates random English words, useful for brainstorming, word games, testing, or creative writing prompts." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my inputs uploaded to a server?", "a": "No. All generation happens locally in your browser. Nothing is sent to any server." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "text-to-slug": {
@@ -287,7 +408,11 @@
     "meta_title": "Free Text to Slug Converter — Sohelix Tools",
     "meta_description": "Convert any text to a URL-friendly slug instantly.",
     "faqs": [
-      { "q": "How is it different from Slug Generator?", "a": "Same concept, focused on text-to-slug conversion." }
+      { "q": "What does the Text to Slug Converter do?", "a": "This tool converts any text into a URL-friendly slug by lowercasing, removing special characters, and replacing spaces with hyphens." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
+      { "q": "Are my texts uploaded to a server?", "a": "No. All conversion happens locally in your browser. Your text never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your content private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "json-formatter": {
@@ -296,7 +421,11 @@
     "meta_title": "Free JSON Formatter Online — Sohelix Tools",
     "meta_description": "Format and beautify JSON data. Free online JSON formatter.",
     "faqs": [
-      { "q": "Does it validate JSON?", "a": "Yes, it shows errors too." }
+      { "q": "What does the JSON Formatter do?", "a": "This tool formats, beautifies, and indents JSON data to make it readable. It also validates JSON and shows syntax errors." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits on data size." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All formatting happens locally in your browser. Your JSON data is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your data remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "json-validator": {
@@ -305,7 +434,11 @@
     "meta_title": "Free JSON Validator Online — Sohelix Tools",
     "meta_description": "Validate JSON data and find syntax errors instantly.",
     "faqs": [
-      { "q": "What errors does it detect?", "a": "Syntax errors, missing brackets, etc." }
+      { "q": "What does the JSON Validator do?", "a": "This tool checks whether your JSON data is valid and highlights any syntax errors such as missing brackets, commas, or quotes." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited validation." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All validation happens locally in your browser. Your data is never sent anywhere." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool processes everything client-side, keeping your data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "base64-encoder": {
@@ -314,7 +447,11 @@
     "meta_title": "Free Base64 Encoder — Sohelix Tools",
     "meta_description": "Encode text to Base64 format. Free online tool.",
     "faqs": [
-      { "q": "Is Base64 encryption?", "a": "No, it's encoding, not encryption." }
+      { "q": "What does the Base64 Encoder do?", "a": "This tool encodes plain text into Base64 format, which is commonly used for data transmission in URLs, emails, and APIs." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All encoding happens locally in your browser. Your text is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your data remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "base64-decoder": {
@@ -323,7 +460,11 @@
     "meta_title": "Free Base64 Decoder — Sohelix Tools",
     "meta_description": "Decode Base64 strings to readable text. Free tool.",
     "faqs": [
-      { "q": "Is it free?", "a": "Yes." }
+      { "q": "What does the Base64 Decoder do?", "a": "This tool decodes Base64 encoded strings back into readable plain text." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All decoding happens locally in your browser. Nothing is sent to any server." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "url-encoder": {
@@ -332,7 +473,11 @@
     "meta_title": "Free URL Encoder — Sohelix Tools",
     "meta_description": "Encode URLs for safe transmission. Free online tool.",
     "faqs": [
-      { "q": "When do I need this?", "a": "When passing special characters in URLs." }
+      { "q": "What does the URL Encoder do?", "a": "This tool encodes special characters in URLs (like spaces, &, =) into percent-encoded format for safe use in web addresses and APIs." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no restrictions." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All encoding happens locally in your browser. Your data never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your data remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "url-decoder": {
@@ -341,7 +486,11 @@
     "meta_title": "Free URL Decoder — Sohelix Tools",
     "meta_description": "Decode encoded URLs back to readable text. Free tool.",
     "faqs": [
-      { "q": "Is it free?", "a": "Yes." }
+      { "q": "What does the URL Decoder do?", "a": "This tool decodes percent-encoded URLs back into readable text, converting characters like %20 back to spaces." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All decoding happens locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "uuid-generator": {
@@ -350,7 +499,11 @@
     "meta_title": "Free UUID Generator — Sohelix Tools",
     "meta_description": "Generate random UUID v4 identifiers. Free online tool.",
     "faqs": [
-      { "q": "Are they unique?", "a": "Yes, statistically guaranteed unique." }
+      { "q": "What does the UUID Generator do?", "a": "This tool generates random UUID v4 identifiers, which are universally unique IDs commonly used in databases and APIs." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. Generate as many UUIDs as you need." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All generation happens locally in your browser using the Web Crypto API." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with cryptographically secure random generation." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "regex-tester": {
@@ -359,7 +512,11 @@
     "meta_title": "Free Regex Tester — Sohelix Tools",
     "meta_description": "Test and debug regular expressions with live matching.",
     "faqs": [
-      { "q": "What flavors are supported?", "a": "JavaScript regex flavor." }
+      { "q": "What does the Regex Tester do?", "a": "This tool lets you test regular expressions against sample text with live highlighting of matches, groups, and flags." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All regex processing happens locally in your browser. Your data is never sent anywhere." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, keeping your data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "csv-to-json": {
@@ -368,7 +525,11 @@
     "meta_title": "Free CSV to JSON Converter — Sohelix Tools",
     "meta_description": "Convert CSV data to JSON format instantly. Free tool.",
     "faqs": [
-      { "q": "Does it handle headers?", "a": "Yes, the first row is used as keys." }
+      { "q": "What does the CSV to JSON Converter do?", "a": "This tool converts CSV (comma-separated values) data into JSON format, using the first row as object keys." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no data size limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All conversion happens locally in your browser. Your data never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool processes everything client-side, keeping your data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "json-to-csv": {
@@ -377,7 +538,11 @@
     "meta_title": "Free JSON to CSV Converter — Sohelix Tools",
     "meta_description": "Convert JSON arrays to CSV format. Free online tool.",
     "faqs": [
-      { "q": "What JSON format?", "a": "Array of objects with consistent keys." }
+      { "q": "What does the JSON to CSV Converter do?", "a": "This tool converts JSON arrays of objects into CSV format, using object keys as column headers." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited conversions." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All conversion happens locally in your browser. Your data is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "html-minifier": {
@@ -386,7 +551,11 @@
     "meta_title": "Free HTML Minifier — Sohelix Tools",
     "meta_description": "Minify HTML code by removing whitespace and comments.",
     "faqs": [
-      { "q": "Does it break functionality?", "a": "No, only whitespace and comments are removed." }
+      { "q": "What does the HTML Minifier do?", "a": "This tool minifies HTML code by removing unnecessary whitespace, comments, and line breaks to reduce file size." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All minification happens locally in your browser. Your code is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, keeping your code private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "css-minifier": {
@@ -395,7 +564,11 @@
     "meta_title": "Free CSS Minifier — Sohelix Tools",
     "meta_description": "Minify CSS code to reduce file size. Free online tool.",
     "faqs": [
-      { "q": "Does it remove comments?", "a": "Yes, all comments are removed." }
+      { "q": "What does the CSS Minifier do?", "a": "This tool minifies CSS code by removing comments, whitespace, and unnecessary characters to reduce file size for faster page loads." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no restrictions." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All minification happens locally in your browser. Your code never leaves your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your code remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "js-minifier": {
@@ -404,7 +577,11 @@
     "meta_title": "Free JavaScript Minifier — Sohelix Tools",
     "meta_description": "Minify JavaScript code to reduce file size. Free tool.",
     "faqs": [
-      { "q": "Does it remove comments?", "a": "Yes, single-line and multi-line comments." }
+      { "q": "What does the JavaScript Minifier do?", "a": "This tool minifies JavaScript code by removing comments, whitespace, and line breaks to reduce file size for faster loading." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All minification happens locally in your browser. Your code is never sent anywhere." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your code private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "color-code-converter": {
@@ -413,7 +590,11 @@
     "meta_title": "Free Color Code Converter — Sohelix Tools",
     "meta_description": "Convert between HEX, RGB, and HSL color formats.",
     "faqs": [
-      { "q": "What formats are supported?", "a": "HEX, RGB, and HSL." }
+      { "q": "What does the Color Code Converter do?", "a": "This tool converts color values between HEX, RGB, and HSL formats. Enter a color in any format and get all conversions instantly." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited conversions." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All conversion happens locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "meta-tag-generator": {
@@ -422,7 +603,11 @@
     "meta_title": "Free Meta Tag Generator — Sohelix Tools",
     "meta_description": "Generate HTML meta tags for SEO. Free online tool.",
     "faqs": [
-      { "q": "What tags are included?", "a": "Title, description, OG, Twitter cards." }
+      { "q": "What does the Meta Tag Generator do?", "a": "This tool generates HTML meta tags for your website including title, description, Open Graph, and Twitter Card tags for better SEO." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no restrictions." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All generation happens locally in your browser. Your data is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, keeping your information private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "robots-txt-generator": {
@@ -431,7 +616,11 @@
     "meta_title": "Free Robots.txt Generator — Sohelix Tools",
     "meta_description": "Generate robots.txt file for your website. Free tool.",
     "faqs": [
-      { "q": "What is robots.txt?", "a": "A file that tells search engines what to crawl." }
+      { "q": "What does the Robots.txt Generator do?", "a": "This tool helps you create a robots.txt file that tells search engine crawlers which pages to index and which to skip." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. The file is generated entirely in your browser. Nothing is sent to any server." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "sitemap-xml-generator": {
@@ -440,7 +629,11 @@
     "meta_title": "Free Sitemap XML Generator — Sohelix Tools",
     "meta_description": "Generate XML sitemaps for your website. Free tool.",
     "faqs": [
-      { "q": "What is a sitemap?", "a": "An XML file listing all pages for search engines." }
+      { "q": "What does the Sitemap XML Generator do?", "a": "This tool generates an XML sitemap for your website, listing all your pages so search engines can discover and index them efficiently." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits on URLs." },
+      { "q": "Are my data uploaded to a server?", "a": "No. The sitemap is generated entirely in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your URLs remain private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "slug-generator": {
@@ -449,7 +642,11 @@
     "meta_title": "Free Slug Generator — Sohelix Tools",
     "meta_description": "Generate URL-friendly slugs from text. Free online tool.",
     "faqs": [
-      { "q": "What is a slug?", "a": "A URL-friendly version of a title." }
+      { "q": "What does the Slug Generator do?", "a": "This tool converts any text into a clean, URL-friendly slug by lowercasing, removing special characters, and replacing spaces with hyphens." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited use." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All generation happens locally in your browser. Nothing is sent anywhere." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "serp-preview-tool": {
@@ -458,7 +655,11 @@
     "meta_title": "Free SERP Preview Tool — Sohelix Tools",
     "meta_description": "Preview how your page appears in Google search results.",
     "faqs": [
-      { "q": "Is it accurate?", "a": "It closely mimics Google's display." }
+      { "q": "What does the SERP Preview Tool do?", "a": "This tool shows you a preview of how your webpage title and description will appear in Google search results, helping you optimize for better click-through rates." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. The preview is generated entirely in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "qr-code-generator": {
@@ -467,7 +668,11 @@
     "meta_title": "Free QR Code Generator — Sohelix Tools",
     "meta_description": "Generate QR codes for any text or URL. Download as PNG.",
     "faqs": [
-      { "q": "What formats?", "a": "PNG download." }
+      { "q": "What does the QR Code Generator do?", "a": "This tool generates QR codes from any text, URL, email, phone number, WiFi credentials, or other data types. You can customize colors, styles, and download in PNG, SVG, or JPG." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits on QR code generation." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All QR code generation happens locally in your browser. Your data is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your data remains private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "password-generator": {
@@ -476,7 +681,11 @@
     "meta_title": "Free Password Generator — Sohelix Tools",
     "meta_description": "Generate strong random passwords with customizable options.",
     "faqs": [
-      { "q": "Are they secure?", "a": "Yes, generated using crypto API." }
+      { "q": "What does the Password Generator do?", "a": "This tool generates strong, random passwords with customizable length and character options including uppercase, lowercase, numbers, and symbols." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. Generate as many passwords as you need." },
+      { "q": "Are my passwords uploaded to a server?", "a": "No. All password generation happens locally in your browser using the Web Crypto API. Your passwords are never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. Passwords are generated using cryptographically secure random numbers, and nothing is ever sent to any server." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "random-number-generator": {
@@ -485,7 +694,11 @@
     "meta_title": "Free Random Number Generator — Sohelix Tools",
     "meta_description": "Generate random numbers within a range. Free tool.",
     "faqs": [
-      { "q": "Is it truly random?", "a": "Yes, using crypto API." }
+      { "q": "What does the Random Number Generator do?", "a": "This tool generates random numbers within a specified minimum and maximum range using cryptographically secure random generation." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited generation." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All generation happens locally in your browser using the crypto API." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool uses cryptographically secure random numbers and runs entirely client-side." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "timestamp-converter": {
@@ -494,7 +707,11 @@
     "meta_title": "Free Timestamp Converter — Sohelix Tools",
     "meta_description": "Convert Unix timestamps to human-readable dates.",
     "faqs": [
-      { "q": "What formats?", "a": "Unix seconds and milliseconds." }
+      { "q": "What does the Timestamp Converter do?", "a": "This tool converts Unix timestamps (seconds or milliseconds) to human-readable dates and vice versa." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited conversions." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All conversion happens locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "dice-roller": {
@@ -503,7 +720,11 @@
     "meta_title": "Free Dice Roller Online — Sohelix Tools",
     "meta_description": "Roll virtual dice with customizable sides and count.",
     "faqs": [
-      { "q": "Is it random?", "a": "Yes, using cryptographic randomness." }
+      { "q": "What does the Dice Roller do?", "a": "This tool simulates rolling dice with customizable number of sides and dice count. Results are generated using cryptographic randomness." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited rolls." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All dice rolling happens locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool uses cryptographically secure random generation and runs entirely client-side." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "coin-flip": {
@@ -512,7 +733,11 @@
     "meta_title": "Free Coin Flip Generator — Sohelix Tools",
     "meta_description": "Flip a virtual coin with fair 50/50 probability.",
     "faqs": [
-      { "q": "Is it fair?", "a": "Yes, 50/50 probability using crypto API." }
+      { "q": "What does the Coin Flip Generator do?", "a": "This tool simulates flipping a coin with fair 50/50 probability using cryptographic randomness, and tracks your flip history and statistics." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited flips." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All flipping happens locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool uses the Web Crypto API for fair randomness and runs entirely client-side." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "random-picker": {
@@ -521,7 +746,11 @@
     "meta_title": "Free Random Picker — Sohelix Tools",
     "meta_description": "Randomly pick items from a list. Free online tool.",
     "faqs": [
-      { "q": "Is the selection random?", "a": "Yes, using cryptographic randomness." }
+      { "q": "What does the Random Picker do?", "a": "This tool randomly selects one or more items from a list you provide. Great for drawings, decisions, or random selections." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All picking happens locally in your browser using cryptographic randomness." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, keeping your data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "age-calculator": {
@@ -530,7 +759,11 @@
     "meta_title": "Free Age Calculator — Sohelix Tools",
     "meta_description": "Calculate your exact age in years, months and days.",
     "faqs": [
-      { "q": "Is it accurate?", "a": "Yes, down to the day." }
+      { "q": "What does the Age Calculator do?", "a": "This tool calculates your exact age from your birth date, showing years, months, and days. It also shows upcoming birthday countdown." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no sign-up required." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Your birth date is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your personal data stays private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "bmi-calculator": {
@@ -539,7 +772,11 @@
     "meta_title": "Free BMI Calculator — Sohelix Tools",
     "meta_description": "Calculate your Body Mass Index based on weight and height.",
     "faqs": [
-      { "q": "What is BMI?", "a": "Body Mass Index measures body fat based on weight and height." }
+      { "q": "What does the BMI Calculator do?", "a": "This tool calculates your Body Mass Index based on your weight and height, and shows your BMI category (underweight, normal, overweight, or obese)." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No account needed." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Your health data is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, keeping your personal data private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "percentage-calculator": {
@@ -548,7 +785,11 @@
     "meta_title": "Free Percentage Calculator — Sohelix Tools",
     "meta_description": "Calculate percentages easily. Free online calculator.",
     "faqs": [
-      { "q": "Is it free?", "a": "Yes." }
+      { "q": "What does the Percentage Calculator do?", "a": "This tool calculates percentages in multiple ways: what is X% of Y, what percentage is X of Y, and percentage change between values." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited calculations." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "loan-emi-calculator": {
@@ -557,7 +798,11 @@
     "meta_title": "Free Loan EMI Calculator — Sohelix Tools",
     "meta_description": "Calculate monthly loan EMI payments and view schedule.",
     "faqs": [
-      { "q": "What is EMI?", "a": "Equated Monthly Installment." }
+      { "q": "What does the Loan EMI Calculator do?", "a": "This tool calculates your Equated Monthly Installment (EMI) for loans based on principal amount, interest rate, and tenure. It also shows a detailed repayment schedule." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Your financial data is never transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, keeping your financial information private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "interest-calculator": {
@@ -566,7 +811,11 @@
     "meta_title": "Free Interest Calculator — Sohelix Tools",
     "meta_description": "Calculate simple and compound interest. Free tool.",
     "faqs": [
-      { "q": "Simple vs compound?", "a": "Compound interest earns interest on interest." }
+      { "q": "What does the Interest Calculator do?", "a": "This tool calculates both simple and compound interest based on principal, rate, and time period. It shows the total interest earned and final amount." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Your financial data stays private." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "discount-calculator": {
@@ -575,7 +824,11 @@
     "meta_title": "Free Discount Calculator — Sohelix Tools",
     "meta_description": "Calculate discount amounts and final prices instantly.",
     "faqs": [
-      { "q": "Is it free?", "a": "Yes." }
+      { "q": "What does the Discount Calculator do?", "a": "This tool calculates the discounted price, savings amount, and final price after applying a percentage discount to the original price." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no restrictions." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "date-difference-calculator": {
@@ -584,7 +837,11 @@
     "meta_title": "Free Date Difference Calculator — Sohelix Tools",
     "meta_description": "Calculate the number of days between two dates.",
     "faqs": [
-      { "q": "Does it count weekends?", "a": "Yes, all days are counted." }
+      { "q": "What does the Date Difference Calculator do?", "a": "This tool calculates the exact number of days, weeks, months, and years between any two dates." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited calculations." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "time-duration-calculator": {
@@ -593,7 +850,11 @@
     "meta_title": "Free Time Duration Calculator — Sohelix Tools",
     "meta_description": "Calculate duration between two times. Free tool.",
     "faqs": [
-      { "q": "Is it free?", "a": "Yes." }
+      { "q": "What does the Time Duration Calculator do?", "a": "This tool calculates the exact duration between two times in hours, minutes, and seconds." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "profit-margin-calculator": {
@@ -602,7 +863,11 @@
     "meta_title": "Free Profit Margin Calculator — Sohelix Tools",
     "meta_description": "Calculate profit margins and markups. Free calculator.",
     "faqs": [
-      { "q": "Margin vs markup?", "a": "Margin is based on selling price, markup on cost." }
+      { "q": "What does the Profit Margin Calculator do?", "a": "This tool calculates profit margin and markup percentages based on cost price and selling price, helping you understand your profitability." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Your financial data stays private." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "tip-calculator": {
@@ -611,7 +876,11 @@
     "meta_title": "Free Tip Calculator — Sohelix Tools",
     "meta_description": "Calculate tips and split bills easily. Free tool.",
     "faqs": [
-      { "q": "Can I split the bill?", "a": "Yes, between any number of people." }
+      { "q": "What does the Tip Calculator do?", "a": "This tool calculates tip amounts based on bill total and tip percentage, and can split the bill evenly between any number of people." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No account needed." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "average-calculator": {
@@ -620,7 +889,11 @@
     "meta_title": "Free Average Calculator — Sohelix Tools",
     "meta_description": "Calculate mean, median, sum, min, max of numbers.",
     "faqs": [
-      { "q": "What stats does it show?", "a": "Mean, median, sum, min, max, and count." }
+      { "q": "What does the Average Calculator do?", "a": "This tool calculates the mean, median, sum, minimum, maximum, and count of any set of numbers you enter." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "percentage-increase-calculator": {
@@ -629,7 +902,11 @@
     "meta_title": "Free Percentage Increase Calculator — Sohelix Tools",
     "meta_description": "Calculate percentage increase between two values.",
     "faqs": [
-      { "q": "Does it handle decreases?", "a": "Yes, it shows negative percentages too." }
+      { "q": "What does the Percentage Increase Calculator do?", "a": "This tool calculates the percentage increase from one value to another, showing the difference and the percentage change." },
+      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited calculations." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   },
   "percentage-decrease-calculator": {
@@ -638,7 +915,11 @@
     "meta_title": "Free Percentage Decrease Calculator — Sohelix Tools",
     "meta_description": "Calculate the result after a percentage decrease.",
     "faqs": [
-      { "q": "Is it free?", "a": "Yes, completely free." }
+      { "q": "What does the Percentage Decrease Calculator do?", "a": "This tool calculates the resulting value after applying a percentage decrease to an original number, showing the amount decreased and the final value." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no restrictions." },
+      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   }
 }
