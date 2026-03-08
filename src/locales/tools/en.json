@@ -1,0 +1,644 @@
+{
+  "image-compressor": {
+    "title": "Image Compressor",
+    "description": "Compress images online for free without losing quality.",
+    "meta_title": "Free Image Compressor Online — Sohelix Tools",
+    "meta_description": "Reduce image file size instantly with this free browser-based image compressor. No uploads required.",
+    "faqs": [
+      { "q": "Is this tool free?", "a": "Yes, completely free." },
+      { "q": "Does it upload files?", "a": "No. Everything runs locally in your browser." }
+    ]
+  },
+  "image-resizer": {
+    "title": "Image Resizer",
+    "description": "Resize images to any dimension instantly.",
+    "meta_title": "Free Image Resizer Online — Sohelix Tools",
+    "meta_description": "Resize images to any dimension instantly. Free browser-based tool, no uploads.",
+    "faqs": [
+      { "q": "Is this tool free?", "a": "Yes, completely free." },
+      { "q": "Does it upload files?", "a": "No. Everything runs locally." }
+    ]
+  },
+  "image-cropper": {
+    "title": "Image Cropper",
+    "description": "Crop images to any size online.",
+    "meta_title": "Free Image Cropper Online — Sohelix Tools",
+    "meta_description": "Crop images to any size online. Free and runs in your browser.",
+    "faqs": [
+      { "q": "Is this tool free?", "a": "Yes, completely free." }
+    ]
+  },
+  "png-to-jpg": {
+    "title": "PNG to JPG Converter",
+    "description": "Convert PNG images to JPG format instantly.",
+    "meta_title": "Free PNG to JPG Converter Online — Sohelix Tools",
+    "meta_description": "Convert PNG images to JPG format instantly. Free online converter.",
+    "faqs": [
+      { "q": "Is this tool free?", "a": "Yes." }
+    ]
+  },
+  "jpg-to-png": {
+    "title": "JPG to PNG Converter",
+    "description": "Convert JPG images to PNG format with transparency support.",
+    "meta_title": "Free JPG to PNG Converter Online — Sohelix Tools",
+    "meta_description": "Convert JPG to PNG with transparency support. Free online tool.",
+    "faqs": [
+      { "q": "Will it support transparency?", "a": "Yes, PNG supports transparency." }
+    ]
+  },
+  "webp-to-jpg": {
+    "title": "WebP to JPG Converter",
+    "description": "Convert WebP images to JPG format.",
+    "meta_title": "Free WebP to JPG Converter Online — Sohelix Tools",
+    "meta_description": "Convert WebP images to JPG format. Free online converter.",
+    "faqs": [
+      { "q": "Is this tool free?", "a": "Yes." }
+    ]
+  },
+  "jpg-to-webp": {
+    "title": "JPG to WebP Converter",
+    "description": "Convert JPG images to WebP for better web performance.",
+    "meta_title": "Free JPG to WebP Converter Online — Sohelix Tools",
+    "meta_description": "Convert JPG to WebP for better web performance. Free online tool.",
+    "faqs": [
+      { "q": "Why use WebP?", "a": "WebP offers better compression for the web." }
+    ]
+  },
+  "image-to-base64": {
+    "title": "Image to Base64",
+    "description": "Convert images to Base64 encoded strings.",
+    "meta_title": "Free Image to Base64 Converter — Sohelix Tools",
+    "meta_description": "Convert images to Base64 encoded strings. Free browser-based tool.",
+    "faqs": [
+      { "q": "What is Base64?", "a": "A text encoding format for binary data." }
+    ]
+  },
+  "base64-to-image": {
+    "title": "Base64 to Image",
+    "description": "Convert Base64 strings back to images.",
+    "meta_title": "Free Base64 to Image Converter — Sohelix Tools",
+    "meta_description": "Convert Base64 strings back to downloadable images. Free tool.",
+    "faqs": [
+      { "q": "Is this tool free?", "a": "Yes." }
+    ]
+  },
+  "image-color-picker": {
+    "title": "Image Color Picker",
+    "description": "Pick any color from an uploaded image.",
+    "meta_title": "Free Image Color Picker Online — Sohelix Tools",
+    "meta_description": "Pick any color from an uploaded image. Get HEX, RGB, and HSL values.",
+    "faqs": [
+      { "q": "What formats are supported?", "a": "HEX, RGB, and HSL." }
+    ]
+  },
+  "image-watermark": {
+    "title": "Image Watermark Tool",
+    "description": "Add text watermarks to your images online.",
+    "meta_title": "Free Image Watermark Tool — Sohelix Tools",
+    "meta_description": "Add text watermarks to images online. Free browser-based tool.",
+    "faqs": [
+      { "q": "Can I customize the watermark?", "a": "Yes, you can change text, size, and opacity." },
+      { "q": "Does it upload my image?", "a": "No, everything runs locally in your browser." }
+    ]
+  },
+  "image-blur": {
+    "title": "Image Blur Tool",
+    "description": "Apply blur effect to images online.",
+    "meta_title": "Free Image Blur Tool Online — Sohelix Tools",
+    "meta_description": "Apply blur effects to images online. Adjust blur radius freely.",
+    "faqs": [
+      { "q": "Can I control the blur amount?", "a": "Yes, use the radius slider." }
+    ]
+  },
+  "image-rotate": {
+    "title": "Image Rotate Tool",
+    "description": "Rotate images by any angle online.",
+    "meta_title": "Free Image Rotate Tool — Sohelix Tools",
+    "meta_description": "Rotate images by 90°, 180°, or 270° online. Free tool.",
+    "faqs": [
+      { "q": "What angles are supported?", "a": "90°, 180°, and 270°." }
+    ]
+  },
+  "image-flip": {
+    "title": "Image Flip Tool",
+    "description": "Flip images horizontally or vertically.",
+    "meta_title": "Free Image Flip Tool — Sohelix Tools",
+    "meta_description": "Flip images horizontally or vertically online. Free tool.",
+    "faqs": [
+      { "q": "Can I flip both ways?", "a": "Yes, horizontal and vertical." }
+    ]
+  },
+  "images-to-pdf": {
+    "title": "Images to PDF",
+    "description": "Combine multiple images into a single PDF.",
+    "meta_title": "Free Images to PDF Converter — Sohelix Tools",
+    "meta_description": "Combine multiple images into a single PDF file. Free online tool.",
+    "faqs": [
+      { "q": "How many images?", "a": "As many as you want." }
+    ]
+  },
+  "pdf-to-jpg": {
+    "title": "PDF to JPG",
+    "description": "Convert PDF pages to JPG images.",
+    "meta_title": "Free PDF to JPG Converter — Sohelix Tools",
+    "meta_description": "Convert PDF pages to high-quality JPG images. Free online tool.",
+    "faqs": [
+      { "q": "Is quality preserved?", "a": "Yes, high quality output." }
+    ]
+  },
+  "pdf-page-counter": {
+    "title": "PDF Page Counter",
+    "description": "Count pages in a PDF file instantly.",
+    "meta_title": "Free PDF Page Counter — Sohelix Tools",
+    "meta_description": "Count the number of pages in any PDF file instantly.",
+    "faqs": [
+      { "q": "Is it accurate?", "a": "Yes, 100% accurate." }
+    ]
+  },
+  "pdf-metadata-viewer": {
+    "title": "PDF Metadata Viewer",
+    "description": "View metadata of PDF files.",
+    "meta_title": "Free PDF Metadata Viewer — Sohelix Tools",
+    "meta_description": "View author, title, creation date and other PDF metadata.",
+    "faqs": [
+      { "q": "What metadata is shown?", "a": "Author, title, creation date, etc." }
+    ]
+  },
+  "pdf-reader": {
+    "title": "PDF Reader",
+    "description": "Read PDF files directly in your browser.",
+    "meta_title": "Free Online PDF Reader — Sohelix Tools",
+    "meta_description": "Read PDF files directly in your browser. No downloads needed.",
+    "faqs": [
+      { "q": "Is it free?", "a": "Yes." }
+    ]
+  },
+  "pdf-page-rotator": {
+    "title": "PDF Page Rotator",
+    "description": "Rotate PDF pages easily.",
+    "meta_title": "Free PDF Page Rotator — Sohelix Tools",
+    "meta_description": "Rotate individual PDF pages easily. Free browser-based tool.",
+    "faqs": [
+      { "q": "Can I rotate individual pages?", "a": "Yes." }
+    ]
+  },
+  "word-counter": {
+    "title": "Word Counter",
+    "description": "Count words, characters, sentences and paragraphs.",
+    "meta_title": "Free Word Counter Online — Sohelix Tools",
+    "meta_description": "Count words, characters, sentences and paragraphs instantly.",
+    "faqs": [
+      { "q": "Is this tool free?", "a": "Yes." }
+    ]
+  },
+  "character-counter": {
+    "title": "Character Counter",
+    "description": "Count characters with and without spaces.",
+    "meta_title": "Free Character Counter Online — Sohelix Tools",
+    "meta_description": "Count characters with and without spaces. Track character limits.",
+    "faqs": [
+      { "q": "Does it count spaces?", "a": "It shows both with and without spaces." }
+    ]
+  },
+  "text-case-converter": {
+    "title": "Text Case Converter",
+    "description": "Convert text to uppercase, lowercase, title case and more.",
+    "meta_title": "Free Text Case Converter — Sohelix Tools",
+    "meta_description": "Convert text to uppercase, lowercase, title case and more.",
+    "faqs": [
+      { "q": "What cases are supported?", "a": "Upper, lower, title, sentence, and more." }
+    ]
+  },
+  "remove-duplicate-lines": {
+    "title": "Remove Duplicate Lines",
+    "description": "Remove duplicate lines from text.",
+    "meta_title": "Free Remove Duplicate Lines Tool — Sohelix Tools",
+    "meta_description": "Remove duplicate lines from text instantly. Free online tool.",
+    "faqs": [
+      { "q": "Is it case-sensitive?", "a": "You can toggle case sensitivity." }
+    ]
+  },
+  "text-sorter": {
+    "title": "Text Sorter",
+    "description": "Sort lines of text alphabetically or numerically.",
+    "meta_title": "Free Text Sorter Online — Sohelix Tools",
+    "meta_description": "Sort lines of text alphabetically or numerically. Free tool.",
+    "faqs": [
+      { "q": "Can I sort numerically?", "a": "Yes." }
+    ]
+  },
+  "lorem-ipsum-generator": {
+    "title": "Lorem Ipsum Generator",
+    "description": "Generate placeholder Lorem Ipsum text.",
+    "meta_title": "Free Lorem Ipsum Generator — Sohelix Tools",
+    "meta_description": "Generate placeholder Lorem Ipsum text for your designs.",
+    "faqs": [
+      { "q": "What is Lorem Ipsum?", "a": "Standard placeholder text used in design." }
+    ]
+  },
+  "random-text-generator": {
+    "title": "Random Text Generator",
+    "description": "Generate random text strings.",
+    "meta_title": "Free Random Text Generator — Sohelix Tools",
+    "meta_description": "Generate random text strings for testing. Free tool.",
+    "faqs": [
+      { "q": "Is it truly random?", "a": "Yes, using browser crypto API." }
+    ]
+  },
+  "text-compare": {
+    "title": "Text Compare Tool",
+    "description": "Compare two texts side by side and find differences.",
+    "meta_title": "Free Text Compare Tool — Sohelix Tools",
+    "meta_description": "Compare two texts side by side and find differences highlighted.",
+    "faqs": [
+      { "q": "Does it show line-by-line diff?", "a": "Yes, changed lines are highlighted." }
+    ]
+  },
+  "text-reverse": {
+    "title": "Text Reverse Tool",
+    "description": "Reverse text characters or words instantly.",
+    "meta_title": "Free Text Reverse Tool — Sohelix Tools",
+    "meta_description": "Reverse text characters or words instantly. Free online tool.",
+    "faqs": [
+      { "q": "Can I reverse words too?", "a": "Yes, both character and word reversal." }
+    ]
+  },
+  "remove-extra-spaces": {
+    "title": "Remove Extra Spaces",
+    "description": "Remove extra spaces, tabs, and blank lines from text.",
+    "meta_title": "Free Remove Extra Spaces Tool — Sohelix Tools",
+    "meta_description": "Remove extra spaces, tabs, and blank lines from text.",
+    "faqs": [
+      { "q": "Does it remove all spaces?", "a": "No, only extra/duplicate spaces." }
+    ]
+  },
+  "random-word-generator": {
+    "title": "Random Word Generator",
+    "description": "Generate random words for brainstorming or testing.",
+    "meta_title": "Free Random Word Generator — Sohelix Tools",
+    "meta_description": "Generate random words for brainstorming or testing.",
+    "faqs": [
+      { "q": "Are the words real?", "a": "Yes, they are real English words." }
+    ]
+  },
+  "text-to-slug": {
+    "title": "Text to Slug Converter",
+    "description": "Convert any text to a URL-friendly slug.",
+    "meta_title": "Free Text to Slug Converter — Sohelix Tools",
+    "meta_description": "Convert any text to a URL-friendly slug instantly.",
+    "faqs": [
+      { "q": "How is it different from Slug Generator?", "a": "Same concept, focused on text-to-slug conversion." }
+    ]
+  },
+  "json-formatter": {
+    "title": "JSON Formatter",
+    "description": "Format and beautify JSON data.",
+    "meta_title": "Free JSON Formatter Online — Sohelix Tools",
+    "meta_description": "Format and beautify JSON data. Free online JSON formatter.",
+    "faqs": [
+      { "q": "Does it validate JSON?", "a": "Yes, it shows errors too." }
+    ]
+  },
+  "json-validator": {
+    "title": "JSON Validator",
+    "description": "Validate JSON data and find errors.",
+    "meta_title": "Free JSON Validator Online — Sohelix Tools",
+    "meta_description": "Validate JSON data and find syntax errors instantly.",
+    "faqs": [
+      { "q": "What errors does it detect?", "a": "Syntax errors, missing brackets, etc." }
+    ]
+  },
+  "base64-encoder": {
+    "title": "Base64 Encoder",
+    "description": "Encode text to Base64 format.",
+    "meta_title": "Free Base64 Encoder — Sohelix Tools",
+    "meta_description": "Encode text to Base64 format. Free online tool.",
+    "faqs": [
+      { "q": "Is Base64 encryption?", "a": "No, it's encoding, not encryption." }
+    ]
+  },
+  "base64-decoder": {
+    "title": "Base64 Decoder",
+    "description": "Decode Base64 strings to text.",
+    "meta_title": "Free Base64 Decoder — Sohelix Tools",
+    "meta_description": "Decode Base64 strings to readable text. Free tool.",
+    "faqs": [
+      { "q": "Is it free?", "a": "Yes." }
+    ]
+  },
+  "url-encoder": {
+    "title": "URL Encoder",
+    "description": "Encode URLs for safe transmission.",
+    "meta_title": "Free URL Encoder — Sohelix Tools",
+    "meta_description": "Encode URLs for safe transmission. Free online tool.",
+    "faqs": [
+      { "q": "When do I need this?", "a": "When passing special characters in URLs." }
+    ]
+  },
+  "url-decoder": {
+    "title": "URL Decoder",
+    "description": "Decode encoded URLs back to readable text.",
+    "meta_title": "Free URL Decoder — Sohelix Tools",
+    "meta_description": "Decode encoded URLs back to readable text. Free tool.",
+    "faqs": [
+      { "q": "Is it free?", "a": "Yes." }
+    ]
+  },
+  "uuid-generator": {
+    "title": "UUID Generator",
+    "description": "Generate random UUIDs (v4).",
+    "meta_title": "Free UUID Generator — Sohelix Tools",
+    "meta_description": "Generate random UUID v4 identifiers. Free online tool.",
+    "faqs": [
+      { "q": "Are they unique?", "a": "Yes, statistically guaranteed unique." }
+    ]
+  },
+  "regex-tester": {
+    "title": "Regex Tester",
+    "description": "Test and debug regular expressions.",
+    "meta_title": "Free Regex Tester — Sohelix Tools",
+    "meta_description": "Test and debug regular expressions with live matching.",
+    "faqs": [
+      { "q": "What flavors are supported?", "a": "JavaScript regex flavor." }
+    ]
+  },
+  "csv-to-json": {
+    "title": "CSV to JSON Converter",
+    "description": "Convert CSV data to JSON format.",
+    "meta_title": "Free CSV to JSON Converter — Sohelix Tools",
+    "meta_description": "Convert CSV data to JSON format instantly. Free tool.",
+    "faqs": [
+      { "q": "Does it handle headers?", "a": "Yes, the first row is used as keys." }
+    ]
+  },
+  "json-to-csv": {
+    "title": "JSON to CSV Converter",
+    "description": "Convert JSON arrays to CSV format.",
+    "meta_title": "Free JSON to CSV Converter — Sohelix Tools",
+    "meta_description": "Convert JSON arrays to CSV format. Free online tool.",
+    "faqs": [
+      { "q": "What JSON format?", "a": "Array of objects with consistent keys." }
+    ]
+  },
+  "html-minifier": {
+    "title": "HTML Minifier",
+    "description": "Minify HTML code by removing whitespace and comments.",
+    "meta_title": "Free HTML Minifier — Sohelix Tools",
+    "meta_description": "Minify HTML code by removing whitespace and comments.",
+    "faqs": [
+      { "q": "Does it break functionality?", "a": "No, only whitespace and comments are removed." }
+    ]
+  },
+  "css-minifier": {
+    "title": "CSS Minifier",
+    "description": "Minify CSS code to reduce file size.",
+    "meta_title": "Free CSS Minifier — Sohelix Tools",
+    "meta_description": "Minify CSS code to reduce file size. Free online tool.",
+    "faqs": [
+      { "q": "Does it remove comments?", "a": "Yes, all comments are removed." }
+    ]
+  },
+  "js-minifier": {
+    "title": "JavaScript Minifier",
+    "description": "Minify JavaScript code to reduce file size.",
+    "meta_title": "Free JavaScript Minifier — Sohelix Tools",
+    "meta_description": "Minify JavaScript code to reduce file size. Free tool.",
+    "faqs": [
+      { "q": "Does it remove comments?", "a": "Yes, single-line and multi-line comments." }
+    ]
+  },
+  "color-code-converter": {
+    "title": "Color Code Converter",
+    "description": "Convert between HEX, RGB, and HSL color formats.",
+    "meta_title": "Free Color Code Converter — Sohelix Tools",
+    "meta_description": "Convert between HEX, RGB, and HSL color formats.",
+    "faqs": [
+      { "q": "What formats are supported?", "a": "HEX, RGB, and HSL." }
+    ]
+  },
+  "meta-tag-generator": {
+    "title": "Meta Tag Generator",
+    "description": "Generate HTML meta tags for SEO.",
+    "meta_title": "Free Meta Tag Generator — Sohelix Tools",
+    "meta_description": "Generate HTML meta tags for SEO. Free online tool.",
+    "faqs": [
+      { "q": "What tags are included?", "a": "Title, description, OG, Twitter cards." }
+    ]
+  },
+  "robots-txt-generator": {
+    "title": "Robots.txt Generator",
+    "description": "Generate robots.txt file for your website.",
+    "meta_title": "Free Robots.txt Generator — Sohelix Tools",
+    "meta_description": "Generate robots.txt file for your website. Free tool.",
+    "faqs": [
+      { "q": "What is robots.txt?", "a": "A file that tells search engines what to crawl." }
+    ]
+  },
+  "sitemap-xml-generator": {
+    "title": "Sitemap XML Generator",
+    "description": "Generate XML sitemaps for your website.",
+    "meta_title": "Free Sitemap XML Generator — Sohelix Tools",
+    "meta_description": "Generate XML sitemaps for your website. Free tool.",
+    "faqs": [
+      { "q": "What is a sitemap?", "a": "An XML file listing all pages for search engines." }
+    ]
+  },
+  "slug-generator": {
+    "title": "Slug Generator",
+    "description": "Generate URL-friendly slugs from text.",
+    "meta_title": "Free Slug Generator — Sohelix Tools",
+    "meta_description": "Generate URL-friendly slugs from text. Free online tool.",
+    "faqs": [
+      { "q": "What is a slug?", "a": "A URL-friendly version of a title." }
+    ]
+  },
+  "serp-preview-tool": {
+    "title": "SERP Preview Tool",
+    "description": "Preview how your page appears in Google search results.",
+    "meta_title": "Free SERP Preview Tool — Sohelix Tools",
+    "meta_description": "Preview how your page appears in Google search results.",
+    "faqs": [
+      { "q": "Is it accurate?", "a": "It closely mimics Google's display." }
+    ]
+  },
+  "qr-code-generator": {
+    "title": "QR Code Generator",
+    "description": "Generate QR codes for any text or URL.",
+    "meta_title": "Free QR Code Generator — Sohelix Tools",
+    "meta_description": "Generate QR codes for any text or URL. Download as PNG.",
+    "faqs": [
+      { "q": "What formats?", "a": "PNG download." }
+    ]
+  },
+  "password-generator": {
+    "title": "Password Generator",
+    "description": "Generate strong random passwords.",
+    "meta_title": "Free Password Generator — Sohelix Tools",
+    "meta_description": "Generate strong random passwords with customizable options.",
+    "faqs": [
+      { "q": "Are they secure?", "a": "Yes, generated using crypto API." }
+    ]
+  },
+  "random-number-generator": {
+    "title": "Random Number Generator",
+    "description": "Generate random numbers within a range.",
+    "meta_title": "Free Random Number Generator — Sohelix Tools",
+    "meta_description": "Generate random numbers within a range. Free tool.",
+    "faqs": [
+      { "q": "Is it truly random?", "a": "Yes, using crypto API." }
+    ]
+  },
+  "timestamp-converter": {
+    "title": "Timestamp Converter",
+    "description": "Convert Unix timestamps to human-readable dates.",
+    "meta_title": "Free Timestamp Converter — Sohelix Tools",
+    "meta_description": "Convert Unix timestamps to human-readable dates.",
+    "faqs": [
+      { "q": "What formats?", "a": "Unix seconds and milliseconds." }
+    ]
+  },
+  "dice-roller": {
+    "title": "Dice Roller",
+    "description": "Roll virtual dice with customizable sides and count.",
+    "meta_title": "Free Dice Roller Online — Sohelix Tools",
+    "meta_description": "Roll virtual dice with customizable sides and count.",
+    "faqs": [
+      { "q": "Is it random?", "a": "Yes, using cryptographic randomness." }
+    ]
+  },
+  "coin-flip": {
+    "title": "Coin Flip Generator",
+    "description": "Flip a virtual coin and track results.",
+    "meta_title": "Free Coin Flip Generator — Sohelix Tools",
+    "meta_description": "Flip a virtual coin with fair 50/50 probability.",
+    "faqs": [
+      { "q": "Is it fair?", "a": "Yes, 50/50 probability using crypto API." }
+    ]
+  },
+  "random-picker": {
+    "title": "Random Picker",
+    "description": "Randomly pick items from a list.",
+    "meta_title": "Free Random Picker — Sohelix Tools",
+    "meta_description": "Randomly pick items from a list. Free online tool.",
+    "faqs": [
+      { "q": "Is the selection random?", "a": "Yes, using cryptographic randomness." }
+    ]
+  },
+  "age-calculator": {
+    "title": "Age Calculator",
+    "description": "Calculate your exact age in years, months and days.",
+    "meta_title": "Free Age Calculator — Sohelix Tools",
+    "meta_description": "Calculate your exact age in years, months and days.",
+    "faqs": [
+      { "q": "Is it accurate?", "a": "Yes, down to the day." }
+    ]
+  },
+  "bmi-calculator": {
+    "title": "BMI Calculator",
+    "description": "Calculate your Body Mass Index.",
+    "meta_title": "Free BMI Calculator — Sohelix Tools",
+    "meta_description": "Calculate your Body Mass Index based on weight and height.",
+    "faqs": [
+      { "q": "What is BMI?", "a": "Body Mass Index measures body fat based on weight and height." }
+    ]
+  },
+  "percentage-calculator": {
+    "title": "Percentage Calculator",
+    "description": "Calculate percentages easily.",
+    "meta_title": "Free Percentage Calculator — Sohelix Tools",
+    "meta_description": "Calculate percentages easily. Free online calculator.",
+    "faqs": [
+      { "q": "Is it free?", "a": "Yes." }
+    ]
+  },
+  "loan-emi-calculator": {
+    "title": "Loan EMI Calculator",
+    "description": "Calculate monthly loan EMI payments.",
+    "meta_title": "Free Loan EMI Calculator — Sohelix Tools",
+    "meta_description": "Calculate monthly loan EMI payments and view schedule.",
+    "faqs": [
+      { "q": "What is EMI?", "a": "Equated Monthly Installment." }
+    ]
+  },
+  "interest-calculator": {
+    "title": "Interest Calculator",
+    "description": "Calculate simple and compound interest.",
+    "meta_title": "Free Interest Calculator — Sohelix Tools",
+    "meta_description": "Calculate simple and compound interest. Free tool.",
+    "faqs": [
+      { "q": "Simple vs compound?", "a": "Compound interest earns interest on interest." }
+    ]
+  },
+  "discount-calculator": {
+    "title": "Discount Calculator",
+    "description": "Calculate discount amounts and final prices.",
+    "meta_title": "Free Discount Calculator — Sohelix Tools",
+    "meta_description": "Calculate discount amounts and final prices instantly.",
+    "faqs": [
+      { "q": "Is it free?", "a": "Yes." }
+    ]
+  },
+  "date-difference-calculator": {
+    "title": "Date Difference Calculator",
+    "description": "Calculate days between two dates.",
+    "meta_title": "Free Date Difference Calculator — Sohelix Tools",
+    "meta_description": "Calculate the number of days between two dates.",
+    "faqs": [
+      { "q": "Does it count weekends?", "a": "Yes, all days are counted." }
+    ]
+  },
+  "time-duration-calculator": {
+    "title": "Time Duration Calculator",
+    "description": "Calculate duration between two times.",
+    "meta_title": "Free Time Duration Calculator — Sohelix Tools",
+    "meta_description": "Calculate duration between two times. Free tool.",
+    "faqs": [
+      { "q": "Is it free?", "a": "Yes." }
+    ]
+  },
+  "profit-margin-calculator": {
+    "title": "Profit Margin Calculator",
+    "description": "Calculate profit margins and markups.",
+    "meta_title": "Free Profit Margin Calculator — Sohelix Tools",
+    "meta_description": "Calculate profit margins and markups. Free calculator.",
+    "faqs": [
+      { "q": "Margin vs markup?", "a": "Margin is based on selling price, markup on cost." }
+    ]
+  },
+  "tip-calculator": {
+    "title": "Tip Calculator",
+    "description": "Calculate tips and split bills.",
+    "meta_title": "Free Tip Calculator — Sohelix Tools",
+    "meta_description": "Calculate tips and split bills easily. Free tool.",
+    "faqs": [
+      { "q": "Can I split the bill?", "a": "Yes, between any number of people." }
+    ]
+  },
+  "average-calculator": {
+    "title": "Average Calculator",
+    "description": "Calculate the average, median, min, and max of a set of numbers.",
+    "meta_title": "Free Average Calculator — Sohelix Tools",
+    "meta_description": "Calculate mean, median, sum, min, max of numbers.",
+    "faqs": [
+      { "q": "What stats does it show?", "a": "Mean, median, sum, min, max, and count." }
+    ]
+  },
+  "percentage-increase-calculator": {
+    "title": "Percentage Increase Calculator",
+    "description": "Calculate the percentage increase between two values.",
+    "meta_title": "Free Percentage Increase Calculator — Sohelix Tools",
+    "meta_description": "Calculate percentage increase between two values.",
+    "faqs": [
+      { "q": "Does it handle decreases?", "a": "Yes, it shows negative percentages too." }
+    ]
+  },
+  "percentage-decrease-calculator": {
+    "title": "Percentage Decrease Calculator",
+    "description": "Calculate the result after a percentage decrease.",
+    "meta_title": "Free Percentage Decrease Calculator — Sohelix Tools",
+    "meta_description": "Calculate the result after a percentage decrease.",
+    "faqs": [
+      { "q": "Is it free?", "a": "Yes, completely free." }
+    ]
+  }
+}
