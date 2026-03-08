@@ -32,7 +32,8 @@ const ColorPaletteGeneratorTool = () => {
   const extractColors = async () => {
     if (!imgRef.current) return;
     try {
-      const ColorThief = (await import("colorthief")).default;
+      const mod = await import("colorthief");
+      const ColorThief = (mod as any).default || mod;
       const ct = new ColorThief();
 
       // Ensure image is loaded
