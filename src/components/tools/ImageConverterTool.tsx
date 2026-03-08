@@ -1,24 +1,29 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "react-router-dom";
+import { Download } from "lucide-react";
+import FileUploadZone from "@/components/FileUploadZone";
+import { ComparisonPreview } from "@/components/ResultPreview";
 
-const formatMap: Record<string, { from: string; to: string; mime: string }> = {
-  "png-to-jpg": { from: "PNG", to: "JPG", mime: "image/jpeg" },
-  "jpg-to-png": { from: "JPG", to: "PNG", mime: "image/png" },
-  "webp-to-jpg": { from: "WebP", to: "JPG", mime: "image/jpeg" },
-  "jpg-to-webp": { from: "JPG", to: "WebP", mime: "image/webp" },
+const formatMap: Record<string, { from: string; to: string; mime: string; ext: string }> = {
+  "png-to-jpg": { from: "PNG", to: "JPG", mime: "image/jpeg", ext: "jpg" },
+  "jpg-to-png": { from: "JPG", to: "PNG", mime: "image/png", ext: "png" },
+  "webp-to-jpg": { from: "WebP", to: "JPG", mime: "image/jpeg", ext: "jpg" },
+  "jpg-to-webp": { from: "JPG", to: "WebP", mime: "image/webp", ext: "webp" },
 };
 
 const ImageConverterTool = () => {
   const location = useLocation();
   const slug = location.pathname.split("/").pop() || "";
-  const fmt = formatMap[slug] || { from: "Image", to: "Image", mime: "image/png" };
+  const fmt = formatMap[slug] || { from: "Image", to: "Image", mime: "image/png", ext: "png" };
+  const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState("");
   const [result, setResult] = useState("");
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
-    if (f) { setPreview(URL.createObjectURL(f)); setResult(""); }
+  const handleFiles = (files: File[]) => {
+    const f = files[0];
+    if (f) { setFile(f); setPreview(URL.createObjectURL(f)); setResult(""); }
+    else { setFile(null); setPreview(""); setResult(""); }
   };
 
   const convert = () => {
@@ -34,25 +39,26 @@ const ImageConverterTool = () => {
     img.src = preview;
   };
 
-  const download = () => {
-    const ext = fmt.to.toLowerCase();
-    const a = document.createElement("a"); a.href = result; a.download = `converted.${ext}`; a.click();
-  };
+  const download = () => { const a = document.createElement("a"); a.href = result; a.download = `converted.${fmt.ext}`; a.click(); };
 
   return (
-    <div className="space-y-4">
-      <p className="text-sm text-muted-foreground">Convert {fmt.from} to {fmt.to} format</p>
-      <input type="file" accept="image/*" onChange={handleFile} className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary/10 file:text-primary file:font-medium" />
-      {preview && (
+    <div className="space-y-5">
+      {!file ? (
+        <FileUploadZone accept="image/*" onFiles={handleFiles} formats={`${fmt.from} • PNG • JPG • WEBP`} label={`Drag & drop your ${fmt.from} image here`} />
+      ) : (
         <>
-          <img src={preview} alt="Preview" className="rounded-lg border border-border max-h-48 w-full object-contain" />
-          <Button onClick={convert} className="w-full">Convert to {fmt.to}</Button>
-          {result && (
+          <Button onClick={convert} className="w-full h-11 rounded-xl">Convert to {fmt.to}</Button>
+          {result ? (
             <>
-              <p className="text-sm text-muted-foreground">✅ Conversion complete!</p>
-              <Button onClick={download} variant="outline" className="w-full">Download {fmt.to} File</Button>
+              <ComparisonPreview originalSrc={preview} originalLabel={`Original (${fmt.from})`} processedSrc={result} processedLabel={`Converted (${fmt.to})`} />
+              <Button onClick={download} variant="outline" className="w-full h-11 rounded-xl gap-2"><Download className="h-4 w-4" /> Download {fmt.to} File</Button>
             </>
+          ) : (
+            <div className="rounded-2xl border border-border p-3">
+              <img src={preview} alt="Preview" className="rounded-xl w-full max-h-64 object-contain" />
+            </div>
           )}
+          <Button variant="ghost" size="sm" className="w-full text-muted-foreground" onClick={() => handleFiles([])}>Upload a different image</Button>
         </>
       )}
     </div>

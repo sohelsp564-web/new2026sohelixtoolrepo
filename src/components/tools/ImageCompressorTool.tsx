@@ -3,19 +3,22 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import imageCompression from "browser-image-compression";
 import { toast } from "@/hooks/use-toast";
+import FileUploadZone from "@/components/FileUploadZone";
+import { ComparisonPreview } from "@/components/ResultPreview";
+import { Download } from "lucide-react";
 
 const ImageCompressorTool = () => {
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState("");
-  const [compressed, setCompressed] = useState<Blob | null>(null);
   const [compressedUrl, setCompressedUrl] = useState("");
   const [quality, setQuality] = useState([80]);
   const [loading, setLoading] = useState(false);
   const [stats, setStats] = useState({ original: 0, compressed: 0 });
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
-    if (f) { setFile(f); setPreview(URL.createObjectURL(f)); setCompressed(null); setCompressedUrl(""); }
+  const handleFiles = (files: File[]) => {
+    const f = files[0];
+    if (f) { setFile(f); setPreview(URL.createObjectURL(f)); setCompressedUrl(""); }
+    else { setFile(null); setPreview(""); setCompressedUrl(""); }
   };
 
   const compress = useCallback(async () => {
@@ -23,9 +26,7 @@ const ImageCompressorTool = () => {
     setLoading(true);
     try {
       const targetSizeMB = Math.max(0.01, (quality[0] / 100) * (file.size / 1024 / 1024));
-      const opts = { maxSizeMB: targetSizeMB, useWebWorker: true, maxWidthOrHeight: 4096 };
-      const out = await imageCompression(file, opts);
-      setCompressed(out);
+      const out = await imageCompression(file, { maxSizeMB: targetSizeMB, useWebWorker: true, maxWidthOrHeight: 4096 });
       setCompressedUrl(URL.createObjectURL(out));
       setStats({ original: file.size, compressed: out.size });
     } catch (err) {
@@ -42,28 +43,34 @@ const ImageCompressorTool = () => {
   const fmt = (b: number) => b > 1024 * 1024 ? `${(b / 1024 / 1024).toFixed(2)} MB` : `${(b / 1024).toFixed(1)} KB`;
 
   return (
-    <div className="space-y-4">
-      <input type="file" accept="image/*" onChange={handleFile} className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary/10 file:text-primary file:font-medium hover:file:bg-primary/20" />
-      {preview && (
+    <div className="space-y-5">
+      {!file ? (
+        <FileUploadZone accept="image/*" onFiles={handleFiles} formats="PNG • JPG • WEBP • GIF" label="Drag & drop your image here" />
+      ) : (
         <>
-          <div className="space-y-2">
+          <div className="space-y-3">
             <label className="text-sm font-medium">Quality: {quality[0]}%</label>
             <Slider value={quality} onValueChange={setQuality} min={10} max={100} step={5} />
           </div>
-          <Button onClick={compress} disabled={loading} className="w-full">{loading ? "Compressing..." : "Compress Image"}</Button>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div>
-              <p className="text-xs text-muted-foreground mb-1">Original ({fmt(file?.size || 0)})</p>
-              <img src={preview} alt="Original" className="rounded-lg border border-border max-h-64 w-full object-contain" />
+          <Button onClick={compress} disabled={loading} className="w-full h-11 rounded-xl">{loading ? "Compressing..." : "Compress Image"}</Button>
+          {compressedUrl ? (
+            <>
+              <ComparisonPreview
+                originalSrc={preview}
+                originalLabel={`Original (${fmt(stats.original)})`}
+                processedSrc={compressedUrl}
+                processedLabel={`Compressed (${fmt(stats.compressed)}) — ${((1 - stats.compressed / stats.original) * 100).toFixed(1)}% smaller`}
+              />
+              <Button onClick={download} variant="outline" className="w-full h-11 rounded-xl gap-2">
+                <Download className="h-4 w-4" /> Download Compressed Image
+              </Button>
+            </>
+          ) : (
+            <div className="rounded-2xl border border-border p-3">
+              <img src={preview} alt="Preview" className="rounded-xl w-full max-h-64 object-contain" />
             </div>
-            {compressedUrl && (
-              <div>
-                <p className="text-xs text-muted-foreground mb-1">Compressed ({fmt(stats.compressed)}) — {((1 - stats.compressed / stats.original) * 100).toFixed(1)}% smaller</p>
-                <img src={compressedUrl} alt="Compressed" className="rounded-lg border border-border max-h-64 w-full object-contain" />
-              </div>
-            )}
-          </div>
-          {compressedUrl && <Button onClick={download} variant="outline" className="w-full">Download Compressed Image</Button>}
+          )}
+          <Button variant="ghost" size="sm" className="w-full text-muted-foreground" onClick={() => handleFiles([])}>Upload a different image</Button>
         </>
       )}
     </div>
