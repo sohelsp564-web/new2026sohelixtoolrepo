@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import imageCompression from "browser-image-compression";
+import { toast } from "@/hooks/use-toast";
 
 const ImageCompressorTool = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -21,12 +22,15 @@ const ImageCompressorTool = () => {
     if (!file) return;
     setLoading(true);
     try {
-      const opts = { maxSizeMB: (quality[0] / 100) * (file.size / 1024 / 1024), useWebWorker: true, maxWidthOrHeight: 4096 };
+      const targetSizeMB = Math.max(0.01, (quality[0] / 100) * (file.size / 1024 / 1024));
+      const opts = { maxSizeMB: targetSizeMB, useWebWorker: true, maxWidthOrHeight: 4096 };
       const out = await imageCompression(file, opts);
       setCompressed(out);
       setCompressedUrl(URL.createObjectURL(out));
       setStats({ original: file.size, compressed: out.size });
-    } catch { /* ignore */ }
+    } catch (err) {
+      toast({ title: "Compression failed", description: String(err), variant: "destructive" });
+    }
     setLoading(false);
   }, [file, quality]);
 
