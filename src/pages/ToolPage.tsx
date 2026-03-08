@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -35,7 +35,7 @@ const ToolPage = () => {
     );
   }
 
-  const related = getRelatedTools(tool);
+  const related = useMemo(() => getRelatedTools(tool), [tool?.slug, tool?.categorySlug]);
 
   // Use translated content or fallback to tool data
   const title = t?.title || tool.name;
