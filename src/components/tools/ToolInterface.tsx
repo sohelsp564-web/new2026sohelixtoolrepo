@@ -143,11 +143,21 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "percentage-decrease-calculator": PercentageDecreaseTool,
 };
 
+const ToolLoadingFallback = () => (
+  <div className="flex flex-col items-center justify-center py-16 gap-3">
+    <div className="relative h-10 w-10">
+      <div className="absolute inset-0 rounded-full border-2 border-muted" />
+      <div className="absolute inset-0 rounded-full border-2 border-primary border-t-transparent animate-spin" />
+    </div>
+    <p className="text-sm font-medium text-muted-foreground">Loading Tool...</p>
+  </div>
+);
+
 const ToolInterface = ({ slug }: { slug: string }) => {
   const Component = toolMap[slug];
   if (!Component) return <p className="text-muted-foreground">Tool interface coming soon.</p>;
   return (
-    <Suspense fallback={<div className="flex items-center justify-center py-12 text-muted-foreground">Loading tool...</div>}>
+    <Suspense fallback={<ToolLoadingFallback />}>
       <Component />
     </Suspense>
   );
