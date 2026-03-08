@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getToolBySlug, getRelatedTools } from "@/data/tools";
 import ToolCard from "@/components/ToolCard";
 import ToolInterface from "@/components/tools/ToolInterface";
