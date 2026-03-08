@@ -8,6 +8,11 @@ const ImageToBase64Tool = lazy(() => import("./ImageToBase64Tool"));
 const Base64ToImageTool = lazy(() => import("./Base64ToImageTool"));
 const ColorPickerTool = lazy(() => import("./ColorPickerTool"));
 const ImagesToPdfTool = lazy(() => import("./ImagesToPdfTool"));
+const PdfToJpgTool = lazy(() => import("./PdfToJpgTool"));
+const PdfPageCounterTool = lazy(() => import("./PdfPageCounterTool"));
+const PdfMetadataViewerTool = lazy(() => import("./PdfMetadataViewerTool"));
+const PdfReaderTool = lazy(() => import("./PdfReaderTool"));
+const PdfPageRotatorTool = lazy(() => import("./PdfPageRotatorTool"));
 const WordCounterTool = lazy(() => import("./WordCounterTool"));
 const CharacterCounterTool = lazy(() => import("./CharacterCounterTool"));
 const TextCaseConverterTool = lazy(() => import("./TextCaseConverterTool"));
@@ -42,7 +47,6 @@ const DateDifferenceTool = lazy(() => import("./DateDifferenceTool"));
 const TimeDurationTool = lazy(() => import("./TimeDurationTool"));
 const ProfitMarginTool = lazy(() => import("./ProfitMarginTool"));
 const TipCalculatorTool = lazy(() => import("./TipCalculatorTool"));
-const PdfPlaceholder = lazy(() => import("./PdfPlaceholder"));
 
 const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = {
   "image-compressor": ImageCompressorTool,
@@ -56,11 +60,11 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "base64-to-image": Base64ToImageTool,
   "image-color-picker": ColorPickerTool,
   "images-to-pdf": ImagesToPdfTool,
-  "pdf-to-jpg": PdfPlaceholder,
-  "pdf-page-counter": PdfPlaceholder,
-  "pdf-metadata-viewer": PdfPlaceholder,
-  "pdf-reader": PdfPlaceholder,
-  "pdf-page-rotator": PdfPlaceholder,
+  "pdf-to-jpg": PdfToJpgTool,
+  "pdf-page-counter": PdfPageCounterTool,
+  "pdf-metadata-viewer": PdfMetadataViewerTool,
+  "pdf-reader": PdfReaderTool,
+  "pdf-page-rotator": PdfPageRotatorTool,
   "word-counter": WordCounterTool,
   "character-counter": CharacterCounterTool,
   "text-case-converter": TextCaseConverterTool,
