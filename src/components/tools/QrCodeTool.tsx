@@ -93,8 +93,9 @@ const QrCodeTool = () => {
   const download = async (ext: "png" | "svg" | "jpeg") => {
     qrRef.current?.download({ extension: ext, name: "qrcode" });
     // Save to history
-    const blob = await qrRef.current?.getRawData("png");
-    if (blob) {
+    const raw = await qrRef.current?.getRawData("png");
+    if (raw) {
+      const blob = raw instanceof Blob ? raw : new Blob([raw]);
       const reader = new FileReader();
       reader.onload = () => saveQrToHistory(getData(), reader.result as string);
       reader.readAsDataURL(blob);
