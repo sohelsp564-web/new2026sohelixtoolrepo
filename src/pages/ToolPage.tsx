@@ -1,21 +1,29 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import { ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getToolBySlug, getRelatedTools } from "@/data/tools";
 import AdSlot from "@/components/AdSlot";
 import ToolCard from "@/components/ToolCard";
+import ToolRating from "@/components/ToolRating";
+import ShareButtons from "@/components/ShareButtons";
 import ToolInterface from "@/components/tools/ToolInterface";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { useToolTranslation, SUPPORTED_LANGS, LANG_NAMES, isValidLang, type SupportedLang } from "@/hooks/useToolTranslation";
+import { trackToolVisit } from "@/hooks/useRecentTools";
 
 const ToolPage = () => {
   const { slug, lang: langParam } = useParams<{ slug: string; lang?: string }>();
   const lang: SupportedLang = langParam && isValidLang(langParam) ? langParam : "en";
   const tool = getToolBySlug(slug || "");
-
   const t = useToolTranslation(slug || "", lang);
+
+  // Track tool visit for "Recently Used" feature
+  useEffect(() => {
+    if (tool?.slug) trackToolVisit(tool.slug);
+  }, [tool?.slug]);
 
   if (!tool) {
     return (
@@ -125,8 +133,11 @@ const ToolPage = () => {
 
         {/* Title */}
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-          <h1 className="text-3xl font-bold mb-3 md:text-4xl" style={{ fontFamily: 'Space Grotesk' }}>{title}</h1>
-          <p className="text-muted-foreground mb-10 text-lg leading-relaxed max-w-2xl">{description}</p>
+          <h1 className="text-3xl font-bold mb-2 md:text-4xl" style={{ fontFamily: 'Space Grotesk' }}>{title}</h1>
+          <ToolRating />
+          <p className="text-muted-foreground mb-4 mt-3 text-lg leading-relaxed max-w-2xl">{description}</p>
+          <ShareButtons title={title} />
+          <div className="mb-10" />
         </motion.div>
 
         {/* Ad Slot 1: Top Banner */}

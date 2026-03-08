@@ -7,15 +7,17 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import ToolCard from "@/components/ToolCard";
-import { tools, categories, searchTools } from "@/data/tools";
+import { tools, categories, searchTools, getToolBySlug } from "@/data/tools";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { useRecentTools } from "@/hooks/useRecentTools";
 
 const Index = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<ReturnType<typeof searchTools>>([]);
   const navigate = useNavigate();
-
+  const recentSlugs = useRecentTools();
+  const recentTools = recentSlugs.map(s => getToolBySlug(s)).filter(Boolean);
   const popularTools = tools.filter(t => t.isPopular);
   const trendingTools = tools.filter(t => t.isTrending);
   const newTools = tools.filter(t => t.isNew);
@@ -41,7 +43,9 @@ const Index = () => {
         <meta property="og:title" content="Sohelix Tools — Free Online Tools" />
         <meta property="og:description" content="Free online tools that run in your browser. No uploads, no registration." />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sohelix.com/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://sohelix.com/og-image.png" />
         <meta name="keywords" content="free online tools, browser tools, image tools, PDF tools, developer tools, client-side tools" />
       </Helmet>
 
@@ -112,6 +116,19 @@ const Index = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
         <AdSlot id="ad-homepage-banner" size="banner" />
       </div>
+
+      {/* Recently Used Tools */}
+      {recentTools.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 pb-0">
+          <div className="mb-10">
+            <h2 className="text-2xl font-bold md:text-3xl">Recently Used</h2>
+            <p className="text-sm text-muted-foreground mt-1.5">Pick up where you left off</p>
+          </div>
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {recentTools.map((t, i) => <ToolCard key={t!.slug} tool={t!} index={i} />)}
+          </div>
+        </section>
+      )}
 
       {/* Popular Tools */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
