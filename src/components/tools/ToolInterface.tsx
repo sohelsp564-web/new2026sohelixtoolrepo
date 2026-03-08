@@ -1,4 +1,41 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, Component, type ReactNode, type ErrorInfo } from "react";
+
+// Error boundary to catch lazy-load failures
+class ToolErrorBoundary extends Component<
+  { children: ReactNode; slug: string },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: { children: ReactNode; slug: string }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    console.error(`Tool load error [${this.props.slug}]:`, error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="flex flex-col items-center justify-center py-16 gap-3 text-center">
+          <p className="text-sm font-medium text-destructive">Failed to load tool.</p>
+          <p className="text-xs text-muted-foreground max-w-md">{this.state.error?.message}</p>
+          <button
+            onClick={() => this.setState({ hasError: false, error: null })}
+            className="mt-2 text-sm text-primary hover:underline"
+          >
+            Try again
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 const ImageCompressorTool = lazy(() => import("./ImageCompressorTool"));
 const ImageResizerTool = lazy(() => import("./ImageResizerTool"));
@@ -170,11 +207,20 @@ const ToolLoadingFallback = () => (
 
 const ToolInterface = ({ slug }: { slug: string }) => {
   const Component = toolMap[slug];
-  if (!Component) return <p className="text-muted-foreground">Tool interface coming soon.</p>;
+  if (!Component) {
+    return (
+      <div className="flex flex-col items-center justify-center py-16 gap-2 text-center">
+        <p className="text-lg font-semibold text-foreground">Tool not found</p>
+        <p className="text-sm text-muted-foreground">The tool "{slug}" is not available.</p>
+      </div>
+    );
+  }
   return (
-    <Suspense fallback={<ToolLoadingFallback />}>
-      <Component />
-    </Suspense>
+    <ToolErrorBoundary slug={slug}>
+      <Suspense fallback={<ToolLoadingFallback />}>
+        <Component />
+      </Suspense>
+    </ToolErrorBoundary>
   );
 };
 
