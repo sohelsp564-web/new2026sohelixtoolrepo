@@ -46,12 +46,24 @@ const AgeCalculatorTool = () => {
     const minutes = (now.getMinutes() - birth.getMinutes() + 60) % 60;
     const seconds = (now.getSeconds() - birth.getSeconds() + 60) % 60;
 
+    // Next birthday
+    let nextBirthday = new Date(now.getFullYear(), m - 1, d);
+    if (nextBirthday.getTime() <= now.getTime()) {
+      nextBirthday = new Date(now.getFullYear() + 1, m - 1, d);
+    }
+    const bdayDiffMs = nextBirthday.getTime() - now.getTime();
+    const bdayDays = Math.floor(bdayDiffMs / (1000 * 60 * 60 * 24));
+    const bdayHours = Math.floor((bdayDiffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const bdayMinutes = Math.floor((bdayDiffMs % (1000 * 60 * 60)) / (1000 * 60));
+    const bdaySeconds = Math.floor((bdayDiffMs % (1000 * 60)) / 1000);
+
     return {
       years, months, days,
       hours: ((hours % 24) + 24) % 24,
       minutes,
       seconds,
       totalMonths, totalWeeks, totalDays, totalHours, totalMinutes, totalSeconds,
+      nextBirthday: { days: bdayDays, hours: bdayHours, minutes: bdayMinutes, seconds: bdaySeconds, turningAge: years + 1 },
     };
   }, [dob, tob, now, calculated]);
 
@@ -115,6 +127,23 @@ const AgeCalculatorTool = () => {
                   <div className="text-lg font-bold text-foreground tabular-nums">{s.value}</div>
                   <div className="text-xs text-muted-foreground">{s.label}</div>
                 </Card>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-muted-foreground mb-3">🎂 Next Birthday Countdown (Turning {result.nextBirthday.turningAge})</h3>
+            <div className="grid grid-cols-4 gap-3">
+              {[
+                { label: "Days", value: result.nextBirthday.days },
+                { label: "Hours", value: result.nextBirthday.hours },
+                { label: "Minutes", value: result.nextBirthday.minutes },
+                { label: "Seconds", value: result.nextBirthday.seconds },
+              ].map(s => (
+                <div key={s.label} className="rounded-xl bg-primary/10 p-3 text-center">
+                  <div className="text-2xl font-bold text-primary tabular-nums">{s.value}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{s.label}</div>
+                </div>
               ))}
             </div>
           </div>
