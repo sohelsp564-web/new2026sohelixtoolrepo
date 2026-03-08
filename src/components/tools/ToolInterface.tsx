@@ -141,6 +141,21 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "average-calculator": AverageCalculatorTool,
   "percentage-increase-calculator": PercentageIncreaseTool,
   "percentage-decrease-calculator": PercentageDecreaseTool,
+  // Programmatic SEO — Age Calculator variants
+  "how-old-am-i": AgeCalculatorTool,
+  "age-in-days-calculator": AgeCalculatorTool,
+  "date-of-birth-calculator": AgeCalculatorTool,
+  "age-difference-calculator": AgeCalculatorTool,
+  // Programmatic SEO — BMI Calculator variants
+  "body-mass-index-calculator": BmiCalculatorTool,
+  "bmi-for-men": BmiCalculatorTool,
+  "bmi-for-women": BmiCalculatorTool,
+  "bmi-for-kids": BmiCalculatorTool,
+  // Programmatic SEO — Loan Calculator variants
+  "mortgage-calculator": LoanEmiTool,
+  "personal-loan-calculator": LoanEmiTool,
+  "car-loan-calculator": LoanEmiTool,
+  "emi-calculator": LoanEmiTool,
 };
 
 const ToolLoadingFallback = () => (
