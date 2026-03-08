@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu, X, Moon, Sun, Search } from "lucide-react";
+import { Menu, X, Moon, Sun, Search, Command } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { searchTools } from "@/data/tools";
@@ -35,6 +35,10 @@ const Header = () => {
     localStorage.setItem("theme", next ? "dark" : "light");
   };
 
+  const openCommandPalette = () => {
+    document.dispatchEvent(new KeyboardEvent("keydown", { key: "k", metaKey: true, bubbles: true }));
+  };
+
   const handleSearch = (q: string) => {
     setSearchQuery(q);
     setSearchResults(q.length > 1 ? searchTools(q).slice(0, 8) : []);
@@ -42,10 +46,10 @@ const Header = () => {
 
   return (
     <header className={`sticky top-0 z-50 border-b transition-all duration-300 ${scrolled ? "border-border bg-background/90 backdrop-blur-xl shadow-soft" : "border-transparent bg-background/60 backdrop-blur-md"}`}>
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+      <div className="mx-auto max-w-7xl flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-glow text-primary-foreground font-bold text-lg transition-transform group-hover:scale-105" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>S</div>
-          <span className="text-xl font-bold tracking-tight" style={{ fontFamily: 'Space Grotesk, sans-serif' }}>Sohelix Tools</span>
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-glow text-primary-foreground font-bold text-lg transition-transform group-hover:scale-105">S</div>
+          <span className="text-xl font-bold tracking-tight">Sohelix Tools</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -66,6 +70,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-2">
+          {/* Desktop search */}
           <div className="relative hidden md:block">
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
@@ -87,6 +92,13 @@ const Header = () => {
               </div>
             )}
           </div>
+
+          {/* Ctrl+K button */}
+          <Button variant="ghost" size="sm" onClick={openCommandPalette} className="hidden lg:flex items-center gap-1.5 text-xs text-muted-foreground rounded-xl h-9 px-3 border border-border/50">
+            <Command className="h-3 w-3" />
+            <span>K</span>
+          </Button>
+
           <Button variant="ghost" size="icon" onClick={toggleTheme} className="shrink-0 rounded-xl h-9 w-9">
             {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
