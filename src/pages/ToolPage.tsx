@@ -18,8 +18,12 @@ const ToolPage = () => {
   const { slug, lang: langParam } = useParams<{ slug: string; lang?: string }>();
   const lang: SupportedLang = langParam && isValidLang(langParam) ? langParam : "en";
   const tool = getToolBySlug(slug || "");
-
   const t = useToolTranslation(slug || "", lang);
+
+  // Track tool visit for "Recently Used" feature
+  useEffect(() => {
+    if (tool?.slug) trackToolVisit(tool.slug);
+  }, [tool?.slug]);
 
   if (!tool) {
     return (
@@ -32,11 +36,6 @@ const ToolPage = () => {
   }
 
   const related = getRelatedTools(tool);
-
-  // Track tool visit for "Recently Used" feature
-  useEffect(() => {
-    if (tool?.slug) trackToolVisit(tool.slug);
-  }, [tool?.slug]);
 
   // Use translated content or fallback to tool data
   const title = t?.title || tool.name;
