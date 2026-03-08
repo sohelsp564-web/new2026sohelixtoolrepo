@@ -20,6 +20,8 @@ const ToolPage = () => {
   const tool = getToolBySlug(slug || "");
   const t = useToolTranslation(slug || "", lang);
 
+  const related = useMemo(() => (tool ? getRelatedTools(tool) : []), [tool?.slug, tool?.categorySlug]);
+
   // Track tool visit for "Recently Used" feature
   useEffect(() => {
     if (tool?.slug) trackToolVisit(tool.slug);
@@ -34,8 +36,6 @@ const ToolPage = () => {
       </div>
     );
   }
-
-  const related = useMemo(() => getRelatedTools(tool), [tool?.slug, tool?.categorySlug]);
 
   // Use translated content or fallback to tool data
   const title = t?.title || tool.name;
