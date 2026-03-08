@@ -8,6 +8,10 @@ const ImageToBase64Tool = lazy(() => import("./ImageToBase64Tool"));
 const Base64ToImageTool = lazy(() => import("./Base64ToImageTool"));
 const ColorPickerTool = lazy(() => import("./ColorPickerTool"));
 const ImagesToPdfTool = lazy(() => import("./ImagesToPdfTool"));
+const ImageWatermarkTool = lazy(() => import("./ImageWatermarkTool"));
+const ImageBlurTool = lazy(() => import("./ImageBlurTool"));
+const ImageRotateTool = lazy(() => import("./ImageRotateTool"));
+const ImageFlipTool = lazy(() => import("./ImageFlipTool"));
 const PdfToJpgTool = lazy(() => import("./PdfToJpgTool"));
 const PdfPageCounterTool = lazy(() => import("./PdfPageCounterTool"));
 const PdfMetadataViewerTool = lazy(() => import("./PdfMetadataViewerTool"));
@@ -20,6 +24,11 @@ const RemoveDuplicatesTool = lazy(() => import("./RemoveDuplicatesTool"));
 const TextSorterTool = lazy(() => import("./TextSorterTool"));
 const LoremIpsumTool = lazy(() => import("./LoremIpsumTool"));
 const RandomTextTool = lazy(() => import("./RandomTextTool"));
+const TextCompareTool = lazy(() => import("./TextCompareTool"));
+const TextReverseTool = lazy(() => import("./TextReverseTool"));
+const RemoveExtraSpacesTool = lazy(() => import("./RemoveExtraSpacesTool"));
+const RandomWordGeneratorTool = lazy(() => import("./RandomWordGeneratorTool"));
+const TextToSlugTool = lazy(() => import("./TextToSlugTool"));
 const JsonFormatterTool = lazy(() => import("./JsonFormatterTool"));
 const JsonValidatorTool = lazy(() => import("./JsonValidatorTool"));
 const Base64EncoderTool = lazy(() => import("./Base64EncoderTool"));
@@ -28,6 +37,12 @@ const UrlEncoderTool = lazy(() => import("./UrlEncoderTool"));
 const UrlDecoderTool = lazy(() => import("./UrlDecoderTool"));
 const UuidGeneratorTool = lazy(() => import("./UuidGeneratorTool"));
 const RegexTesterTool = lazy(() => import("./RegexTesterTool"));
+const CsvToJsonTool = lazy(() => import("./CsvToJsonTool"));
+const JsonToCsvTool = lazy(() => import("./JsonToCsvTool"));
+const HtmlMinifierTool = lazy(() => import("./HtmlMinifierTool"));
+const CssMinifierTool = lazy(() => import("./CssMinifierTool"));
+const JsMinifierTool = lazy(() => import("./JsMinifierTool"));
+const ColorCodeConverterTool = lazy(() => import("./ColorCodeConverterTool"));
 const MetaTagGeneratorTool = lazy(() => import("./MetaTagGeneratorTool"));
 const RobotsTxtTool = lazy(() => import("./RobotsTxtTool"));
 const SitemapTool = lazy(() => import("./SitemapTool"));
@@ -37,6 +52,9 @@ const QrCodeTool = lazy(() => import("./QrCodeTool"));
 const PasswordGeneratorTool = lazy(() => import("./PasswordGeneratorTool"));
 const RandomNumberTool = lazy(() => import("./RandomNumberTool"));
 const TimestampTool = lazy(() => import("./TimestampTool"));
+const DiceRollerTool = lazy(() => import("./DiceRollerTool"));
+const CoinFlipTool = lazy(() => import("./CoinFlipTool"));
+const RandomPickerTool = lazy(() => import("./RandomPickerTool"));
 const AgeCalculatorTool = lazy(() => import("./AgeCalculatorTool"));
 const BmiCalculatorTool = lazy(() => import("./BmiCalculatorTool"));
 const PercentageCalculatorTool = lazy(() => import("./PercentageCalculatorTool"));
@@ -47,6 +65,9 @@ const DateDifferenceTool = lazy(() => import("./DateDifferenceTool"));
 const TimeDurationTool = lazy(() => import("./TimeDurationTool"));
 const ProfitMarginTool = lazy(() => import("./ProfitMarginTool"));
 const TipCalculatorTool = lazy(() => import("./TipCalculatorTool"));
+const AverageCalculatorTool = lazy(() => import("./AverageCalculatorTool"));
+const PercentageIncreaseTool = lazy(() => import("./PercentageIncreaseTool"));
+const PercentageDecreaseTool = lazy(() => import("./PercentageDecreaseTool"));
 
 const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = {
   "image-compressor": ImageCompressorTool,
@@ -60,6 +81,10 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "base64-to-image": Base64ToImageTool,
   "image-color-picker": ColorPickerTool,
   "images-to-pdf": ImagesToPdfTool,
+  "image-watermark": ImageWatermarkTool,
+  "image-blur": ImageBlurTool,
+  "image-rotate": ImageRotateTool,
+  "image-flip": ImageFlipTool,
   "pdf-to-jpg": PdfToJpgTool,
   "pdf-page-counter": PdfPageCounterTool,
   "pdf-metadata-viewer": PdfMetadataViewerTool,
@@ -72,6 +97,11 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "text-sorter": TextSorterTool,
   "lorem-ipsum-generator": LoremIpsumTool,
   "random-text-generator": RandomTextTool,
+  "text-compare": TextCompareTool,
+  "text-reverse": TextReverseTool,
+  "remove-extra-spaces": RemoveExtraSpacesTool,
+  "random-word-generator": RandomWordGeneratorTool,
+  "text-to-slug": TextToSlugTool,
   "json-formatter": JsonFormatterTool,
   "json-validator": JsonValidatorTool,
   "base64-encoder": Base64EncoderTool,
@@ -80,6 +110,12 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "url-decoder": UrlDecoderTool,
   "uuid-generator": UuidGeneratorTool,
   "regex-tester": RegexTesterTool,
+  "csv-to-json": CsvToJsonTool,
+  "json-to-csv": JsonToCsvTool,
+  "html-minifier": HtmlMinifierTool,
+  "css-minifier": CssMinifierTool,
+  "js-minifier": JsMinifierTool,
+  "color-code-converter": ColorCodeConverterTool,
   "meta-tag-generator": MetaTagGeneratorTool,
   "robots-txt-generator": RobotsTxtTool,
   "sitemap-xml-generator": SitemapTool,
@@ -89,6 +125,9 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "password-generator": PasswordGeneratorTool,
   "random-number-generator": RandomNumberTool,
   "timestamp-converter": TimestampTool,
+  "dice-roller": DiceRollerTool,
+  "coin-flip": CoinFlipTool,
+  "random-picker": RandomPickerTool,
   "age-calculator": AgeCalculatorTool,
   "bmi-calculator": BmiCalculatorTool,
   "percentage-calculator": PercentageCalculatorTool,
@@ -99,6 +138,9 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "time-duration-calculator": TimeDurationTool,
   "profit-margin-calculator": ProfitMarginTool,
   "tip-calculator": TipCalculatorTool,
+  "average-calculator": AverageCalculatorTool,
+  "percentage-increase-calculator": PercentageIncreaseTool,
+  "percentage-decrease-calculator": PercentageDecreaseTool,
 };
 
 const ToolInterface = ({ slug }: { slug: string }) => {
