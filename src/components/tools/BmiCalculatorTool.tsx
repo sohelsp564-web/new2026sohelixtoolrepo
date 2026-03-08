@@ -86,12 +86,51 @@ const BmiCalculatorTool = () => {
       <Button onClick={calculate} className="w-full">Calculate BMI</Button>
 
       {result && (
-        <div className="rounded-lg bg-muted p-6 text-center space-y-2">
-          <div className="text-4xl font-bold text-primary">{result.bmi}</div>
-          <div className={`text-sm font-semibold ${categoryColor}`}>{result.category}</div>
-          <div className="text-xs text-muted-foreground">Healthy weight range: {result.healthyRange}</div>
-        </div>
+        <>
+          <div className="rounded-lg bg-muted p-6 text-center space-y-2">
+            <div className="text-4xl font-bold text-primary">{result.bmi}</div>
+            <div className={`text-sm font-semibold ${categoryColor}`}>{result.category}</div>
+            <div className="text-xs text-muted-foreground">Healthy weight range: {result.healthyRange}</div>
+          </div>
+
+          {/* BMI Category Scale */}
+          <div className="rounded-lg bg-muted p-4">
+            <h4 className="text-sm font-semibold text-muted-foreground mb-3 text-center">BMI Categories</h4>
+            <div className="space-y-2">
+              {([
+                { label: "Underweight", range: "< 18.5", color: "bg-yellow-500", min: 0, max: 18.5 },
+                { label: "Normal", range: "18.5 – 24.9", color: "bg-green-500", min: 18.5, max: 24.9 },
+                { label: "Overweight", range: "25 – 29.9", color: "bg-orange-500", min: 25, max: 29.9 },
+                { label: "Obese", range: "≥ 30", color: "bg-red-500", min: 30, max: 50 },
+              ] as const).map(cat => {
+                const isActive = result.bmi >= cat.min && result.bmi < (cat.max === 50 ? Infinity : cat.max + 0.1);
+                return (
+                  <div key={cat.label} className={`flex items-center gap-3 rounded-lg px-3 py-2 transition-colors ${isActive ? "bg-background ring-1 ring-border shadow-sm" : ""}`}>
+                    <div className={`h-3 w-3 rounded-full ${cat.color} shrink-0`} />
+                    <span className={`text-sm flex-1 ${isActive ? "font-semibold text-foreground" : "text-muted-foreground"}`}>{cat.label}</span>
+                    <span className="text-xs text-muted-foreground tabular-nums">{cat.range}</span>
+                    {isActive && <span className="text-xs font-bold text-primary">← You</span>}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </>
       )}
+
+      {/* Example Calculation */}
+      <div className="rounded-lg border border-dashed border-border p-4">
+        <h4 className="text-sm font-semibold text-muted-foreground mb-3">📌 Example Calculation</h4>
+        <div className="text-sm text-muted-foreground space-y-1">
+          <p><span className="font-medium text-foreground">Weight:</span> 70 kg</p>
+          <p><span className="font-medium text-foreground">Height:</span> 175 cm</p>
+          <div className="mt-3 pt-3 border-t border-border space-y-1">
+            <p><span className="font-medium text-foreground">BMI:</span> 22.9</p>
+            <p><span className="font-medium text-foreground">Category:</span> Normal weight</p>
+            <p><span className="font-medium text-foreground">Healthy range:</span> 56.7 – 76.3 kg</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
