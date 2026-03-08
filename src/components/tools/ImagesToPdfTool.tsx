@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { jsPDF } from "jspdf";
+import { toast } from "@/hooks/use-toast";
 
 const ImagesToPdfTool = () => {
   const [files, setFiles] = useState<File[]>([]);
@@ -10,21 +11,32 @@ const ImagesToPdfTool = () => {
     if (e.target.files) setFiles(Array.from(e.target.files));
   };
 
+  const toDataURL = (file: File): Promise<string> =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+
   const generate = async () => {
     if (!files.length) return;
     setLoading(true);
-    const pdf = new jsPDF();
-    for (let i = 0; i < files.length; i++) {
-      const url = URL.createObjectURL(files[i]);
-      const img = new Image();
-      await new Promise<void>(r => { img.onload = () => r(); img.src = url; });
-      const w = pdf.internal.pageSize.getWidth();
-      const h = (img.height * w) / img.width;
-      if (i > 0) pdf.addPage();
-      pdf.addImage(url, "JPEG", 0, 0, w, Math.min(h, pdf.internal.pageSize.getHeight()));
-      URL.revokeObjectURL(url);
+    try {
+      const pdf = new jsPDF();
+      for (let i = 0; i < files.length; i++) {
+        const dataUrl = await toDataURL(files[i]);
+        const img = new Image();
+        await new Promise<void>((r, rej) => { img.onload = () => r(); img.onerror = rej; img.src = dataUrl; });
+        const w = pdf.internal.pageSize.getWidth();
+        const h = (img.height * w) / img.width;
+        if (i > 0) pdf.addPage();
+        pdf.addImage(dataUrl, "JPEG", 0, 0, w, Math.min(h, pdf.internal.pageSize.getHeight()));
+      }
+      pdf.save("images.pdf");
+    } catch (err) {
+      toast({ title: "Error creating PDF", description: String(err), variant: "destructive" });
     }
-    pdf.save("images.pdf");
     setLoading(false);
   };
 
