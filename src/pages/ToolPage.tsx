@@ -3,6 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getToolBySlug, getRelatedTools } from "@/data/tools";
+import AdSlot from "@/components/AdSlot";
 import ToolCard from "@/components/ToolCard";
 import ToolInterface from "@/components/tools/ToolInterface";
 import { Helmet } from "react-helmet-async";
