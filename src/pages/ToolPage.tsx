@@ -129,6 +129,9 @@ const ToolPage = () => {
           <p className="text-muted-foreground mb-10 text-lg leading-relaxed max-w-2xl">{description}</p>
         </motion.div>
 
+        {/* Ad Slot 1: Top Banner */}
+        <AdSlot id="ad-top-banner" size="banner" className="mb-8" />
+
         <div className="grid gap-8 lg:grid-cols-[1fr_300px]">
           <div>
             {/* Tool Interface */}
@@ -137,6 +140,9 @@ const ToolPage = () => {
                 <ToolInterface slug={tool.slug} />
               </Card>
             </motion.div>
+
+            {/* Ad Slot 2: Below Tool Interface */}
+            <AdSlot id="ad-below-tool" size="banner" className="mb-8" />
 
             {/* How to Use */}
             <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
@@ -169,6 +175,9 @@ const ToolPage = () => {
                 ))}
               </ul>
             </Card>
+
+            {/* Ad Slot 3: Before FAQ */}
+            <AdSlot id="ad-before-faq" size="banner" className="mb-6" />
 
             {/* FAQ */}
             <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl" itemScope itemType="https://schema.org/FAQPage">
