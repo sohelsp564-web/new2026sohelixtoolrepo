@@ -18,6 +18,7 @@ import TermsOfServicePage from "./pages/TermsOfServicePage";
 import FaqPage from "./pages/FaqPage";
 import RequestToolPage from "./pages/RequestToolPage";
 import NotFound from "./pages/NotFound";
+import PerfDashboard from "./components/PerfDashboard";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
               </Routes>
             </main>
             <Footer />
+            <PerfDashboard />
           </div>
         </BrowserRouter>
       </TooltipProvider>
