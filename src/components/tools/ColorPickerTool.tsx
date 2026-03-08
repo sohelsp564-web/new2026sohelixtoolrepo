@@ -1,16 +1,19 @@
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { Copy } from "lucide-react";
+import FileUploadZone from "@/components/FileUploadZone";
 
 const ColorPickerTool = () => {
-  const [file, setFile] = useState<File | null>(null);
+  const [hasFile, setHasFile] = useState(false);
   const [preview, setPreview] = useState("");
   const [color, setColor] = useState({ hex: "", rgb: "", hsl: "" });
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
-    if (f) { setFile(f); setPreview(URL.createObjectURL(f)); }
+  const handleFiles = (files: File[]) => {
+    const f = files[0];
+    if (f) { setHasFile(true); setPreview(URL.createObjectURL(f)); setColor({ hex: "", rgb: "", hsl: "" }); }
+    else { setHasFile(false); setPreview(""); }
   };
 
   const pickColor = (e: React.MouseEvent<HTMLCanvasElement>) => {
@@ -49,22 +52,32 @@ const ColorPickerTool = () => {
   };
 
   return (
-    <div className="space-y-4">
-      <input type="file" accept="image/*" onChange={handleFile} className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary/10 file:text-primary file:font-medium" />
-      {preview && (
+    <div className="space-y-5">
+      {!hasFile ? (
+        <FileUploadZone accept="image/*" onFiles={handleFiles} formats="PNG • JPG • WEBP • GIF" label="Drag & drop your image here" sublabel="Click on any pixel to pick its color" />
+      ) : (
         <>
           <img ref={imgRef} src={preview} alt="Source" className="hidden" onLoad={onImgLoad} />
-          <canvas ref={canvasRef} onClick={pickColor} className="rounded-lg border border-border max-h-64 w-full object-contain cursor-crosshair" style={{ imageRendering: "pixelated" }} />
+          <div className="rounded-2xl border border-border p-2 shadow-soft">
+            <canvas ref={canvasRef} onClick={pickColor} className="rounded-xl max-h-72 w-full object-contain cursor-crosshair" style={{ imageRendering: "pixelated" }} />
+          </div>
+          <p className="text-xs text-muted-foreground text-center">Click anywhere on the image to pick a color</p>
           {color.hex && (
-            <div className="flex items-center gap-4 p-3 rounded-lg bg-muted">
-              <div className="h-12 w-12 rounded-lg border border-border" style={{ backgroundColor: color.hex }} />
-              <div className="space-y-1 text-sm">
-                <p><strong>HEX:</strong> {color.hex} <Button size="sm" variant="ghost" onClick={() => navigator.clipboard.writeText(color.hex)}>Copy</Button></p>
-                <p><strong>RGB:</strong> {color.rgb}</p>
-                <p><strong>HSL:</strong> {color.hsl}</p>
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-muted shadow-soft">
+              <div className="h-14 w-14 rounded-2xl border border-border shadow-card" style={{ backgroundColor: color.hex }} />
+              <div className="space-y-1.5 text-sm flex-1">
+                {[["HEX", color.hex], ["RGB", color.rgb], ["HSL", color.hsl]].map(([label, val]) => (
+                  <div key={label} className="flex items-center justify-between">
+                    <span><strong>{label}:</strong> {val}</span>
+                    <Button size="sm" variant="ghost" className="h-7 text-xs gap-1" onClick={() => navigator.clipboard.writeText(val)}>
+                      <Copy className="h-3 w-3" /> Copy
+                    </Button>
+                  </div>
+                ))}
               </div>
             </div>
           )}
+          <Button variant="ghost" size="sm" className="w-full text-muted-foreground" onClick={() => handleFiles([])}>Upload a different image</Button>
         </>
       )}
     </div>
