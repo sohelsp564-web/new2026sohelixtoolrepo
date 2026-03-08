@@ -11,42 +11,36 @@ const cases = [
   { label: "aLtErNaTiNg", fn: (s: string) => s.split("").map((c, i) => (i % 2 ? c.toUpperCase() : c.toLowerCase())).join("") },
 ];
 
-const TextCaseConverterTool = () => {
+const TextCaseInner = ({ text }: { text: string }) => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
+  const result = useMemo(() => {
+    if (selectedCase === null || !text) return "";
+    return cases[selectedCase].fn(text);
+  }, [text, selectedCase]);
 
   return (
-    <TextToolWrapper storageKey="text-case-converter" placeholder="Enter your text...">
-      {({ text, autoProcess }) => {
-        const result = useMemo(() => {
-          if (selectedCase === null || !text) return "";
-          return cases[selectedCase].fn(text);
-        }, [text, selectedCase]);
-
-        return (
-          <div className="space-y-4">
-            <div className="flex flex-wrap gap-2">
-              {cases.map((c, i) => (
-                <Button
-                  key={c.label}
-                  variant={selectedCase === i ? "default" : "outline"}
-                  size="sm"
-                  onClick={() => setSelectedCase(i)}
-                >
-                  {c.label}
-                </Button>
-              ))}
-            </div>
-            {result && (
-              <>
-                <Textarea value={result} readOnly rows={5} />
-                <CopyResultButton text={result} />
-              </>
-            )}
-          </div>
-        );
-      }}
-    </TextToolWrapper>
+    <div className="space-y-4">
+      <div className="flex flex-wrap gap-2">
+        {cases.map((c, i) => (
+          <Button key={c.label} variant={selectedCase === i ? "default" : "outline"} size="sm" onClick={() => setSelectedCase(i)}>
+            {c.label}
+          </Button>
+        ))}
+      </div>
+      {result && (
+        <>
+          <Textarea value={result} readOnly rows={5} />
+          <CopyResultButton text={result} />
+        </>
+      )}
+    </div>
   );
 };
+
+const TextCaseConverterTool = () => (
+  <TextToolWrapper storageKey="text-case-converter" placeholder="Enter your text...">
+    {({ text }) => <TextCaseInner text={text} />}
+  </TextToolWrapper>
+);
 
 export default TextCaseConverterTool;
