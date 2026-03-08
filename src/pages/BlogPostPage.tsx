@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { getBlogPostBySlug } from "@/data/blogPosts";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -69,6 +70,29 @@ const BlogPostPage = () => {
             </div>
           </div>
         </Card>
+
+        {/* Useful Tools Section */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold mb-6" style={{ fontFamily: "Space Grotesk" }}>Try Our Free Online Tools</h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { name: "Age Calculator", slug: "age-calculator", desc: "Calculate your exact age in years, months, and days instantly." },
+              { name: "BMI Calculator", slug: "bmi-calculator", desc: "Check your body mass index and health category." },
+              { name: "Loan Calculator", slug: "loan-emi-calculator", desc: "Calculate monthly payments, total interest, and amortization." },
+              { name: "QR Code Generator", slug: "qr-code-generator", desc: "Create QR codes for links, text, WiFi, and more." },
+              { name: "Password Generator", slug: "password-generator", desc: "Generate strong, secure passwords with custom options." },
+              { name: "Image Compressor", slug: "image-compressor", desc: "Compress images without losing quality for faster loading." },
+            ].map((tool) => (
+              <Card key={tool.slug} className="p-5 border-transparent shadow-card hover:shadow-elevated hover:-translate-y-1 transition-all duration-300">
+                <h3 className="font-semibold text-sm mb-1.5" style={{ fontFamily: "Space Grotesk" }}>{tool.name}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-4">{tool.desc}</p>
+                <Button asChild size="sm" variant="outline" className="w-full gap-1.5 rounded-xl text-xs">
+                  <Link to={`/tools/${tool.slug}`}>Use Tool <ArrowRight className="h-3 w-3" /></Link>
+                </Button>
+              </Card>
+            ))}
+          </div>
+        </section>
 
         <div className="mt-8 text-center">
           <Link to="/blog" className="text-primary hover:underline text-sm">← Back to all articles</Link>
