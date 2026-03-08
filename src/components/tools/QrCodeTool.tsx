@@ -95,7 +95,7 @@ const QrCodeTool = () => {
     // Save to history
     const raw = await qrRef.current?.getRawData("png");
     if (raw) {
-      const blob = raw instanceof Blob ? raw : new Blob([raw]);
+      const blob = raw instanceof Blob ? raw : new Blob([raw as unknown as BlobPart]);
       const reader = new FileReader();
       reader.onload = () => saveQrToHistory(getData(), reader.result as string);
       reader.readAsDataURL(blob);

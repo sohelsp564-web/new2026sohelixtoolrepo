@@ -19,7 +19,7 @@ const QrBatchGenerator = () => {
       const qr = new QRCodeStyling({ width: 300, height: 300, data: line, dotsOptions: { type: "square" } });
       const raw = await qr.getRawData("png");
       if (raw) {
-        const blob = raw instanceof Blob ? raw : new Blob([raw]);
+        const blob = raw instanceof Blob ? raw : new Blob([raw as unknown as BlobPart]);
         results.push({ url: line, dataUrl: URL.createObjectURL(blob) });
       }
     }
