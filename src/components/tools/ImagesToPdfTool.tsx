@@ -2,14 +2,12 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { jsPDF } from "jspdf";
 import { toast } from "@/hooks/use-toast";
+import FileUploadZone from "@/components/FileUploadZone";
+import { Download } from "lucide-react";
 
 const ImagesToPdfTool = () => {
   const [files, setFiles] = useState<File[]>([]);
   const [loading, setLoading] = useState(false);
-
-  const handleFiles = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) setFiles(Array.from(e.target.files));
-  };
 
   const toDataURL = (file: File): Promise<string> =>
     new Promise((resolve, reject) => {
@@ -41,13 +39,12 @@ const ImagesToPdfTool = () => {
   };
 
   return (
-    <div className="space-y-4">
-      <input type="file" accept="image/*" multiple onChange={handleFiles} className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary/10 file:text-primary file:font-medium" />
+    <div className="space-y-5">
+      <FileUploadZone accept="image/*" multiple onFiles={setFiles} formats="PNG • JPG • WEBP • GIF" label="Drag & drop images here" sublabel="or click to upload (multiple files supported)" />
       {files.length > 0 && (
-        <>
-          <p className="text-sm text-muted-foreground">{files.length} image(s) selected</p>
-          <Button onClick={generate} disabled={loading} className="w-full">{loading ? "Generating..." : "Create PDF"}</Button>
-        </>
+        <Button onClick={generate} disabled={loading} className="w-full h-11 rounded-xl gap-2">
+          <Download className="h-4 w-4" /> {loading ? "Generating PDF..." : `Create PDF (${files.length} images)`}
+        </Button>
       )}
     </div>
   );

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Download } from "lucide-react";
+import FileUploadZone from "@/components/FileUploadZone";
 
 const ImageResizerTool = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -9,9 +11,12 @@ const ImageResizerTool = () => {
   const [height, setHeight] = useState("600");
   const [result, setResult] = useState("");
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
-    if (f) { setFile(f); setPreview(URL.createObjectURL(f)); const img = new Image(); img.onload = () => { setWidth(String(img.width)); setHeight(String(img.height)); }; img.src = URL.createObjectURL(f); }
+  const handleFiles = (files: File[]) => {
+    const f = files[0];
+    if (f) {
+      setFile(f); setPreview(URL.createObjectURL(f)); setResult("");
+      const img = new Image(); img.onload = () => { setWidth(String(img.width)); setHeight(String(img.height)); }; img.src = URL.createObjectURL(f);
+    } else { setFile(null); setPreview(""); setResult(""); }
   };
 
   const resize = () => {
@@ -29,21 +34,30 @@ const ImageResizerTool = () => {
   const download = () => { const a = document.createElement("a"); a.href = result; a.download = "resized-image.png"; a.click(); };
 
   return (
-    <div className="space-y-4">
-      <input type="file" accept="image/*" onChange={handleFile} className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary/10 file:text-primary file:font-medium" />
-      {preview && (
+    <div className="space-y-5">
+      {!file ? (
+        <FileUploadZone accept="image/*" onFiles={handleFiles} formats="PNG • JPG • WEBP • GIF" label="Drag & drop your image here" />
+      ) : (
         <>
           <div className="grid grid-cols-2 gap-3">
-            <div><label className="text-sm font-medium mb-1 block">Width (px)</label><Input value={width} onChange={e => setWidth(e.target.value)} type="number" /></div>
-            <div><label className="text-sm font-medium mb-1 block">Height (px)</label><Input value={height} onChange={e => setHeight(e.target.value)} type="number" /></div>
+            <div><label className="text-sm font-medium mb-1 block">Width (px)</label><Input value={width} onChange={e => setWidth(e.target.value)} type="number" className="rounded-xl" /></div>
+            <div><label className="text-sm font-medium mb-1 block">Height (px)</label><Input value={height} onChange={e => setHeight(e.target.value)} type="number" className="rounded-xl" /></div>
           </div>
-          <Button onClick={resize} className="w-full">Resize Image</Button>
-          {result && (
+          <Button onClick={resize} className="w-full h-11 rounded-xl">Resize Image</Button>
+          {result ? (
             <>
-              <img src={result} alt="Resized" className="rounded-lg border border-border max-h-64 w-full object-contain" />
-              <Button onClick={download} variant="outline" className="w-full">Download Resized Image</Button>
+              <div className="rounded-2xl border border-primary/20 bg-card p-3 shadow-soft">
+                <p className="text-xs text-primary mb-2 font-medium">Resized ({width} × {height})</p>
+                <img src={result} alt="Resized" className="rounded-xl w-full max-h-64 object-contain" />
+              </div>
+              <Button onClick={download} variant="outline" className="w-full h-11 rounded-xl gap-2"><Download className="h-4 w-4" /> Download Resized Image</Button>
             </>
+          ) : (
+            <div className="rounded-2xl border border-border p-3">
+              <img src={preview} alt="Preview" className="rounded-xl w-full max-h-64 object-contain" />
+            </div>
           )}
+          <Button variant="ghost" size="sm" className="w-full text-muted-foreground" onClick={() => handleFiles([])}>Upload a different image</Button>
         </>
       )}
     </div>

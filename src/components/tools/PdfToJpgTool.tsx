@@ -1,41 +1,41 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/hooks/use-toast";
+import FileUploadZone from "@/components/FileUploadZone";
+import { Download } from "lucide-react";
 
 const PdfToJpgTool = () => {
   const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [fileName, setFileName] = useState("");
+  const [hasFile, setHasFile] = useState(false);
 
-  const handleFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
+  const handleFiles = async (files: File[]) => {
+    const file = files[0];
     if (!file || file.type !== "application/pdf") {
-      toast({ title: "Please upload a valid PDF file", variant: "destructive" });
+      if (file) toast({ title: "Please upload a valid PDF file", variant: "destructive" });
+      setHasFile(false);
       return;
     }
     setFileName(file.name);
+    setHasFile(true);
     setLoading(true);
     setImages([]);
 
     try {
       const pdfjsLib = await import("pdfjs-dist");
       pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
-
       const arrayBuffer = await file.arrayBuffer();
       const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
       const results: string[] = [];
-
       for (let i = 1; i <= pdf.numPages; i++) {
         const page = await pdf.getPage(i);
         const viewport = page.getViewport({ scale: 2 });
         const canvas = document.createElement("canvas");
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-        const ctx = canvas.getContext("2d")!;
-        await page.render({ canvasContext: ctx, viewport }).promise;
+        canvas.width = viewport.width; canvas.height = viewport.height;
+        await page.render({ canvasContext: canvas.getContext("2d")!, viewport }).promise;
         results.push(canvas.toDataURL("image/jpeg", 0.92));
       }
-
       setImages(results);
     } catch (err) {
       toast({ title: "Error processing PDF", description: String(err), variant: "destructive" });
@@ -45,31 +45,32 @@ const PdfToJpgTool = () => {
 
   const download = (dataUrl: string, index: number) => {
     const a = document.createElement("a");
-    a.href = dataUrl;
-    a.download = `${fileName.replace(".pdf", "")}-page-${index + 1}.jpg`;
-    a.click();
-  };
-
-  const downloadAll = () => {
-    images.forEach((img, i) => download(img, i));
+    a.href = dataUrl; a.download = `${fileName.replace(".pdf", "")}-page-${index + 1}.jpg`; a.click();
   };
 
   return (
-    <div className="space-y-4">
-      <input type="file" accept=".pdf" onChange={handleFile} className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary/10 file:text-primary file:font-medium" />
-      {loading && <p className="text-sm text-muted-foreground">Processing PDF pages...</p>}
-      {images.length > 0 && (
+    <div className="space-y-5">
+      {!hasFile ? (
+        <FileUploadZone accept=".pdf" onFiles={handleFiles} formats="PDF" label="Drag & drop your PDF here" />
+      ) : (
         <>
-          <p className="text-sm text-muted-foreground">{images.length} page(s) converted</p>
-          <Button onClick={downloadAll} className="w-full">Download All Pages</Button>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {images.map((img, i) => (
-              <div key={i} className="space-y-2">
-                <img src={img} alt={`Page ${i + 1}`} className="rounded-lg border border-border w-full" />
-                <Button onClick={() => download(img, i)} variant="outline" size="sm" className="w-full">Download Page {i + 1}</Button>
+          {loading && <p className="text-sm text-muted-foreground text-center animate-pulse-soft">Processing PDF pages...</p>}
+          {images.length > 0 && (
+            <>
+              <Button onClick={() => images.forEach((img, i) => download(img, i))} className="w-full h-11 rounded-xl gap-2">
+                <Download className="h-4 w-4" /> Download All {images.length} Pages
+              </Button>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {images.map((img, i) => (
+                  <div key={i} className="rounded-2xl border border-border p-3 shadow-soft">
+                    <img src={img} alt={`Page ${i + 1}`} className="rounded-xl w-full" />
+                    <Button onClick={() => download(img, i)} variant="outline" size="sm" className="w-full mt-2 rounded-xl">Download Page {i + 1}</Button>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
+          <Button variant="ghost" size="sm" className="w-full text-muted-foreground" onClick={() => { setHasFile(false); setImages([]); }}>Upload a different PDF</Button>
         </>
       )}
     </div>

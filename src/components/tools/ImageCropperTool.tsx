@@ -1,26 +1,24 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import FileUploadZone from "@/components/FileUploadZone";
 
 const ImageCropperTool = () => {
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState("");
   const [result, setResult] = useState("");
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [crop, setCrop] = useState({ x: 50, y: 50, w: 200, h: 200 });
-  const [imgDims, setImgDims] = useState({ w: 0, h: 0 });
+  const [crop, setCrop] = useState({ x: 0, y: 0, w: 400, h: 400 });
 
-  const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const f = e.target.files?.[0];
+  const handleFiles = (files: File[]) => {
+    const f = files[0];
     if (f) { setFile(f); setPreview(URL.createObjectURL(f)); setResult(""); }
+    else { setFile(null); setPreview(""); setResult(""); }
   };
 
   useEffect(() => {
     if (!preview) return;
     const img = new Image();
-    img.onload = () => {
-      setImgDims({ w: img.width, h: img.height });
-      setCrop({ x: 0, y: 0, w: Math.min(img.width, 400), h: Math.min(img.height, 400) });
-    };
+    img.onload = () => setCrop({ x: 0, y: 0, w: Math.min(img.width, 400), h: Math.min(img.height, 400) });
     img.src = preview;
   }, [preview]);
 
@@ -38,24 +36,33 @@ const ImageCropperTool = () => {
   const download = () => { const a = document.createElement("a"); a.href = result; a.download = "cropped-image.png"; a.click(); };
 
   return (
-    <div className="space-y-4">
-      <input type="file" accept="image/*" onChange={handleFile} className="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary/10 file:text-primary file:font-medium" />
-      {preview && (
+    <div className="space-y-5">
+      {!file ? (
+        <FileUploadZone accept="image/*" onFiles={handleFiles} formats="PNG • JPG • WEBP • GIF" label="Drag & drop your image here" />
+      ) : (
         <>
           <div className="grid grid-cols-4 gap-2">
             {(["x", "y", "w", "h"] as const).map(k => (
-              <div key={k}><label className="text-xs font-medium">{k.toUpperCase()}</label>
-              <input type="number" value={crop[k]} onChange={e => setCrop(p => ({ ...p, [k]: parseInt(e.target.value) || 0 }))} className="w-full rounded-md border border-input bg-background px-2 py-1 text-sm" /></div>
+              <div key={k}>
+                <label className="text-xs font-medium uppercase text-muted-foreground">{k === "w" ? "Width" : k === "h" ? "Height" : k.toUpperCase()}</label>
+                <input type="number" value={crop[k]} onChange={e => setCrop(p => ({ ...p, [k]: parseInt(e.target.value) || 0 }))} className="w-full rounded-xl border border-input bg-background px-3 py-2 text-sm" />
+              </div>
             ))}
           </div>
-          <img src={preview} alt="Preview" className="rounded-lg border border-border max-h-48 w-full object-contain" />
-          <Button onClick={doCrop} className="w-full">Crop Image</Button>
+          <div className="rounded-2xl border border-border p-3">
+            <img src={preview} alt="Preview" className="rounded-xl w-full max-h-48 object-contain" />
+          </div>
+          <Button onClick={doCrop} className="w-full h-11 rounded-xl">Crop Image</Button>
           {result && (
             <>
-              <img src={result} alt="Cropped" className="rounded-lg border border-border max-h-48 w-full object-contain" />
-              <Button onClick={download} variant="outline" className="w-full">Download Cropped Image</Button>
+              <div className="rounded-2xl border border-primary/20 bg-card p-3 shadow-soft">
+                <p className="text-xs text-primary mb-2 font-medium">Cropped Result</p>
+                <img src={result} alt="Cropped" className="rounded-xl w-full max-h-48 object-contain" />
+              </div>
+              <Button onClick={download} variant="outline" className="w-full h-11 rounded-xl gap-2"><Download className="h-4 w-4" /> Download Cropped Image</Button>
             </>
           )}
+          <Button variant="ghost" size="sm" className="w-full text-muted-foreground" onClick={() => handleFiles([])}>Upload a different image</Button>
         </>
       )}
     </div>
