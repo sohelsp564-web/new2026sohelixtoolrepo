@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CommandPalette from "@/components/CommandPalette";
 import Index from "./pages/Index";
 import ToolPage from "./pages/ToolPage";
 import CategoryPage from "./pages/CategoryPage";
@@ -29,6 +30,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <CommandPalette />
           <div className="flex min-h-screen flex-col">
             <Header />
             <main className="flex-1">
