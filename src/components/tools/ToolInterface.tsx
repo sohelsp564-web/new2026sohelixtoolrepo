@@ -1,73 +1,145 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, Component, type ReactNode } from "react";
+import { AlertTriangle, RefreshCw } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const ImageCompressorTool = lazy(() => import("./ImageCompressorTool"));
-const ImageResizerTool = lazy(() => import("./ImageResizerTool"));
-const ImageCropperTool = lazy(() => import("./ImageCropperTool"));
-const ImageConverterTool = lazy(() => import("./ImageConverterTool"));
-const ImageToBase64Tool = lazy(() => import("./ImageToBase64Tool"));
-const Base64ToImageTool = lazy(() => import("./Base64ToImageTool"));
-const ColorPickerTool = lazy(() => import("./ColorPickerTool"));
-const ImagesToPdfTool = lazy(() => import("./ImagesToPdfTool"));
-const ImageWatermarkTool = lazy(() => import("./ImageWatermarkTool"));
-const ImageBlurTool = lazy(() => import("./ImageBlurTool"));
-const ImageRotateTool = lazy(() => import("./ImageRotateTool"));
-const ImageFlipTool = lazy(() => import("./ImageFlipTool"));
-const PdfToJpgTool = lazy(() => import("./PdfToJpgTool"));
-const PdfPageCounterTool = lazy(() => import("./PdfPageCounterTool"));
-const PdfMetadataViewerTool = lazy(() => import("./PdfMetadataViewerTool"));
-const PdfReaderTool = lazy(() => import("./PdfReaderTool"));
-const PdfPageRotatorTool = lazy(() => import("./PdfPageRotatorTool"));
-const WordCounterTool = lazy(() => import("./WordCounterTool"));
-const CharacterCounterTool = lazy(() => import("./CharacterCounterTool"));
-const TextCaseConverterTool = lazy(() => import("./TextCaseConverterTool"));
-const RemoveDuplicatesTool = lazy(() => import("./RemoveDuplicatesTool"));
-const TextSorterTool = lazy(() => import("./TextSorterTool"));
-const LoremIpsumTool = lazy(() => import("./LoremIpsumTool"));
-const RandomTextTool = lazy(() => import("./RandomTextTool"));
-const TextCompareTool = lazy(() => import("./TextCompareTool"));
-const TextReverseTool = lazy(() => import("./TextReverseTool"));
-const RemoveExtraSpacesTool = lazy(() => import("./RemoveExtraSpacesTool"));
-const RandomWordGeneratorTool = lazy(() => import("./RandomWordGeneratorTool"));
-const TextToSlugTool = lazy(() => import("./TextToSlugTool"));
-const JsonFormatterTool = lazy(() => import("./JsonFormatterTool"));
-const JsonValidatorTool = lazy(() => import("./JsonValidatorTool"));
-const Base64EncoderTool = lazy(() => import("./Base64EncoderTool"));
-const Base64DecoderTool = lazy(() => import("./Base64DecoderTool"));
-const UrlEncoderTool = lazy(() => import("./UrlEncoderTool"));
-const UrlDecoderTool = lazy(() => import("./UrlDecoderTool"));
-const UuidGeneratorTool = lazy(() => import("./UuidGeneratorTool"));
-const RegexTesterTool = lazy(() => import("./RegexTesterTool"));
-const CsvToJsonTool = lazy(() => import("./CsvToJsonTool"));
-const JsonToCsvTool = lazy(() => import("./JsonToCsvTool"));
-const HtmlMinifierTool = lazy(() => import("./HtmlMinifierTool"));
-const CssMinifierTool = lazy(() => import("./CssMinifierTool"));
-const JsMinifierTool = lazy(() => import("./JsMinifierTool"));
-const ColorCodeConverterTool = lazy(() => import("./ColorCodeConverterTool"));
-const MetaTagGeneratorTool = lazy(() => import("./MetaTagGeneratorTool"));
-const RobotsTxtTool = lazy(() => import("./RobotsTxtTool"));
-const SitemapTool = lazy(() => import("./SitemapTool"));
-const SlugGeneratorTool = lazy(() => import("./SlugGeneratorTool"));
-const SerpPreviewTool = lazy(() => import("./SerpPreviewTool"));
-const QrCodeTool = lazy(() => import("./QrCodeTool"));
-const PasswordGeneratorTool = lazy(() => import("./PasswordGeneratorTool"));
-const RandomNumberTool = lazy(() => import("./RandomNumberTool"));
-const TimestampTool = lazy(() => import("./TimestampTool"));
-const DiceRollerTool = lazy(() => import("./DiceRollerTool"));
-const CoinFlipTool = lazy(() => import("./CoinFlipTool"));
-const RandomPickerTool = lazy(() => import("./RandomPickerTool"));
-const AgeCalculatorTool = lazy(() => import("./AgeCalculatorTool"));
-const BmiCalculatorTool = lazy(() => import("./BmiCalculatorTool"));
-const PercentageCalculatorTool = lazy(() => import("./PercentageCalculatorTool"));
-const LoanEmiTool = lazy(() => import("./LoanEmiTool"));
-const InterestCalculatorTool = lazy(() => import("./InterestCalculatorTool"));
-const DiscountCalculatorTool = lazy(() => import("./DiscountCalculatorTool"));
-const DateDifferenceTool = lazy(() => import("./DateDifferenceTool"));
-const TimeDurationTool = lazy(() => import("./TimeDurationTool"));
-const ProfitMarginTool = lazy(() => import("./ProfitMarginTool"));
-const TipCalculatorTool = lazy(() => import("./TipCalculatorTool"));
-const AverageCalculatorTool = lazy(() => import("./AverageCalculatorTool"));
-const PercentageIncreaseTool = lazy(() => import("./PercentageIncreaseTool"));
-const PercentageDecreaseTool = lazy(() => import("./PercentageDecreaseTool"));
+// ErrorBoundary for catching render errors in lazy-loaded tools
+class ToolErrorBoundary extends Component<
+  { children: ReactNode },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: { children: ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, info: React.ErrorInfo) {
+    console.error("[ToolErrorBoundary] Render error:", error, info.componentStack);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="flex flex-col items-center justify-center py-16 gap-4 text-center">
+          <AlertTriangle className="h-10 w-10 text-destructive" />
+          <p className="text-sm font-medium text-muted-foreground">
+            Something went wrong loading this tool.
+          </p>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => this.setState({ hasError: false, error: null })}
+            className="gap-2"
+          >
+            <RefreshCw className="h-4 w-4" />
+            Try again
+          </Button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+// Graceful lazy-load wrapper: catches network/import failures
+function safeLazy(importFn: () => Promise<{ default: React.ComponentType }>) {
+  return lazy(() =>
+    importFn().catch((err) => {
+      console.error("[ToolInterface] Failed to load module:", err);
+      return {
+        default: () => (
+          <div className="flex flex-col items-center justify-center py-16 gap-4 text-center">
+            <AlertTriangle className="h-10 w-10 text-destructive" />
+            <p className="text-sm font-medium text-muted-foreground">
+              Failed to load this tool. Please check your connection and try again.
+            </p>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => window.location.reload()}
+              className="gap-2"
+            >
+              <RefreshCw className="h-4 w-4" />
+              Reload page
+            </Button>
+          </div>
+        ),
+      };
+    })
+  );
+}
+
+const ImageCompressorTool = safeLazy(() => import("./ImageCompressorTool"));
+const ImageResizerTool = safeLazy(() => import("./ImageResizerTool"));
+const ImageCropperTool = safeLazy(() => import("./ImageCropperTool"));
+const ImageConverterTool = safeLazy(() => import("./ImageConverterTool"));
+const ImageToBase64Tool = safeLazy(() => import("./ImageToBase64Tool"));
+const Base64ToImageTool = safeLazy(() => import("./Base64ToImageTool"));
+const ColorPickerTool = safeLazy(() => import("./ColorPickerTool"));
+const ImagesToPdfTool = safeLazy(() => import("./ImagesToPdfTool"));
+const ImageWatermarkTool = safeLazy(() => import("./ImageWatermarkTool"));
+const ImageBlurTool = safeLazy(() => import("./ImageBlurTool"));
+const ImageRotateTool = safeLazy(() => import("./ImageRotateTool"));
+const ImageFlipTool = safeLazy(() => import("./ImageFlipTool"));
+const PdfToJpgTool = safeLazy(() => import("./PdfToJpgTool"));
+const PdfPageCounterTool = safeLazy(() => import("./PdfPageCounterTool"));
+const PdfMetadataViewerTool = safeLazy(() => import("./PdfMetadataViewerTool"));
+const PdfReaderTool = safeLazy(() => import("./PdfReaderTool"));
+const PdfPageRotatorTool = safeLazy(() => import("./PdfPageRotatorTool"));
+const WordCounterTool = safeLazy(() => import("./WordCounterTool"));
+const CharacterCounterTool = safeLazy(() => import("./CharacterCounterTool"));
+const TextCaseConverterTool = safeLazy(() => import("./TextCaseConverterTool"));
+const RemoveDuplicatesTool = safeLazy(() => import("./RemoveDuplicatesTool"));
+const TextSorterTool = safeLazy(() => import("./TextSorterTool"));
+const LoremIpsumTool = safeLazy(() => import("./LoremIpsumTool"));
+const RandomTextTool = safeLazy(() => import("./RandomTextTool"));
+const TextCompareTool = safeLazy(() => import("./TextCompareTool"));
+const TextReverseTool = safeLazy(() => import("./TextReverseTool"));
+const RemoveExtraSpacesTool = safeLazy(() => import("./RemoveExtraSpacesTool"));
+const RandomWordGeneratorTool = safeLazy(() => import("./RandomWordGeneratorTool"));
+const TextToSlugTool = safeLazy(() => import("./TextToSlugTool"));
+const JsonFormatterTool = safeLazy(() => import("./JsonFormatterTool"));
+const JsonValidatorTool = safeLazy(() => import("./JsonValidatorTool"));
+const Base64EncoderTool = safeLazy(() => import("./Base64EncoderTool"));
+const Base64DecoderTool = safeLazy(() => import("./Base64DecoderTool"));
+const UrlEncoderTool = safeLazy(() => import("./UrlEncoderTool"));
+const UrlDecoderTool = safeLazy(() => import("./UrlDecoderTool"));
+const UuidGeneratorTool = safeLazy(() => import("./UuidGeneratorTool"));
+const RegexTesterTool = safeLazy(() => import("./RegexTesterTool"));
+const CsvToJsonTool = safeLazy(() => import("./CsvToJsonTool"));
+const JsonToCsvTool = safeLazy(() => import("./JsonToCsvTool"));
+const HtmlMinifierTool = safeLazy(() => import("./HtmlMinifierTool"));
+const CssMinifierTool = safeLazy(() => import("./CssMinifierTool"));
+const JsMinifierTool = safeLazy(() => import("./JsMinifierTool"));
+const ColorCodeConverterTool = safeLazy(() => import("./ColorCodeConverterTool"));
+const MetaTagGeneratorTool = safeLazy(() => import("./MetaTagGeneratorTool"));
+const RobotsTxtTool = safeLazy(() => import("./RobotsTxtTool"));
+const SitemapTool = safeLazy(() => import("./SitemapTool"));
+const SlugGeneratorTool = safeLazy(() => import("./SlugGeneratorTool"));
+const SerpPreviewTool = safeLazy(() => import("./SerpPreviewTool"));
+const QrCodeTool = safeLazy(() => import("./QrCodeTool"));
+const PasswordGeneratorTool = safeLazy(() => import("./PasswordGeneratorTool"));
+const RandomNumberTool = safeLazy(() => import("./RandomNumberTool"));
+const TimestampTool = safeLazy(() => import("./TimestampTool"));
+const DiceRollerTool = safeLazy(() => import("./DiceRollerTool"));
+const CoinFlipTool = safeLazy(() => import("./CoinFlipTool"));
+const RandomPickerTool = safeLazy(() => import("./RandomPickerTool"));
+const AgeCalculatorTool = safeLazy(() => import("./AgeCalculatorTool"));
+const BmiCalculatorTool = safeLazy(() => import("./BmiCalculatorTool"));
+const PercentageCalculatorTool = safeLazy(() => import("./PercentageCalculatorTool"));
+const LoanEmiTool = safeLazy(() => import("./LoanEmiTool"));
+const InterestCalculatorTool = safeLazy(() => import("./InterestCalculatorTool"));
+const DiscountCalculatorTool = safeLazy(() => import("./DiscountCalculatorTool"));
+const DateDifferenceTool = safeLazy(() => import("./DateDifferenceTool"));
+const TimeDurationTool = safeLazy(() => import("./TimeDurationTool"));
+const ProfitMarginTool = safeLazy(() => import("./ProfitMarginTool"));
+const TipCalculatorTool = safeLazy(() => import("./TipCalculatorTool"));
+const AverageCalculatorTool = safeLazy(() => import("./AverageCalculatorTool"));
+const PercentageIncreaseTool = safeLazy(() => import("./PercentageIncreaseTool"));
+const PercentageDecreaseTool = safeLazy(() => import("./PercentageDecreaseTool"));
 
 const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = {
   "image-compressor": ImageCompressorTool,
@@ -170,11 +242,20 @@ const ToolLoadingFallback = () => (
 
 const ToolInterface = ({ slug }: { slug: string }) => {
   const Component = toolMap[slug];
-  if (!Component) return <p className="text-muted-foreground">Tool interface coming soon.</p>;
+
+  if (!Component) {
+    if (import.meta.env.DEV) {
+      console.warn(`[ToolInterface] No module mapped for slug: "${slug}"`);
+    }
+    return <p className="text-muted-foreground">Tool interface coming soon.</p>;
+  }
+
   return (
-    <Suspense fallback={<ToolLoadingFallback />}>
-      <Component />
-    </Suspense>
+    <ToolErrorBoundary>
+      <Suspense fallback={<ToolLoadingFallback />}>
+        <Component />
+      </Suspense>
+    </ToolErrorBoundary>
   );
 };
 

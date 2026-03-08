@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { ChevronRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -20,6 +20,8 @@ const ToolPage = () => {
   const tool = getToolBySlug(slug || "");
   const t = useToolTranslation(slug || "", lang);
 
+  const related = useMemo(() => (tool ? getRelatedTools(tool) : []), [tool?.slug, tool?.categorySlug]);
+
   // Track tool visit for "Recently Used" feature
   useEffect(() => {
     if (tool?.slug) trackToolVisit(tool.slug);
@@ -34,8 +36,6 @@ const ToolPage = () => {
       </div>
     );
   }
-
-  const related = getRelatedTools(tool);
 
   // Use translated content or fallback to tool data
   const title = t?.title || tool.name;
