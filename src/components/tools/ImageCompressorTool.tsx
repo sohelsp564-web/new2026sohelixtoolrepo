@@ -6,6 +6,7 @@ import { toast } from "@/hooks/use-toast";
 import FileUploadZone from "@/components/FileUploadZone";
 import { ComparisonPreview } from "@/components/ResultPreview";
 import { Download } from "lucide-react";
+import { usePerformance } from "@/hooks/usePerformance";
 
 const ImageCompressorTool = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -14,6 +15,7 @@ const ImageCompressorTool = () => {
   const [quality, setQuality] = useState([80]);
   const [loading, setLoading] = useState(false);
   const [stats, setStats] = useState({ original: 0, compressed: 0 });
+  const { measure } = usePerformance("Image Compressor");
 
   const handleFiles = (files: File[]) => {
     const f = files[0];
@@ -26,7 +28,7 @@ const ImageCompressorTool = () => {
     setLoading(true);
     try {
       const targetSizeMB = Math.max(0.01, (quality[0] / 100) * (file.size / 1024 / 1024));
-      const out = await imageCompression(file, { maxSizeMB: targetSizeMB, useWebWorker: true, maxWidthOrHeight: 4096 });
+      const out = await measure(() => imageCompression(file, { maxSizeMB: targetSizeMB, useWebWorker: true, maxWidthOrHeight: 4096 }));
       setCompressedUrl(URL.createObjectURL(out));
       setStats({ original: file.size, compressed: out.size });
     } catch (err) {
