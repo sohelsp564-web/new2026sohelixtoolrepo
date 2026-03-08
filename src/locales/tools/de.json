@@ -1,0 +1,644 @@
+{
+  "image-compressor": {
+    "title": "Bildkompressor",
+    "description": "Komprimieren Sie Bilder online kostenlos ohne Qualitätsverlust.",
+    "meta_title": "Kostenloser Online-Bildkompressor — Sohelix Tools",
+    "meta_description": "Reduzieren Sie die Bildgröße sofort mit diesem kostenlosen browserbasierten Bildkompressor.",
+    "faqs": [
+      { "q": "Ist dieses Tool kostenlos?", "a": "Ja, vollständig kostenlos." },
+      { "q": "Werden Dateien hochgeladen?", "a": "Nein. Alles läuft lokal in Ihrem Browser." }
+    ]
+  },
+  "image-resizer": {
+    "title": "Bild-Größenanpassung",
+    "description": "Ändern Sie die Bildgröße auf beliebige Dimensionen sofort.",
+    "meta_title": "Kostenlose Bild-Größenanpassung — Sohelix Tools",
+    "meta_description": "Ändern Sie die Bildgröße auf beliebige Dimensionen sofort. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja, vollständig kostenlos." },
+      { "q": "Werden Dateien hochgeladen?", "a": "Nein. Alles läuft lokal." }
+    ]
+  },
+  "image-cropper": {
+    "title": "Bildzuschnitt",
+    "description": "Schneiden Sie Bilder online auf jede Größe zu.",
+    "meta_title": "Kostenloser Online-Bildzuschnitt — Sohelix Tools",
+    "meta_description": "Schneiden Sie Bilder online auf jede Größe zu. Kostenlos und in Ihrem Browser.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja, vollständig kostenlos." }
+    ]
+  },
+  "png-to-jpg": {
+    "title": "PNG zu JPG Konverter",
+    "description": "Konvertieren Sie PNG-Bilder sofort in das JPG-Format.",
+    "meta_title": "Kostenloser PNG zu JPG Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie PNG-Bilder sofort in das JPG-Format. Kostenloser Konverter.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "jpg-to-png": {
+    "title": "JPG zu PNG Konverter",
+    "description": "Konvertieren Sie JPG-Bilder in das PNG-Format mit Transparenzunterstützung.",
+    "meta_title": "Kostenloser JPG zu PNG Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie JPG zu PNG mit Transparenzunterstützung. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Unterstützt es Transparenz?", "a": "Ja, PNG unterstützt Transparenz." }
+    ]
+  },
+  "webp-to-jpg": {
+    "title": "WebP zu JPG Konverter",
+    "description": "Konvertieren Sie WebP-Bilder in das JPG-Format.",
+    "meta_title": "Kostenloser WebP zu JPG Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie WebP-Bilder in das JPG-Format. Kostenloser Online-Konverter.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "jpg-to-webp": {
+    "title": "JPG zu WebP Konverter",
+    "description": "Konvertieren Sie JPG-Bilder in WebP für bessere Web-Performance.",
+    "meta_title": "Kostenloser JPG zu WebP Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie JPG zu WebP für bessere Web-Performance. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Warum WebP verwenden?", "a": "WebP bietet bessere Kompression für das Web." }
+    ]
+  },
+  "image-to-base64": {
+    "title": "Bild zu Base64",
+    "description": "Konvertieren Sie Bilder in Base64-kodierte Zeichenketten.",
+    "meta_title": "Kostenloser Bild-zu-Base64-Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie Bilder in Base64-kodierte Zeichenketten. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Was ist Base64?", "a": "Ein Textkodierungsformat für Binärdaten." }
+    ]
+  },
+  "base64-to-image": {
+    "title": "Base64 zu Bild",
+    "description": "Konvertieren Sie Base64-Zeichenketten zurück zu Bildern.",
+    "meta_title": "Kostenloser Base64-zu-Bild-Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie Base64-Zeichenketten zu herunterladbaren Bildern.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "image-color-picker": {
+    "title": "Bild-Farbwähler",
+    "description": "Wählen Sie eine beliebige Farbe aus einem hochgeladenen Bild.",
+    "meta_title": "Kostenloser Bild-Farbwähler — Sohelix Tools",
+    "meta_description": "Wählen Sie eine Farbe aus einem Bild. Erhalten Sie HEX, RGB und HSL-Werte.",
+    "faqs": [
+      { "q": "Welche Formate werden unterstützt?", "a": "HEX, RGB und HSL." }
+    ]
+  },
+  "image-watermark": {
+    "title": "Bild-Wasserzeichen-Tool",
+    "description": "Fügen Sie Ihren Bildern online Text-Wasserzeichen hinzu.",
+    "meta_title": "Kostenloses Bild-Wasserzeichen-Tool — Sohelix Tools",
+    "meta_description": "Fügen Sie Bildern online Wasserzeichen hinzu. Kostenloses browserbasiertes Tool.",
+    "faqs": [
+      { "q": "Kann ich das Wasserzeichen anpassen?", "a": "Ja, Sie können Text, Größe und Deckkraft ändern." },
+      { "q": "Wird mein Bild hochgeladen?", "a": "Nein, alles läuft lokal in Ihrem Browser." }
+    ]
+  },
+  "image-blur": {
+    "title": "Bild-Weichzeichner",
+    "description": "Wenden Sie einen Weichzeichner-Effekt auf Bilder online an.",
+    "meta_title": "Kostenloser Bild-Weichzeichner — Sohelix Tools",
+    "meta_description": "Wenden Sie Weichzeichner-Effekte auf Bilder online an. Radius frei einstellbar.",
+    "faqs": [
+      { "q": "Kann ich die Unschärfe steuern?", "a": "Ja, verwenden Sie den Radius-Schieberegler." }
+    ]
+  },
+  "image-rotate": {
+    "title": "Bild-Drehwerkzeug",
+    "description": "Drehen Sie Bilder online um jeden Winkel.",
+    "meta_title": "Kostenloses Bild-Drehwerkzeug — Sohelix Tools",
+    "meta_description": "Drehen Sie Bilder um 90°, 180° oder 270° online. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Welche Winkel werden unterstützt?", "a": "90°, 180° und 270°." }
+    ]
+  },
+  "image-flip": {
+    "title": "Bild-Spiegelwerkzeug",
+    "description": "Spiegeln Sie Bilder horizontal oder vertikal.",
+    "meta_title": "Kostenloses Bild-Spiegelwerkzeug — Sohelix Tools",
+    "meta_description": "Spiegeln Sie Bilder horizontal oder vertikal. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Kann ich in beide Richtungen spiegeln?", "a": "Ja, horizontal und vertikal." }
+    ]
+  },
+  "images-to-pdf": {
+    "title": "Bilder zu PDF",
+    "description": "Kombinieren Sie mehrere Bilder zu einer PDF.",
+    "meta_title": "Kostenloser Bilder-zu-PDF-Konverter — Sohelix Tools",
+    "meta_description": "Kombinieren Sie mehrere Bilder zu einer PDF-Datei. Kostenloses Online-Tool.",
+    "faqs": [
+      { "q": "Wie viele Bilder?", "a": "So viele Sie möchten." }
+    ]
+  },
+  "pdf-to-jpg": {
+    "title": "PDF zu JPG",
+    "description": "Konvertieren Sie PDF-Seiten in JPG-Bilder.",
+    "meta_title": "Kostenloser PDF-zu-JPG-Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie PDF-Seiten in hochwertige JPG-Bilder.",
+    "faqs": [
+      { "q": "Bleibt die Qualität erhalten?", "a": "Ja, hochwertige Ausgabe." }
+    ]
+  },
+  "pdf-page-counter": {
+    "title": "PDF-Seitenzähler",
+    "description": "Zählen Sie sofort die Seiten einer PDF-Datei.",
+    "meta_title": "Kostenloser PDF-Seitenzähler — Sohelix Tools",
+    "meta_description": "Zählen Sie sofort die Seitenzahl jeder PDF-Datei.",
+    "faqs": [
+      { "q": "Ist es genau?", "a": "Ja, 100% genau." }
+    ]
+  },
+  "pdf-metadata-viewer": {
+    "title": "PDF-Metadaten-Viewer",
+    "description": "Zeigen Sie Metadaten von PDF-Dateien an.",
+    "meta_title": "Kostenloser PDF-Metadaten-Viewer — Sohelix Tools",
+    "meta_description": "Zeigen Sie Autor, Titel, Erstellungsdatum und andere PDF-Metadaten an.",
+    "faqs": [
+      { "q": "Welche Metadaten werden angezeigt?", "a": "Autor, Titel, Erstellungsdatum usw." }
+    ]
+  },
+  "pdf-reader": {
+    "title": "PDF-Reader",
+    "description": "Lesen Sie PDF-Dateien direkt in Ihrem Browser.",
+    "meta_title": "Kostenloser Online-PDF-Reader — Sohelix Tools",
+    "meta_description": "Lesen Sie PDF-Dateien direkt in Ihrem Browser. Kein Download nötig.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "pdf-page-rotator": {
+    "title": "PDF-Seitenrotator",
+    "description": "Drehen Sie PDF-Seiten einfach.",
+    "meta_title": "Kostenloser PDF-Seitenrotator — Sohelix Tools",
+    "meta_description": "Drehen Sie einzelne PDF-Seiten einfach. Kostenloses browserbasiertes Tool.",
+    "faqs": [
+      { "q": "Kann ich einzelne Seiten drehen?", "a": "Ja." }
+    ]
+  },
+  "word-counter": {
+    "title": "Wortzähler",
+    "description": "Zählen Sie Wörter, Zeichen, Sätze und Absätze.",
+    "meta_title": "Kostenloser Wortzähler — Sohelix Tools",
+    "meta_description": "Zählen Sie sofort Wörter, Zeichen, Sätze und Absätze.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "character-counter": {
+    "title": "Zeichenzähler",
+    "description": "Zählen Sie Zeichen mit und ohne Leerzeichen.",
+    "meta_title": "Kostenloser Zeichenzähler — Sohelix Tools",
+    "meta_description": "Zählen Sie Zeichen mit und ohne Leerzeichen. Verfolgen Sie Zeichenlimits.",
+    "faqs": [
+      { "q": "Zählt es Leerzeichen?", "a": "Es zeigt beides, mit und ohne Leerzeichen." }
+    ]
+  },
+  "text-case-converter": {
+    "title": "Textfall-Konverter",
+    "description": "Konvertieren Sie Text in Großbuchstaben, Kleinbuchstaben, Titelfall und mehr.",
+    "meta_title": "Kostenloser Textfall-Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie Text in Großbuchstaben, Kleinbuchstaben, Titelfall und mehr.",
+    "faqs": [
+      { "q": "Welche Fälle werden unterstützt?", "a": "Groß, Klein, Titel, Satz und mehr." }
+    ]
+  },
+  "remove-duplicate-lines": {
+    "title": "Doppelte Zeilen Entfernen",
+    "description": "Entfernen Sie doppelte Zeilen aus Text.",
+    "meta_title": "Kostenlos Doppelte Zeilen Entfernen — Sohelix Tools",
+    "meta_description": "Entfernen Sie sofort doppelte Zeilen aus Text. Kostenloses Online-Tool.",
+    "faqs": [
+      { "q": "Ist es groß-/kleinschreibungsabhängig?", "a": "Sie können die Groß-/Kleinschreibung umschalten." }
+    ]
+  },
+  "text-sorter": {
+    "title": "Textsortierer",
+    "description": "Sortieren Sie Textzeilen alphabetisch oder numerisch.",
+    "meta_title": "Kostenloser Textsortierer — Sohelix Tools",
+    "meta_description": "Sortieren Sie Textzeilen alphabetisch oder numerisch.",
+    "faqs": [
+      { "q": "Kann es numerisch sortieren?", "a": "Ja." }
+    ]
+  },
+  "lorem-ipsum-generator": {
+    "title": "Lorem Ipsum Generator",
+    "description": "Generieren Sie Platzhalter-Lorem-Ipsum-Text.",
+    "meta_title": "Kostenloser Lorem Ipsum Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie Platzhalter-Lorem-Ipsum-Text für Ihre Designs.",
+    "faqs": [
+      { "q": "Was ist Lorem Ipsum?", "a": "Standard-Platzhaltertext im Design." }
+    ]
+  },
+  "random-text-generator": {
+    "title": "Zufallstext-Generator",
+    "description": "Generieren Sie zufällige Textzeichenketten.",
+    "meta_title": "Kostenloser Zufallstext-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie zufällige Textzeichenketten zum Testen.",
+    "faqs": [
+      { "q": "Ist es wirklich zufällig?", "a": "Ja, mit der Browser-Crypto-API." }
+    ]
+  },
+  "text-compare": {
+    "title": "Textvergleich-Tool",
+    "description": "Vergleichen Sie zwei Texte nebeneinander und finden Sie Unterschiede.",
+    "meta_title": "Kostenloser Textvergleich — Sohelix Tools",
+    "meta_description": "Vergleichen Sie zwei Texte nebeneinander und finden Sie markierte Unterschiede.",
+    "faqs": [
+      { "q": "Zeigt es Zeile-für-Zeile-Unterschiede?", "a": "Ja, geänderte Zeilen werden markiert." }
+    ]
+  },
+  "text-reverse": {
+    "title": "Text-Umkehr-Tool",
+    "description": "Kehren Sie Textzeichen oder Wörter sofort um.",
+    "meta_title": "Kostenlose Text-Umkehr — Sohelix Tools",
+    "meta_description": "Kehren Sie Textzeichen oder Wörter sofort um.",
+    "faqs": [
+      { "q": "Kann ich auch Wörter umkehren?", "a": "Ja, sowohl Zeichen- als auch Wortumkehr." }
+    ]
+  },
+  "remove-extra-spaces": {
+    "title": "Zusätzliche Leerzeichen Entfernen",
+    "description": "Entfernen Sie zusätzliche Leerzeichen, Tabs und Leerzeilen aus Text.",
+    "meta_title": "Kostenlos Zusätzliche Leerzeichen Entfernen — Sohelix Tools",
+    "meta_description": "Entfernen Sie zusätzliche Leerzeichen, Tabs und Leerzeilen aus Text.",
+    "faqs": [
+      { "q": "Entfernt es alle Leerzeichen?", "a": "Nein, nur zusätzliche/doppelte Leerzeichen." }
+    ]
+  },
+  "random-word-generator": {
+    "title": "Zufallswort-Generator",
+    "description": "Generieren Sie zufällige Wörter für Brainstorming oder Tests.",
+    "meta_title": "Kostenloser Zufallswort-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie zufällige Wörter für Brainstorming oder Tests.",
+    "faqs": [
+      { "q": "Sind die Wörter echt?", "a": "Ja, es sind echte englische Wörter." }
+    ]
+  },
+  "text-to-slug": {
+    "title": "Text-zu-Slug-Konverter",
+    "description": "Konvertieren Sie beliebigen Text in einen URL-freundlichen Slug.",
+    "meta_title": "Kostenloser Text-zu-Slug-Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie beliebigen Text sofort in einen URL-freundlichen Slug.",
+    "faqs": [
+      { "q": "Wie unterscheidet es sich vom Slug-Generator?", "a": "Gleiches Konzept, Fokus auf Text-zu-Slug-Konvertierung." }
+    ]
+  },
+  "json-formatter": {
+    "title": "JSON-Formatierer",
+    "description": "Formatieren und verschönern Sie JSON-Daten.",
+    "meta_title": "Kostenloser JSON-Formatierer — Sohelix Tools",
+    "meta_description": "Formatieren und verschönern Sie JSON-Daten. Kostenloser Online-JSON-Formatierer.",
+    "faqs": [
+      { "q": "Validiert es JSON?", "a": "Ja, es zeigt auch Fehler an." }
+    ]
+  },
+  "json-validator": {
+    "title": "JSON-Validator",
+    "description": "Validieren Sie JSON-Daten und finden Sie Fehler.",
+    "meta_title": "Kostenloser JSON-Validator — Sohelix Tools",
+    "meta_description": "Validieren Sie JSON-Daten und finden Sie sofort Syntaxfehler.",
+    "faqs": [
+      { "q": "Welche Fehler erkennt es?", "a": "Syntaxfehler, fehlende Klammern usw." }
+    ]
+  },
+  "base64-encoder": {
+    "title": "Base64-Encoder",
+    "description": "Kodieren Sie Text im Base64-Format.",
+    "meta_title": "Kostenloser Base64-Encoder — Sohelix Tools",
+    "meta_description": "Kodieren Sie Text im Base64-Format. Kostenloses Online-Tool.",
+    "faqs": [
+      { "q": "Ist Base64 Verschlüsselung?", "a": "Nein, es ist Kodierung, keine Verschlüsselung." }
+    ]
+  },
+  "base64-decoder": {
+    "title": "Base64-Decoder",
+    "description": "Dekodieren Sie Base64-Zeichenketten zu Text.",
+    "meta_title": "Kostenloser Base64-Decoder — Sohelix Tools",
+    "meta_description": "Dekodieren Sie Base64-Zeichenketten zu lesbarem Text.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "url-encoder": {
+    "title": "URL-Encoder",
+    "description": "Kodieren Sie URLs für sichere Übertragung.",
+    "meta_title": "Kostenloser URL-Encoder — Sohelix Tools",
+    "meta_description": "Kodieren Sie URLs für sichere Übertragung. Kostenloses Online-Tool.",
+    "faqs": [
+      { "q": "Wann brauche ich das?", "a": "Beim Übergeben von Sonderzeichen in URLs." }
+    ]
+  },
+  "url-decoder": {
+    "title": "URL-Decoder",
+    "description": "Dekodieren Sie kodierte URLs zu lesbarem Text.",
+    "meta_title": "Kostenloser URL-Decoder — Sohelix Tools",
+    "meta_description": "Dekodieren Sie kodierte URLs zu lesbarem Text. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "uuid-generator": {
+    "title": "UUID-Generator",
+    "description": "Generieren Sie zufällige UUIDs (v4).",
+    "meta_title": "Kostenloser UUID-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie zufällige UUID-v4-Identifikatoren. Kostenloses Online-Tool.",
+    "faqs": [
+      { "q": "Sind sie einzigartig?", "a": "Ja, statistisch garantiert einzigartig." }
+    ]
+  },
+  "regex-tester": {
+    "title": "Regex-Tester",
+    "description": "Testen und debuggen Sie reguläre Ausdrücke.",
+    "meta_title": "Kostenloser Regex-Tester — Sohelix Tools",
+    "meta_description": "Testen und debuggen Sie reguläre Ausdrücke mit Live-Übereinstimmung.",
+    "faqs": [
+      { "q": "Welche Dialekte werden unterstützt?", "a": "JavaScript-Regex-Dialekt." }
+    ]
+  },
+  "csv-to-json": {
+    "title": "CSV-zu-JSON-Konverter",
+    "description": "Konvertieren Sie CSV-Daten in das JSON-Format.",
+    "meta_title": "Kostenloser CSV-zu-JSON-Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie sofort CSV-Daten in das JSON-Format.",
+    "faqs": [
+      { "q": "Verarbeitet es Header?", "a": "Ja, die erste Zeile wird als Schlüssel verwendet." }
+    ]
+  },
+  "json-to-csv": {
+    "title": "JSON-zu-CSV-Konverter",
+    "description": "Konvertieren Sie JSON-Arrays in das CSV-Format.",
+    "meta_title": "Kostenloser JSON-zu-CSV-Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie JSON-Arrays in das CSV-Format. Kostenloses Online-Tool.",
+    "faqs": [
+      { "q": "Welches JSON-Format?", "a": "Array von Objekten mit konsistenten Schlüsseln." }
+    ]
+  },
+  "html-minifier": {
+    "title": "HTML-Minifier",
+    "description": "Minimieren Sie HTML-Code durch Entfernen von Leerzeichen und Kommentaren.",
+    "meta_title": "Kostenloser HTML-Minifier — Sohelix Tools",
+    "meta_description": "Minimieren Sie HTML-Code durch Entfernen von Leerzeichen und Kommentaren.",
+    "faqs": [
+      { "q": "Beeinträchtigt es die Funktionalität?", "a": "Nein, nur Leerzeichen und Kommentare werden entfernt." }
+    ]
+  },
+  "css-minifier": {
+    "title": "CSS-Minifier",
+    "description": "Minimieren Sie CSS-Code zur Reduzierung der Dateigröße.",
+    "meta_title": "Kostenloser CSS-Minifier — Sohelix Tools",
+    "meta_description": "Minimieren Sie CSS-Code zur Reduzierung der Dateigröße.",
+    "faqs": [
+      { "q": "Entfernt es Kommentare?", "a": "Ja, alle Kommentare werden entfernt." }
+    ]
+  },
+  "js-minifier": {
+    "title": "JavaScript-Minifier",
+    "description": "Minimieren Sie JavaScript-Code zur Reduzierung der Dateigröße.",
+    "meta_title": "Kostenloser JavaScript-Minifier — Sohelix Tools",
+    "meta_description": "Minimieren Sie JavaScript-Code zur Reduzierung der Dateigröße.",
+    "faqs": [
+      { "q": "Entfernt es Kommentare?", "a": "Ja, einzeilige und mehrzeilige Kommentare." }
+    ]
+  },
+  "color-code-converter": {
+    "title": "Farbcode-Konverter",
+    "description": "Konvertieren Sie zwischen HEX-, RGB- und HSL-Farbformaten.",
+    "meta_title": "Kostenloser Farbcode-Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie zwischen HEX-, RGB- und HSL-Farbformaten.",
+    "faqs": [
+      { "q": "Welche Formate werden unterstützt?", "a": "HEX, RGB und HSL." }
+    ]
+  },
+  "meta-tag-generator": {
+    "title": "Meta-Tag-Generator",
+    "description": "Generieren Sie HTML-Meta-Tags für SEO.",
+    "meta_title": "Kostenloser Meta-Tag-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie HTML-Meta-Tags für SEO. Kostenloses Online-Tool.",
+    "faqs": [
+      { "q": "Welche Tags sind enthalten?", "a": "Titel, Beschreibung, OG, Twitter Cards." }
+    ]
+  },
+  "robots-txt-generator": {
+    "title": "Robots.txt-Generator",
+    "description": "Generieren Sie eine robots.txt-Datei für Ihre Website.",
+    "meta_title": "Kostenloser Robots.txt-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie eine robots.txt-Datei für Ihre Website.",
+    "faqs": [
+      { "q": "Was ist robots.txt?", "a": "Eine Datei, die Suchmaschinen sagt, was sie crawlen sollen." }
+    ]
+  },
+  "sitemap-xml-generator": {
+    "title": "Sitemap-XML-Generator",
+    "description": "Generieren Sie XML-Sitemaps für Ihre Website.",
+    "meta_title": "Kostenloser Sitemap-XML-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie XML-Sitemaps für Ihre Website. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Was ist eine Sitemap?", "a": "Eine XML-Datei, die alle Seiten für Suchmaschinen auflistet." }
+    ]
+  },
+  "slug-generator": {
+    "title": "Slug-Generator",
+    "description": "Generieren Sie URL-freundliche Slugs aus Text.",
+    "meta_title": "Kostenloser Slug-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie URL-freundliche Slugs aus Text.",
+    "faqs": [
+      { "q": "Was ist ein Slug?", "a": "Eine URL-freundliche Version eines Titels." }
+    ]
+  },
+  "serp-preview-tool": {
+    "title": "SERP-Vorschau-Tool",
+    "description": "Sehen Sie sich an, wie Ihre Seite in Google-Suchergebnissen erscheint.",
+    "meta_title": "Kostenloses SERP-Vorschau-Tool — Sohelix Tools",
+    "meta_description": "Sehen Sie sich an, wie Ihre Seite in Google-Suchergebnissen erscheint.",
+    "faqs": [
+      { "q": "Ist es genau?", "a": "Es ahmt die Google-Anzeige genau nach." }
+    ]
+  },
+  "qr-code-generator": {
+    "title": "QR-Code-Generator",
+    "description": "Generieren Sie QR-Codes für jeden Text oder URL.",
+    "meta_title": "Kostenloser QR-Code-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie QR-Codes für jeden Text oder URL. Download als PNG.",
+    "faqs": [
+      { "q": "Welche Formate?", "a": "PNG-Download." }
+    ]
+  },
+  "password-generator": {
+    "title": "Passwort-Generator",
+    "description": "Generieren Sie starke zufällige Passwörter.",
+    "meta_title": "Kostenloser Passwort-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie starke zufällige Passwörter mit anpassbaren Optionen.",
+    "faqs": [
+      { "q": "Sind sie sicher?", "a": "Ja, generiert mit der Crypto-API." }
+    ]
+  },
+  "random-number-generator": {
+    "title": "Zufallszahl-Generator",
+    "description": "Generieren Sie Zufallszahlen in einem Bereich.",
+    "meta_title": "Kostenloser Zufallszahl-Generator — Sohelix Tools",
+    "meta_description": "Generieren Sie Zufallszahlen in einem Bereich. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Ist es wirklich zufällig?", "a": "Ja, mit der Crypto-API." }
+    ]
+  },
+  "timestamp-converter": {
+    "title": "Zeitstempel-Konverter",
+    "description": "Konvertieren Sie Unix-Zeitstempel in lesbare Daten.",
+    "meta_title": "Kostenloser Zeitstempel-Konverter — Sohelix Tools",
+    "meta_description": "Konvertieren Sie Unix-Zeitstempel in menschenlesbare Daten.",
+    "faqs": [
+      { "q": "Welche Formate?", "a": "Unix-Sekunden und Millisekunden." }
+    ]
+  },
+  "dice-roller": {
+    "title": "Würfelroller",
+    "description": "Würfeln Sie virtuelle Würfel mit anpassbaren Seiten und Anzahl.",
+    "meta_title": "Kostenloser Virtueller Würfelroller — Sohelix Tools",
+    "meta_description": "Würfeln Sie virtuelle Würfel mit anpassbaren Seiten und Anzahl.",
+    "faqs": [
+      { "q": "Ist es zufällig?", "a": "Ja, mit kryptografischer Zufälligkeit." }
+    ]
+  },
+  "coin-flip": {
+    "title": "Münzwurf",
+    "description": "Werfen Sie eine virtuelle Münze und verfolgen Sie Ergebnisse.",
+    "meta_title": "Kostenloser Münzwurf — Sohelix Tools",
+    "meta_description": "Werfen Sie eine virtuelle Münze mit fairer 50/50-Wahrscheinlichkeit.",
+    "faqs": [
+      { "q": "Ist es fair?", "a": "Ja, 50/50-Wahrscheinlichkeit mit Crypto-API." }
+    ]
+  },
+  "random-picker": {
+    "title": "Zufallsauswahl",
+    "description": "Wählen Sie zufällig Elemente aus einer Liste.",
+    "meta_title": "Kostenlose Zufallsauswahl — Sohelix Tools",
+    "meta_description": "Wählen Sie zufällig Elemente aus einer Liste. Kostenloses Online-Tool.",
+    "faqs": [
+      { "q": "Ist die Auswahl zufällig?", "a": "Ja, mit kryptografischer Zufälligkeit." }
+    ]
+  },
+  "age-calculator": {
+    "title": "Altersrechner",
+    "description": "Berechnen Sie Ihr genaues Alter in Jahren, Monaten und Tagen.",
+    "meta_title": "Kostenloser Altersrechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie Ihr genaues Alter in Jahren, Monaten und Tagen.",
+    "faqs": [
+      { "q": "Ist es genau?", "a": "Ja, bis auf den Tag genau." }
+    ]
+  },
+  "bmi-calculator": {
+    "title": "BMI-Rechner",
+    "description": "Berechnen Sie Ihren Body-Mass-Index.",
+    "meta_title": "Kostenloser BMI-Rechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie Ihren Body-Mass-Index basierend auf Gewicht und Größe.",
+    "faqs": [
+      { "q": "Was ist BMI?", "a": "Der Body-Mass-Index misst Körperfett basierend auf Gewicht und Größe." }
+    ]
+  },
+  "percentage-calculator": {
+    "title": "Prozentrechner",
+    "description": "Berechnen Sie Prozentsätze einfach.",
+    "meta_title": "Kostenloser Prozentrechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie Prozentsätze einfach. Kostenloser Online-Rechner.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "loan-emi-calculator": {
+    "title": "Kredit-EMI-Rechner",
+    "description": "Berechnen Sie monatliche Kredit-EMI-Zahlungen.",
+    "meta_title": "Kostenloser Kredit-EMI-Rechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie monatliche Kredit-EMI-Zahlungen und sehen Sie den Zeitplan.",
+    "faqs": [
+      { "q": "Was ist EMI?", "a": "Gleichbleibende Monatliche Rate." }
+    ]
+  },
+  "interest-calculator": {
+    "title": "Zinsrechner",
+    "description": "Berechnen Sie einfache und Zinseszinsen.",
+    "meta_title": "Kostenloser Zinsrechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie einfache und Zinseszinsen. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Einfach vs. Zinseszins?", "a": "Zinseszins erwirtschaftet Zinsen auf Zinsen." }
+    ]
+  },
+  "discount-calculator": {
+    "title": "Rabattrechner",
+    "description": "Berechnen Sie Rabattbeträge und Endpreise.",
+    "meta_title": "Kostenloser Rabattrechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie sofort Rabattbeträge und Endpreise.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "date-difference-calculator": {
+    "title": "Datumsdifferenz-Rechner",
+    "description": "Berechnen Sie die Tage zwischen zwei Daten.",
+    "meta_title": "Kostenloser Datumsdifferenz-Rechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie die Anzahl der Tage zwischen zwei Daten.",
+    "faqs": [
+      { "q": "Zählt es Wochenenden?", "a": "Ja, alle Tage werden gezählt." }
+    ]
+  },
+  "time-duration-calculator": {
+    "title": "Zeitdauer-Rechner",
+    "description": "Berechnen Sie die Dauer zwischen zwei Zeiten.",
+    "meta_title": "Kostenloser Zeitdauer-Rechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie die Dauer zwischen zwei Zeiten. Kostenloses Tool.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja." }
+    ]
+  },
+  "profit-margin-calculator": {
+    "title": "Gewinnmargen-Rechner",
+    "description": "Berechnen Sie Gewinnmargen und Aufschläge.",
+    "meta_title": "Kostenloser Gewinnmargen-Rechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie Gewinnmargen und Aufschläge. Kostenloser Rechner.",
+    "faqs": [
+      { "q": "Marge vs. Aufschlag?", "a": "Marge basiert auf dem Verkaufspreis, Aufschlag auf den Kosten." }
+    ]
+  },
+  "tip-calculator": {
+    "title": "Trinkgeldrechner",
+    "description": "Berechnen Sie Trinkgelder und teilen Sie Rechnungen.",
+    "meta_title": "Kostenloser Trinkgeldrechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie Trinkgelder und teilen Sie Rechnungen einfach.",
+    "faqs": [
+      { "q": "Kann ich die Rechnung teilen?", "a": "Ja, zwischen beliebig vielen Personen." }
+    ]
+  },
+  "average-calculator": {
+    "title": "Durchschnittsrechner",
+    "description": "Berechnen Sie Durchschnitt, Median, Minimum und Maximum einer Zahlenreihe.",
+    "meta_title": "Kostenloser Durchschnittsrechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie Mittelwert, Median, Summe, Minimum, Maximum von Zahlen.",
+    "faqs": [
+      { "q": "Welche Statistiken zeigt es?", "a": "Mittelwert, Median, Summe, Minimum, Maximum und Anzahl." }
+    ]
+  },
+  "percentage-increase-calculator": {
+    "title": "Prozentuale Steigerung Rechner",
+    "description": "Berechnen Sie die prozentuale Steigerung zwischen zwei Werten.",
+    "meta_title": "Kostenloser Prozentuale-Steigerung-Rechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie die prozentuale Steigerung zwischen zwei Werten.",
+    "faqs": [
+      { "q": "Verarbeitet es Abnahmen?", "a": "Ja, es zeigt auch negative Prozentsätze." }
+    ]
+  },
+  "percentage-decrease-calculator": {
+    "title": "Prozentuale Abnahme Rechner",
+    "description": "Berechnen Sie das Ergebnis nach einer prozentualen Abnahme.",
+    "meta_title": "Kostenloser Prozentuale-Abnahme-Rechner — Sohelix Tools",
+    "meta_description": "Berechnen Sie das Ergebnis nach einer prozentualen Abnahme.",
+    "faqs": [
+      { "q": "Ist es kostenlos?", "a": "Ja, vollständig kostenlos." }
+    ]
+  }
+}
