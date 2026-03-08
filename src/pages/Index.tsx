@@ -7,15 +7,17 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import ToolCard from "@/components/ToolCard";
-import { tools, categories, searchTools } from "@/data/tools";
+import { tools, categories, searchTools, getToolBySlug } from "@/data/tools";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { useRecentTools } from "@/hooks/useRecentTools";
 
 const Index = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<ReturnType<typeof searchTools>>([]);
   const navigate = useNavigate();
-
+  const recentSlugs = useRecentTools();
+  const recentTools = recentSlugs.map(s => getToolBySlug(s)).filter(Boolean);
   const popularTools = tools.filter(t => t.isPopular);
   const trendingTools = tools.filter(t => t.isTrending);
   const newTools = tools.filter(t => t.isNew);
