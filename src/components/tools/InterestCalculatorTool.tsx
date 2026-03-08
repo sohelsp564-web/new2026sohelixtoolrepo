@@ -52,6 +52,20 @@ const InterestCalculatorTool = () => {
           <div className="text-xs text-muted-foreground">Total: ${(p + compound).toFixed(2)}</div>
         </div>
       </div>
+
+      {/* Example Calculation */}
+      <div className="rounded-lg border border-dashed border-border p-4">
+        <h4 className="text-sm font-semibold text-muted-foreground mb-3">📌 Example Calculation</h4>
+        <div className="text-sm text-muted-foreground space-y-1">
+          <p><span className="font-medium text-foreground">Principal:</span> $10,000</p>
+          <p><span className="font-medium text-foreground">Rate:</span> 5% per year</p>
+          <p><span className="font-medium text-foreground">Time:</span> 3 years (compounded monthly)</p>
+          <div className="mt-3 pt-3 border-t border-border space-y-1">
+            <p><span className="font-medium text-foreground">Simple Interest:</span> $1,500.00</p>
+            <p><span className="font-medium text-foreground">Compound Interest:</span> $1,614.72</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

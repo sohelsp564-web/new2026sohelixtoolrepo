@@ -149,6 +149,21 @@ const AgeCalculatorTool = () => {
           </div>
         </>
       )}
+
+      {/* Example Calculation */}
+      <div className="rounded-lg border border-dashed border-border p-4">
+        <h4 className="text-sm font-semibold text-muted-foreground mb-3">📌 Example Calculation</h4>
+        <div className="text-sm text-muted-foreground space-y-1">
+          <p><span className="font-medium text-foreground">Date of Birth:</span> January 15, 1990</p>
+          <p><span className="font-medium text-foreground">Current Date:</span> March 8, 2026</p>
+          <div className="mt-3 pt-3 border-t border-border space-y-1">
+            <p><span className="font-medium text-foreground">Age:</span> 36 years, 1 month, 21 days</p>
+            <p><span className="font-medium text-foreground">Total Days:</span> 13,201</p>
+            <p><span className="font-medium text-foreground">Total Weeks:</span> 1,885</p>
+            <p><span className="font-medium text-foreground">Total Hours:</span> 316,824</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
