@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { getBlogPostBySlug } from "@/data/blogPosts";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
