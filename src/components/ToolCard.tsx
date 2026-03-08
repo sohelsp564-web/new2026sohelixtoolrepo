@@ -4,20 +4,16 @@ import { Badge } from "@/components/ui/badge";
 import * as Icons from "lucide-react";
 import type { Tool } from "@/data/tools";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 
 const ToolCard = ({ tool, index = 0 }: { tool: Tool; index?: number }) => {
   const IconComponent = (Icons as any)[tool.icon] || Icons.Wrench;
-  const { i18n } = useTranslation();
-  const langPrefix = i18n.language && i18n.language !== "en" ? `/${i18n.language.split("-")[0]}` : "";
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.04 }}
     >
-      <Link to={`${langPrefix}/tools/${tool.slug}`}>
+      <Link to={`/tools/${tool.slug}`}>
         <Card className="group relative overflow-hidden p-5 transition-all duration-300 hover:shadow-elevated hover:-translate-y-1.5 hover:border-primary/20 border-transparent shadow-card">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="relative flex items-start gap-4">

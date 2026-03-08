@@ -4,20 +4,17 @@ import { getCategoryBySlug, getToolsByCategory } from "@/data/tools";
 import ToolCard from "@/components/ToolCard";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
 
 const CategoryPage = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t, i18n } = useTranslation();
-  const langPrefix = i18n.language && i18n.language !== "en" ? `/${i18n.language.split("-")[0]}` : "";
   const category = getCategoryBySlug(slug || "");
   const categoryTools = getToolsByCategory(slug || "");
 
   if (!category) {
     return (
       <div className="container mx-auto px-4 py-20 text-center">
-        <h1 className="text-3xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>{t("category_not_found")}</h1>
-        <Link to={`${langPrefix}/`} className="mt-6 inline-block text-primary hover:underline">{t("back_to_home")}</Link>
+        <h1 className="text-3xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Category Not Found</h1>
+        <Link to="/" className="mt-6 inline-block text-primary hover:underline">← Back to Home</Link>
       </div>
     );
   }
@@ -32,7 +29,7 @@ const CategoryPage = () => {
 
       <div className="container mx-auto px-4 py-8">
         <nav className="flex items-center gap-1.5 text-sm text-muted-foreground mb-8">
-          <Link to={`${langPrefix}/`} className="hover:text-foreground transition-colors">{t("home")}</Link>
+          <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
           <ChevronRight className="h-3 w-3" />
           <span className="text-foreground font-medium">{category.name}</span>
         </nav>

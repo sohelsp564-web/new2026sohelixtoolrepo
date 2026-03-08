@@ -6,8 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import HreflangTags from "@/components/HreflangTags";
-import LanguageWrapper from "@/components/LanguageWrapper";
 import Index from "./pages/Index";
 import ToolPage from "./pages/ToolPage";
 import CategoryPage from "./pages/CategoryPage";
@@ -23,24 +21,6 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const AppRoutes = () => (
-  <Routes>
-    <Route path="/" element={<Index />} />
-    <Route path="/tools/:slug" element={<ToolPage />} />
-    <Route path="/category/:slug" element={<CategoryPage />} />
-    <Route path="/categories" element={<CategoriesPage />} />
-    <Route path="/about" element={<AboutPage />} />
-    <Route path="/contact" element={<ContactPage />} />
-    <Route path="/privacy" element={<PrivacyPage />} />
-    <Route path="/privacy-policy" element={<PrivacyPage />} />
-    <Route path="/terms-of-service" element={<TermsOfServicePage />} />
-    <Route path="/disclaimer" element={<DisclaimerPage />} />
-    <Route path="/faq" element={<FaqPage />} />
-    <Route path="/request-tool" element={<RequestToolPage />} />
-    <Route path="*" element={<NotFound />} />
-  </Routes>
-);
-
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
@@ -48,19 +28,23 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <HreflangTags />
           <div className="flex min-h-screen flex-col">
             <Header />
             <main className="flex-1">
               <Routes>
-                {/* Language-prefixed routes */}
-                <Route path="/:lang/*" element={
-                  <LanguageWrapper>
-                    <AppRoutes />
-                  </LanguageWrapper>
-                } />
-                {/* Default (English) routes */}
-                <Route path="/*" element={<AppRoutes />} />
+                <Route path="/" element={<Index />} />
+                <Route path="/tools/:slug" element={<ToolPage />} />
+                <Route path="/category/:slug" element={<CategoryPage />} />
+                <Route path="/categories" element={<CategoriesPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/privacy-policy" element={<PrivacyPage />} />
+                <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+                <Route path="/disclaimer" element={<DisclaimerPage />} />
+                <Route path="/faq" element={<FaqPage />} />
+                <Route path="/request-tool" element={<RequestToolPage />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
             <Footer />
