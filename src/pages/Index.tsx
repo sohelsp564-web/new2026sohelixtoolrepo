@@ -43,7 +43,9 @@ const Index = () => {
         <meta property="og:title" content="Sohelix Tools — Free Online Tools" />
         <meta property="og:description" content="Free online tools that run in your browser. No uploads, no registration." />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://sohelix.com/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://sohelix.com/og-image.png" />
         <meta name="keywords" content="free online tools, browser tools, image tools, PDF tools, developer tools, client-side tools" />
       </Helmet>
 
