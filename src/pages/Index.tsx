@@ -9,11 +9,14 @@ import ToolCard from "@/components/ToolCard";
 import { tools, categories, searchTools } from "@/data/tools";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<ReturnType<typeof searchTools>>([]);
   const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language && i18n.language !== "en" ? `/${i18n.language.split("-")[0]}` : "";
 
   const popularTools = tools.filter(t => t.isPopular);
   const trendingTools = tools.filter(t => t.isTrending);
@@ -25,20 +28,20 @@ const Index = () => {
   };
 
   const benefits = [
-    { icon: Shield, title: "100% Browser Processing", desc: "All tools run locally. Your files never leave your device.", color: "from-blue-500/10 to-blue-600/5" },
-    { icon: Lock, title: "No Upload Required", desc: "Complete privacy. Zero data collection or file uploads.", color: "from-purple-500/10 to-purple-600/5" },
-    { icon: Zap, title: "Fast & Secure", desc: "Instant processing with no server delays.", color: "from-amber-500/10 to-amber-600/5" },
-    { icon: Globe, title: "Completely Free", desc: "All tools are free to use, forever. No registration.", color: "from-emerald-500/10 to-emerald-600/5" },
+    { icon: Shield, title: t("benefit_browser"), desc: t("benefit_browser_desc"), color: "from-blue-500/10 to-blue-600/5" },
+    { icon: Lock, title: t("benefit_privacy"), desc: t("benefit_privacy_desc"), color: "from-purple-500/10 to-purple-600/5" },
+    { icon: Zap, title: t("benefit_fast"), desc: t("benefit_fast_desc"), color: "from-amber-500/10 to-amber-600/5" },
+    { icon: Globe, title: t("benefit_free"), desc: t("benefit_free_desc"), color: "from-emerald-500/10 to-emerald-600/5" },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Sohelix Tools — Free Online Tools for Images, PDFs, Text & More</title>
-        <meta name="description" content="Free online tools for images, PDFs, text, developers and calculations. All tools run directly in your browser. No uploads. No registration." />
+        <title>Sohelix Tools — {t("home_title")}</title>
+        <meta name="description" content={t("home_subtitle")} />
         <link rel="canonical" href="https://sohelix.com/tools" />
-        <meta property="og:title" content="Sohelix Tools — Free Online Tools" />
-        <meta property="og:description" content="Free online tools that run in your browser. No uploads, no registration." />
+        <meta property="og:title" content={`Sohelix Tools — ${t("home_title")}`} />
+        <meta property="og:description" content={t("home_subtitle")} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
@@ -55,29 +58,28 @@ const Index = () => {
               className="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-1.5 text-sm text-primary font-medium mb-6"
             >
               <Sparkles className="h-3.5 w-3.5" />
-              100% Free & Private
+              {t("free_private")}
             </motion.div>
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl leading-[1.1]" style={{ fontFamily: 'Space Grotesk' }}>
-              Free Online Tools for{" "}
-              <span className="text-gradient">Images, PDFs, Text & Developers</span>
+              {t("home_title")}
             </h1>
             <p className="mt-5 text-lg text-muted-foreground md:text-xl max-w-2xl mx-auto leading-relaxed">
-              All tools run securely in your browser. No uploads required.
+              {t("home_subtitle")}
             </p>
             <div className="relative mx-auto mt-10 max-w-xl">
               <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
               <Input
                 className="h-14 rounded-2xl pl-12 text-base shadow-elevated border-border/50 bg-card focus:shadow-glow focus:border-primary/30 transition-all"
-                placeholder="Search for a tool..."
+                placeholder={t("search_for_tool")}
                 value={query}
                 onChange={e => handleSearch(e.target.value)}
               />
               {results.length > 0 && (
                 <div className="absolute top-full left-0 mt-2 w-full rounded-2xl border border-border bg-card shadow-elevated z-10 max-h-80 overflow-y-auto overflow-hidden">
-                  {results.map(t => (
-                    <button key={t.slug} className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm hover:bg-muted transition-colors" onClick={() => { navigate(`/tools/${t.slug}`); setQuery(""); setResults([]); }}>
-                      <span className="font-medium">{t.name}</span>
-                      <span className="text-xs text-muted-foreground ml-auto">{t.category}</span>
+                  {results.map(tool => (
+                    <button key={tool.slug} className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm hover:bg-muted transition-colors" onClick={() => { navigate(`${langPrefix}/tools/${tool.slug}`); setQuery(""); setResults([]); }}>
+                      <span className="font-medium">{tool.name}</span>
+                      <span className="text-xs text-muted-foreground ml-auto">{tool.category}</span>
                     </button>
                   ))}
                 </div>
@@ -87,7 +89,7 @@ const Index = () => {
               {["Image Compressor", "JSON Formatter", "QR Code"].map(name => {
                 const tool = tools.find(t => t.name.includes(name.split(" ")[0]));
                 return tool ? (
-                  <Link key={name} to={`/tools/${tool.slug}`} className="rounded-full bg-muted/60 px-3.5 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
+                  <Link key={name} to={`${langPrefix}/tools/${tool.slug}`} className="rounded-full bg-muted/60 px-3.5 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
                     {name}
                   </Link>
                 ) : null;
@@ -101,11 +103,11 @@ const Index = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-2xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Popular Tools</h2>
-            <p className="text-sm text-muted-foreground mt-1">Most used tools by our community</p>
+            <h2 className="text-2xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>{t("popular_tools")}</h2>
+            <p className="text-sm text-muted-foreground mt-1">{t("popular_tools_desc")}</p>
           </div>
-          <Link to="/categories" className="hidden sm:flex items-center gap-1 text-sm font-medium text-primary hover:text-primary/80 transition-colors">
-            View all <ArrowRight className="h-3.5 w-3.5" />
+          <Link to={`${langPrefix}/categories`} className="hidden sm:flex items-center gap-1 text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+            {t("view_all")} <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -116,8 +118,8 @@ const Index = () => {
       {/* Categories */}
       <section className="container mx-auto px-4 py-16">
         <div className="mb-8">
-          <h2 className="text-2xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Browse by Category</h2>
-          <p className="text-sm text-muted-foreground mt-1">Find the right tool for your task</p>
+          <h2 className="text-2xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>{t("browse_by_category")}</h2>
+          <p className="text-sm text-muted-foreground mt-1">{t("browse_by_category_desc")}</p>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {categories.map((cat, i) => {
@@ -125,7 +127,7 @@ const Index = () => {
             const count = tools.filter(t => t.categorySlug === cat.slug).length;
             return (
               <motion.div key={cat.slug} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>
-                <Link to={`/category/${cat.slug}`}>
+                <Link to={`${langPrefix}/category/${cat.slug}`}>
                   <Card className="group p-4 transition-all duration-300 hover:shadow-elevated hover:-translate-y-1 border-transparent shadow-card">
                     <div className="flex items-center gap-3">
                       <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/8 text-primary group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-primary-glow group-hover:text-primary-foreground transition-all duration-300">
@@ -133,7 +135,7 @@ const Index = () => {
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="font-semibold text-sm" style={{ fontFamily: 'Space Grotesk' }}>{cat.name}</h3>
-                        <p className="text-xs text-muted-foreground">{count} tools</p>
+                        <p className="text-xs text-muted-foreground">{count} {t("tools_count")}</p>
                       </div>
                       <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
                     </div>
@@ -148,8 +150,8 @@ const Index = () => {
       {/* Trending */}
       <section className="container mx-auto px-4 py-16">
         <div className="mb-8">
-          <h2 className="text-2xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Trending Tools</h2>
-          <p className="text-sm text-muted-foreground mt-1">What's popular right now</p>
+          <h2 className="text-2xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>{t("trending_tools")}</h2>
+          <p className="text-sm text-muted-foreground mt-1">{t("trending_tools_desc")}</p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {trendingTools.map((t, i) => <ToolCard key={t.slug} tool={t} index={i} />)}
@@ -159,8 +161,8 @@ const Index = () => {
       {/* Recently Added */}
       <section className="container mx-auto px-4 py-16">
         <div className="mb-8">
-          <h2 className="text-2xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Recently Added</h2>
-          <p className="text-sm text-muted-foreground mt-1">Fresh tools just added to the collection</p>
+          <h2 className="text-2xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>{t("recently_added")}</h2>
+          <p className="text-sm text-muted-foreground mt-1">{t("recently_added_desc")}</p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {newTools.map((t, i) => <ToolCard key={t.slug} tool={t} index={i} />)}
@@ -170,8 +172,8 @@ const Index = () => {
       {/* Why Sohelix */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold md:text-3xl" style={{ fontFamily: 'Space Grotesk' }}>Why Sohelix Tools?</h2>
-          <p className="text-muted-foreground mt-2">Built for privacy, speed, and simplicity</p>
+          <h2 className="text-2xl font-bold md:text-3xl" style={{ fontFamily: 'Space Grotesk' }}>{t("why_sohelix")}</h2>
+          <p className="text-muted-foreground mt-2">{t("why_sohelix_desc")}</p>
         </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((b, i) => (

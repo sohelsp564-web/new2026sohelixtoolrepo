@@ -6,17 +6,20 @@ import ToolCard from "@/components/ToolCard";
 import ToolInterface from "@/components/tools/ToolInterface";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ToolPage = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { t, i18n } = useTranslation();
+  const langPrefix = i18n.language && i18n.language !== "en" ? `/${i18n.language.split("-")[0]}` : "";
   const tool = getToolBySlug(slug || "");
 
   if (!tool) {
     return (
       <div className="container mx-auto px-4 py-20 text-center">
-        <h1 className="text-3xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>Tool Not Found</h1>
-        <p className="mt-4 text-muted-foreground">The tool you're looking for doesn't exist.</p>
-        <Link to="/" className="mt-6 inline-block text-primary hover:underline">← Back to Home</Link>
+        <h1 className="text-3xl font-bold" style={{ fontFamily: 'Space Grotesk' }}>{t("tool_not_found")}</h1>
+        <p className="mt-4 text-muted-foreground">{t("tool_not_found_desc")}</p>
+        <Link to={`${langPrefix}/`} className="mt-6 inline-block text-primary hover:underline">{t("back_to_home")}</Link>
       </div>
     );
   }
@@ -74,9 +77,9 @@ const ToolPage = () => {
       <div className="container mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1.5 text-sm text-muted-foreground mb-8">
-          <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
+          <Link to={`${langPrefix}/`} className="hover:text-foreground transition-colors">{t("home")}</Link>
           <ChevronRight className="h-3 w-3" />
-          <Link to={`/category/${tool.categorySlug}`} className="hover:text-foreground transition-colors">{tool.category}</Link>
+          <Link to={`${langPrefix}/category/${tool.categorySlug}`} className="hover:text-foreground transition-colors">{tool.category}</Link>
           <ChevronRight className="h-3 w-3" />
           <span className="text-foreground font-medium">{tool.name}</span>
         </nav>
@@ -98,7 +101,7 @@ const ToolPage = () => {
 
             {/* How to Use */}
             <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
-              <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>How to Use</h2>
+              <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>{t("how_to_use")}</h2>
               <ol className="space-y-4">
                 {tool.howToUse.map((step, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -111,15 +114,9 @@ const ToolPage = () => {
 
             {/* Benefits */}
             <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
-              <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>Benefits</h2>
+              <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>{t("benefits")}</h2>
               <ul className="space-y-3 text-muted-foreground">
-                {[
-                  "100% free to use",
-                  "No file uploads — everything runs in your browser",
-                  "Fast and instant processing",
-                  "No registration or sign-up required",
-                  "Works on mobile and desktop",
-                ].map((b, i) => (
+                {[t("benefit_1"), t("benefit_2"), t("benefit_3"), t("benefit_4"), t("benefit_5")].map((b, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent text-xs">✓</span>
                     {b}
@@ -130,7 +127,7 @@ const ToolPage = () => {
 
             {/* FAQ */}
             <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
-              <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>Frequently Asked Questions</h2>
+              <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>{t("faq")}</h2>
               <div className="space-y-5">
                 {tool.faqs.map((faq, i) => (
                   <div key={i}>
@@ -151,7 +148,7 @@ const ToolPage = () => {
         {/* Related Tools */}
         {related.length > 0 && (
           <section className="mt-16">
-            <h2 className="text-xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>Related Tools</h2>
+            <h2 className="text-xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>{t("related_tools")}</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {related.map((t, i) => <ToolCard key={t.slug} tool={t} index={i} />)}
             </div>
