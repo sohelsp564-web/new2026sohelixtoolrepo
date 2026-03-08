@@ -115,6 +115,19 @@ const Index = () => {
         <AdSlot id="ad-homepage-banner" size="banner" />
       </div>
 
+      {/* Recently Used Tools */}
+      {recentTools.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 pb-0">
+          <div className="mb-10">
+            <h2 className="text-2xl font-bold md:text-3xl">Recently Used</h2>
+            <p className="text-sm text-muted-foreground mt-1.5">Pick up where you left off</p>
+          </div>
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {recentTools.map((t, i) => <ToolCard key={t!.slug} tool={t!} index={i} />)}
+          </div>
+        </section>
+      )}
+
       {/* Popular Tools */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div className="flex items-center justify-between mb-10">
