@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Search, Shield, Zap, Globe, Lock, ChevronRight, ArrowRight, Sparkles, Command } from "lucide-react";
+import AdSlot from "@/components/AdSlot";
 import * as Icons from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -106,6 +107,11 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Ad Slot: Homepage Top Banner */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+        <AdSlot id="ad-homepage-banner" size="banner" />
+      </div>
 
       {/* Popular Tools */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
