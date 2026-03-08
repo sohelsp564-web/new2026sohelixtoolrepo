@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { usePerformance } from "@/hooks/usePerformance";
 
 const JsonFormatterTool = () => {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [error, setError] = useState("");
+  const { measure } = usePerformance("JSON Formatter");
 
-  const format = () => {
+  const format = async () => {
     try {
-      const parsed = JSON.parse(input);
-      setOutput(JSON.stringify(parsed, null, 2));
+      const result = await measure(() => JSON.stringify(JSON.parse(input), null, 2));
+      setOutput(result);
       setError("");
     } catch (e: any) {
       setError(e.message);
@@ -18,9 +20,10 @@ const JsonFormatterTool = () => {
     }
   };
 
-  const minify = () => {
+  const minify = async () => {
     try {
-      setOutput(JSON.stringify(JSON.parse(input)));
+      const result = await measure(() => JSON.stringify(JSON.parse(input)));
+      setOutput(result);
       setError("");
     } catch (e: any) {
       setError(e.message);
