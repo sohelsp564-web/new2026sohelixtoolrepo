@@ -24,7 +24,7 @@ const ShareButtons = ({ title, url }: { title: string; url?: string }) => {
         size="sm"
         variant="outline"
         className="h-8 gap-1.5 rounded-full text-xs"
-        onClick={() => window.open(`https://wa.me/?text=${encodeURIComponent(text + " " + shareUrl)}`, "_blank")}
+        onClick={() => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text + " " + shareUrl)}`, "_blank", "noopener,noreferrer")}
       >
         <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
       </Button>
