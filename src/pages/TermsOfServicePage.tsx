@@ -5,7 +5,7 @@ const TermsOfServicePage = () => (
     <Helmet>
       <title>Terms of Service — Sohelix Tools</title>
       <meta name="description" content="Terms of Service for Sohelix Tools. Read our terms for using our free online tools." />
-      <link rel="canonical" href="https://sohelix.com/terms-of-service" />
+      <link rel="canonical" href="https://tools.sohelix.com/terms-of-service" />
     </Helmet>
     <div className="container mx-auto px-4 py-12 max-w-3xl">
       <h1 className="text-3xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>Terms of Service</h1>

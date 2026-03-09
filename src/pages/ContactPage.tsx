@@ -31,7 +31,7 @@ const ContactPage = () => {
       <Helmet>
         <title>Contact — Sohelix Tools</title>
         <meta name="description" content="Contact the Sohelix Tools team. Reach out for questions, feedback, or suggestions." />
-        <link rel="canonical" href="https://sohelix.com/contact" />
+        <link rel="canonical" href="https://tools.sohelix.com/contact" />
       </Helmet>
       <div className="container mx-auto px-4 py-12 max-w-xl">
         <h1 className="text-3xl font-bold mb-2" style={{ fontFamily: 'Space Grotesk' }}>Contact Us</h1>

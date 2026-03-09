@@ -7,7 +7,7 @@ const AboutPage = () => (
     <Helmet>
       <title>About — Sohelix Tools</title>
       <meta name="description" content="Learn about Sohelix Tools, a free platform providing browser-based utilities for images, PDFs, text, developer tools, and calculators." />
-      <link rel="canonical" href="https://sohelix.com/about" />
+      <link rel="canonical" href="https://tools.sohelix.com/about" />
     </Helmet>
     <div className="container mx-auto px-4 py-12 max-w-3xl">
       <h1 className="text-3xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>About Sohelix Tools</h1>

@@ -11,7 +11,7 @@ const CategoriesPage = () => (
     <Helmet>
       <title>All Tool Categories — Sohelix Tools</title>
       <meta name="description" content="Browse all free online tool categories at Sohelix Tools." />
-      <link rel="canonical" href="https://sohelix.com/categories" />
+      <link rel="canonical" href="https://tools.sohelix.com/categories" />
     </Helmet>
     <div className="container mx-auto px-4 py-8">
       <nav className="flex items-center gap-1 text-sm text-muted-foreground mb-8">

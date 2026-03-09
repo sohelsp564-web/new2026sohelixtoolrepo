@@ -5,7 +5,7 @@ const PrivacyPage = () => (
     <Helmet>
       <title>Privacy Policy — Sohelix Tools</title>
       <meta name="description" content="Privacy Policy for Sohelix Tools. Learn how we protect your data and privacy." />
-      <link rel="canonical" href="https://sohelix.com/privacy-policy" />
+      <link rel="canonical" href="https://tools.sohelix.com/privacy-policy" />
     </Helmet>
     <div className="container mx-auto px-4 py-12 max-w-3xl">
       <h1 className="text-3xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>Privacy Policy</h1>

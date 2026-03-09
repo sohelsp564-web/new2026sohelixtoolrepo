@@ -11,7 +11,7 @@ const BlogPage = () => (
     <Helmet>
       <title>Blog — Sohelix Tools</title>
       <meta name="description" content="Read helpful articles about online tools, image compression, QR codes, password security, and web productivity." />
-      <link rel="canonical" href="https://sohelix.com/blog" />
+      <link rel="canonical" href="https://tools.sohelix.com/blog" />
     </Helmet>
     <div className="container mx-auto px-4 py-12">
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>

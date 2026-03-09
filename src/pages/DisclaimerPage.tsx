@@ -5,7 +5,7 @@ const DisclaimerPage = () => (
     <Helmet>
       <title>Disclaimer — Sohelix Tools</title>
       <meta name="description" content="Disclaimer for Sohelix Tools. Read about limitations and responsibilities." />
-      <link rel="canonical" href="https://sohelix.com/disclaimer" />
+      <link rel="canonical" href="https://tools.sohelix.com/disclaimer" />
     </Helmet>
     <div className="container mx-auto px-4 py-12 max-w-3xl">
       <h1 className="text-3xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>Disclaimer</h1>

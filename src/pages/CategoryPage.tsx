@@ -24,7 +24,7 @@ const CategoryPage = () => {
       <Helmet>
         <title>{category.name} — Free Online Tools | Sohelix</title>
         <meta name="description" content={category.description} />
-        <link rel="canonical" href={`https://sohelix.com/category/${category.slug}`} />
+        <link rel="canonical" href={`https://tools.sohelix.com/category/${category.slug}`} />
       </Helmet>
 
       <div className="container mx-auto px-4 py-8">

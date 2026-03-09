@@ -31,7 +31,7 @@ const RequestToolPage = () => {
       <Helmet>
         <title>Request a Tool — Sohelix Tools</title>
         <meta name="description" content="Suggest a new tool for Sohelix Tools. We'd love to hear your ideas!" />
-        <link rel="canonical" href="https://sohelix.com/request-tool" />
+        <link rel="canonical" href="https://tools.sohelix.com/request-tool" />
       </Helmet>
       <div className="container mx-auto px-4 py-12 max-w-xl">
         <h1 className="text-3xl font-bold mb-2" style={{ fontFamily: 'Space Grotesk' }}>Request a Tool</h1>
