@@ -27,7 +27,7 @@ const FaqPage = () => (
     <Helmet>
       <title>FAQ — Sohelix Tools</title>
       <meta name="description" content="Frequently asked questions about Sohelix Tools. Learn how our free browser-based tools work." />
-      <link rel="canonical" href="https://sohelix.com/faq" />
+      <link rel="canonical" href="https://tools.sohelix.com/faq" />
       <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
     </Helmet>
     <div className="container mx-auto px-4 py-12 max-w-3xl">

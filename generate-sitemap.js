@@ -80,6 +80,6 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
 writeFileSync('public/sitemap.xml', sitemapIndex);
 
 // ── robots.txt ───────────────────────────────────────────────────
-writeFileSync('public/robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${DOMAIN}/sitemap.xml\n`);
+writeFileSync('public/robots.txt', `User-agent: *\nAllow: /\n\nDisallow: /api/\n\nSitemap: ${DOMAIN}/sitemap.xml\n`);
 
 console.log('[sitemap] Generated sitemap.xml, pages-sitemap.xml, tools-sitemap.xml, robots.txt');

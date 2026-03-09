@@ -34,7 +34,7 @@ const BlogPostPage = () => {
       <Helmet>
         <title>{post.title} — Sohelix Tools Blog</title>
         <meta name="description" content={post.description} />
-        <link rel="canonical" href={`https://sohelix.com/blog/${post.slug}`} />
+        <link rel="canonical" href={`https://tools.sohelix.com/blog/${post.slug}`} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.description} />
         <meta property="og:type" content="article" />

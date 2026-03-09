@@ -70,9 +70,9 @@ const ToolPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://sohelix.com/" },
-      { "@type": "ListItem", position: 2, name: tool.category, item: `https://sohelix.com/category/${tool.categorySlug}` },
-      { "@type": "ListItem", position: 3, name: title, item: `https://sohelix.com${toolPath}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://tools.sohelix.com/" },
+      { "@type": "ListItem", position: 2, name: tool.category, item: `https://tools.sohelix.com/category/${tool.categorySlug}` },
+      { "@type": "ListItem", position: 3, name: title, item: `https://tools.sohelix.com${toolPath}` },
     ],
   };
 
@@ -82,7 +82,7 @@ const ToolPage = () => {
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://sohelix.com${toolPath}`} />
+        <link rel="canonical" href={`https://tools.sohelix.com${toolPath}`} />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
@@ -95,10 +95,10 @@ const ToolPage = () => {
             key={l}
             rel="alternate"
             hrefLang={l}
-            href={`https://sohelix.com${l === "en" ? `/tools/${tool.slug}` : `/${l}/tools/${tool.slug}`}`}
+            href={`https://tools.sohelix.com${l === "en" ? `/tools/${tool.slug}` : `/${l}/tools/${tool.slug}`}`}
           />
         ))}
-        <link rel="alternate" hrefLang="x-default" href={`https://sohelix.com/tools/${tool.slug}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://tools.sohelix.com/tools/${tool.slug}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
