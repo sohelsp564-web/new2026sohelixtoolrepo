@@ -76,6 +76,17 @@ const ToolPage = () => {
     ],
   };
 
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `How to Use ${title}`,
+    step: tool.howToUse.map((text, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      text,
+    })),
+  };
+
   return (
     <>
       <Helmet>
