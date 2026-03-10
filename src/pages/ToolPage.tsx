@@ -117,6 +117,7 @@ const ToolPage = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>
       </Helmet>
 
       <div className="container mx-auto px-4 py-8">
