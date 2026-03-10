@@ -238,6 +238,11 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "personal-loan-calculator": LoanEmiTool,
   "car-loan-calculator": LoanEmiTool,
   "emi-calculator": LoanEmiTool,
+  // Finance Tools
+  "currency-converter": CurrencyConverterTool,
+  "denomination-calculator": DenominationCalculatorTool,
+  "sip-calculator": SipCalculatorTool,
+  "inflation-calculator": InflationCalculatorTool,
 };
 
 const ToolLoadingFallback = () => (

@@ -27,6 +27,7 @@ export const categories: Category[] = [
   { name: "Developer Tools", slug: "developer-tools", description: "JSON, Base64, UUID and more dev utilities", icon: "Code" },
   { name: "SEO Tools", slug: "seo-tools", description: "Meta tags, sitemaps and SEO utilities", icon: "Search" },
   { name: "Calculator Tools", slug: "calculator-tools", description: "Math, finance and everyday calculators", icon: "Calculator" },
+  { name: "Finance Tools", slug: "finance-tools", description: "Currency converter, SIP, inflation and financial calculators", icon: "Landmark" },
   { name: "Utilities", slug: "utilities", description: "QR codes, passwords and handy utilities", icon: "Wrench" },
 ];
 
