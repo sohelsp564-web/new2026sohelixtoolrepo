@@ -145,6 +145,10 @@ const TipCalculatorTool = safeLazy(() => import("./TipCalculatorTool"));
 const AverageCalculatorTool = safeLazy(() => import("./AverageCalculatorTool"));
 const PercentageIncreaseTool = safeLazy(() => import("./PercentageIncreaseTool"));
 const PercentageDecreaseTool = safeLazy(() => import("./PercentageDecreaseTool"));
+const CurrencyConverterTool = safeLazy(() => import("./CurrencyConverterTool"));
+const DenominationCalculatorTool = safeLazy(() => import("./DenominationCalculatorTool"));
+const SipCalculatorTool = safeLazy(() => import("./SipCalculatorTool"));
+const InflationCalculatorTool = safeLazy(() => import("./InflationCalculatorTool"));
 
 const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = {
   "image-compressor": ImageCompressorTool,
