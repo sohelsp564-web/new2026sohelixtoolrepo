@@ -19,12 +19,38 @@ const CategoryPage = () => {
     );
   }
 
+  const collectionPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: category.name,
+    description: category.description,
+    url: `https://tools.sohelix.com/category/${category.slug}`,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: categoryTools.map((t, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: t.name,
+        url: `https://tools.sohelix.com/tools/${t.slug}`,
+      })),
+    },
+  };
+
   return (
     <>
       <Helmet>
         <title>{category.name} — Free Online Tools | Sohelix</title>
         <meta name="description" content={category.description} />
         <link rel="canonical" href={`https://tools.sohelix.com/category/${category.slug}`} />
+        <meta property="og:title" content={`${category.name} — Free Online Tools | Sohelix`} />
+        <meta property="og:description" content={category.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://tools.sohelix.com/category/${category.slug}`} />
+        <meta property="og:image" content="https://tools.sohelix.com/social-preview.webp" />
+        <meta property="og:site_name" content="Sohelix Tools" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://tools.sohelix.com/social-preview.webp" />
+        <script type="application/ld+json">{JSON.stringify(collectionPageJsonLd)}</script>
       </Helmet>
 
       <div className="container mx-auto px-4 py-8">

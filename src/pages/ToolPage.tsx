@@ -76,6 +76,17 @@ const ToolPage = () => {
     ],
   };
 
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `How to Use ${title}`,
+    step: tool.howToUse.map((text, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      text,
+    })),
+  };
+
   return (
     <>
       <Helmet>
@@ -86,9 +97,13 @@ const ToolPage = () => {
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://tools.sohelix.com${toolPath}`} />
+        <meta property="og:image" content="https://tools.sohelix.com/social-preview.webp" />
+        <meta property="og:site_name" content="Sohelix Tools" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content="https://tools.sohelix.com/social-preview.webp" />
         {/* hreflang tags for all supported languages */}
         {SUPPORTED_LANGS.map(l => (
           <link
@@ -102,6 +117,7 @@ const ToolPage = () => {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>
       </Helmet>
 
       <div className="container mx-auto px-4 py-8">
