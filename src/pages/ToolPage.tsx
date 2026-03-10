@@ -97,9 +97,13 @@ const ToolPage = () => {
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://tools.sohelix.com${toolPath}`} />
+        <meta property="og:image" content="https://tools.sohelix.com/social-preview.webp" />
+        <meta property="og:site_name" content="Sohelix Tools" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metaTitle} />
         <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content="https://tools.sohelix.com/social-preview.webp" />
         {/* hreflang tags for all supported languages */}
         {SUPPORTED_LANGS.map(l => (
           <link
