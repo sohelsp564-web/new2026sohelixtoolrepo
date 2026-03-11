@@ -133,6 +133,7 @@ const DiceRollerTool = safeLazy(() => import("./DiceRollerTool"));
 const CoinFlipTool = safeLazy(() => import("./CoinFlipTool"));
 const RandomPickerTool = safeLazy(() => import("./RandomPickerTool"));
 const AgeCalculatorTool = safeLazy(() => import("./AgeCalculatorTool"));
+const AgeDifferenceTool = safeLazy(() => import("./AgeDifferenceTool"));
 const BmiCalculatorTool = safeLazy(() => import("./BmiCalculatorTool"));
 const PercentageCalculatorTool = safeLazy(() => import("./PercentageCalculatorTool"));
 const LoanEmiTool = safeLazy(() => import("./LoanEmiTool"));
