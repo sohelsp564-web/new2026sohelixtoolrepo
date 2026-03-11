@@ -227,11 +227,8 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "average-calculator": AverageCalculatorTool,
   "percentage-increase-calculator": PercentageIncreaseTool,
   "percentage-decrease-calculator": PercentageDecreaseTool,
-  // Programmatic SEO — Age Calculator variants
-  "how-old-am-i": AgeCalculatorTool,
-  "age-in-days-calculator": AgeCalculatorTool,
-  "date-of-birth-calculator": AgeCalculatorTool,
-  "age-difference-calculator": AgeCalculatorTool,
+  // Age Difference Calculator (separate component with 2 DOB inputs)
+  "age-difference-calculator": AgeDifferenceTool,
   // Programmatic SEO — BMI Calculator variants
   "body-mass-index-calculator": BmiCalculatorTool,
   "bmi-for-men": BmiCalculatorTool,

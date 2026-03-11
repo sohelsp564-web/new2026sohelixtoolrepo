@@ -207,16 +207,16 @@ const ToolPage = () => {
             <AdSlot id="ad-before-faq" size="banner" className="mb-6" />
 
             {/* FAQ */}
-            <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl" itemScope itemType="https://schema.org/FAQPage">
+            <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
               <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>Frequently Asked Questions</h2>
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, i) => (
-                  <AccordionItem key={i} value={`faq-${i}`} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                  <AccordionItem key={i} value={`faq-${i}`}>
                     <AccordionTrigger className="text-left font-semibold text-sm sm:text-base">
-                      <span itemProp="name">{faq.q}</span>
+                      {faq.q}
                     </AccordionTrigger>
-                    <AccordionContent itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                      <p itemProp="text" className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                    <AccordionContent>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
                     </AccordionContent>
                   </AccordionItem>
                 ))}
