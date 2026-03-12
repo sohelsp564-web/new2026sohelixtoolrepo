@@ -92,6 +92,7 @@ const PdfMetadataViewerTool = safeLazy(() => import("./PdfMetadataViewerTool"));
 const PdfReaderTool = safeLazy(() => import("./PdfReaderTool"));
 const PdfPageRotatorTool = safeLazy(() => import("./PdfPageRotatorTool"));
 const ImageToTextTool = safeLazy(() => import("./ImageToTextTool"));
+const ImageToExcelWordTool = safeLazy(() => import("./ImageToExcelWordTool"));
 const FaviconGeneratorTool = safeLazy(() => import("./FaviconGeneratorTool"));
 const ColorPaletteGeneratorTool = safeLazy(() => import("./ColorPaletteGeneratorTool"));
 const WordCounterTool = safeLazy(() => import("./WordCounterTool"));
