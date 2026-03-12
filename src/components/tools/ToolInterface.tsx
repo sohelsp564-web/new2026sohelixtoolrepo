@@ -92,7 +92,6 @@ const PdfMetadataViewerTool = safeLazy(() => import("./PdfMetadataViewerTool"));
 const PdfReaderTool = safeLazy(() => import("./PdfReaderTool"));
 const PdfPageRotatorTool = safeLazy(() => import("./PdfPageRotatorTool"));
 const ImageToTextTool = safeLazy(() => import("./ImageToTextTool"));
-const ImageToExcelWordTool = safeLazy(() => import("./ImageToExcelWordTool"));
 const FaviconGeneratorTool = safeLazy(() => import("./FaviconGeneratorTool"));
 const ColorPaletteGeneratorTool = safeLazy(() => import("./ColorPaletteGeneratorTool"));
 const WordCounterTool = safeLazy(() => import("./WordCounterTool"));
@@ -176,7 +175,6 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "pdf-reader": PdfReaderTool,
   "pdf-page-rotator": PdfPageRotatorTool,
   "image-to-text": ImageToTextTool,
-  "image-to-excel-word": ImageToExcelWordTool,
   "favicon-generator": FaviconGeneratorTool,
   "color-palette-generator": ColorPaletteGeneratorTool,
   "word-counter": WordCounterTool,
