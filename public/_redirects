@@ -1,1 +1,7 @@
+/tools/reducer /tools/image-compressor 301
+/tools/editor /tools/image-editor 301
+/tools/cropper /tools/image-cropper 301
+/tools/webp /tools/png-to-webp 301
+/tools/social /tools/social-media-image-resizer 301
+/tools/converter /tools/image-converter 301
 /*    /index.html   200
