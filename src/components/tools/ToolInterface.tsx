@@ -176,6 +176,7 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "pdf-reader": PdfReaderTool,
   "pdf-page-rotator": PdfPageRotatorTool,
   "image-to-text": ImageToTextTool,
+  "image-to-excel-word": ImageToExcelWordTool,
   "favicon-generator": FaviconGeneratorTool,
   "color-palette-generator": ColorPaletteGeneratorTool,
   "word-counter": WordCounterTool,
