@@ -1,11 +1,2 @@
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
+# AI training crawlers are blocked via robots.txt
+# This file is intentionally minimal.
