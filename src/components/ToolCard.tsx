@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import * as Icons from "lucide-react";
 import type { Tool } from "@/data/tools";
 import { motion } from "framer-motion";
+import { getIconComponent } from "@/lib/iconMap";
 
 const ToolCard = ({ tool, index = 0 }: { tool: Tool; index?: number }) => {
-  const IconComponent = (Icons as any)[tool.icon] || Icons.Wrench;
+  const IconComponent = getIconComponent(tool.icon);
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}

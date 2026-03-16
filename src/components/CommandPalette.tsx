@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
-import * as Icons from "lucide-react";
 import { tools } from "@/data/tools";
+import { getIconComponent } from "@/lib/iconMap";
 import {
   CommandDialog,
   CommandInput,
@@ -46,7 +46,7 @@ const CommandPalette = () => {
         {Object.entries(grouped).map(([category, items]) => (
           <CommandGroup key={category} heading={category}>
             {items.map(tool => {
-              const Icon = (Icons as any)[tool.icon] || Icons.Wrench;
+              const Icon = getIconComponent(tool.icon);
               return (
                 <CommandItem
                   key={tool.slug}

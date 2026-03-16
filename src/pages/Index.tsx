@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Search, Shield, Zap, Globe, Lock, ChevronRight, ArrowRight, Sparkles, Command } from "lucide-react";
+import { Search, Shield, Zap, Globe, Lock, ChevronRight, ArrowRight, Sparkles, Command, Folder } from "lucide-react";
 import AdSlot from "@/components/AdSlot";
-import * as Icons from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -11,6 +10,7 @@ import { tools, categories, searchTools, getToolBySlug } from "@/data/tools";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import { useRecentTools } from "@/hooks/useRecentTools";
+import { getIconComponent } from "@/lib/iconMap";
 
 const Index = () => {
   const [query, setQuery] = useState("");
@@ -37,7 +37,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Sohelix Tools — Free Online Tools for Images, PDFs, Text & More</title>
+        <title>50+ Free Online Tools – PDF, Image, Text & Developer Tools | Sohelix</title>
         <meta name="description" content="50+ free online tools for images, PDFs, text, developers and calculations. All tools run directly in your browser. No uploads. No registration." />
         <link rel="canonical" href="https://tools.sohelix.com/" />
         <meta property="og:title" content="Sohelix Tools — Free Online Tools" />
@@ -113,6 +113,24 @@ const Index = () => {
           </motion.div>
         </div>
       </section>
+      
+  {/* SEO Content Section */}
+   <section className="mx-auto max-w-4xl px-4 py-16 text-center">
+  <h2 className="text-2xl font-bold mb-4">
+    Free Online Tools for Everyday Tasks
+  </h2>
+
+  <p className="text-muted-foreground leading-relaxed">
+    Sohelix Tools provides a powerful collection of free online tools
+    including PDF tools, image tools, developer tools, text utilities,
+    calculators and QR code generators. All tools run directly in your
+    browser without uploading files, ensuring complete privacy and security.
+
+    Whether you need to compress images, format JSON, convert PDFs,
+    generate QR codes or analyze text, Sohelix offers fast and secure
+    browser-based tools that work on any device.
+  </p>
+    </section>
 
       {/* Ad Slot: Homepage Top Banner */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
@@ -131,6 +149,20 @@ const Index = () => {
           </div>
         </section>
       )}
+
+      {/* Tool Categories SEO */}
+     <section className="mx-auto max-w-5xl px-4 py-16 text-center">
+  <h2 className="text-2xl font-bold mb-4">
+    Explore Our Free Online Tool Categories
+  </h2>
+
+  <p className="text-muted-foreground leading-relaxed">
+    Our free online tools include powerful PDF tools, image tools,
+    developer utilities, text tools, SEO tools and calculator tools.
+    These browser-based tools help you complete everyday tasks quickly
+    without installing any software.
+  </p>
+      </section>
 
       {/* Popular Tools */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
@@ -156,7 +188,7 @@ const Index = () => {
         </div>
         <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {categories.map((cat, i) => {
-            const IconComp = (Icons as any)[cat.icon] || Icons.Folder;
+            const IconComp = getIconComponent(cat.icon, Folder);
             const count = tools.filter(t => t.categorySlug === cat.slug).length;
             return (
               <motion.div key={cat.slug} initial={{ opacity: 0, y: 12 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}>

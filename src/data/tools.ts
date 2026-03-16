@@ -1,10 +1,12 @@
+import type { IconName } from "@/lib/iconMap";
+
 export interface Tool {
   name: string;
   slug: string;
   category: string;
   categorySlug: string;
   description: string;
-  icon: string;
+  icon: IconName;
   howToUse: string[];
   faqs: { q: string; a: string }[];
   relatedSlugs: string[];
@@ -17,7 +19,7 @@ export interface Category {
   name: string;
   slug: string;
   description: string;
-  icon: string;
+  icon: IconName;
 }
 
 export const categories: Category[] = [

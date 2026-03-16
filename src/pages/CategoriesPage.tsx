@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
-import * as Icons from "lucide-react";
+import { ChevronRight, Folder } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { categories, tools } from "@/data/tools";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { getIconComponent } from "@/lib/iconMap";
 
 const CategoriesPage = () => (
   <>
@@ -25,7 +25,7 @@ const CategoriesPage = () => (
       </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((cat, i) => {
-          const IconComp = (Icons as any)[cat.icon] || Icons.Folder;
+          const IconComp = getIconComponent(cat.icon, Folder);
           const count = tools.filter(t => t.categorySlug === cat.slug).length;
           return (
             <motion.div key={cat.slug} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.05 }}>
