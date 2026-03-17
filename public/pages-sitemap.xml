@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://tools.sohelix.com/</loc><lastmod>2026-03-15</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-  <url><loc>https://tools.sohelix.com/categories</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://tools.sohelix.com/blog</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tools.sohelix.com/about</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://tools.sohelix.com/contact</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://tools.sohelix.com/privacy-policy</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://tools.sohelix.com/terms-of-service</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://tools.sohelix.com/disclaimer</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://tools.sohelix.com/faq</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://tools.sohelix.com/request-tool</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://tools.sohelix.com/</loc><lastmod>2026-03-16</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://tools.sohelix.com/categories</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://tools.sohelix.com/blog</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tools.sohelix.com/about</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://tools.sohelix.com/contact</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://tools.sohelix.com/privacy-policy</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://tools.sohelix.com/terms-of-service</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://tools.sohelix.com/disclaimer</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://tools.sohelix.com/faq</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://tools.sohelix.com/request-tool</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.4</priority></url>
 
   <!-- Category Pages -->
-  <url><loc>https://tools.sohelix.com/category/image-tools</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tools.sohelix.com/category/pdf-tools</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tools.sohelix.com/category/text-tools</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tools.sohelix.com/category/developer-tools</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tools.sohelix.com/category/seo-tools</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tools.sohelix.com/category/calculator-tools</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tools.sohelix.com/category/finance-tools</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://tools.sohelix.com/category/utilities</loc><lastmod>2026-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tools.sohelix.com/category/image-tools</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tools.sohelix.com/category/pdf-tools</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tools.sohelix.com/category/text-tools</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tools.sohelix.com/category/developer-tools</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tools.sohelix.com/category/seo-tools</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tools.sohelix.com/category/calculator-tools</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tools.sohelix.com/category/finance-tools</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tools.sohelix.com/category/utilities</loc><lastmod>2026-03-16</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Blog Posts -->
-  <url><loc>https://tools.sohelix.com/blog/best-free-online-tools</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/compress-images-without-losing-quality</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/what-is-qr-code-how-it-works</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/generate-secure-passwords-online</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/benefits-of-browser-based-tools</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/online-pdf-tools-save-time</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/client-side-tools-safer-for-privacy</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/top-free-developer-utilities</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/convert-images-online-quickly</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/future-of-online-productivity-tools</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/how-online-calculators-simplify-life</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/understanding-percentage-calculations</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/date-time-tools-for-productivity</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/complete-guide-to-loan-emi-calculation</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://tools.sohelix.com/blog/bmi-calculator-guide-healthy-weight</loc><lastmod>2026-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/best-free-online-tools</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/compress-images-without-losing-quality</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/what-is-qr-code-how-it-works</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/generate-secure-passwords-online</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/benefits-of-browser-based-tools</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/online-pdf-tools-save-time</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/client-side-tools-safer-for-privacy</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/top-free-developer-utilities</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/convert-images-online-quickly</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/future-of-online-productivity-tools</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/how-online-calculators-simplify-life</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/understanding-percentage-calculations</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/date-time-tools-for-productivity</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/complete-guide-to-loan-emi-calculation</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tools.sohelix.com/blog/bmi-calculator-guide-healthy-weight</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

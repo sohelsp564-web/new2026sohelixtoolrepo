@@ -37,12 +37,21 @@ const ToolPage = () => {
     );
   }
 
-  // Use translated content or fallback to tool data
-  const title = t?.title || tool.name;
-  const description = t?.description || tool.description;
-  const metaTitle = t?.meta_title || `${tool.name} — Free Online Tool | Sohelix Tools`;
-  const metaDescription = t?.meta_description || tool.description;
-  const faqs = t?.faqs || tool.faqs;
+// Use translated content or fallback to tool data
+const title = t?.title || tool.name;
+const description = t?.description || tool.description;
+
+const metaTitle =
+  t?.meta_title ||
+  tool.meta_title ||
+  `${tool.name} | Sohelix`;
+
+const metaDescription =
+  t?.meta_description ||
+  tool.meta_description ||
+  tool.description;
+
+const faqs = t?.faqs || tool.faqs;
 
   const toolPath = lang === "en" ? `/tools/${tool.slug}` : `/${lang}/tools/${tool.slug}`;
 
@@ -222,7 +231,33 @@ const ToolPage = () => {
                 ))}
               </Accordion>
             </Card>
+
+            {/* Popular Searches */}
+{tool.keywords?.length > 0 && (
+<Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
+
+<h2 className="text-xl font-bold mb-4">
+Popular Searches
+</h2>
+
+<div className="flex flex-wrap gap-2">
+
+{tool.keywords.map((k, i) => (
+<span
+key={i}
+className="bg-muted px-3 py-1 rounded text-sm"
+>
+{k}
+</span>
+))}
+
+</div>
+
+</Card>
+)}
           </div>
+
+          
 
           {/* Sidebar */}
           <aside className="space-y-4">

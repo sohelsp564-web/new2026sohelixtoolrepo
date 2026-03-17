@@ -5,11 +5,16 @@ export interface Tool {
   slug: string;
   category: string;
   categorySlug: string;
+
   description: string;
+  meta_title?: string;
+  meta_description?: string;
+
   icon: IconName;
   howToUse: string[];
   faqs: { q: string; a: string }[];
   relatedSlugs: string[];
+
   isPopular?: boolean;
   isTrending?: boolean;
   isNew?: boolean;
@@ -35,7 +40,7 @@ export const categories: Category[] = [
 
 export const tools: Tool[] = [
   // IMAGE TOOLS
-  { name: "Image Compressor", slug: "image-compressor", category: "Image Tools", categorySlug: "image-tools", description: "Compress images online for free without losing quality.", icon: "ImageDown", howToUse: ["Upload your image", "Choose compression level", "Download optimized image"], faqs: [{ q: "Is this tool free?", a: "Yes, completely free." }, { q: "Does it upload files?", a: "No. Everything runs locally in your browser." }], relatedSlugs: ["image-resizer", "image-cropper", "png-to-jpg"], isPopular: true, isTrending: true },
+  { name: "Image Compressor Online – Compress Images Without Losing Quality", slug: "image-compressor", category: "Image Tools", categorySlug: "image-tools", description: "Compress images online for free. Reduce image file size, compress JPEG and PNG images quickly without losing quality.", icon: "ImageDown", howToUse: ["Upload your image", "Choose compression level", "Download optimized image"], faqs: [{ q: "Is this tool free?", a: "Yes, completely free." }, { q: "Does it upload files?", a: "No. Everything runs locally in your browser." }], relatedSlugs: ["image-resizer", "image-cropper", "png-to-jpg"], isPopular: true, isTrending: true },
   { name: "Image Resizer", slug: "image-resizer", category: "Image Tools", categorySlug: "image-tools", description: "Resize images to any dimension instantly.", icon: "Maximize", howToUse: ["Upload your image", "Enter desired dimensions", "Download resized image"], faqs: [{ q: "Is this tool free?", a: "Yes, completely free." }, { q: "Does it upload files?", a: "No. Everything runs locally." }], relatedSlugs: ["image-compressor", "image-cropper", "png-to-jpg"], isPopular: true },
   { name: "Image Cropper", slug: "image-cropper", category: "Image Tools", categorySlug: "image-tools", description: "Crop images to any size online.", icon: "Crop", howToUse: ["Upload your image", "Select crop area", "Download cropped image"], faqs: [{ q: "Is this tool free?", a: "Yes, completely free." }], relatedSlugs: ["image-resizer", "image-compressor", "jpg-to-png"] },
   { name: "PNG to JPG Converter", slug: "png-to-jpg", category: "Image Tools", categorySlug: "image-tools", description: "Convert PNG images to JPG format instantly.", icon: "ArrowRightLeft", howToUse: ["Upload a PNG image", "Click convert", "Download the JPG file"], faqs: [{ q: "Is this tool free?", a: "Yes." }], relatedSlugs: ["jpg-to-png", "webp-to-jpg", "image-compressor"], isPopular: true, isTrending: true },
