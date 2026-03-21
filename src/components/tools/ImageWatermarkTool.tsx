@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Download } from "lucide-react";
+import { Download, Loader2 } from "lucide-react";
 import FileUploadZone from "@/components/FileUploadZone";
 import { ComparisonPreview } from "@/components/ResultPreview";
 
@@ -12,6 +12,7 @@ const ImageWatermarkTool = () => {
   const [text, setText] = useState("Sohelix");
   const [opacity, setOpacity] = useState("30");
   const [fontSize, setFontSize] = useState("48");
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleFiles = (files: File[]) => {
     const f = files[0];
@@ -21,6 +22,7 @@ const ImageWatermarkTool = () => {
 
   const apply = () => {
     if (!file) return;
+    setIsProcessing(true);
     const img = new Image();
     img.onload = () => {
       const canvas = document.createElement("canvas");
@@ -47,6 +49,7 @@ const ImageWatermarkTool = () => {
       }
       ctx.restore();
       setResult(canvas.toDataURL("image/png"));
+      setIsProcessing(false);
     };
     img.src = preview;
   };
@@ -64,7 +67,9 @@ const ImageWatermarkTool = () => {
             <div><label className="text-sm font-medium mb-1 block">Opacity (%)</label><Input type="number" value={opacity} onChange={e => setOpacity(e.target.value)} min="5" max="100" className="rounded-xl" /></div>
             <div><label className="text-sm font-medium mb-1 block">Font Size</label><Input type="number" value={fontSize} onChange={e => setFontSize(e.target.value)} min="12" max="200" className="rounded-xl" /></div>
           </div>
-          <Button onClick={apply} className="w-full h-11 rounded-xl">Apply Watermark</Button>
+          <Button onClick={apply} disabled={isProcessing} className="w-full h-11 rounded-xl gap-2">
+            {isProcessing ? <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</> : "Apply Watermark"}
+          </Button>
           {result ? (
             <>
               <ComparisonPreview originalSrc={preview} originalLabel="Original" processedSrc={result} processedLabel="Watermarked" />

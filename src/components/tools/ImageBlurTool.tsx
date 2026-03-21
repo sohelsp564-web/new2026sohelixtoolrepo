@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Download } from "lucide-react";
+import { Download, Loader2 } from "lucide-react";
 import FileUploadZone from "@/components/FileUploadZone";
 import { ComparisonPreview } from "@/components/ResultPreview";
 
@@ -10,6 +10,7 @@ const ImageBlurTool = () => {
   const [preview, setPreview] = useState("");
   const [result, setResult] = useState("");
   const [radius, setRadius] = useState("5");
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleFiles = (files: File[]) => {
     const f = files[0];
@@ -19,6 +20,7 @@ const ImageBlurTool = () => {
 
   const apply = () => {
     if (!file) return;
+    setIsProcessing(true);
     const img = new Image();
     img.onload = () => {
       const canvas = document.createElement("canvas");
@@ -27,6 +29,7 @@ const ImageBlurTool = () => {
       ctx.filter = `blur(${radius}px)`;
       ctx.drawImage(img, 0, 0);
       setResult(canvas.toDataURL("image/png"));
+      setIsProcessing(false);
     };
     img.src = preview;
   };
@@ -40,7 +43,9 @@ const ImageBlurTool = () => {
       ) : (
         <>
           <div><label className="text-sm font-medium mb-1 block">Blur Radius (px)</label><Input type="number" value={radius} onChange={e => setRadius(e.target.value)} min="1" max="50" className="rounded-xl" /></div>
-          <Button onClick={apply} className="w-full h-11 rounded-xl">Apply Blur</Button>
+          <Button onClick={apply} disabled={isProcessing} className="w-full h-11 rounded-xl gap-2">
+            {isProcessing ? <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</> : "Apply Blur"}
+          </Button>
           {result ? (
             <>
               <ComparisonPreview originalSrc={preview} originalLabel="Original" processedSrc={result} processedLabel="Blurred" />

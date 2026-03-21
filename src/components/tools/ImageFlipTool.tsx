@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Download, FlipHorizontal, FlipVertical } from "lucide-react";
+import { Download, FlipHorizontal, FlipVertical, Loader2 } from "lucide-react";
 import FileUploadZone from "@/components/FileUploadZone";
 import { ComparisonPreview } from "@/components/ResultPreview";
 
@@ -9,6 +9,7 @@ const ImageFlipTool = () => {
   const [preview, setPreview] = useState("");
   const [result, setResult] = useState("");
   const [dir, setDir] = useState<"h" | "v">("h");
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleFiles = (files: File[]) => {
     const f = files[0];
@@ -18,6 +19,7 @@ const ImageFlipTool = () => {
 
   const flip = () => {
     if (!file) return;
+    setIsProcessing(true);
     const img = new Image();
     img.onload = () => {
       const canvas = document.createElement("canvas");
@@ -26,6 +28,7 @@ const ImageFlipTool = () => {
       if (dir === "h") { ctx.scale(-1, 1); ctx.drawImage(img, -img.width, 0); }
       else { ctx.scale(1, -1); ctx.drawImage(img, 0, -img.height); }
       setResult(canvas.toDataURL("image/png"));
+      setIsProcessing(false);
     };
     img.src = preview;
   };
@@ -46,7 +49,9 @@ const ImageFlipTool = () => {
               <FlipVertical className="h-4 w-4" /> Vertical
             </Button>
           </div>
-          <Button onClick={flip} className="w-full h-11 rounded-xl">Flip Image</Button>
+          <Button onClick={flip} disabled={isProcessing} className="w-full h-11 rounded-xl gap-2">
+            {isProcessing ? <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</> : "Flip Image"}
+          </Button>
           {result ? (
             <>
               <ComparisonPreview originalSrc={preview} originalLabel="Original" processedSrc={result} processedLabel={`Flipped ${dir === "h" ? "Horizontally" : "Vertically"}`} />

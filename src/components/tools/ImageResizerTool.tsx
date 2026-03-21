@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Download } from "lucide-react";
+import { Download, Loader2 } from "lucide-react";
 import FileUploadZone from "@/components/FileUploadZone";
 import { ComparisonPreview } from "@/components/ResultPreview";
 
@@ -11,6 +11,7 @@ const ImageResizerTool = () => {
   const [width, setWidth] = useState("800");
   const [height, setHeight] = useState("600");
   const [result, setResult] = useState("");
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleFiles = (files: File[]) => {
     const f = files[0];
@@ -22,12 +23,14 @@ const ImageResizerTool = () => {
 
   const resize = () => {
     if (!file) return;
+    setIsProcessing(true);
     const img = new Image();
     img.onload = () => {
       const canvas = document.createElement("canvas");
       canvas.width = parseInt(width); canvas.height = parseInt(height);
       canvas.getContext("2d")?.drawImage(img, 0, 0, canvas.width, canvas.height);
       setResult(canvas.toDataURL("image/png"));
+      setIsProcessing(false);
     };
     img.src = preview;
   };
@@ -44,7 +47,9 @@ const ImageResizerTool = () => {
             <div><label className="text-sm font-medium mb-1 block">Width (px)</label><Input value={width} onChange={e => setWidth(e.target.value)} type="number" className="rounded-xl" /></div>
             <div><label className="text-sm font-medium mb-1 block">Height (px)</label><Input value={height} onChange={e => setHeight(e.target.value)} type="number" className="rounded-xl" /></div>
           </div>
-          <Button onClick={resize} className="w-full h-11 rounded-xl">Resize Image</Button>
+          <Button onClick={resize} disabled={isProcessing} className="w-full h-11 rounded-xl gap-2">
+            {isProcessing ? <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</> : "Resize Image"}
+          </Button>
           {result ? (
             <>
               <ComparisonPreview

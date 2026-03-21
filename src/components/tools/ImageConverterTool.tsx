@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "react-router-dom";
-import { Download } from "lucide-react";
+import { Download, Loader2 } from "lucide-react";
 import FileUploadZone from "@/components/FileUploadZone";
 import { ComparisonPreview } from "@/components/ResultPreview";
 
@@ -19,6 +19,7 @@ const ImageConverterTool = () => {
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState("");
   const [result, setResult] = useState("");
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleFiles = (files: File[]) => {
     const f = files[0];
@@ -27,6 +28,7 @@ const ImageConverterTool = () => {
   };
 
   const convert = () => {
+    setIsProcessing(true);
     const img = new Image();
     img.onload = () => {
       const canvas = document.createElement("canvas");
@@ -35,6 +37,7 @@ const ImageConverterTool = () => {
       if (fmt.mime === "image/jpeg") { ctx.fillStyle = "#FFFFFF"; ctx.fillRect(0, 0, canvas.width, canvas.height); }
       ctx.drawImage(img, 0, 0);
       setResult(canvas.toDataURL(fmt.mime, 0.92));
+      setIsProcessing(false);
     };
     img.src = preview;
   };
@@ -47,7 +50,9 @@ const ImageConverterTool = () => {
         <FileUploadZone accept="image/*" onFiles={handleFiles} formats={`${fmt.from} • PNG • JPG • WEBP`} label={`Drag & drop your ${fmt.from} image here`} />
       ) : (
         <>
-          <Button onClick={convert} className="w-full h-11 rounded-xl">Convert to {fmt.to}</Button>
+          <Button onClick={convert} disabled={isProcessing} className="w-full h-11 rounded-xl gap-2">
+            {isProcessing ? <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</> : `Convert to ${fmt.to}`}
+          </Button>
           {result ? (
             <>
               <ComparisonPreview originalSrc={preview} originalLabel={`Original (${fmt.from})`} processedSrc={result} processedLabel={`Converted (${fmt.to})`} />

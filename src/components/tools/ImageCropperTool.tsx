@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Download, Loader2 } from "lucide-react";
 import FileUploadZone from "@/components/FileUploadZone";
 import { ComparisonPreview } from "@/components/ResultPreview";
 
@@ -9,6 +9,7 @@ const ImageCropperTool = () => {
   const [preview, setPreview] = useState("");
   const [result, setResult] = useState("");
   const [crop, setCrop] = useState({ x: 0, y: 0, w: 400, h: 400 });
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleFiles = (files: File[]) => {
     const f = files[0];
@@ -24,12 +25,14 @@ const ImageCropperTool = () => {
   }, [preview]);
 
   const doCrop = () => {
+    setIsProcessing(true);
     const img = new Image();
     img.onload = () => {
       const canvas = document.createElement("canvas");
       canvas.width = crop.w; canvas.height = crop.h;
       canvas.getContext("2d")?.drawImage(img, crop.x, crop.y, crop.w, crop.h, 0, 0, crop.w, crop.h);
       setResult(canvas.toDataURL("image/png"));
+      setIsProcessing(false);
     };
     img.src = preview;
   };
@@ -62,7 +65,9 @@ const ImageCropperTool = () => {
               <img loading="lazy" src={preview} alt="Preview" className="rounded-xl w-full max-h-48 object-contain" />
             </div>
           )}
-          <Button onClick={doCrop} className="w-full h-11 rounded-xl">Crop Image</Button>
+          <Button onClick={doCrop} disabled={isProcessing} className="w-full h-11 rounded-xl gap-2">
+            {isProcessing ? <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</> : "Crop Image"}
+          </Button>
           {result && (
             <Button onClick={download} variant="outline" className="w-full h-11 rounded-xl gap-2"><Download className="h-4 w-4" /> Download Cropped Image</Button>
           )}

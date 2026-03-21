@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Download, RotateCw } from "lucide-react";
+import { Download, RotateCw, Loader2 } from "lucide-react";
 import FileUploadZone from "@/components/FileUploadZone";
 import { ComparisonPreview } from "@/components/ResultPreview";
 
@@ -9,6 +9,7 @@ const ImageRotateTool = () => {
   const [preview, setPreview] = useState("");
   const [result, setResult] = useState("");
   const [angle, setAngle] = useState(90);
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleFiles = (files: File[]) => {
     const f = files[0];
@@ -18,6 +19,7 @@ const ImageRotateTool = () => {
 
   const rotate = () => {
     if (!file) return;
+    setIsProcessing(true);
     const img = new Image();
     img.onload = () => {
       const canvas = document.createElement("canvas");
@@ -30,6 +32,7 @@ const ImageRotateTool = () => {
       ctx.rotate(rad);
       ctx.drawImage(img, -img.width / 2, -img.height / 2);
       setResult(canvas.toDataURL("image/png"));
+      setIsProcessing(false);
     };
     img.src = preview;
   };
@@ -49,7 +52,9 @@ const ImageRotateTool = () => {
               </Button>
             ))}
           </div>
-          <Button onClick={rotate} className="w-full h-11 rounded-xl">Rotate Image</Button>
+          <Button onClick={rotate} disabled={isProcessing} className="w-full h-11 rounded-xl gap-2">
+            {isProcessing ? <><Loader2 className="h-4 w-4 animate-spin" /> Processing...</> : "Rotate Image"}
+          </Button>
           {result ? (
             <>
               <ComparisonPreview originalSrc={preview} originalLabel="Original" processedSrc={result} processedLabel={`Rotated ${angle}°`} />
