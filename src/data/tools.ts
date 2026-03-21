@@ -44,7 +44,7 @@ export const tools: Tool[] = [
   // IMAGE TOOLS
   { name: "Image Compressor", slug: "image-compressor", category: "Image Tools", categorySlug: "image-tools",
     h1Title: "Image Compressor Online",
-    description: "Our Image Compressor allows you to compress images online and reduce image file size quickly. This tool supports JPEG and PNG compression and helps optimize images for websites, social media, and email. The compression process runs directly in your browser, keeping your images private and secure.",
+    description: "Our Image Compressor helps you compress images online and reduce image file size quickly without losing quality. You can easily compress JPEG online, compress PNG online, and optimize images for faster loading on websites and social media. This free image compressor online tool allows you to compress images online directly in your browser without uploading files to any server. Whether you want to reduce image file size, optimize pictures for SEO, or save storage space, this tool provides a fast and secure solution. You can use this tool to compress images online for web, improve page speed, and ensure high-quality output. It supports multiple formats and works instantly on any device.",
     meta_title: "Image Compressor Online – Compress Image & Reduce File Size | Sohelix",
     meta_description: "Compress images online for free. Reduce image file size, compress JPEG and PNG images quickly without losing quality.",
     keywords: ["image compressor", "image compressor online", "compress image online", "compress images online", "compress jpeg online", "compress png online", "reduce image file size", "picture compressor", "online photo compressor"],
