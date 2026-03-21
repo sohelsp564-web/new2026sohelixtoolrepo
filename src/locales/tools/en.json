@@ -78,10 +78,10 @@
     ]
   },
   "jpg-to-webp": {
-    "title": "JPG to WebP Converter",
-    "description": "Convert JPG images to WebP for better web performance.",
-    "meta_title": "Free JPG to WebP Converter Online — Sohelix Tools",
-    "meta_description": "Convert JPG to WebP for better web performance. Free online tool.",
+    "title": "WebP Converter",
+    "description": "Our WebP Converter allows you to convert images to WebP online quickly and easily. You can convert JPG and PNG images into WebP format for better compression and faster web performance. This free WebP image converter helps you convert images to WebP online while maintaining high quality. It is perfect for developers, designers, and website owners who want optimized images. You can use this tool to convert JPG to WebP, PNG to WebP, and improve website loading speed instantly.",
+    "meta_title": "WebP Converter – Convert Images to WebP Online | Sohelix",
+    "meta_description": "Convert images to WebP format online. Transform JPG and PNG images into optimized WebP files for better performance.",
     "faqs": [
       { "q": "What does the JPG to WebP Converter do?", "a": "This tool converts JPG images to WebP format, which offers superior compression and smaller file sizes ideal for web use." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free. No registration or payment required." },
