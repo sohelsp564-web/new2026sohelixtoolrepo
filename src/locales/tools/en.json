@@ -52,10 +52,10 @@
     ]
   },
   "jpg-to-png": {
-    "title": "JPG to PNG Converter",
-    "description": "Convert JPG images to PNG format with transparency support.",
-    "meta_title": "Free JPG to PNG Converter Online — Sohelix Tools",
-    "meta_description": "Convert JPG to PNG with transparency support. Free online tool.",
+    "title": "Convert JPG to PNG",
+    "description": "Convert JPG images to PNG format instantly with our free JPG to PNG converter. Upload your image and download a high-quality PNG file within seconds.",
+    "meta_title": "JPG to PNG Converter – Convert JPG to PNG Image Online Free | Sohelix",
+    "meta_description": "Convert JPG to PNG online for free. Upload your image and get high-quality PNG output instantly.",
     "faqs": [
       { "q": "What does the JPG to PNG Converter do?", "a": "This tool converts JPG images to PNG format, which supports transparency and lossless compression." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited conversions. No account required." },
@@ -182,10 +182,10 @@
     ]
   },
   "images-to-pdf": {
-    "title": "Images to PDF",
-    "description": "Combine multiple images into a single PDF.",
-    "meta_title": "Free Images to PDF Converter — Sohelix Tools",
-    "meta_description": "Combine multiple images into a single PDF file. Free online tool.",
+    "title": "Convert Images to PDF",
+    "description": "Convert images to PDF online easily. Upload JPG, PNG, or other image files and combine them into a single PDF document instantly.",
+    "meta_title": "Image to PDF Converter – JPG to PDF & Convert Images to PDF Online | Sohelix",
+    "meta_description": "Convert images to PDF online. Combine JPG, PNG, and photos into a single PDF document quickly and securely.",
     "faqs": [
       { "q": "What does the Images to PDF tool do?", "a": "This tool combines multiple images into a single PDF document. You can arrange the image order before generating the PDF." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits on the number of images." },
@@ -195,10 +195,10 @@
     ]
   },
   "pdf-to-jpg": {
-    "title": "PDF to JPG",
-    "description": "Convert PDF pages to JPG images.",
-    "meta_title": "Free PDF to JPG Converter — Sohelix Tools",
-    "meta_description": "Convert PDF pages to high-quality JPG images. Free online tool.",
+    "title": "PDF to JPG Converter",
+    "description": "Convert PDF files into JPG images instantly. Extract images from PDF documents or convert PDF pages into high-quality JPG pictures.",
+    "meta_title": "PDF to JPG Converter – Convert PDF to JPG & Extract Images Online | Sohelix",
+    "meta_description": "Convert PDF to JPG online. Extract images or convert PDF pages into high-quality JPG files instantly.",
     "faqs": [
       { "q": "What does the PDF to JPG tool do?", "a": "This tool converts each page of a PDF file into a high-quality JPG image that you can download." },
       { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited conversions." },

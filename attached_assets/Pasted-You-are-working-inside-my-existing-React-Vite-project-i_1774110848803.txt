@@ -1,0 +1,125 @@
+You are working inside my existing React (Vite) project in Replit.
+
+Update the SEO content for my tool pages using the data below.
+
+IMPORTANT RULES:
+
+* Do NOT change UI layout
+* Do NOT change project structure
+* Do NOT break any existing functionality
+* ONLY update or insert SEO-related content
+* If a section does not exist, create it in the correct place following existing patterns
+
+---
+
+## TOOL 1: JPG → PNG CONVERTER
+
+Meta Title:
+JPG to PNG Converter – Convert JPG to PNG Image Online Free | Sohelix
+
+Meta Description:
+Convert JPG to PNG online for free. Upload your image and get high-quality PNG output instantly.
+
+H1:
+Convert JPG to PNG
+
+Description:
+Convert JPG images to PNG format instantly with our free JPG to PNG converter. Upload your image and download a high-quality PNG file within seconds.
+
+Popular Searches:
+
+* jpg to png converter
+* convert jpg to png
+* convert jpg to png online
+* jpeg to png converter
+* jpg to png free
+* convert jpeg image to png
+
+---
+
+## TOOL 2: IMAGES → PDF
+
+Meta Title:
+Image to PDF Converter – JPG to PDF & Convert Images to PDF Online | Sohelix
+
+Meta Description:
+Convert images to PDF online. Combine JPG, PNG, and photos into a single PDF document quickly and securely.
+
+H1:
+Convert Images to PDF
+
+Description:
+Convert images to PDF online easily. Upload JPG, PNG, or other image files and combine them into a single PDF document instantly.
+
+Popular Searches:
+
+* image to pdf
+* jpg to pdf
+* images to pdf
+* photo to pdf
+* pictures to pdf
+* convert image to pdf
+* convert images to pdf
+* create pdf from images
+* multiple images to pdf
+
+---
+
+## TOOL 3: PDF → JPG
+
+Meta Title:
+PDF to JPG Converter – Convert PDF to JPG & Extract Images Online | Sohelix
+
+Meta Description:
+Convert PDF to JPG online. Extract images or convert PDF pages into high-quality JPG files instantly.
+
+H1:
+PDF to JPG Converter
+
+Description:
+Convert PDF files into JPG images instantly. Extract images from PDF documents or convert PDF pages into high-quality JPG pictures.
+
+Popular Searches:
+
+* pdf to jpg
+* convert pdf to jpg
+* pdf to image
+* pdf to pictures
+* pdf pages to jpg
+* convert pdf file to jpg
+* extract images from pdf
+
+---
+
+## TASKS
+
+For ALL tools above:
+
+1. Replace existing meta title and meta description
+2. Update or insert H1 heading (use tool name if missing)
+3. Add/update description section below tool UI
+4. Add "Popular Searches" section:
+
+   * Display as list or tags
+   * Place below description or bottom of page
+5. Ensure SEO tags are applied correctly (Helmet or equivalent)
+6. Keep styling consistent with existing tool pages
+
+---
+
+## OUTPUT FORMAT
+
+* Show exact files modified
+* Provide updated code snippets (ready to paste)
+* No unnecessary explanations
+
+---
+
+## FINAL CHECK
+
+* Confirm SEO tags updated correctly
+* Confirm no UI or functionality is broken
+* Confirm all pages render properly
+
+GOAL:
+Improve SEO for JPG to PNG, Image to PDF, and PDF to JPG tools without changing structure or functionality.
