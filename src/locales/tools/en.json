@@ -196,7 +196,7 @@
   },
   "pdf-to-jpg": {
     "title": "PDF to JPG Converter",
-    "description": "Convert PDF files into JPG images instantly. Extract images from PDF documents or convert PDF pages into high-quality JPG pictures.",
+    "description": "Convert PDF files into images using our PDF to JPG converter. This tool lets you convert PDF to JPG online, extract images, and turn PDF pages into high-quality pictures. You can easily convert PDF pages to JPG or extract images from PDF documents in seconds. This free tool works directly in your browser and ensures fast and secure conversion. Whether you need to convert PDF to image for sharing or editing, this tool provides reliable results.",
     "meta_title": "PDF to JPG Converter – Convert PDF to JPG & Extract Images Online | Sohelix",
     "meta_description": "Convert PDF to JPG online. Extract images or convert PDF pages into high-quality JPG files instantly.",
     "faqs": [
@@ -260,10 +260,10 @@
     ]
   },
   "word-counter": {
-    "title": "Word Counter",
-    "description": "Count words, characters, sentences and paragraphs.",
-    "meta_title": "Free Word Counter Online — Sohelix Tools",
-    "meta_description": "Count words, characters, sentences and paragraphs instantly.",
+    "title": "Word Counter Tool",
+    "description": "Our Word Counter helps you count words online and analyze text instantly. You can check word count, character count, sentences, and paragraphs in real time. This free word counter tool is perfect for writers, students, and professionals who need accurate text analysis. You can count words in text online, track writing progress, and improve content quality easily.",
+    "meta_title": "Word Counter – Count Words and Characters Online | Sohelix",
+    "meta_description": "Count words and characters online instantly. Use this free word counter tool to analyze text quickly.",
     "faqs": [
       { "q": "What does the Word Counter do?", "a": "This tool counts the number of words, characters, sentences, and paragraphs in any text you type or paste." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free. No sign-up or limits." },
@@ -273,10 +273,10 @@
     ]
   },
   "character-counter": {
-    "title": "Character Counter",
-    "description": "Count characters with and without spaces.",
-    "meta_title": "Free Character Counter Online — Sohelix Tools",
-    "meta_description": "Count characters with and without spaces. Track character limits.",
+    "title": "Character Counter Tool",
+    "description": "Use our Character Counter to count characters online instantly. It shows character count, spaces, and text length in real time. This tool is useful for social media posts, SEO content, and writing tasks where character limits matter.",
+    "meta_title": "Character Counter – Count Characters Online | Sohelix",
+    "meta_description": "Count characters online easily. Check text length, spaces, and character count instantly.",
     "faqs": [
       { "q": "What does the Character Counter do?", "a": "This tool counts the total number of characters in your text, showing counts both with and without spaces." },
       { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
@@ -312,10 +312,10 @@
     ]
   },
   "text-sorter": {
-    "title": "Text Sorter",
-    "description": "Sort lines of text alphabetically or numerically.",
-    "meta_title": "Free Text Sorter Online — Sohelix Tools",
-    "meta_description": "Sort lines of text alphabetically or numerically. Free tool.",
+    "title": "Text Sorter Tool",
+    "description": "Our Text Sorter allows you to sort text alphabetically online and organize lists quickly. You can alphabetize text, sort lines, and arrange data efficiently. This free text sorter tool is ideal for managing large text lists and organizing content.",
+    "meta_title": "Text Sorter – Sort Text Alphabetically Online | Sohelix",
+    "meta_description": "Sort text alphabetically online. Organize lists and text data quickly using this free text sorter tool.",
     "faqs": [
       { "q": "What does the Text Sorter do?", "a": "This tool sorts lines of text alphabetically (A-Z or Z-A) or numerically. Great for organizing lists." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited use." },
@@ -919,6 +919,32 @@
       { "q": "Is this tool free to use?", "a": "Yes, completely free with no restrictions." },
       { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
       { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+    ]
+  },
+  "merge-pdf": {
+    "title": "Merge PDF Files",
+    "description": "Our Merge PDF tool helps you merge PDF files online and combine multiple documents into a single file. You can easily combine PDF files, merge PDF documents, and organize files in the correct order. This free PDF merger allows you to merge multiple PDF files quickly without installing any software. Whether you want to combine reports, documents, or scanned files, this tool makes the process simple. You can merge PDF online securely and download the final combined file instantly.",
+    "meta_title": "Merge PDF Online – Combine PDF Files Free | Sohelix",
+    "meta_description": "Merge PDF files online for free. Combine multiple PDF documents into one file quickly and securely.",
+    "faqs": [
+      { "q": "How many PDFs can I merge?", "a": "There is no limit — merge as many as you need." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
+      { "q": "Are my files uploaded to a server?", "a": "No. Everything runs locally in your browser. Your files are never uploaded." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. All processing happens client-side, keeping your files private." },
+      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+    ]
+  },
+  "split-pdf": {
+    "title": "Split PDF Files",
+    "description": "Use our Split PDF tool to split PDF online and extract pages from your documents. You can easily separate PDF pages, split PDF documents, and divide files into smaller parts. This free PDF splitter tool allows you to extract specific pages or split large files quickly and efficiently.",
+    "meta_title": "Split PDF Online – Extract Pages From PDF Files | Sohelix",
+    "meta_description": "Split PDF files online easily. Extract pages or divide PDF documents into separate files instantly.",
+    "faqs": [
+      { "q": "Can I extract specific pages?", "a": "Yes, enter any page range to extract." },
+      { "q": "Is this tool free to use?", "a": "Yes, completely free." },
+      { "q": "Are my files uploaded to a server?", "a": "No. Processing happens entirely in your browser. Your files never leave your device." },
+      { "q": "Is this tool safe and secure?", "a": "Yes. All processing is client-side, ensuring your files remain private." },
       { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
     ]
   }
