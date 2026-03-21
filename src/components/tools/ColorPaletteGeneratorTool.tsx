@@ -32,14 +32,9 @@ const ColorPaletteGeneratorTool = () => {
   const extractColors = async () => {
     if (!imgRef.current) return;
     try {
-      const mod = await import("colorthief");
-      // colorthief may export as default, default.default, or the module itself
-      const RawCtor = (mod as any).default ?? mod;
-      const ColorThiefCtor: new () => { getPalette: (img: HTMLImageElement, count: number) => [number, number, number][] } =
-        typeof RawCtor === "function" ? RawCtor : (RawCtor as any).default;
-      const ct = new ColorThiefCtor();
+      // colorthief v3 exports named functions, not a class
+      const { getPaletteSync } = await import("colorthief");
 
-      // Ensure image is fully decoded before extracting
       const img = imgRef.current;
       if (!img.complete || img.naturalWidth === 0) {
         await new Promise<void>((resolve, reject) => {
@@ -49,11 +44,18 @@ const ColorPaletteGeneratorTool = () => {
       }
       await img.decode().catch(() => {});
 
-      const palette: [number, number, number][] = ct.getPalette(img, 8);
-      const swatches: ColorSwatch[] = palette.map(([r, g, b]) => ({
-        rgb: [r, g, b],
-        hex: rgbToHex(r, g, b),
-      }));
+      const palette = getPaletteSync(img, { colorCount: 8 });
+      if (!palette || palette.length === 0) {
+        toast({ title: "Could not extract colors", variant: "destructive" });
+        return;
+      }
+      const swatches: ColorSwatch[] = palette.map(color => {
+        const hex = color.hex();
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        return { rgb: [r, g, b] as [number, number, number], hex };
+      });
       setColors(swatches);
     } catch (err) {
       toast({ title: "Error extracting colors", description: String(err), variant: "destructive" });
