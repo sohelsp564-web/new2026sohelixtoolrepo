@@ -85,6 +85,11 @@ const ImageBlurTool = safeLazy(() => import("./ImageBlurTool"));
 const ImageRotateTool = safeLazy(() => import("./ImageRotateTool"));
 const ImageFlipTool = safeLazy(() => import("./ImageFlipTool"));
 const PdfToJpgTool = safeLazy(() => import("./PdfToJpgTool"));
+const PdfToTextTool = safeLazy(() => import("./PdfToTextTool"));
+const PdfToPngTool = safeLazy(() => import("./PdfToPngTool"));
+const ImageToWordTool = safeLazy(() => import("./ImageToWordTool"));
+const AddTextToImageTool = safeLazy(() => import("./AddTextToImageTool"));
+const MemeGeneratorTool = safeLazy(() => import("./MemeGeneratorTool"));
 const MergePdfTool = safeLazy(() => import("./MergePdfTool"));
 const SplitPdfTool = safeLazy(() => import("./SplitPdfTool"));
 const PdfPageCounterTool = safeLazy(() => import("./PdfPageCounterTool"));
@@ -168,6 +173,11 @@ const toolMap: Record<string, React.LazyExoticComponent<React.ComponentType>> = 
   "image-rotate": ImageRotateTool,
   "image-flip": ImageFlipTool,
   "pdf-to-jpg": PdfToJpgTool,
+  "pdf-to-text": PdfToTextTool,
+  "pdf-to-png": PdfToPngTool,
+  "image-to-word": ImageToWordTool,
+  "add-text-to-image": AddTextToImageTool,
+  "meme-generator": MemeGeneratorTool,
   "merge-pdf": MergePdfTool,
   "split-pdf": SplitPdfTool,
   "pdf-page-counter": PdfPageCounterTool,

@@ -1,0 +1,95 @@
+You are working inside my existing React (Vite) project in Replit.
+
+Analyze my project and add new tools in the SAME folder structure as my existing tools.
+
+IMPORTANT RULES:
+
+* Do NOT change UI design
+* Do NOT change project structure
+* Do NOT modify or break existing tools
+* Do NOT rename existing files or folders
+* ONLY add new tools inside their respective folders (like existing ones)
+* Follow EXACT same coding pattern, layout, and components
+
+---
+
+## FOLDER STRUCTURE RULE (VERY IMPORTANT)
+
+* All PDF-related tools must go inside the existing PDF tools folder
+* All Image-related tools must go inside the existing Image tools folder
+* Use the same file naming and component structure as other tools in those folders
+* Register routes exactly like existing tools
+
+---
+
+## TOOLS TO ADD
+
+📄 PDF TOOLS (Add inside PDF tools folder)
+
+1. PDF to Text Tool
+
+* Extract text using pdf.js
+* Show text in textarea
+* Add copy and download (.txt)
+
+2. PDF to PNG Tool
+
+* Extend existing PDF to JPG logic
+* Export pages as PNG
+* Support multiple pages
+
+---
+
+🖼️ IMAGE TOOLS (Add inside Image tools folder)
+
+3. Image to Word Tool
+
+* Reuse existing OCR (tesseract.js)
+* Convert extracted text to downloadable .docx
+* Show preview before download
+
+4. Add Text to Image Tool
+
+* Upload image
+* Add customizable text (size, color, position)
+* Live preview using canvas
+* Download final image
+
+5. Meme Generator Tool
+
+* Upload image
+* Add top & bottom text
+* Use meme-style font
+* Live preview
+* Download image
+
+---
+
+## IMPLEMENTATION INSTRUCTIONS
+
+* Reuse existing components, hooks, and utilities
+* Follow same UI layout as other tools
+* Add routes exactly like existing tools
+* Use lazy loading if already used
+* Keep everything client-side (Cloudflare Pages compatible)
+* Ensure performance is optimized
+
+---
+
+## OUTPUT FORMAT
+
+* Show exact file paths where each tool should be added
+* Provide complete working code (ready to paste)
+* Show route additions
+* Ensure imports match existing project
+
+---
+
+## FINAL CHECK
+
+* Confirm no existing feature is broken
+* Confirm UI and structure remain unchanged
+* Confirm tools are working correctly
+
+GOAL:
+Add new tools into correct folders (PDF/Image) with maximum functionality while keeping the entire project consistent and stable.
