@@ -50,14 +50,14 @@ const ImageCropperTool = () => {
             ))}
           </div>
           <div className="rounded-2xl border border-border p-3">
-            <img loading="lazy" src={preview} alt="Preview" className="rounded-xl w-full max-h-48 object-contain" />
+            <img src={preview} alt="Preview" className="rounded-xl w-full max-h-48 object-contain" />
           </div>
           <Button onClick={doCrop} className="w-full h-11 rounded-xl">Crop Image</Button>
           {result && (
             <>
               <div className="rounded-2xl border border-primary/20 bg-card p-3 shadow-soft">
                 <p className="text-xs text-primary mb-2 font-medium">Cropped Result</p>
-                <img loading="lazy" src={result} alt="Cropped" className="rounded-xl w-full max-h-48 object-contain" />
+                <img src={result} alt="Cropped" className="rounded-xl w-full max-h-48 object-contain" />
               </div>
               <Button onClick={download} variant="outline" className="w-full h-11 rounded-xl gap-2"><Download className="h-4 w-4" /> Download Cropped Image</Button>
             </>

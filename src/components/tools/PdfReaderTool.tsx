@@ -53,7 +53,7 @@ const PdfReaderTool = () => {
                 <Button variant="outline" size="sm" className="rounded-xl" disabled={currentPage === pages.length - 1} onClick={() => setCurrentPage(p => p + 1)}>Next →</Button>
               </div>
               <div className="rounded-2xl border border-border p-3 shadow-soft">
-                <img loading="lazy" src={pages[currentPage]} alt={`Page ${currentPage + 1}`} className="rounded-xl w-full" />
+                <img src={pages[currentPage]} alt={`Page ${currentPage + 1}`} className="rounded-xl w-full" />
               </div>
             </>
           )}

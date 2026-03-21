@@ -67,7 +67,7 @@ const QrBatchGenerator = () => {
         <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
           {previews.map((p, i) => (
             <div key={i} className="rounded-xl border border-border bg-card p-3 flex flex-col items-center gap-2">
-              <img loading="lazy" src={p.dataUrl} alt={`QR ${i + 1}`} className="w-full aspect-square rounded-lg object-contain" />
+              <img src={p.dataUrl} alt={`QR ${i + 1}`} className="w-full aspect-square rounded-lg object-contain" />
               <p className="text-[10px] text-muted-foreground truncate w-full text-center">{p.url.slice(0, 30)}</p>
             </div>
           ))}

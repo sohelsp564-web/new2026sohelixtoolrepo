@@ -9,8 +9,8 @@ import { HelmetProvider } from "react-helmet-async";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CommandPalette from "@/components/CommandPalette";
+import Index from "./pages/Index";
 
-const Index = lazy(() => import("./pages/Index"));
 const ToolPage = lazy(() => import("./pages/ToolPage"));
 const CategoryPage = lazy(() => import("./pages/CategoryPage"));
 const CategoriesPage = lazy(() => import("./pages/CategoriesPage"));

@@ -25,11 +25,11 @@ const ComparisonPreview = ({ originalSrc, originalLabel, processedSrc, processed
   <div className="grid gap-4 sm:grid-cols-2">
     <div className="rounded-2xl border border-border bg-card p-3 shadow-soft">
       <p className="text-xs text-muted-foreground mb-2 font-medium">{originalLabel}</p>
-      <img loading="lazy" src={originalSrc} alt="Original" className="rounded-xl w-full max-h-64 object-contain" />
+      <img src={originalSrc} alt="Original" className="rounded-xl w-full max-h-64 object-contain" />
     </div>
     <div className="rounded-2xl border border-primary/20 bg-card p-3 shadow-soft">
       <p className="text-xs text-primary mb-2 font-medium">{processedLabel}</p>
-      <img loading="lazy" src={processedSrc} alt="Processed" className="rounded-xl w-full max-h-64 object-contain" />
+      <img src={processedSrc} alt="Processed" className="rounded-xl w-full max-h-64 object-contain" />
     </div>
   </div>
 );

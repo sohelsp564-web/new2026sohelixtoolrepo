@@ -71,7 +71,7 @@ const ImageWatermarkTool = () => {
               <Button onClick={download} variant="outline" className="w-full h-11 rounded-xl gap-2"><Download className="h-4 w-4" /> Download</Button>
             </>
           ) : (
-            <div className="rounded-2xl border border-border p-3"><img loading="lazy" src={preview} alt="Preview" className="rounded-xl w-full max-h-64 object-contain" /></div>
+            <div className="rounded-2xl border border-border p-3"><img src={preview} alt="Preview" className="rounded-xl w-full max-h-64 object-contain" /></div>
           )}
           <Button variant="ghost" size="sm" className="w-full text-muted-foreground" onClick={() => handleFiles([])}>Upload a different image</Button>
         </>

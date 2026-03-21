@@ -55,7 +55,7 @@ const ImageConverterTool = () => {
             </>
           ) : (
             <div className="rounded-2xl border border-border p-3">
-              <img loading="lazy" src={preview} alt="Preview" className="rounded-xl w-full max-h-64 object-contain" />
+              <img src={preview} alt="Preview" className="rounded-xl w-full max-h-64 object-contain" />
             </div>
           )}
           <Button variant="ghost" size="sm" className="w-full text-muted-foreground" onClick={() => handleFiles([])}>Upload a different image</Button>

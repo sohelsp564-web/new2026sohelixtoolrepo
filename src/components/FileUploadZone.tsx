@@ -105,7 +105,7 @@ const FileUploadZone = ({
           {uploadedFiles.map((uf, i) => (
             <div key={i} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3 shadow-soft transition-all hover:shadow-card">
               {uf.preview ? (
-                <img loading="lazy" src={uf.preview} alt={uf.file.name} className="h-14 w-14 rounded-lg object-cover border border-border" />
+                <img src={uf.preview} alt={uf.file.name} className="h-14 w-14 rounded-lg object-cover border border-border" />
               ) : (
                 <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-muted">
                   <FileText className="h-6 w-6 text-muted-foreground" />

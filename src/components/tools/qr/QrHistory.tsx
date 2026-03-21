@@ -44,7 +44,7 @@ const QrHistory = ({ onRegenerate }: { onRegenerate: (data: string) => void }) =
       <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
         {entries.map(e => (
           <div key={e.id} className="rounded-xl border border-border bg-card p-3 flex flex-col items-center gap-2">
-            <img loading="lazy" src={e.dataUrl} alt="QR" className="w-full aspect-square rounded-lg object-contain" />
+            <img src={e.dataUrl} alt="QR" className="w-full aspect-square rounded-lg object-contain" />
             <p className="text-[10px] text-muted-foreground truncate w-full text-center">{e.data.slice(0, 30)}</p>
             <div className="flex gap-1">
               <Button size="icon" variant="ghost" className="h-7 w-7" onClick={() => {

@@ -63,7 +63,7 @@ const PdfToJpgTool = () => {
               <div className="grid gap-4 sm:grid-cols-2">
                 {images.map((img, i) => (
                   <div key={i} className="rounded-2xl border border-border p-3 shadow-soft">
-                    <img loading="lazy" src={img} alt={`Page ${i + 1}`} className="rounded-xl w-full" />
+                    <img src={img} alt={`Page ${i + 1}`} className="rounded-xl w-full" />
                     <Button onClick={() => download(img, i)} variant="outline" size="sm" className="w-full mt-2 rounded-xl">Download Page {i + 1}</Button>
                   </div>
                 ))}
