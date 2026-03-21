@@ -158,7 +158,7 @@ const faqs = t?.faqs || tool.faqs;
 
         {/* Title */}
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-          <h1 className="text-3xl font-bold mb-2 md:text-4xl" style={{ fontFamily: 'Space Grotesk' }}>{title}</h1>
+          <h1 className="text-3xl font-bold mb-2 md:text-4xl" style={{ fontFamily: 'Space Grotesk' }}>{tool.h1Title || title}</h1>
           <ToolRating />
           <p className="text-muted-foreground mb-4 mt-3 text-lg leading-relaxed max-w-2xl">{description}</p>
           <ShareButtons title={title} />

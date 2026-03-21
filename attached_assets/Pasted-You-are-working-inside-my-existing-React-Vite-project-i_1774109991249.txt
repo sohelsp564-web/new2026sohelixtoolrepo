@@ -1,0 +1,100 @@
+You are working inside my existing React (Vite) project in Replit.
+
+Update the SEO content for my tool pages using the data below.
+
+IMPORTANT RULES:
+
+* Do NOT change UI layout
+* Do NOT change project structure
+* Do NOT break any existing functionality
+* ONLY update or insert SEO-related content
+* If a section does not exist, create it in the correct place following existing patterns
+
+---
+
+## TOOL 1: IMAGE COMPRESSOR
+
+Meta Title:
+Image Compressor Online – Compress Image & Reduce File Size | Sohelix
+
+Meta Description:
+Compress images online for free. Reduce image file size, compress JPEG and PNG images quickly without losing quality.
+
+H1:
+Image Compressor Online
+
+Description:
+Our Image Compressor allows you to compress images online and reduce image file size quickly. This tool supports JPEG and PNG compression and helps optimize images for websites, social media, and email. The compression process runs directly in your browser, keeping your images private and secure.
+
+Popular Searches:
+
+* image compressor
+* image compressor online
+* compress image online
+* compress images online
+* compress jpeg online
+* compress png online
+* reduce image file size
+* picture compressor
+* online photo compressor
+
+---
+
+## TOOL 2: IMAGE RESIZER
+
+Meta Title:
+Image Resizer Online – Resize Image for Web & Social Media | Sohelix
+
+Meta Description:
+Resize images online easily. Adjust image dimensions for web, social media, and email without losing quality.
+
+H1:
+Resize Images Online
+
+Description:
+Resize images quickly using our free Image Resizer tool. You can resize photos for websites, social media, and email while maintaining high image quality. This browser-based tool makes it easy to adjust image dimensions instantly.
+
+Popular Searches:
+
+* image resizer online
+* resize image online
+* resize photos for web
+* image resize tool
+* resize image without losing quality
+* reduce image dimensions online
+* resize image for website
+
+---
+
+## TASKS
+
+For BOTH tools:
+
+1. Replace existing meta title and meta description
+2. Update or insert H1 heading (use tool name if missing)
+3. Add/update description section below tool UI
+4. Add "Popular Searches" section:
+
+   * Display as list or tags
+   * Place below description or bottom of page
+5. Ensure SEO tags are applied correctly (Helmet or equivalent)
+6. Keep styling consistent with existing tool pages
+
+---
+
+## OUTPUT FORMAT
+
+* Show exact files modified
+* Provide updated code snippets (ready to paste)
+* No unnecessary explanations
+
+---
+
+## FINAL CHECK
+
+* Confirm SEO tags updated correctly
+* Confirm no UI or functionality is broken
+* Confirm both pages render properly
+
+GOAL:
+Improve SEO for Image Compressor and Image Resizer pages without changing structure or functionality.

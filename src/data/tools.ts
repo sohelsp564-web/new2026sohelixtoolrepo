@@ -9,6 +9,8 @@ export interface Tool {
   description: string;
   meta_title?: string;
   meta_description?: string;
+  h1Title?: string;
+  keywords?: string[];
 
   icon: IconName;
   howToUse: string[];
@@ -40,11 +42,20 @@ export const categories: Category[] = [
 
 export const tools: Tool[] = [
   // IMAGE TOOLS
-  { name: "Image Compressor", slug: "image-compressor", category: "Image Tools", categorySlug: "image-tools", description: "Our Image Compressor allows you to compress images online and reduce image file size quickly. This tool supports JPEG and PNG compression and helps optimize images for websites, social media, and email. The compression process runs directly in your browser, keeping your images private and secure.",meta_title: "Compress Image Online – Reduce Image Size & JPEG PNG Tool | Sohelix",meta_description: "Compress images online for free. Reduce image file size, compress JPEG and PNG images quickly without losing quality.",
-   icon: "ImageDown", howToUse: ["Upload your image", "Choose compression level", "Download optimized image"], faqs: [{ q: "Is this tool free?", a: "Yes, completely free." }, { q: "Does it upload files?", a: "No. Everything runs locally in your browser." }], relatedSlugs: ["image-resizer", "image-cropper", "png-to-jpg"], isPopular: true, isTrending: true },
+  { name: "Image Compressor", slug: "image-compressor", category: "Image Tools", categorySlug: "image-tools",
+    h1Title: "Image Compressor Online",
+    description: "Our Image Compressor allows you to compress images online and reduce image file size quickly. This tool supports JPEG and PNG compression and helps optimize images for websites, social media, and email. The compression process runs directly in your browser, keeping your images private and secure.",
+    meta_title: "Image Compressor Online – Compress Image & Reduce File Size | Sohelix",
+    meta_description: "Compress images online for free. Reduce image file size, compress JPEG and PNG images quickly without losing quality.",
+    keywords: ["image compressor", "image compressor online", "compress image online", "compress images online", "compress jpeg online", "compress png online", "reduce image file size", "picture compressor", "online photo compressor"],
+    icon: "ImageDown", howToUse: ["Upload your image", "Choose compression level", "Download optimized image"], faqs: [{ q: "Is this tool free?", a: "Yes, completely free." }, { q: "Does it upload files?", a: "No. Everything runs locally in your browser." }], relatedSlugs: ["image-resizer", "image-cropper", "png-to-jpg"], isPopular: true, isTrending: true },
 
-  { name: "Image Resizer", slug: "image-resizer", category: "Image Tools", categorySlug: "image-tools", description: "Resize images quickly using our free Image Resizer tool. You can resize photos for websites, social media, and email while maintaining high image quality. This browser-based tool makes it easy to adjust image dimensions instantly.",
-    meta_title: "Resize Image Online – Image Resizer for Web & Photos | Sohelix",meta_description: "Compress images online for free. Reduce image file size, compress JPEG and PNG images quickly without losing quality.",
+  { name: "Image Resizer", slug: "image-resizer", category: "Image Tools", categorySlug: "image-tools",
+    h1Title: "Resize Images Online",
+    description: "Resize images quickly using our free Image Resizer tool. You can resize photos for websites, social media, and email while maintaining high image quality. This browser-based tool makes it easy to adjust image dimensions instantly.",
+    meta_title: "Image Resizer Online – Resize Image for Web & Social Media | Sohelix",
+    meta_description: "Resize images online easily. Adjust image dimensions for web, social media, and email without losing quality.",
+    keywords: ["image resizer online", "resize image online", "resize photos for web", "image resize tool", "resize image without losing quality", "reduce image dimensions online", "resize image for website"],
     icon: "Maximize", howToUse: ["Upload your image", "Enter desired dimensions", "Download resized image"], faqs: [{ q: "Is this tool free?", a: "Yes, completely free." }, { q: "Does it upload files?", a: "No. Everything runs locally." }], relatedSlugs: ["image-compressor", "image-cropper", "png-to-jpg"], isPopular: true },
     
   { name: "Image Cropper", slug: "image-cropper", category: "Image Tools", categorySlug: "image-tools", description: "Crop images to any size online.", icon: "Crop", howToUse: ["Upload your image", "Select crop area", "Download cropped image"], faqs: [{ q: "Is this tool free?", a: "Yes, completely free." }], relatedSlugs: ["image-resizer", "image-compressor", "jpg-to-png"] },
