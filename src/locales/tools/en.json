@@ -1,9 +1,9 @@
 {
   "image-compressor": {
-    "title": "Image Compressor",
-    "description": "Compress images online for free without losing quality.",
-    "meta_title": "Free Image Compressor Online — Sohelix Tools",
-    "meta_description": "Reduce image file size instantly with this free browser-based image compressor. No uploads required.",
+    "title": "Image Compressor Online",
+    "description": "Our Image Compressor allows you to compress images online and reduce image file size quickly. This tool supports JPEG and PNG compression and helps optimize images for websites, social media, and email. The compression process runs directly in your browser, keeping your images private and secure.",
+    "meta_title": "Image Compressor Online – Compress Image & Reduce File Size | Sohelix",
+    "meta_description": "Compress images online for free. Reduce image file size, compress JPEG and PNG images quickly without losing quality.",
     "faqs": [
       { "q": "What does the Image Compressor do?", "a": "This tool reduces the file size of your images while maintaining visual quality. It processes everything directly in your browser — no server uploads needed." },
       { "q": "Is this tool free to use?", "a": "Yes, the Image Compressor is completely free. You can compress unlimited images without creating an account or paying anything." },
@@ -13,10 +13,10 @@
     ]
   },
   "image-resizer": {
-    "title": "Image Resizer",
-    "description": "Resize images to any dimension instantly.",
-    "meta_title": "Free Image Resizer Online — Sohelix Tools",
-    "meta_description": "Resize images to any dimension instantly. Free browser-based tool, no uploads.",
+    "title": "Resize Images Online",
+    "description": "Resize images quickly using our free Image Resizer tool. You can resize photos for websites, social media, and email while maintaining high image quality. This browser-based tool makes it easy to adjust image dimensions instantly.",
+    "meta_title": "Image Resizer Online – Resize Image for Web & Social Media | Sohelix",
+    "meta_description": "Resize images online easily. Adjust image dimensions for web, social media, and email without losing quality.",
     "faqs": [
       { "q": "What does the Image Resizer do?", "a": "This tool lets you resize images to any custom width and height. You can maintain aspect ratio or set exact dimensions as needed." },
       { "q": "Is this tool free to use?", "a": "Yes, the Image Resizer is completely free with no limits on the number of images you can resize." },
