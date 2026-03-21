@@ -33,14 +33,21 @@ const ColorPaletteGeneratorTool = () => {
     if (!imgRef.current) return;
     try {
       const mod = await import("colorthief");
-      const ColorThief = (mod as any).default || mod;
-      const ct = new ColorThief();
+      // colorthief may export as default, default.default, or the module itself
+      const RawCtor = (mod as any).default ?? mod;
+      const ColorThiefCtor: new () => { getPalette: (img: HTMLImageElement, count: number) => [number, number, number][] } =
+        typeof RawCtor === "function" ? RawCtor : (RawCtor as any).default;
+      const ct = new ColorThiefCtor();
 
-      // Ensure image is loaded
+      // Ensure image is fully decoded before extracting
       const img = imgRef.current;
-      if (!img.complete) {
-        await new Promise<void>(r => { img.onload = () => r(); });
+      if (!img.complete || img.naturalWidth === 0) {
+        await new Promise<void>((resolve, reject) => {
+          img.onload = () => resolve();
+          img.onerror = () => reject(new Error("Image failed to load"));
+        });
       }
+      await img.decode().catch(() => {});
 
       const palette: [number, number, number][] = ct.getPalette(img, 8);
       const swatches: ColorSwatch[] = palette.map(([r, g, b]) => ({
@@ -81,7 +88,6 @@ const ColorPaletteGeneratorTool = () => {
               ref={imgRef}
               src={imgSrc}
               alt="Source"
-              crossOrigin="anonymous"
               onLoad={extractColors}
               className="w-full max-h-64 object-contain"
             />
