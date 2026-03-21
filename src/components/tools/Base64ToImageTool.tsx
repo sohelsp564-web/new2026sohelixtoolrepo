@@ -16,7 +16,7 @@ const Base64ToImageTool = () => {
       <Textarea placeholder="Paste Base64 string here..." value={input} onChange={e => { setInput(e.target.value); setError(""); }} rows={5} className="font-mono text-xs" />
       {input && isValid && (
         <>
-          <img src={src} alt="Decoded" className="rounded-lg border border-border max-h-64 w-full object-contain" onError={() => setError("Invalid Base64 image")} />
+          <img loading="lazy" src={src} alt="Decoded" className="rounded-lg border border-border max-h-64 w-full object-contain" onError={() => setError("Invalid Base64 image")} />
           {!error && <Button onClick={download} variant="outline" className="w-full">Download Image</Button>}
           {error && <p className="text-sm text-destructive">{error}</p>}
         </>
