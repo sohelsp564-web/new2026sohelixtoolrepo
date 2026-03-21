@@ -73,7 +73,7 @@ const PdfPageRotatorTool = () => {
           <p className="text-sm text-muted-foreground">{pageCount} page(s) detected</p>
           {preview && (
             <div className="rounded-2xl border border-border p-3 shadow-soft">
-              <img src={preview} alt="PDF Preview" className="rounded-xl max-h-48 w-full object-contain" />
+              <img loading="lazy" src={preview} alt="PDF Preview" className="rounded-xl max-h-48 w-full object-contain" />
             </div>
           )}
           <div>

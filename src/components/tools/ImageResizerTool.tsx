@@ -48,13 +48,13 @@ const ImageResizerTool = () => {
             <>
               <div className="rounded-2xl border border-primary/20 bg-card p-3 shadow-soft">
                 <p className="text-xs text-primary mb-2 font-medium">Resized ({width} × {height})</p>
-                <img src={result} alt="Resized" className="rounded-xl w-full max-h-64 object-contain" />
+                <img loading="lazy" src={result} alt="Resized" className="rounded-xl w-full max-h-64 object-contain" />
               </div>
               <Button onClick={download} variant="outline" className="w-full h-11 rounded-xl gap-2"><Download className="h-4 w-4" /> Download Resized Image</Button>
             </>
           ) : (
             <div className="rounded-2xl border border-border p-3">
-              <img src={preview} alt="Preview" className="rounded-xl w-full max-h-64 object-contain" />
+              <img loading="lazy" src={preview} alt="Preview" className="rounded-xl w-full max-h-64 object-contain" />
             </div>
           )}
           <Button variant="ghost" size="sm" className="w-full text-muted-foreground" onClick={() => handleFiles([])}>Upload a different image</Button>
