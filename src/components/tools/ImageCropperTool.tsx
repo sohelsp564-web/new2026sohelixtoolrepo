@@ -14,6 +14,16 @@ const RATIOS = [
   { label: "9:16", value: "9:16" },
 ];
 
+/* ── pixel size presets ── */
+const PIXEL_PRESETS = [
+  { label: "800×600",   w: 800,  h: 600  },
+  { label: "1280×720",  w: 1280, h: 720  },
+  { label: "1920×1080", w: 1920, h: 1080 },
+  { label: "1080×1080", w: 1080, h: 1080 },
+  { label: "1200×630",  w: 1200, h: 630  },
+  { label: "1200×675",  w: 1200, h: 675  },
+];
+
 const HS = 8;
 const MIN = 12;
 
@@ -34,6 +44,9 @@ const ImageCropperTool = () => {
   const [isProcessing, setIsProc] = useState(false);
   const [ratio, setRatio]         = useState("free");
   const [info, setInfo]           = useState("");
+  const [activePixel, setActivePixel] = useState<string | null>(null);
+  const [customW, setCustomW]     = useState("");
+  const [customH, setCustomH]     = useState("");
 
   const canvasRef  = useRef<HTMLCanvasElement>(null);
   const imgRef     = useRef<HTMLImageElement | null>(null);
@@ -237,6 +250,41 @@ const ImageCropperTool = () => {
     updateInfo();
   };
 
+  /* ── apply pixel dimensions to crop ── */
+  const applyPixelDimensions = useCallback((pw: number, ph: number, presetLabel: string | null = null) => {
+    const canvas = canvasRef.current;
+    const img    = imgRef.current;
+    if (!canvas || !img) return;
+    const scaleX = canvas.width  / img.naturalWidth;
+    const scaleY = canvas.height / img.naturalHeight;
+    // Clamp to image natural size
+    const clampedW = Math.min(pw, img.naturalWidth);
+    const clampedH = Math.min(ph, img.naturalHeight);
+    const cw = Math.round(clampedW * scaleX);
+    const ch = Math.round(clampedH * scaleY);
+    // Center the crop selection
+    const cx = Math.round((canvas.width  - cw) / 2);
+    const cy = Math.round((canvas.height - ch) / 2);
+    cropRef.current = {
+      x: clamp(cx, 0, canvas.width  - MIN),
+      y: clamp(cy, 0, canvas.height - MIN),
+      w: clamp(cw, MIN, canvas.width),
+      h: clamp(ch, MIN, canvas.height),
+    };
+    setRatio("free");
+    setActivePixel(presetLabel);
+    draw();
+    updateInfo();
+  }, [draw, updateInfo]);
+
+  const applyCustomPixels = () => {
+    const pw = parseInt(customW);
+    const ph = parseInt(customH);
+    if (!pw || !ph || pw < 1 || ph < 1) return;
+    applyPixelDimensions(pw, ph, null);
+    setActivePixel("custom");
+  };
+
   /* ── crop & download ── */
   const doCrop = () => {
     const canvas = canvasRef.current;
@@ -277,18 +325,73 @@ const ImageCropperTool = () => {
       ) : (
         <>
           {/* Aspect ratio pills */}
-          <div className="flex flex-wrap gap-1.5">
-            {RATIOS.map(r => (
+          <div>
+            <p className="text-xs font-medium text-muted-foreground uppercase mb-1.5">Aspect Ratio</p>
+            <div className="flex flex-wrap gap-1.5">
+              {RATIOS.map(r => (
+                <Button
+                  key={r.value}
+                  size="sm"
+                  variant={ratio === r.value && !activePixel ? "default" : "outline"}
+                  className="rounded-xl h-8 text-xs px-3"
+                  onClick={() => { changeRatio(r.value); setActivePixel(null); }}
+                >
+                  {r.label}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          {/* Pixel size presets */}
+          <div>
+            <p className="text-xs font-medium text-muted-foreground uppercase mb-1.5">Pixel Size</p>
+            <div className="flex flex-wrap gap-1.5">
+              {PIXEL_PRESETS.map(p => (
+                <Button
+                  key={p.label}
+                  size="sm"
+                  variant={activePixel === p.label ? "default" : "outline"}
+                  className="rounded-xl h-8 text-xs px-3"
+                  onClick={() => applyPixelDimensions(p.w, p.h, p.label)}
+                >
+                  {p.label}
+                </Button>
+              ))}
+            </div>
+          </div>
+
+          {/* Custom pixel input */}
+          <div>
+            <p className="text-xs font-medium text-muted-foreground uppercase mb-1.5">Custom Size</p>
+            <div className="flex gap-2 items-center">
+              <input
+                type="number"
+                min={1}
+                placeholder="Width"
+                value={customW}
+                onChange={e => setCustomW(e.target.value)}
+                className="w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              <span className="text-muted-foreground text-sm font-medium shrink-0">×</span>
+              <input
+                type="number"
+                min={1}
+                placeholder="Height"
+                value={customH}
+                onChange={e => setCustomH(e.target.value)}
+                className="w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+              />
+              <span className="text-muted-foreground text-sm shrink-0">px</span>
               <Button
-                key={r.value}
                 size="sm"
-                variant={ratio === r.value ? "default" : "outline"}
-                className="rounded-xl h-8 text-xs px-3"
-                onClick={() => changeRatio(r.value)}
+                variant={activePixel === "custom" ? "default" : "outline"}
+                className="rounded-xl h-9 px-4 text-xs shrink-0"
+                onClick={applyCustomPixels}
+                disabled={!customW || !customH}
               >
-                {r.label}
+                Apply
               </Button>
-            ))}
+            </div>
           </div>
 
           {/* Interactive canvas */}
