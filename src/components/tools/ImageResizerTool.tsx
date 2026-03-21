@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Download } from "lucide-react";
 import FileUploadZone from "@/components/FileUploadZone";
+import { ComparisonPreview } from "@/components/ResultPreview";
 
 const ImageResizerTool = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -46,10 +47,12 @@ const ImageResizerTool = () => {
           <Button onClick={resize} className="w-full h-11 rounded-xl">Resize Image</Button>
           {result ? (
             <>
-              <div className="rounded-2xl border border-primary/20 bg-card p-3 shadow-soft">
-                <p className="text-xs text-primary mb-2 font-medium">Resized ({width} × {height})</p>
-                <img loading="lazy" src={result} alt="Resized" className="rounded-xl w-full max-h-64 object-contain" />
-              </div>
+              <ComparisonPreview
+                originalSrc={preview}
+                originalLabel="Original"
+                processedSrc={result}
+                processedLabel={`Resized (${width} × ${height})`}
+              />
               <Button onClick={download} variant="outline" className="w-full h-11 rounded-xl gap-2"><Download className="h-4 w-4" /> Download Resized Image</Button>
             </>
           ) : (
