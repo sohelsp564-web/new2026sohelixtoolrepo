@@ -13,7 +13,9 @@ const FaviconGeneratorTool = () => {
   const generateFavicons = (file: File) => {
     setSourceFile(file);
     const img = new Image();
+    const objectUrl = URL.createObjectURL(file);
     img.onload = () => {
+      URL.revokeObjectURL(objectUrl);
       const results: { size: number; dataUrl: string }[] = [];
       for (const size of SIZES) {
         const canvas = document.createElement("canvas");
@@ -26,7 +28,7 @@ const FaviconGeneratorTool = () => {
       setPreviews(results);
     };
     img.onerror = () => toast({ title: "Error loading image", variant: "destructive" });
-    img.src = URL.createObjectURL(file);
+    img.src = objectUrl;
   };
 
   const handleFiles = (files: File[]) => {

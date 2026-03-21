@@ -47,7 +47,7 @@ const ImageConverterTool = () => {
   return (
     <div className="space-y-5">
       {!file ? (
-        <FileUploadZone accept="image/*" onFiles={handleFiles} formats={`${fmt.from} • PNG • JPG • WEBP`} label={`Drag & drop your ${fmt.from} image here`} />
+        <FileUploadZone accept="image/*" onFiles={handleFiles} formats="JPG • PNG • WebP • GIF" label={`Drag & drop your ${fmt.from} image here`} />
       ) : (
         <>
           <Button onClick={convert} disabled={isProcessing} className="w-full h-11 rounded-xl gap-2">

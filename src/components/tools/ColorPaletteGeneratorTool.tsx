@@ -24,8 +24,7 @@ const ColorPaletteGeneratorTool = () => {
       toast({ title: "Please upload an image file", variant: "destructive" });
       return;
     }
-    const url = URL.createObjectURL(file);
-    setImgSrc(url);
+    setImgSrc(prev => { if (prev) URL.revokeObjectURL(prev); return URL.createObjectURL(file); });
     setColors([]);
   };
 

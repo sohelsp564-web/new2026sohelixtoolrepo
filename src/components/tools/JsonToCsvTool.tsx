@@ -25,7 +25,9 @@ const JsonToCsvTool = () => {
   const copy = () => { navigator.clipboard.writeText(csv); toast.success("Copied!"); };
   const download = () => {
     const blob = new Blob([csv], { type: "text/csv" });
-    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "data.csv"; a.click();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a"); a.href = url; a.download = "data.csv"; a.click();
+    URL.revokeObjectURL(url);
   };
 
   return (

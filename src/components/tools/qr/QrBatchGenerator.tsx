@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Loader2 } from "lucide-react";
 import QRCodeStyling from "qr-code-styling";
@@ -9,10 +9,17 @@ const QrBatchGenerator = () => {
   const [generating, setGenerating] = useState(false);
   const [previews, setPreviews] = useState<{ url: string; dataUrl: string }[]>([]);
 
+  useEffect(() => {
+    return () => {
+      previews.forEach(p => URL.revokeObjectURL(p.dataUrl));
+    };
+  }, [previews]);
+
   const generate = useCallback(async () => {
     const lines = input.split("\n").map(l => l.trim()).filter(Boolean);
     if (!lines.length) return;
     setGenerating(true);
+    setPreviews(old => { old.forEach(p => URL.revokeObjectURL(p.dataUrl)); return []; });
     const results: { url: string; dataUrl: string }[] = [];
 
     for (const line of lines) {
@@ -36,10 +43,12 @@ const QrBatchGenerator = () => {
       zip.file(`qrcode-${i + 1}.png`, blob);
     }
     const content = await zip.generateAsync({ type: "blob" });
+    const url = URL.createObjectURL(content);
     const a = document.createElement("a");
-    a.href = URL.createObjectURL(content);
+    a.href = url;
     a.download = "qrcodes.zip";
     a.click();
+    URL.revokeObjectURL(url);
   }, [previews]);
 
   return (

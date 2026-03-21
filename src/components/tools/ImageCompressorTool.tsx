@@ -216,10 +216,12 @@ const ImageCompressorTool = () => {
         zip.file(r.name, r.compressedBlob);
       }
       const content = await zip.generateAsync({ type: "blob" });
+      const zipUrl = URL.createObjectURL(content);
       const a = document.createElement("a");
-      a.href = URL.createObjectURL(content);
+      a.href = zipUrl;
       a.download = "compressed_images.zip";
       a.click();
+      URL.revokeObjectURL(zipUrl);
     } catch {
       toast({ title: "ZIP creation failed", variant: "destructive" });
     }

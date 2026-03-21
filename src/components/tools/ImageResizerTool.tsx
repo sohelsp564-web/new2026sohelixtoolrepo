@@ -16,8 +16,9 @@ const ImageResizerTool = () => {
   const handleFiles = (files: File[]) => {
     const f = files[0];
     if (f) {
-      setFile(f); setPreview(URL.createObjectURL(f)); setResult("");
-      const img = new Image(); img.onload = () => { setWidth(String(img.width)); setHeight(String(img.height)); }; img.src = URL.createObjectURL(f);
+      const previewUrl = URL.createObjectURL(f);
+      setFile(f); setPreview(previewUrl); setResult("");
+      const img = new Image(); img.onload = () => { setWidth(String(img.width)); setHeight(String(img.height)); }; img.src = previewUrl;
     } else { setFile(null); setPreview(""); setResult(""); }
   };
 

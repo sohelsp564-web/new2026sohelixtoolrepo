@@ -89,8 +89,8 @@ const FileUploadZone = ({
         </div>
         {formats && (
           <div className="flex flex-wrap justify-center gap-1.5 mt-1">
-            {formats.split("•").map(f => f.trim()).filter(Boolean).map(f => (
-              <span key={f} className="rounded-full bg-muted px-2.5 py-0.5 text-[10px] font-medium text-muted-foreground">
+            {formats.split("•").map(f => f.trim()).filter(Boolean).map((f, i) => (
+              <span key={`${f}-${i}`} className="rounded-full bg-muted px-2.5 py-0.5 text-[10px] font-medium text-muted-foreground">
                 {f}
               </span>
             ))}
