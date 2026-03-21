@@ -222,9 +222,9 @@
   },
   "pdf-metadata-viewer": {
     "title": "PDF Metadata Viewer",
-    "description": "View metadata of PDF files.",
-    "meta_title": "Free PDF Metadata Viewer — Sohelix Tools",
-    "meta_description": "View author, title, creation date and other PDF metadata.",
+    "description": "Our PDF Metadata Viewer lets you view PDF metadata online and check file details instantly. You can see information such as author, creation date, and document properties. This free PDF metadata checker allows you to view PDF file information, analyze metadata, and manage documents more effectively. Use this tool to quickly access PDF metadata without installing any software.",
+    "meta_title": "PDF Metadata Viewer – View PDF File Information | Sohelix",
+    "meta_description": "View PDF metadata online. Check file properties, author details, and document information easily.",
     "faqs": [
       { "q": "What does the PDF Metadata Viewer do?", "a": "This tool displays metadata from PDF files including author, title, creation date, modification date, and more." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
@@ -235,9 +235,9 @@
   },
   "pdf-reader": {
     "title": "PDF Reader",
-    "description": "Read PDF files directly in your browser.",
-    "meta_title": "Free Online PDF Reader — Sohelix Tools",
-    "meta_description": "Read PDF files directly in your browser. No downloads needed.",
+    "description": "Our PDF Reader allows you to open PDF online and read PDF files directly in your browser. You can view documents quickly without installing any software. This free PDF viewer online lets you read PDF online, open files instantly, and access documents securely. It is a simple and fast solution for viewing PDF files anytime, anywhere.",
+    "meta_title": "PDF Reader Online – Open and View PDF Files | Sohelix",
+    "meta_description": "Open and read PDF files online. View PDF documents directly in your browser without installing any software.",
     "faqs": [
       { "q": "What does the PDF Reader do?", "a": "This tool lets you open and read PDF files directly in your browser without needing to download any software." },
       { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No account required." },
@@ -247,10 +247,10 @@
     ]
   },
   "pdf-page-rotator": {
-    "title": "PDF Page Rotator",
-    "description": "Rotate PDF pages easily.",
-    "meta_title": "Free PDF Page Rotator — Sohelix Tools",
-    "meta_description": "Rotate individual PDF pages easily. Free browser-based tool.",
+    "title": "Rotate PDF Pages",
+    "description": "Our Rotate PDF tool helps you rotate PDF pages online quickly and easily. You can adjust PDF orientation and fix page alignment in seconds. This free PDF rotator allows you to rotate PDF files, rotate individual pages, and ensure documents are properly aligned. It works directly in your browser and requires no installation. Use this tool to rotate PDF online, correct page orientation, and manage documents efficiently.",
+    "meta_title": "Rotate PDF Online – Rotate PDF Pages Free | Sohelix",
+    "meta_description": "Rotate PDF pages online. Adjust PDF orientation quickly using our free PDF rotation tool.",
     "faqs": [
       { "q": "What does the PDF Page Rotator do?", "a": "This tool lets you rotate individual pages within a PDF file by 90°, 180°, or 270° and download the updated PDF." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with no restrictions." },
@@ -287,9 +287,9 @@
   },
   "text-case-converter": {
     "title": "Text Case Converter",
-    "description": "Convert text to uppercase, lowercase, title case and more.",
-    "meta_title": "Free Text Case Converter — Sohelix Tools",
-    "meta_description": "Convert text to uppercase, lowercase, title case and more.",
+    "description": "Our Text Case Converter allows you to convert text case online easily. You can change text to uppercase, lowercase, title case, or sentence case instantly. This free case converter tool helps you convert text to uppercase or lowercase, format content, and improve readability. It is perfect for writers, developers, and anyone working with text formatting.",
+    "meta_title": "Text Case Converter – Uppercase Lowercase Tool | Sohelix",
+    "meta_description": "Convert text to uppercase, lowercase, or title case instantly with this free text case converter tool.",
     "faqs": [
       { "q": "What does the Text Case Converter do?", "a": "This tool converts your text between different cases including uppercase, lowercase, title case, sentence case, and more." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
@@ -300,9 +300,9 @@
   },
   "remove-duplicate-lines": {
     "title": "Remove Duplicate Lines",
-    "description": "Remove duplicate lines from text.",
-    "meta_title": "Free Remove Duplicate Lines Tool — Sohelix Tools",
-    "meta_description": "Remove duplicate lines from text instantly. Free online tool.",
+    "description": "Our Remove Duplicate Lines tool helps you remove duplicate lines from text online quickly. You can clean text, remove repeated lines, and organize content efficiently. This free duplicate line remover allows you to process large text files and remove unnecessary repetitions instantly. It is ideal for developers, writers, and data processing tasks.",
+    "meta_title": "Remove Duplicate Lines – Clean Duplicate Text Online | Sohelix",
+    "meta_description": "Remove duplicate lines from text online. Clean and organize text quickly with this free tool.",
     "faqs": [
       { "q": "What does the Remove Duplicate Lines tool do?", "a": "This tool removes all duplicate lines from your text, leaving only unique lines. You can toggle case sensitivity." },
       { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No account needed." },
@@ -326,9 +326,9 @@
   },
   "lorem-ipsum-generator": {
     "title": "Lorem Ipsum Generator",
-    "description": "Generate placeholder Lorem Ipsum text.",
-    "meta_title": "Free Lorem Ipsum Generator — Sohelix Tools",
-    "meta_description": "Generate placeholder Lorem Ipsum text for your designs.",
+    "description": "Our Lorem Ipsum Generator helps you generate lorem ipsum text online quickly. You can create placeholder text for design, development, and content projects.",
+    "meta_title": "Lorem Ipsum Generator – Dummy Text Generator | Sohelix",
+    "meta_description": "Generate lorem ipsum dummy text instantly. Create placeholder text for design and development projects.",
     "faqs": [
       { "q": "What does the Lorem Ipsum Generator do?", "a": "This tool generates placeholder Lorem Ipsum text in customizable paragraph counts, useful for design mockups and development." },
       { "q": "Is this tool free to use?", "a": "Yes, it's completely free. Generate as much text as you need." },
@@ -352,9 +352,9 @@
   },
   "text-compare": {
     "title": "Text Compare Tool",
-    "description": "Compare two texts side by side and find differences.",
-    "meta_title": "Free Text Compare Tool — Sohelix Tools",
-    "meta_description": "Compare two texts side by side and find differences highlighted.",
+    "description": "Our Text Compare Tool helps you compare text online and find differences between two texts instantly. You can easily compare two texts, detect changes, and analyze differences using this free tool.",
+    "meta_title": "Text Compare Tool – Compare Text Online | Sohelix",
+    "meta_description": "Compare two texts online and find differences instantly with this free text comparison tool.",
     "faqs": [
       { "q": "What does the Text Compare Tool do?", "a": "This tool compares two blocks of text side by side and highlights the differences between them, line by line." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited comparisons." },
@@ -365,9 +365,9 @@
   },
   "text-reverse": {
     "title": "Text Reverse Tool",
-    "description": "Reverse text characters or words instantly.",
-    "meta_title": "Free Text Reverse Tool — Sohelix Tools",
-    "meta_description": "Reverse text characters or words instantly. Free online tool.",
+    "description": "Our Text Reverse Tool allows you to reverse text online instantly. You can reverse words, sentences, or characters with a single click. This free text reverser tool is useful for fun, coding, and text manipulation tasks.",
+    "meta_title": "Reverse Text Tool – Reverse Words Online | Sohelix",
+    "meta_description": "Reverse text online instantly. Flip words, sentences, or characters using this free text reverse tool.",
     "faqs": [
       { "q": "What does the Text Reverse Tool do?", "a": "This tool reverses the characters or words in your text. You can choose between character-level or word-level reversal." },
       { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits." },
@@ -378,9 +378,9 @@
   },
   "remove-extra-spaces": {
     "title": "Remove Extra Spaces",
-    "description": "Remove extra spaces, tabs, and blank lines from text.",
-    "meta_title": "Free Remove Extra Spaces Tool — Sohelix Tools",
-    "meta_description": "Remove extra spaces, tabs, and blank lines from text.",
+    "description": "Our Remove Extra Spaces tool helps you remove extra spaces from text online instantly. You can clean text formatting, fix spacing issues, and improve readability. This free tool allows you to remove double spaces and optimize text quickly.",
+    "meta_title": "Remove Extra Spaces – Clean Text Formatting Online | Sohelix",
+    "meta_description": "Remove extra spaces from text online. Clean formatting and fix spacing issues instantly.",
     "faqs": [
       { "q": "What does the Remove Extra Spaces tool do?", "a": "This tool removes extra whitespace, duplicate spaces, unnecessary tabs, and blank lines from your text while preserving normal spacing." },
       { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No sign-up required." },
@@ -391,9 +391,9 @@
   },
   "random-word-generator": {
     "title": "Random Word Generator",
-    "description": "Generate random words for brainstorming or testing.",
-    "meta_title": "Free Random Word Generator — Sohelix Tools",
-    "meta_description": "Generate random words for brainstorming or testing.",
+    "description": "Our Random Word Generator allows you to generate random words online instantly. It is useful for writing, brainstorming, and testing purposes.",
+    "meta_title": "Random Word Generator – Generate Random Words | Sohelix",
+    "meta_description": "Generate random words online instantly. Use this free tool for creative writing and testing purposes.",
     "faqs": [
       { "q": "What does the Random Word Generator do?", "a": "This tool generates random English words, useful for brainstorming, word games, testing, or creative writing prompts." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
@@ -404,9 +404,9 @@
   },
   "text-to-slug": {
     "title": "Text to Slug Converter",
-    "description": "Convert any text to a URL-friendly slug.",
-    "meta_title": "Free Text to Slug Converter — Sohelix Tools",
-    "meta_description": "Convert any text to a URL-friendly slug instantly.",
+    "description": "Our Slug Generator allows you to convert text to slug online instantly. You can create SEO-friendly URLs quickly using this tool. This free URL slug generator helps you optimize links for better search engine visibility.",
+    "meta_title": "Text to Slug Converter – URL Slug Generator | Sohelix",
+    "meta_description": "Convert text to SEO-friendly URL slugs instantly using this free slug generator tool.",
     "faqs": [
       { "q": "What does the Text to Slug Converter do?", "a": "This tool converts any text into a URL-friendly slug by lowercasing, removing special characters, and replacing spaces with hyphens." },
       { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
@@ -417,9 +417,9 @@
   },
   "json-formatter": {
     "title": "JSON Formatter",
-    "description": "Format and beautify JSON data.",
-    "meta_title": "Free JSON Formatter Online — Sohelix Tools",
-    "meta_description": "Format and beautify JSON data. Free online JSON formatter.",
+    "description": "Our JSON Formatter allows you to format JSON online and beautify your code instantly. You can clean, organize, and structure JSON data easily.",
+    "meta_title": "JSON Formatter – Beautify JSON Online | Sohelix",
+    "meta_description": "Format and beautify JSON online. Use this free JSON formatter to clean and structure your code.",
     "faqs": [
       { "q": "What does the JSON Formatter do?", "a": "This tool formats, beautifies, and indents JSON data to make it readable. It also validates JSON and shows syntax errors." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits on data size." },
@@ -443,9 +443,9 @@
   },
   "base64-encoder": {
     "title": "Base64 Encoder",
-    "description": "Encode text to Base64 format.",
-    "meta_title": "Free Base64 Encoder — Sohelix Tools",
-    "meta_description": "Encode text to Base64 format. Free online tool.",
+    "description": "Our Base64 Encoder allows you to encode Base64 online quickly. You can convert text into Base64 format for secure and efficient data handling.",
+    "meta_title": "Base64 Encoder – Encode Base64 Online | Sohelix",
+    "meta_description": "Encode text to Base64 online instantly. Use this free Base64 encoder tool for quick conversions.",
     "faqs": [
       { "q": "What does the Base64 Encoder do?", "a": "This tool encodes plain text into Base64 format, which is commonly used for data transmission in URLs, emails, and APIs." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
@@ -755,9 +755,9 @@
   },
   "age-calculator": {
     "title": "Age Calculator",
-    "description": "Calculate your exact age in years, months and days.",
-    "meta_title": "Free Age Calculator — Sohelix Tools",
-    "meta_description": "Calculate your exact age in years, months and days.",
+    "description": "Our Age Calculator helps you calculate age online instantly using your date of birth. It provides accurate age results in seconds.",
+    "meta_title": "Age Calculator – Calculate Age Online | Sohelix",
+    "meta_description": "Calculate age online instantly. Find your exact age using this free age calculator tool.",
     "faqs": [
       { "q": "What does the Age Calculator do?", "a": "This tool calculates your exact age from your birth date, showing years, months, and days. It also shows upcoming birthday countdown." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with no sign-up required." },
@@ -781,9 +781,9 @@
   },
   "percentage-calculator": {
     "title": "Percentage Calculator",
-    "description": "Calculate percentages easily.",
-    "meta_title": "Free Percentage Calculator — Sohelix Tools",
-    "meta_description": "Calculate percentages easily. Free online calculator.",
+    "description": "Our Percentage Calculator allows you to calculate percentages online quickly and easily. You can perform percentage calculations instantly.",
+    "meta_title": "Percentage Calculator – Calculate Percentages Online | Sohelix",
+    "meta_description": "Calculate percentages online easily. Use this free percentage calculator for quick calculations.",
     "faqs": [
       { "q": "What does the Percentage Calculator do?", "a": "This tool calculates percentages in multiple ways: what is X% of Y, what percentage is X of Y, and percentage change between values." },
       { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited calculations." },
