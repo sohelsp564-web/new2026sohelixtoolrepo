@@ -1,0 +1,154 @@
+### ROLE
+
+You are an expert React developer and SEO specialist.
+
+---
+
+### OBJECTIVE
+
+Add H2 sections to each tool page using the EXACT H2 structure content already provided in my SEO data.
+
+---
+
+### CONTEXT
+
+* My website is built in React.
+* Each tool already has SEO content (meta, description, FAQs, etc.).
+* I have already provided structured H2 content for each tool.
+* You must use that SAME content (do NOT rewrite or invent new H2 text).
+
+---
+
+### IMPORTANT RULES
+
+* Do NOT modify UI layout or styling
+* Do NOT change existing components
+* Do NOT edit existing SEO fields
+* ONLY ADD H2 sections
+* Use EXACT provided H2 titles and descriptions
+* Insert BELOW tool UI or description
+
+---
+
+### IMPLEMENTATION METHOD
+
+If project uses data (recommended):
+→ Add this field inside each tool object:
+
+h2Sections: [
+{ title: "", content: "" }
+]
+
+If project uses JSX:
+→ Insert <h2> + <p> blocks directly
+
+---
+
+### USE EXACT H2 DATA (DO NOT MODIFY TEXT)
+
+---
+
+#### Age Calculator (USE EXACT TEXT)
+
+h2Sections: [
+{
+title: "Calculate Age from Date of Birth",
+content: "Easily calculate your age using your date of birth with our accurate and fast tool."
+},
+{
+title: "Exact Age Calculator in Years, Months, and Days",
+content: "Get a complete breakdown of your age in years, months, and days instantly."
+},
+{
+title: "Age Calculator in Days",
+content: "Find your total age in days with our advanced age calculator tool."
+},
+{
+title: "How to Use the Online Age Calculator",
+content: "Enter your date of birth and get your exact age instantly without any calculations."
+}
+]
+
+---
+
+#### EMI Calculator (USE EXACT TEXT)
+
+h2Sections: [
+{
+title: "Loan EMI Calculator for Home & Personal Loans",
+content: "Calculate EMI for different types of loans including home loans and personal loans instantly."
+},
+{
+title: "How to Calculate EMI Online",
+content: "Enter your loan details and use our EMI calculator online to get accurate results without manual calculations."
+},
+{
+title: "EMI Calculation Formula Explained",
+content: "Understand how EMI is calculated using loan amount, interest rate, and tenure."
+},
+{
+title: "Monthly EMI Breakdown with Interest",
+content: "Check your monthly EMI and total interest payable easily."
+}
+]
+
+---
+
+#### Average Calculator (USE EXACT TEXT)
+
+h2Sections: [
+{
+title: "Calculate Average of Numbers Online",
+content: "Easily calculate the average of any set of numbers using this tool."
+},
+{
+title: "Mean Calculator for Quick Results",
+content: "Use this mean calculator to find accurate results instantly."
+},
+{
+title: "Average Formula Explained",
+content: "Understand how average is calculated using a simple formula."
+},
+{
+title: "How to Find Average Easily",
+content: "Learn how to calculate average step-by-step using this tool."
+}
+]
+
+---
+
+### RENDERING (IMPORTANT)
+
+If rendering dynamically, use:
+
+{tool.h2Sections?.map((section, index) => (
+
+  <div key={index}>
+    <h2>{section.title}</h2>
+    <p>{section.content}</p>
+  </div>
+))}
+
+---
+
+### PLACEMENT RULE
+
+H1
+→ Tool UI
+→ Description
+→ H2 Sections (ADD HERE)
+→ FAQs
+
+---
+
+### OUTPUT REQUIREMENTS
+
+* Return only updated sections
+* Do not rewrite entire file
+* Ensure no duplication if H2 already exists
+
+---
+
+### FINAL TASK
+
+Add H2 sections using the EXACT provided content for each tool safely and correctly.

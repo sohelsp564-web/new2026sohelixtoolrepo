@@ -11,6 +11,7 @@ export interface Tool {
   meta_description?: string;
   h1Title?: string;
   keywords?: string[];
+  h2Sections?: { title: string; content: string }[];
 
   icon: IconName;
   howToUse: string[];
@@ -281,6 +282,12 @@ export const tools: Tool[] = [
     meta_title: "Age Calculator Online – Calculate Age from Date of Birth (Years, Months, Days) | Sohelix",
     meta_description: "Free age calculator online to calculate age from date of birth. Find your exact age in years, months, and days instantly with accurate results.",
     keywords: ["age calculator online", "calculate age from date of birth", "exact age calculator", "age calculator in days", "online age calculator", "age calculator by dob", "find age from date of birth"],
+    h2Sections: [
+      { title: "Calculate Age from Date of Birth", content: "Easily calculate your age using your date of birth with our accurate and fast tool." },
+      { title: "Exact Age Calculator in Years, Months, and Days", content: "Get a complete breakdown of your age in years, months, and days instantly." },
+      { title: "Age Calculator in Days", content: "Find your total age in days with our advanced age calculator tool." },
+      { title: "How to Use the Online Age Calculator", content: "Enter your date of birth and get your exact age instantly without any calculations." },
+    ],
     icon: "Calendar", howToUse: ["Enter birth date", "See your age", "View breakdown"], faqs: [{ q: "Is it accurate?", a: "Yes, down to the day." }], relatedSlugs: ["bmi-calculator", "date-difference-calculator", "percentage-calculator"] },
   { name: "BMI Calculator", slug: "bmi-calculator", category: "Calculator Tools", categorySlug: "calculator-tools", description: "Calculate your Body Mass Index.", icon: "Activity", howToUse: ["Enter weight and height", "See BMI result", "View category"], faqs: [{ q: "What is BMI?", a: "Body Mass Index measures body fat based on weight and height." }], relatedSlugs: ["age-calculator", "percentage-calculator", "tip-calculator"], isTrending: true },
   { name: "Percentage Calculator", slug: "percentage-calculator", category: "Calculator Tools", categorySlug: "calculator-tools",
@@ -296,6 +303,12 @@ export const tools: Tool[] = [
     meta_title: "EMI Calculator Online – Calculate Loan EMI for Home & Personal Loans | Sohelix",
     meta_description: "Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. Get accurate monthly EMI with interest breakdown.",
     keywords: ["emi calculator", "emi calculator online", "home loan emi calculator", "loan emi calculator", "calculate emi", "emi calculator for personal loan", "emi interest calculator"],
+    h2Sections: [
+      { title: "Loan EMI Calculator for Home & Personal Loans", content: "Calculate EMI for different types of loans including home loans and personal loans instantly." },
+      { title: "How to Calculate EMI Online", content: "Enter your loan details and use our EMI calculator online to get accurate results without manual calculations." },
+      { title: "EMI Calculation Formula Explained", content: "Understand how EMI is calculated using loan amount, interest rate, and tenure." },
+      { title: "Monthly EMI Breakdown with Interest", content: "Check your monthly EMI and total interest payable easily." },
+    ],
     icon: "Landmark", howToUse: ["Enter loan details", "See EMI breakdown", "View schedule"], faqs: [{ q: "What is EMI?", a: "Equated Monthly Installment." }], relatedSlugs: ["interest-calculator", "percentage-calculator", "discount-calculator"] },
   { name: "Interest Calculator", slug: "interest-calculator", category: "Calculator Tools", categorySlug: "calculator-tools", description: "Calculate simple and compound interest.", icon: "TrendingUp", howToUse: ["Enter principal and rate", "Choose type", "See result"], faqs: [{ q: "Simple vs compound?", a: "Compound interest earns interest on interest." }], relatedSlugs: ["loan-emi-calculator", "percentage-calculator", "profit-margin-calculator"] },
   { name: "Discount Calculator", slug: "discount-calculator", category: "Calculator Tools", categorySlug: "calculator-tools", description: "Calculate discount amounts and final prices.", icon: "BadgePercent", howToUse: ["Enter price and discount", "See savings", "Copy result"], faqs: [{ q: "Is it free?", a: "Yes." }], relatedSlugs: ["percentage-calculator", "tip-calculator", "profit-margin-calculator"] },
@@ -309,6 +322,12 @@ export const tools: Tool[] = [
     meta_title: "Average Calculator Online – Calculate Mean & Average of Numbers | Sohelix",
     meta_description: "Use this average calculator online to calculate mean and find average of numbers instantly. Free tool to calculate average quickly and accurately.",
     keywords: ["average calculator", "average calculator online", "calculate average", "mean calculator", "find average", "average formula", "average number calculator"],
+    h2Sections: [
+      { title: "Calculate Average of Numbers Online", content: "Easily calculate the average of any set of numbers using this tool." },
+      { title: "Mean Calculator for Quick Results", content: "Use this mean calculator to find accurate results instantly." },
+      { title: "Average Formula Explained", content: "Understand how average is calculated using a simple formula." },
+      { title: "How to Find Average Easily", content: "Learn how to calculate average step-by-step using this tool." },
+    ],
     icon: "BarChart3", howToUse: ["Enter numbers", "See statistics instantly", "Copy results"], faqs: [{ q: "What stats does it show?", a: "Mean, median, sum, min, max, and count." }], relatedSlugs: ["percentage-calculator", "percentage-increase-calculator", "percentage-decrease-calculator"], isNew: true },
   { name: "Percentage Increase Calculator", slug: "percentage-increase-calculator", category: "Calculator Tools", categorySlug: "calculator-tools", description: "Calculate the percentage increase between two values.", icon: "TrendingUp", howToUse: ["Enter from value", "Enter to value", "See percentage change"], faqs: [{ q: "Does it handle decreases?", a: "Yes, it shows negative percentages too." }], relatedSlugs: ["percentage-decrease-calculator", "percentage-calculator", "average-calculator"] },
   { name: "Percentage Decrease Calculator", slug: "percentage-decrease-calculator", category: "Calculator Tools", categorySlug: "calculator-tools", description: "Calculate the result after a percentage decrease.", icon: "TrendingDown", howToUse: ["Enter original value", "Enter decrease percentage", "See result"], faqs: [{ q: "Is it free?", a: "Yes, completely free." }], relatedSlugs: ["percentage-increase-calculator", "percentage-calculator", "discount-calculator"] },

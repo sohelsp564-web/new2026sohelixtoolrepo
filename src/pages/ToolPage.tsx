@@ -212,6 +212,20 @@ const faqs = t?.faqs || tool.faqs;
               </ul>
             </Card>
 
+            {/* H2 Sections */}
+            {tool.h2Sections && tool.h2Sections.length > 0 && (
+              <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
+                <div className="space-y-5">
+                  {tool.h2Sections.map((section, i) => (
+                    <div key={i}>
+                      <h2 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Space Grotesk' }}>{section.title}</h2>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{section.content}</p>
+                    </div>
+                  ))}
+                </div>
+              </Card>
+            )}
+
             {/* Ad Slot 3: Before FAQ */}
             <AdSlot id="ad-before-faq" size="banner" className="mb-6" />
 
