@@ -1,0 +1,123 @@
+### ROLE
+
+You are an expert React developer and SEO specialist.
+
+---
+
+### OBJECTIVE
+
+Update the SEO content of specific tools in my website using the new provided content.
+
+---
+
+### CONTEXT
+
+* My website is built in React.
+* Each tool has its own SEO data (either in components or a data file like tools.ts / JSON).
+* SEO fields already exist but contain OLD content.
+* I want to REPLACE old SEO content with NEW content.
+
+---
+
+### IMPORTANT RULES (DO NOT BREAK)
+
+* Do NOT change UI layout
+* Do NOT modify CSS or styling
+* Do NOT rename components or keys
+* Do NOT change logic or functionality
+* ONLY update text values inside existing fields
+* Keep structure exactly the same
+
+---
+
+### FIELDS TO UPDATE
+
+Update ONLY these fields:
+
+* metaTitle
+* metaDescription
+* h1
+* description
+* faqs
+* popularSearches
+
+If additional SEO fields exist (like h2Sections), update them only if already present.
+
+---
+
+### MATCHING LOGIC
+
+Match tools using name or slug:
+
+* "Age Calculator" → age-calculator
+* "EMI Calculator" → emi-calculator
+* "Average Calculator" → average-calculator
+
+Update ONLY the matching tool.
+
+---
+
+### NEW SEO CONTENT
+
+#### 1. Age Calculator
+
+metaTitle: Age Calculator Online – Calculate Age from Date of Birth (Years, Months, Days) | Sohelix
+metaDescription: Free age calculator online to calculate age from date of birth. Find your exact age in years, months, and days instantly with accurate results.
+h1: Age Calculator Online – Find Your Exact Age Instantly
+description: Use our age calculator online to calculate your exact age from your date of birth in seconds. This free tool helps you find your age in years, months, and days with 100% accuracy. If you want to calculate age from date of birth, simply enter your DOB and get instant results. You can also use this tool as an exact age calculator to find your total age in days, months, or years without manual calculation. Our online age calculator is designed for speed, accuracy, and ease of use. Whether you need to find age for official documents, school forms, or personal use, this tool gives precise results instantly. You can also use it as an age calculator in days to know your total age in days or calculate age difference easily.
+faqs: [
+{question: "How to calculate age from date of birth?", answer: "You can use an age calculator online by entering your date of birth to instantly calculate your exact age."},
+{question: "Can I calculate my exact age in days?", answer: "Yes, this tool works as an age calculator in days and shows your total age in days along with years and months."},
+{question: "What is the most accurate age calculator online?", answer: "Our tool provides accurate results and works as an exact age calculator for all users."},
+{question: "How do I find my age using DOB?", answer: "Simply enter your date of birth in the calculator to find your age instantly."},
+{question: "Is this online age calculator free?", answer: "Yes, it is completely free and available for unlimited use."}
+]
+popularSearches: ["age calculator online","calculate age from date of birth","exact age calculator","age calculator in days","online age calculator","age calculator by dob","find age from date of birth"]
+
+---
+
+#### 2. EMI Calculator
+
+metaTitle: EMI Calculator Online – Calculate Loan EMI for Home & Personal Loans | Sohelix
+metaDescription: Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. Get accurate monthly EMI with interest breakdown.
+h1: EMI Calculator Online – Calculate Your Loan EMI Instantly
+description: Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. This free and easy-to-use tool helps you calculate accurate monthly EMI based on your loan amount, interest rate, and repayment tenure. With our advanced loan EMI calculator, you can quickly estimate your monthly payments and plan your finances more effectively. Whether you need a home loan EMI calculator or an EMI calculator for personal loan, this tool gives precise results in seconds. If you want to calculate EMI, simply enter your loan details and get instant results with a clear monthly breakdown. You can also understand the EMI calculation formula and see how interest impacts your total repayment. Our online EMI calculator is fast, accurate, and designed to help you make better financial decisions with ease.
+faqs: [
+{question: "How to calculate EMI for a loan online?", answer: "You can use this EMI calculator online to calculate loan EMI instantly by entering your loan amount, interest rate, and tenure."},
+{question: "Can I use this as a home loan EMI calculator?", answer: "Yes, this tool works perfectly as a home loan EMI calculator and provides accurate results."},
+{question: "Does this EMI calculator work for personal loans?", answer: "Yes, it also works as an EMI calculator for personal loan and other types of loans."},
+{question: "What is the EMI calculation formula?", answer: "EMI is calculated using loan amount, interest rate, and tenure with a standard formula."},
+{question: "Is this EMI calculator free to use?", answer: "Yes, it is completely free and available online."}
+]
+popularSearches: ["emi calculator","emi calculator online","home loan emi calculator","loan emi calculator","calculate emi","emi calculator for personal loan","emi interest calculator"]
+
+---
+
+#### 3. Average Calculator
+
+metaTitle: Average Calculator Online – Calculate Mean & Average of Numbers | Sohelix
+metaDescription: Use this average calculator online to calculate mean and find average of numbers instantly. Free tool to calculate average quickly and accurately.
+h1: Average Calculator Online – Find the Mean of Numbers Instantly
+description: Use this average calculator online to calculate mean and find average of numbers instantly. This free tool helps you quickly calculate the average of multiple numbers with accurate results. With our easy-to-use mean calculator, you can calculate average values for any set of numbers in seconds. Whether you are solving math problems, analyzing data, or doing calculations for school or work, this tool makes it simple. If you want to find average, just enter your numbers and get instant results. This tool also helps you understand the average formula and how mean values are calculated. Our average number calculator is fast, accurate, and completely free to use online.
+faqs: [
+{question: "How to calculate average of numbers?", answer: "You can use this average calculator online to calculate mean instantly by entering your numbers."},
+{question: "What is the formula to find average?", answer: "The average is calculated by dividing the sum of numbers by the total count."},
+{question: "Can I use this as a mean calculator?", answer: "Yes, this tool works as a mean calculator to find accurate results."},
+{question: "Is this average calculator free?", answer: "Yes, it is completely free and available online."},
+{question: "How do I find average quickly?", answer: "Simply enter your numbers in the tool and get instant results."}
+]
+popularSearches: ["average calculator","average calculator online","calculate average","mean calculator","find average","average formula","average number calculator"]
+
+---
+
+### OUTPUT REQUIREMENTS
+
+* Return ONLY updated code sections (not full project)
+* Clearly indicate what was changed
+* Keep formatting clean and readable
+
+---
+
+### FINAL TASK
+
+Update the existing SEO content with the above new content safely and correctly.
