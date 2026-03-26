@@ -91,29 +91,55 @@
     ]
   },
   "jpg-to-webp": {
-    "title": "WebP Converter",
-    "description": "Our WebP Converter allows you to convert images to WebP online quickly and easily. You can convert JPG and PNG images into WebP format for better compression and faster web performance. This free WebP image converter helps you convert images to WebP online while maintaining high quality. It is perfect for developers, designers, and website owners who want optimized images. You can use this tool to convert JPG to WebP, PNG to WebP, and improve website loading speed instantly.",
-    "meta_title": "WebP Converter – Convert Images to WebP Online | Sohelix",
-    "meta_description": "Convert images to WebP format online. Transform JPG and PNG images into optimized WebP files for better performance.",
+    "title": "WebP Converter Online",
+    "description": "Use this WebP converter online to quickly convert images into WebP format for better performance and smaller file size. This free tool allows you to convert to WebP instantly with high quality. With our easy-to-use image to WebP converter, you can convert JPG and PNG images into WebP format efficiently. Whether you want to convert image to WebP for websites or optimization, this tool makes it simple. If you want to convert JPG to WebP or PNG to WebP, just upload your image and get instant results. You can also use this tool as a WebP image converter for fast processing. Our WebP converter tool is fast, reliable, and completely free to use online.",
+    "meta_title": "WebP Converter Online – Convert JPG & PNG to WebP Free | Sohelix",
+    "meta_description": "Use this WebP converter online to convert JPG and PNG images to WebP instantly. Free image to WebP converter for better performance.",
     "faqs": [
-      { "q": "What does the JPG to WebP Converter do?", "a": "This tool converts JPG images to WebP format, which offers superior compression and smaller file sizes ideal for web use." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free. No registration or payment required." },
-      { "q": "Are my files uploaded to a server?", "a": "No. The conversion runs entirely in your browser. Your files are never sent to any server." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. All processing is client-side, keeping your images private and secure." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to convert image to WebP?", "a": "Upload your image and convert it instantly using this tool." },
+      { "q": "Can I convert JPG to WebP?", "a": "Yes, this tool supports JPG to WebP conversion." },
+      { "q": "Can I convert PNG to WebP?", "a": "Yes, PNG images can also be converted easily." },
+      { "q": "Is this WebP converter free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Why use WebP format?", "a": "WebP reduces file size and improves website performance." }
     ]
   },
   "image-to-base64": {
-    "title": "Image to Base64",
-    "description": "Convert images to Base64 encoded strings.",
-    "meta_title": "Free Image to Base64 Converter — Sohelix Tools",
-    "meta_description": "Convert images to Base64 encoded strings. Free browser-based tool.",
+    "title": "Image to Base64 Converter",
+    "description": "Use this image to Base64 converter online to quickly encode images into Base64 string format. This free tool allows you to convert image to Base64 instantly with accurate results. With our easy-to-use Base64 image encoder, you can upload your image and get encoded data instantly. Whether you are a developer or working on web projects, this tool makes it simple to encode image to Base64. If you want to convert image to Base64 string, just upload your image and get instant results. You can also use this tool as an image Base64 converter for development and testing purposes. Our image to Base64 online tool is fast, secure, and completely free to use.",
+    "meta_title": "Image to Base64 Converter Online – Encode Image to Base64 | Sohelix",
+    "meta_description": "Use this image to Base64 converter online to encode images into Base64 string instantly. Free Base64 image encoder tool.",
     "faqs": [
-      { "q": "What does the Image to Base64 tool do?", "a": "This tool converts any image into a Base64 encoded text string that you can embed directly in HTML, CSS, or use in APIs." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits. No account needed." },
-      { "q": "Are my files uploaded to a server?", "a": "No. The conversion happens entirely in your browser. Your images are never uploaded anywhere." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. Since it runs client-side, your files remain private and secure." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to convert image to Base64?", "a": "Upload your image and get Base64 string instantly." },
+      { "q": "What is Base64 image encoding?", "a": "It converts image data into a text-based Base64 format." },
+      { "q": "Is this tool free to use?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Developers and users can use it easily." },
+      { "q": "Can I encode image online?", "a": "Yes, you can encode images instantly using this tool." }
+    ]
+  },
+  "image-to-text": {
+    "title": "Image to Text Converter Online",
+    "description": "Use this image to text converter online to quickly extract text from images using OCR technology. This free tool helps you convert image to text instantly with accurate results. With our advanced OCR image to text tool, you can upload images and extract text from photos, screenshots, or scanned documents. Whether you need a photo to text converter or an image to text OCR tool, this tool makes it simple and efficient. If you want to extract text from image, just upload your file and get instant results. You can also use this tool as an image to text scanner for documents. Our image to text online tool is fast, accurate, and completely free to use.",
+    "meta_title": "Image to Text Converter Online – OCR Tool to Extract Text from Image | Sohelix",
+    "meta_description": "Use this image to text converter online to extract text from images instantly. Free OCR tool to convert image to text quickly and accurately.",
+    "faqs": [
+      { "q": "How to convert image to text?", "a": "Upload your image and extract text instantly using this tool." },
+      { "q": "What is OCR image to text?", "a": "OCR converts images into editable text using recognition technology." },
+      { "q": "Is this image to text tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Can I extract text from scanned documents?", "a": "Yes, this tool supports scanned images and documents." },
+      { "q": "Which formats are supported?", "a": "It supports JPG, PNG, and other formats." }
+    ]
+  },
+  "image-to-word": {
+    "title": "Image to Word Converter Online",
+    "description": "Use this image to Word converter online to quickly convert images into editable Word documents. This free tool helps you convert image to Word instantly with accurate results. With our advanced image to DOC converter, you can upload JPG or PNG images and convert them into DOCX format easily. Whether you need a photo to Word converter or a document conversion tool, this makes it simple. If you want to convert image to Word online, just upload your image and download the Word file instantly. You can also use this tool as a JPG to Word converter or PNG to Word converter. Our image to Word tool is fast, accurate, and completely free to use online.",
+    "meta_title": "Image to Word Converter Online – Convert JPG/PNG to DOCX Free | Sohelix",
+    "meta_description": "Use this image to Word converter online to convert images into editable Word documents instantly. Free JPG and PNG to DOCX converter.",
+    "faqs": [
+      { "q": "How to convert image to Word?", "a": "Upload your image and convert it into Word document instantly." },
+      { "q": "Can I convert JPG to Word?", "a": "Yes, this tool supports JPG to Word conversion." },
+      { "q": "Can I convert PNG to Word?", "a": "Yes, PNG images can also be converted." },
+      { "q": "Is this image to Word converter free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Which format is supported?", "a": "It supports DOCX format for Word documents." }
     ]
   },
   "base64-to-image": {
@@ -195,16 +221,16 @@
     ]
   },
   "image-rotate": {
-    "title": "Image Rotate Tool",
-    "description": "Rotate images by any angle online.",
-    "meta_title": "Free Image Rotate Tool — Sohelix Tools",
-    "meta_description": "Rotate images by 90°, 180°, or 270° online. Free tool.",
+    "title": "Rotate Image Online",
+    "description": "Use this rotate image online tool to quickly rotate photos to any angle. This free tool allows you to rotate image instantly without losing quality. With our easy-to-use image rotator, you can rotate images by 90 degrees or adjust them to custom angles. Whether you want to rotate photo online for alignment or editing, this tool makes it simple and efficient. If you want to rotate image to angle, just upload your image and apply rotation instantly. You can also use this tool to rotate image without losing quality. Our online image rotator tool is fast, accurate, and completely free to use.",
+    "meta_title": "Rotate Image Online – Free Image Rotator (90° & Custom Angle) | Sohelix",
+    "meta_description": "Use this rotate image online tool to rotate photos by 90 degrees or any angle instantly. Free image rotator without losing quality.",
     "faqs": [
-      { "q": "What does the Image Rotate Tool do?", "a": "This tool rotates your images by 90°, 180°, or 270° with a single click. The rotated image can be downloaded instantly." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits." },
-      { "q": "Are my images uploaded to a server?", "a": "No. All rotation is done locally in your browser. Your images never leave your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. Since it runs entirely in your browser, your files remain private and secure." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to rotate image online?", "a": "Upload your image and choose the rotation angle." },
+      { "q": "Can I rotate image by 90 degrees?", "a": "Yes, you can rotate images by 90°, 180°, or custom angles." },
+      { "q": "Is this image rotator free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Can I rotate image without losing quality?", "a": "Yes, this tool maintains image quality." },
+      { "q": "Which formats are supported?", "a": "It supports JPG, PNG, and other formats." }
     ]
   },
   "image-flip": {
