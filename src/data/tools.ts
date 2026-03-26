@@ -138,7 +138,19 @@ export const tools: Tool[] = [
     ],
     icon: "Cloudy", howToUse: ["Upload your image", "Adjust blur radius", "Download blurred image"], faqs: [{ q: "How to blur image online?", a: "Upload your image and use the tool to apply blur instantly." }, { q: "Can I blur part of an image?", a: "Yes, you can select specific areas and blur them easily." }, { q: "How to blur image background?", a: "Use this tool to blur the background while keeping the subject clear." }, { q: "Is this blur image tool free?", a: "Yes, it is completely free and works online." }, { q: "Can I blur faces in photos?", a: "Yes, you can blur faces or sensitive areas easily." }], relatedSlugs: ["image-watermark", "image-rotate", "image-flip"] },
   { name: "Image Rotate Tool", slug: "image-rotate", category: "Image Tools", categorySlug: "image-tools", description: "Rotate images by any angle online.", icon: "RotateCw", howToUse: ["Upload your image", "Choose rotation angle", "Download rotated image"], faqs: [{ q: "What angles are supported?", a: "90°, 180°, and 270°." }], relatedSlugs: ["image-flip", "image-watermark", "image-blur"] },
-  { name: "Image Flip Tool", slug: "image-flip", category: "Image Tools", categorySlug: "image-tools", description: "Flip images horizontally or vertically.", icon: "FlipHorizontal", howToUse: ["Upload your image", "Choose flip direction", "Download flipped image"], faqs: [{ q: "Can I flip both ways?", a: "Yes, horizontal and vertical." }], relatedSlugs: ["image-rotate", "image-watermark", "image-blur"] },
+  { name: "Image Flip Tool", slug: "image-flip", category: "Image Tools", categorySlug: "image-tools",
+    h1Title: "Flip Image Online – Mirror & Flip Photo Instantly",
+    description: "Use this flip image online tool to quickly mirror and flip photos horizontally or vertically. This free tool allows you to flip image instantly with accurate results. With our easy-to-use image flip tool, you can flip photos, mirror images, and adjust orientation easily. Whether you want to flip photo for editing or design purposes, this tool makes it simple. If you want to flip image horizontally or vertically, just upload your image and get instant results. You can also use this tool as a mirror image tool online. Our online image flip tool is fast, reliable, and completely free to use.",
+    meta_title: "Flip Image Online – Mirror & Flip Photo Horizontally or Vertically | Sohelix",
+    meta_description: "Use this flip image online tool to mirror and flip photos horizontally or vertically instantly. Free image flip tool with fast results.",
+    keywords: ["flip image", "flip image online", "flip photo", "mirror image online", "flip picture", "flip image horizontally", "flip image vertically"],
+    h2Sections: [
+      { title: "Flip Image Online Free", content: "Upload your image and flip it instantly without any cost." },
+      { title: "Flip Image Horizontally or Vertically", content: "Choose how you want to flip your image easily." },
+      { title: "Mirror Image Tool Online", content: "Create mirror images quickly using this tool." },
+      { title: "Image Flip Tool", content: "Use this tool to flip photos without any software." },
+    ],
+    icon: "FlipHorizontal", howToUse: ["Upload your image", "Choose flip direction", "Download flipped image"], faqs: [{ q: "How to flip image online?", a: "Upload your image and choose horizontal or vertical flip." }, { q: "Can I mirror an image online?", a: "Yes, this tool works as a mirror image tool." }, { q: "Is this image flip tool free?", a: "Yes, it is completely free and works online." }, { q: "Can I flip image horizontally and vertically?", a: "Yes, both options are available." }, { q: "Which formats are supported?", a: "It supports common formats like JPG and PNG." }], relatedSlugs: ["image-rotate", "image-watermark", "image-blur"] },
 
   // PDF TOOLS
   { name: "Images to PDF", slug: "images-to-pdf", category: "PDF Tools", categorySlug: "pdf-tools",

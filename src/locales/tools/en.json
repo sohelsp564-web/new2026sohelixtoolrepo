@@ -208,16 +208,16 @@
     ]
   },
   "image-flip": {
-    "title": "Image Flip Tool",
-    "description": "Flip images horizontally or vertically.",
-    "meta_title": "Free Image Flip Tool — Sohelix Tools",
-    "meta_description": "Flip images horizontally or vertically online. Free tool.",
+    "title": "Flip Image Online",
+    "description": "Use this flip image online tool to quickly mirror and flip photos horizontally or vertically. This free tool allows you to flip image instantly with accurate results. With our easy-to-use image flip tool, you can flip photos, mirror images, and adjust orientation easily. Whether you want to flip photo for editing or design purposes, this tool makes it simple. If you want to flip image horizontally or vertically, just upload your image and get instant results. You can also use this tool as a mirror image tool online. Our online image flip tool is fast, reliable, and completely free to use.",
+    "meta_title": "Flip Image Online – Mirror & Flip Photo Horizontally or Vertically | Sohelix",
+    "meta_description": "Use this flip image online tool to mirror and flip photos horizontally or vertically instantly. Free image flip tool with fast results.",
     "faqs": [
-      { "q": "What does the Image Flip Tool do?", "a": "This tool flips your images horizontally (mirror) or vertically (upside down) with one click." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free. No registration needed." },
-      { "q": "Are my images uploaded to a server?", "a": "No. All processing happens locally in your browser. Your images never leave your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your files remain private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to flip image online?", "a": "Upload your image and choose horizontal or vertical flip." },
+      { "q": "Can I mirror an image online?", "a": "Yes, this tool works as a mirror image tool." },
+      { "q": "Is this image flip tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Can I flip image horizontally and vertically?", "a": "Yes, both options are available." },
+      { "q": "Which formats are supported?", "a": "It supports common formats like JPG and PNG." }
     ]
   },
   "images-to-pdf": {
