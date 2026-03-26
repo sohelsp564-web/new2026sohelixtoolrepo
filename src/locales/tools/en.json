@@ -117,16 +117,29 @@
     ]
   },
   "image-color-picker": {
-    "title": "Image Color Picker",
-    "description": "Pick any color from an uploaded image.",
-    "meta_title": "Free Image Color Picker Online — Sohelix Tools",
-    "meta_description": "Pick any color from an uploaded image. Get HEX, RGB, and HSL values.",
+    "title": "Image Color Picker Online",
+    "description": "Use this image color picker online to quickly pick color from image and extract exact color codes. This free tool helps you get color from image instantly with high accuracy. With our easy-to-use color picker from image, you can click on any part of an image and get its exact hex color value. Whether you are a designer or developer, this tool makes it simple to extract color from image. If you want to get hex color from image, just upload your image and click on any area to get instant results. You can also use this tool as a color code picker for design and development projects. Our image color picker is fast, accurate, and completely free to use online.",
+    "meta_title": "Image Color Picker Online – Pick Hex Color from Image | Sohelix",
+    "meta_description": "Use this image color picker online to pick hex color from image instantly. Extract color codes and get exact color values easily.",
     "faqs": [
-      { "q": "What does the Image Color Picker do?", "a": "This tool lets you pick any color from an uploaded image and gives you the color value in HEX, RGB, and HSL formats." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No sign-up required." },
-      { "q": "Are my images uploaded to a server?", "a": "No. All processing happens locally in your browser. Your images never leave your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your files remain private and secure." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to pick color from image?", "a": "Upload your image and click on the desired area to get the color code." },
+      { "q": "Can I get hex color from image?", "a": "Yes, this tool provides exact hex color values." },
+      { "q": "Is this image color picker free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Designers, developers, and creators can use it easily." },
+      { "q": "Does it work on all images?", "a": "Yes, it works on all types of images." }
+    ]
+  },
+  "color-palette-generator": {
+    "title": "Color Palette Generator Online",
+    "description": "Use this color palette generator online to quickly create beautiful and unique color schemes for your projects. This free tool helps you generate color palette combinations instantly for design, UI, and branding. With our easy-to-use color scheme generator, you can explore multiple color combinations and find the perfect palette for your website or design work. Whether you are a designer or developer, this color palette maker makes it simple and efficient. If you want to generate color palette from image or create random palettes, this tool provides fast and accurate results. You can also use it as a color combination generator for creative projects. Our color palette tool is fast, intuitive, and completely free to use online.",
+    "meta_title": "Color Palette Generator Online – Create Color Schemes Instantly | Sohelix",
+    "meta_description": "Use this color palette generator online to create color schemes instantly. Generate beautiful color combinations for design and UI projects.",
+    "faqs": [
+      { "q": "How to generate color palette online?", "a": "Use this tool to create color palettes instantly with one click." },
+      { "q": "Can I generate color palette from image?", "a": "Yes, you can create color palettes based on images or random selection." },
+      { "q": "Is this color palette generator free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Designers, developers, and creators can use it easily." },
+      { "q": "What is a color scheme generator?", "a": "It is a tool that helps create matching color combinations." }
     ]
   },
   "image-watermark": {
@@ -286,29 +299,29 @@
     ]
   },
   "character-counter": {
-    "title": "Character Counter Tool",
-    "description": "Use our Character Counter to count characters online instantly. It shows character count, spaces, and text length in real time. This tool is useful for social media posts, SEO content, and writing tasks where character limits matter.",
-    "meta_title": "Character Counter – Count Characters Online | Sohelix",
-    "meta_description": "Count characters online easily. Check text length, spaces, and character count instantly.",
+    "title": "Character Counter Online",
+    "description": "Use this character counter online to quickly count characters and words in your text. This free tool helps you count characters instantly with accurate results. With our easy-to-use text character counter, you can check both character count and word count for writing, SEO, or social media. It works as a word and character counter for all types of content. If you want to count characters in text, simply paste your content and get instant results. You can also check character count with spaces or without spaces easily. Our character count tool is fast, accurate, and completely free to use online.",
+    "meta_title": "Character Counter Online – Count Words & Characters Instantly | Sohelix",
+    "meta_description": "Use this character counter online to count words and characters instantly. Free text character counter tool with accurate results.",
     "faqs": [
-      { "q": "What does the Character Counter do?", "a": "This tool counts the total number of characters in your text, showing counts both with and without spaces." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
-      { "q": "Are my texts uploaded to a server?", "a": "No. All processing happens locally in your browser. Your text never leaves your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, ensuring your content stays private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to count characters in text?", "a": "Paste your text into the tool to get instant character count." },
+      { "q": "Does this tool count words and characters?", "a": "Yes, it works as both a word and character counter." },
+      { "q": "Can I count characters without spaces?", "a": "Yes, this tool provides character count with and without spaces." },
+      { "q": "Is this character counter free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Writers, students, and SEO professionals can use it easily." }
     ]
   },
   "text-case-converter": {
-    "title": "Text Case Converter",
-    "description": "Our Text Case Converter allows you to convert text case online easily. You can change text to uppercase, lowercase, title case, or sentence case instantly. This free case converter tool helps you convert text to uppercase or lowercase, format content, and improve readability. It is perfect for writers, developers, and anyone working with text formatting.",
-    "meta_title": "Text Case Converter – Uppercase Lowercase Tool | Sohelix",
-    "meta_description": "Convert text to uppercase, lowercase, or title case instantly with this free text case converter tool.",
+    "title": "Text Case Converter Online",
+    "description": "Use this text case converter online to quickly change text to uppercase, lowercase, or sentence case. This free tool helps you convert text case instantly with accurate results. With our simple case converter, you can easily format your text for writing, coding, or content creation. Whether you want to use an uppercase converter, lowercase converter, or sentence case converter, this tool makes it fast and easy. If you want to change text case, just paste your text and select the desired format. This tool supports multiple formats and works instantly without any delay. Our text converter is fast, reliable, and completely free to use online.",
+    "meta_title": "Text Case Converter Online – Convert Uppercase, Lowercase & Sentence Case | Sohelix",
+    "meta_description": "Use this text case converter online to change text to uppercase, lowercase, or sentence case instantly. Free and easy case converter tool.",
     "faqs": [
-      { "q": "What does the Text Case Converter do?", "a": "This tool converts your text between different cases including uppercase, lowercase, title case, sentence case, and more." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
-      { "q": "Are my texts uploaded to a server?", "a": "No. All conversion happens locally in your browser. Your text is never transmitted." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your content remains private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to change text case online?", "a": "Paste your text and select the case format to convert instantly." },
+      { "q": "Can I convert text to uppercase?", "a": "Yes, you can easily convert text to uppercase using this tool." },
+      { "q": "What is a text case converter?", "a": "It is a tool that changes text format like uppercase, lowercase, or sentence case." },
+      { "q": "Is this case converter free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Can I convert text to lowercase?", "a": "Yes, you can convert any text to lowercase instantly." }
     ]
   },
   "remove-duplicate-lines": {
@@ -741,16 +754,16 @@
     ]
   },
   "coin-flip": {
-    "title": "Coin Flip Generator",
-    "description": "Flip a virtual coin and track results.",
-    "meta_title": "Free Coin Flip Generator — Sohelix Tools",
-    "meta_description": "Flip a virtual coin with fair 50/50 probability.",
+    "title": "Coin Flip Online",
+    "description": "Use this coin flip online tool to instantly flip a coin and get random heads or tails results. This free coin flip generator helps you make quick decisions easily. With our simple coin flipper, you can simulate a real coin toss anytime. Whether you want to flip a coin for decision-making, games, or fun, this tool gives instant and random results. If you need a random coin toss online, just click once and get heads or tails instantly. It works as a heads or tails generator with accurate randomness. Our coin flip simulator is fast, fun, and completely free to use online.",
+    "meta_title": "Coin Flip Online – Flip a Coin (Heads or Tails Generator) | Sohelix",
+    "meta_description": "Use this coin flip online tool to flip a coin instantly. Get random heads or tails results with this free coin toss generator.",
     "faqs": [
-      { "q": "What does the Coin Flip Generator do?", "a": "This tool simulates flipping a coin with fair 50/50 probability using cryptographic randomness, and tracks your flip history and statistics." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited flips." },
-      { "q": "Are my data uploaded to a server?", "a": "No. All flipping happens locally in your browser. Nothing is transmitted." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool uses the Web Crypto API for fair randomness and runs entirely client-side." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to flip a coin online?", "a": "Click the button to instantly get heads or tails result." },
+      { "q": "Is this coin flip random?", "a": "Yes, it generates completely random results." },
+      { "q": "Can I use this for decision making?", "a": "Yes, you can use it to make quick decisions." },
+      { "q": "Is this coin flip tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "What is a coin flip generator?", "a": "It is a tool that simulates a real coin toss digitally." }
     ]
   },
   "random-picker": {
