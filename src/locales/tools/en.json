@@ -1,15 +1,15 @@
 {
   "image-compressor": {
     "title": "Image Compressor Online",
-    "description": "Our Image Compressor helps you compress images online and reduce image file size quickly without losing quality. You can easily compress JPEG online, compress PNG online, and optimize images for faster loading on websites and social media. This free image compressor online tool allows you to compress images online directly in your browser without uploading files to any server. Whether you want to reduce image file size, optimize pictures for SEO, or save storage space, this tool provides a fast and secure solution. You can use this tool to compress images online for web, improve page speed, and ensure high-quality output. It supports multiple formats and works instantly on any device.",
-    "meta_title": "Image Compressor Online – Compress Image & Reduce File Size | Sohelix",
-    "meta_description": "Compress images online for free. Reduce image file size, compress JPEG and PNG images quickly without losing quality.",
+    "description": "Use this image compressor online to quickly reduce image size without losing quality. This free tool helps you compress image instantly for faster uploads and better performance. With our easy-to-use image size reducer, you can compress JPG and PNG images efficiently. Whether you want to compress photo for websites, email, or storage, this tool makes it simple. If you want to reduce image size, just upload your image and get optimized results instantly. You can also use this tool to compress image to specific size easily. Our online image compressor is fast, secure, and completely free to use.",
+    "meta_title": "Image Compressor Online – Reduce Image Size Without Losing Quality | Sohelix",
+    "meta_description": "Use this image compressor online to reduce image size without losing quality. Compress JPG, PNG images instantly with this free tool.",
     "faqs": [
-      { "q": "What does the Image Compressor do?", "a": "This tool reduces the file size of your images while maintaining visual quality. It processes everything directly in your browser — no server uploads needed." },
-      { "q": "Is this tool free to use?", "a": "Yes, the Image Compressor is completely free. You can compress unlimited images without creating an account or paying anything." },
-      { "q": "Are my images uploaded to a server?", "a": "No. All image compression happens locally in your browser. Your files never leave your device, ensuring complete privacy." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. Since the tool runs entirely in your browser using client-side JavaScript, your images remain private and are never transmitted over the internet." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on all modern browsers including Chrome, Edge, Firefox, and Safari on both desktop and mobile devices." }
+      { "q": "How to compress image online?", "a": "Upload your image and compress it instantly using this tool." },
+      { "q": "Can I reduce image size without losing quality?", "a": "Yes, this tool maintains image quality while compressing." },
+      { "q": "Does it support JPG and PNG?", "a": "Yes, it supports both JPG and PNG formats." },
+      { "q": "Is this image compressor free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Why should I compress images?", "a": "It helps reduce file size and improve website performance." }
     ]
   },
   "image-resizer": {
@@ -26,16 +26,29 @@
     ]
   },
   "image-cropper": {
-    "title": "Image Cropper Online",
-    "description": "Use this image cropper online to quickly crop image and photo with precision. This free tool allows you to crop image instantly without losing quality. With our easy-to-use photo cropper, you can adjust image size, remove unwanted parts, and focus on important areas. Whether you want to crop picture for social media or personal use, this tool makes it fast and simple. If you want to crop image online, just upload your image, select the area, and download the cropped version instantly. You can also use this tool to crop image to specific size easily. Our image crop tool is fast, accurate, and completely free to use online.",
-    "meta_title": "Image Cropper Online – Crop Image & Photo Free | Sohelix",
-    "meta_description": "Use this image cropper online to crop image and photo instantly. Free tool to crop pictures without losing quality.",
+    "title": "Crop Image Online",
+    "description": "Use this crop image online tool to quickly crop photos and adjust image size with precision. This free tool allows you to crop image instantly without losing quality. With our easy-to-use image cropper, you can remove unwanted parts of your photo and focus on important areas. Whether you want to crop photo online for social media, documents, or personal use, this tool makes it simple and fast. If you want to crop image to size, just upload your image, select the area, and download the cropped version instantly. You can also use this tool to crop picture without losing quality. Our online image cropper tool is fast, accurate, and completely free to use.",
+    "meta_title": "Crop Image Online – Free Image Cropper Tool Without Losing Quality | Sohelix",
+    "meta_description": "Use this crop image online tool to crop photos instantly. Free image cropper to resize and crop images without losing quality.",
     "faqs": [
       { "q": "How to crop image online?", "a": "Upload your image, select the area, and crop it instantly." },
-      { "q": "Can I crop image without losing quality?", "a": "Yes, this tool allows high-quality image cropping." },
+      { "q": "Can I crop image without losing quality?", "a": "Yes, this tool maintains image quality while cropping." },
       { "q": "Is this image cropper free?", "a": "Yes, it is completely free and works online." },
       { "q": "Can I crop photo to specific size?", "a": "Yes, you can crop images to custom dimensions easily." },
       { "q": "Does this tool work on all images?", "a": "Yes, it supports all image formats." }
+    ]
+  },
+  "favicon-generator": {
+    "title": "Favicon Generator Online",
+    "description": "Use this favicon generator online to quickly create favicon icons for your website. This free tool allows you to generate favicon from image and download it in ICO format instantly. With our easy-to-use favicon maker, you can upload your image and convert it into a website favicon. Whether you are building a website or updating your branding, this favicon creator makes it simple. If you want to create favicon online free, just upload your image and get instant results. This tool also works as a favicon icon generator for developers and designers. Our favicon generator tool is fast, accurate, and completely free to use online.",
+    "meta_title": "Favicon Generator Online – Create Favicon from Image Free | Sohelix",
+    "meta_description": "Use this favicon generator online to create favicon from image instantly. Free favicon maker to generate ICO icons for your website.",
+    "faqs": [
+      { "q": "How to create favicon online?", "a": "Upload your image and convert it into a favicon instantly." },
+      { "q": "What is a favicon generator?", "a": "It is a tool that creates favicon icons for websites." },
+      { "q": "Can I create favicon from image?", "a": "Yes, you can upload an image and generate favicon easily." },
+      { "q": "Is this favicon maker free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Which format is supported?", "a": "It supports ICO format for website favicons." }
     ]
   },
   "png-to-jpg": {
@@ -325,16 +338,16 @@
     ]
   },
   "remove-duplicate-lines": {
-    "title": "Remove Duplicate Lines",
-    "description": "Our Remove Duplicate Lines tool helps you remove duplicate lines from text online quickly. You can clean text, remove repeated lines, and organize content efficiently. This free duplicate line remover allows you to process large text files and remove unnecessary repetitions instantly. It is ideal for developers, writers, and data processing tasks.",
-    "meta_title": "Remove Duplicate Lines – Clean Duplicate Text Online | Sohelix",
-    "meta_description": "Remove duplicate lines from text online. Clean and organize text quickly with this free tool.",
+    "title": "Remove Duplicate Lines Online",
+    "description": "Use this remove duplicate lines online tool to quickly clean text and remove repeated lines. This free tool helps you remove duplicate lines from text instantly with accurate results. With our easy-to-use duplicate line remover, you can clean large text files and eliminate repeated content easily. Whether you are working with lists, data, or text files, this tool makes it simple. If you want to remove duplicates from text, just paste your content and get instant results. You can also use this tool to remove repeated lines and organize your data efficiently. Our text duplicate remover is fast, accurate, and completely free to use online.",
+    "meta_title": "Remove Duplicate Lines Online – Clean Text & Remove Repeated Lines | Sohelix",
+    "meta_description": "Use this remove duplicate lines tool online to clean text and remove repeated lines instantly. Free duplicate line remover for accurate results.",
     "faqs": [
-      { "q": "What does the Remove Duplicate Lines tool do?", "a": "This tool removes all duplicate lines from your text, leaving only unique lines. You can toggle case sensitivity." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No account needed." },
-      { "q": "Are my texts uploaded to a server?", "a": "No. All processing happens locally in your browser. Your text never leaves your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. Since it runs entirely in your browser, your content remains private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to remove duplicate lines from text?", "a": "Paste your text into the tool and remove duplicates instantly." },
+      { "q": "What is a duplicate line remover?", "a": "It is a tool that removes repeated lines from text." },
+      { "q": "Can I clean text online?", "a": "Yes, this tool allows you to clean text easily." },
+      { "q": "Is this tool free to use?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Developers, students, and data analysts can use it easily." }
     ]
   },
   "text-sorter": {
@@ -871,16 +884,29 @@
     ]
   },
   "discount-calculator": {
-    "title": "Discount Calculator",
-    "description": "Calculate discount amounts and final prices.",
-    "meta_title": "Free Discount Calculator — Sohelix Tools",
-    "meta_description": "Calculate discount amounts and final prices instantly.",
+    "title": "Discount Calculator Online",
+    "description": "Use this discount calculator online to quickly calculate sale price and percentage discount. This free tool helps you calculate discount instantly and find your savings easily. With our simple percentage discount calculator, you can check how much you save on any product. Whether you are shopping online or offline, this sale price calculator gives accurate results. If you want to calculate discount percentage, just enter the original price and discount value to get instant results. You can also use this tool as a price after discount calculator. Our discount finder tool is fast, accurate, and completely free to use online.",
+    "meta_title": "Discount Calculator Online – Calculate Sale Price & Percentage Off | Sohelix",
+    "meta_description": "Use this discount calculator online to calculate sale price and percentage off instantly. Free tool to find discounts and savings easily.",
     "faqs": [
-      { "q": "What does the Discount Calculator do?", "a": "This tool calculates the discounted price, savings amount, and final price after applying a percentage discount to the original price." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with no restrictions." },
-      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to calculate discount?", "a": "Enter original price and discount percentage to get instant results." },
+      { "q": "What is a discount calculator?", "a": "It is a tool that helps you calculate price after discount." },
+      { "q": "Can I calculate percentage off?", "a": "Yes, this tool calculates percentage discount easily." },
+      { "q": "Is this discount calculator free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Can I calculate sale price?", "a": "Yes, it shows final price after discount instantly." }
+    ]
+  },
+  "emi-calculator": {
+    "title": "EMI Calculator Online",
+    "description": "Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. This free and easy-to-use tool helps you calculate accurate monthly EMI based on your loan amount, interest rate, and repayment tenure. With our advanced loan EMI calculator, you can quickly estimate your monthly payments and plan your finances more effectively. Whether you need a home loan EMI calculator or an EMI calculator for personal loan, this tool gives precise results in seconds. If you want to calculate EMI, simply enter your loan details and get instant results with a clear monthly breakdown. You can also understand the EMI calculation formula and see how interest impacts your total repayment. Our online EMI calculator is fast, accurate, and designed to help you make better financial decisions with ease.",
+    "meta_title": "EMI Calculator Online – Calculate Loan EMI for Home & Personal Loans | Sohelix",
+    "meta_description": "Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. Get accurate monthly EMI with interest breakdown.",
+    "faqs": [
+      { "q": "How to calculate EMI for a loan online?", "a": "You can use this EMI calculator online to calculate loan EMI instantly by entering your loan amount, interest rate, and tenure." },
+      { "q": "Can I use this as a home loan EMI calculator?", "a": "Yes, this tool works perfectly as a home loan EMI calculator and provides accurate results." },
+      { "q": "Does this EMI calculator work for personal loans?", "a": "Yes, it also works as an EMI calculator for personal loan and other types of loans." },
+      { "q": "What is the EMI calculation formula?", "a": "EMI is calculated using loan amount, interest rate, and tenure with a standard formula." },
+      { "q": "Is this EMI calculator free to use?", "a": "Yes, it is completely free and available online." }
     ]
   },
   "date-difference-calculator": {
