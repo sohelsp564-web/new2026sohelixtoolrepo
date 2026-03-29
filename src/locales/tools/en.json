@@ -52,16 +52,16 @@
     ]
   },
   "png-to-jpg": {
-    "title": "PNG to JPG Converter",
-    "description": "Convert PNG images to JPG format instantly.",
-    "meta_title": "Free PNG to JPG Converter Online — Sohelix Tools",
-    "meta_description": "Convert PNG images to JPG format instantly. Free online converter.",
+    "title": "PNG to JPG Converter Online",
+    "description": "Use this PNG to JPG converter online to quickly convert PNG images into JPG format with smaller file size. This free tool allows you to convert PNG to JPG instantly with fast processing. With our easy-to-use image to JPG converter, you can upload PNG images and convert them into JPG or JPEG format easily. Whether you want to reduce file size or change format, this tool makes it simple. If you want to convert image to JPG, just upload your PNG file and get instant results. You can also use this tool as a PNG to JPEG converter online. Our PNG to JPG converter tool is fast, secure, and completely free to use.",
+    "meta_title": "PNG to JPG Converter Online – Convert PNG to JPEG Free | Sohelix",
+    "meta_description": "Use this PNG to JPG converter online to convert PNG images into JPG or JPEG instantly. Free image converter with fast results.",
     "faqs": [
-      { "q": "What does the PNG to JPG Converter do?", "a": "This tool converts PNG images to JPG format instantly in your browser. It's useful for reducing file size since JPG uses lossy compression." },
-      { "q": "Is this tool free to use?", "a": "Yes, this converter is completely free with no limits on the number of conversions." },
-      { "q": "Are my files uploaded to a server?", "a": "No. The conversion happens entirely in your browser. Your files never leave your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. All processing is client-side, so your images stay private and secure." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to convert PNG to JPG?", "a": "Upload your PNG image and convert it instantly." },
+      { "q": "Can I convert PNG to JPEG?", "a": "Yes, this tool supports PNG to JPEG conversion." },
+      { "q": "Is this PNG to JPG converter free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Why convert PNG to JPG?", "a": "JPG reduces file size and is widely supported." },
+      { "q": "Which formats are supported?", "a": "It supports PNG input and JPG/JPEG output." }
     ]
   },
   "jpg-to-png": {
@@ -767,16 +767,16 @@
     ]
   },
   "qr-code-generator": {
-    "title": "QR Code Generator",
-    "description": "Generate QR codes for any text or URL.",
-    "meta_title": "Free QR Code Generator — Sohelix Tools",
-    "meta_description": "Generate QR codes for any text or URL. Download as PNG.",
+    "title": "QR Code Generator Online",
+    "description": "Use this QR code generator online to quickly create QR codes for links, text, and other data. This free tool helps you generate QR code instantly with customizable options. With our easy-to-use QR code maker, you can create QR codes for websites, contact details, or any content. Whether you need a free QR code generator for personal or business use, this tool makes it simple. If you want to create QR code online, just enter your data and download the QR code instantly. You can also use this tool as a custom QR code generator. Our QR code generator tool is fast, reliable, and completely free to use.",
+    "meta_title": "QR Code Generator Online – Create QR Codes Free | Sohelix",
+    "meta_description": "Use this QR code generator online to create QR codes for links, text, and more instantly. Free QR code maker tool.",
     "faqs": [
-      { "q": "What does the QR Code Generator do?", "a": "This tool generates QR codes from any text, URL, email, phone number, WiFi credentials, or other data types. You can customize colors, styles, and download in PNG, SVG, or JPG." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits on QR code generation." },
-      { "q": "Are my data uploaded to a server?", "a": "No. All QR code generation happens locally in your browser. Your data is never transmitted." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your data remains private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to create QR code online?", "a": "Enter your data and generate QR code instantly." },
+      { "q": "What is a QR code generator?", "a": "It is a tool that creates QR codes for different data types." },
+      { "q": "Can I create QR code for a link?", "a": "Yes, you can generate QR codes for URLs easily." },
+      { "q": "Is this QR code generator free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Can I download QR code?", "a": "Yes, you can download QR code instantly." }
     ]
   },
   "password-generator": {
@@ -793,16 +793,16 @@
     ]
   },
   "random-number-generator": {
-    "title": "Random Number Generator",
-    "description": "Generate random numbers within a range.",
-    "meta_title": "Free Random Number Generator — Sohelix Tools",
-    "meta_description": "Generate random numbers within a range. Free tool.",
+    "title": "Random Number Generator Online",
+    "description": "Use this random number generator online to quickly generate random numbers for various purposes. This free tool helps you generate random number instantly with customizable range options. With our easy-to-use random number picker, you can generate numbers between a specific range or pick random values easily. Whether you need it for games, decisions, or testing, this tool makes it simple. If you want to generate random number between numbers, just set your range and get instant results. You can also use this tool as a random number picker online. Our random number generator tool is fast, accurate, and completely free to use.",
+    "meta_title": "Random Number Generator Online – Generate Random Numbers Free | Sohelix",
+    "meta_description": "Use this random number generator online to generate random numbers instantly. Free random number picker tool with custom range.",
     "faqs": [
-      { "q": "What does the Random Number Generator do?", "a": "This tool generates random numbers within a specified minimum and maximum range using cryptographically secure random generation." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited generation." },
-      { "q": "Are my data uploaded to a server?", "a": "No. All generation happens locally in your browser using the crypto API." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool uses cryptographically secure random numbers and runs entirely client-side." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to generate random number?", "a": "Enter range and generate random numbers instantly." },
+      { "q": "What is a random number generator?", "a": "It is a tool that generates random numbers automatically." },
+      { "q": "Can I generate numbers between range?", "a": "Yes, you can set custom range easily." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Anyone can use it for games, selection, or testing." }
     ]
   },
   "timestamp-converter": {
@@ -897,16 +897,42 @@
     ]
   },
   "percentage-calculator": {
-    "title": "Percentage Calculator",
-    "description": "Our Percentage Calculator allows you to calculate percentages online quickly and easily. You can perform percentage calculations instantly.",
-    "meta_title": "Percentage Calculator – Calculate Percentages Online | Sohelix",
-    "meta_description": "Calculate percentages online easily. Use this free percentage calculator for quick calculations.",
+    "title": "Percentage Calculator Online",
+    "description": "Use this percentage calculator online to quickly calculate percentages, increases, decreases, and differences. This free tool helps you calculate percentage instantly for various use cases. With our easy-to-use percent calculator, you can find percentage values, calculate percentage change, and analyze increases or decreases easily. Whether for finance, studies, or daily use, this tool makes it simple. If you want to calculate percentage online, just enter your values and get instant results. You can also use this tool as a percentage increase calculator or percentage decrease calculator. Our percentage calculator tool is fast, accurate, and completely free to use.",
+    "meta_title": "Percentage Calculator Online – Calculate Percentages Easily | Sohelix",
+    "meta_description": "Use this percentage calculator online to calculate percentage, increase, decrease, and difference instantly. Free and easy to use tool.",
     "faqs": [
-      { "q": "What does the Percentage Calculator do?", "a": "This tool calculates percentages in multiple ways: what is X% of Y, what percentage is X of Y, and percentage change between values." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited calculations." },
-      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to calculate percentage?", "a": "Enter values and use this tool to calculate percentage instantly." },
+      { "q": "What is a percentage calculator?", "a": "It is a tool that calculates percentage values easily." },
+      { "q": "Can I calculate percentage increase?", "a": "Yes, this tool supports increase calculations." },
+      { "q": "Can I calculate percentage decrease?", "a": "Yes, it also calculates decrease values." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." }
+    ]
+  },
+  "percentage-increase-calculator": {
+    "title": "Percentage Increase Calculator",
+    "description": "Use this percentage increase calculator to quickly calculate the percentage increase between two values. This free tool helps you calculate percent increase instantly with accurate results. With our easy-to-use percent increase calculator, you can find how much a value has increased over time. Whether you need it for finance, studies, or daily calculations, this tool makes it simple. If you want to calculate percentage increase online, just enter the original and new values to get instant results. You can also use this tool to understand the percentage increase formula. Our percentage increase tool is fast, accurate, and completely free to use.",
+    "meta_title": "Percentage Increase Calculator – Calculate Percent Increase Online | Sohelix",
+    "meta_description": "Use this percentage increase calculator to calculate percent increase instantly. Free tool to find percentage growth easily.",
+    "faqs": [
+      { "q": "How to calculate percentage increase?", "a": "Enter original and new values to calculate increase instantly." },
+      { "q": "What is percentage increase?", "a": "It shows how much a value has increased in percentage." },
+      { "q": "Can I calculate percent increase online?", "a": "Yes, this tool calculates it instantly." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "What is the formula for percentage increase?", "a": "It is based on the difference between original and new value." }
+    ]
+  },
+  "percentage-decrease-calculator": {
+    "title": "Percentage Decrease Calculator",
+    "description": "Use this percentage decrease calculator to quickly calculate the percentage decrease between two values. This free tool helps you calculate percent decrease instantly with accurate results. With our easy-to-use percent decrease calculator, you can find how much a value has decreased over time. Whether you need it for finance, studies, or daily calculations, this tool makes it simple. If you want to calculate percentage decrease online, just enter the original and new values to get instant results. You can also use this tool to understand the percentage decrease formula. Our percentage decrease tool is fast, accurate, and completely free to use.",
+    "meta_title": "Percentage Decrease Calculator – Calculate Percent Decrease Online | Sohelix",
+    "meta_description": "Use this percentage decrease calculator to calculate percent decrease instantly. Free tool to find decrease percentage easily.",
+    "faqs": [
+      { "q": "How to calculate percentage decrease?", "a": "Enter original and new values to calculate decrease instantly." },
+      { "q": "What is percentage decrease?", "a": "It shows how much a value has reduced in percentage." },
+      { "q": "Can I calculate percent decrease online?", "a": "Yes, this tool calculates it instantly." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "What is the formula for percentage decrease?", "a": "It is based on the difference between original and new value." }
     ]
   },
   "loan-emi-calculator": {
@@ -1053,16 +1079,16 @@
     ]
   },
   "profit-margin-calculator": {
-    "title": "Profit Margin Calculator",
-    "description": "Calculate profit margins and markups.",
-    "meta_title": "Free Profit Margin Calculator — Sohelix Tools",
-    "meta_description": "Calculate profit margins and markups. Free calculator.",
+    "title": "Profit Margin Calculator Online",
+    "description": "Use this profit margin calculator online to quickly calculate profit, margin, and markup for your business. This free tool helps you calculate profit margin instantly with accurate results. With our advanced margin calculator, you can determine profit percentage, cost, selling price, and markup easily. Whether you need a gross profit margin calculator or a markup calculator, this tool makes it simple and efficient. If you want to calculate profit margin online, just enter your cost and selling price to get instant results. You can also use this tool as a profit percentage calculator for business analysis. Our profit margin calculator tool is fast, accurate, and completely free to use online.",
+    "meta_title": "Profit Margin Calculator Online – Calculate Margin, Markup & Profit | Sohelix",
+    "meta_description": "Use this profit margin calculator online to calculate margin, markup, and profit instantly. Free and accurate business calculator tool.",
     "faqs": [
-      { "q": "What does the Profit Margin Calculator do?", "a": "This tool calculates profit margin and markup percentages based on cost price and selling price, helping you understand your profitability." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
-      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Your financial data stays private." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to calculate profit margin?", "a": "Enter cost and selling price to calculate margin instantly." },
+      { "q": "What is profit margin?", "a": "It is the percentage of profit based on selling price." },
+      { "q": "What is markup?", "a": "Markup is the percentage added to cost to get selling price." },
+      { "q": "Can I calculate markup and margin together?", "a": "Yes, this tool calculates both." },
+      { "q": "Is this profit margin calculator free?", "a": "Yes, it is completely free and works online." }
     ]
   },
   "tip-calculator": {
