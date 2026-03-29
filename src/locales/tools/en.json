@@ -13,16 +13,16 @@
     ]
   },
   "image-resizer": {
-    "title": "Resize Images Online",
-    "description": "Resize images quickly using our free Image Resizer tool. You can resize photos for websites, social media, and email while maintaining high image quality. This browser-based tool makes it easy to adjust image dimensions instantly.",
-    "meta_title": "Image Resizer Online – Resize Image for Web & Social Media | Sohelix",
-    "meta_description": "Resize images online easily. Adjust image dimensions for web, social media, and email without losing quality.",
+    "title": "Resize Image Online",
+    "description": "Use this resize image online tool to quickly change image size and dimensions without losing quality. This free tool allows you to resize image instantly with precise control. With our easy-to-use image resizer, you can resize photos, adjust dimensions, and optimize images easily. Whether you want to resize photo for social media or documents, this tool makes it simple. If you want to resize image to specific size, just upload your image and set dimensions to get instant results. You can also use this tool to change image size online. Our image resizer tool is fast, accurate, and completely free to use.",
+    "meta_title": "Resize Image Online – Change Image Size Free Without Losing Quality | Sohelix",
+    "meta_description": "Use this image resizer online to resize images instantly. Change image size and dimensions without losing quality for free.",
     "faqs": [
-      { "q": "What does the Image Resizer do?", "a": "This tool lets you resize images to any custom width and height. You can maintain aspect ratio or set exact dimensions as needed." },
-      { "q": "Is this tool free to use?", "a": "Yes, the Image Resizer is completely free with no limits on the number of images you can resize." },
-      { "q": "Are my images uploaded to a server?", "a": "No. All resizing happens locally in your browser. Your images stay on your device and are never uploaded anywhere." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool processes everything client-side, so your files remain completely private and secure." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to resize image online?", "a": "Upload your image and set dimensions to resize instantly." },
+      { "q": "Can I resize image without losing quality?", "a": "Yes, this tool maintains image quality." },
+      { "q": "Is this image resizer free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Can I change image size easily?", "a": "Yes, you can adjust dimensions quickly." },
+      { "q": "Which formats are supported?", "a": "It supports JPG, PNG, and more." }
     ]
   },
   "image-cropper": {
@@ -222,12 +222,12 @@
   },
   "image-rotate": {
     "title": "Rotate Image Online",
-    "description": "Use this rotate image online tool to quickly rotate photos to any angle. This free tool allows you to rotate image instantly without losing quality. With our easy-to-use image rotator, you can rotate images by 90 degrees or adjust them to custom angles. Whether you want to rotate photo online for alignment or editing, this tool makes it simple and efficient. If you want to rotate image to angle, just upload your image and apply rotation instantly. You can also use this tool to rotate image without losing quality. Our online image rotator tool is fast, accurate, and completely free to use.",
-    "meta_title": "Rotate Image Online – Free Image Rotator (90° & Custom Angle) | Sohelix",
-    "meta_description": "Use this rotate image online tool to rotate photos by 90 degrees or any angle instantly. Free image rotator without losing quality.",
+    "description": "Use this rotate image online tool to quickly rotate photos and images to any angle. This free tool allows you to rotate image instantly with accurate results. With our easy-to-use image rotator, you can rotate pictures 90°, 180°, or custom angles easily. Whether you want to rotate photo for correction or editing, this tool makes it simple. If you want to rotate image online free, just upload your image and rotate it instantly. You can also use this tool as a rotate picture tool. Our image rotate tool is fast, secure, and completely free to use.",
+    "meta_title": "Rotate Image Online – Rotate Photo & Picture Free | Sohelix",
+    "meta_description": "Use this image rotate tool to rotate images online instantly. Rotate photos and pictures in any angle for free.",
     "faqs": [
-      { "q": "How to rotate image online?", "a": "Upload your image and choose the rotation angle." },
-      { "q": "Can I rotate image by 90 degrees?", "a": "Yes, you can rotate images by 90°, 180°, or custom angles." },
+      { "q": "How to rotate image online?", "a": "Upload your image and rotate it instantly." },
+      { "q": "Can I rotate image 90 degrees?", "a": "Yes, this tool supports fixed angle rotation." },
       { "q": "Is this image rotator free?", "a": "Yes, it is completely free and works online." },
       { "q": "Can I rotate image without losing quality?", "a": "Yes, this tool maintains image quality." },
       { "q": "Which formats are supported?", "a": "It supports JPG, PNG, and other formats." }
@@ -351,16 +351,16 @@
     ]
   },
   "pdf-page-rotator": {
-    "title": "Rotate PDF Pages",
-    "description": "Our Rotate PDF tool helps you rotate PDF pages online quickly and easily. You can adjust PDF orientation and fix page alignment in seconds. This free PDF rotator allows you to rotate PDF files, rotate individual pages, and ensure documents are properly aligned. It works directly in your browser and requires no installation. Use this tool to rotate PDF online, correct page orientation, and manage documents efficiently.",
+    "title": "Rotate PDF Online",
+    "description": "Use this rotate PDF online tool to quickly rotate PDF pages to the desired orientation. This free tool helps you rotate PDF pages instantly with accurate results. With our easy-to-use PDF page rotator, you can rotate entire documents or specific pages easily. Whether you want to rotate PDF file for proper viewing or printing, this tool makes it simple. If you want to rotate PDF online free, just upload your file and rotate pages instantly. You can also use this tool to rotate PDF 90 degrees or custom angles. Our PDF rotate tool is fast, secure, and completely free to use.",
     "meta_title": "Rotate PDF Online – Rotate PDF Pages Free | Sohelix",
-    "meta_description": "Rotate PDF pages online. Adjust PDF orientation quickly using our free PDF rotation tool.",
+    "meta_description": "Use this rotate PDF tool to rotate PDF pages online instantly. Free PDF page rotator with fast and secure processing.",
     "faqs": [
-      { "q": "What does the PDF Page Rotator do?", "a": "This tool lets you rotate individual pages within a PDF file by 90°, 180°, or 270° and download the updated PDF." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with no restrictions." },
-      { "q": "Are my files uploaded to a server?", "a": "No. All rotation happens locally in your browser. Your PDF never leaves your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. Since the tool runs entirely in your browser, your files remain private and secure." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to rotate PDF pages online?", "a": "Upload your PDF and rotate pages instantly." },
+      { "q": "Can I rotate specific pages in PDF?", "a": "Yes, this tool supports page-level rotation." },
+      { "q": "Is this PDF rotate tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Can I rotate PDF 90 degrees?", "a": "Yes, you can rotate PDF pages easily." },
+      { "q": "Is my file secure?", "a": "Yes, files are processed securely." }
     ]
   },
   "word-counter": {
@@ -442,16 +442,16 @@
     ]
   },
   "random-text-generator": {
-    "title": "Random Text Generator",
-    "description": "Generate random text strings.",
-    "meta_title": "Free Random Text Generator — Sohelix Tools",
-    "meta_description": "Generate random text strings for testing. Free tool.",
+    "title": "Random Text Generator Online",
+    "description": "Use this random text generator online to quickly generate random words, sentences, and paragraphs for various purposes. This free tool helps you generate random text instantly with customizable options. With our easy-to-use random paragraph generator, you can create random content for testing, writing, or development. Whether you need a random sentence generator or random word generator, this tool makes it simple. If you want to generate random text online, just select your options and get instant results. You can also use this tool as a random content generator. Our random text generator tool is fast, flexible, and completely free to use.",
+    "meta_title": "Random Text Generator Online – Generate Random Words & Sentences | Sohelix",
+    "meta_description": "Use this random text generator online to generate random words, sentences, and paragraphs instantly. Free text generator tool.",
     "faqs": [
-      { "q": "What does the Random Text Generator do?", "a": "This tool generates random text strings of customizable length, useful for testing, filling placeholders, or generating sample data." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
-      { "q": "Are my inputs uploaded to a server?", "a": "No. All generation happens locally in your browser using the crypto API." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so nothing is transmitted." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to generate random text?", "a": "Use this tool to generate random words, sentences, or paragraphs instantly." },
+      { "q": "What is a random text generator?", "a": "It is a tool that generates random text automatically." },
+      { "q": "Can I generate random sentences?", "a": "Yes, this tool supports sentence generation." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Developers, writers, and testers can use it." }
     ]
   },
   "text-compare": {
@@ -481,29 +481,29 @@
     ]
   },
   "remove-extra-spaces": {
-    "title": "Remove Extra Spaces",
-    "description": "Our Remove Extra Spaces tool helps you remove extra spaces from text online instantly. You can clean text formatting, fix spacing issues, and improve readability. This free tool allows you to remove double spaces and optimize text quickly.",
-    "meta_title": "Remove Extra Spaces – Clean Text Formatting Online | Sohelix",
-    "meta_description": "Remove extra spaces from text online. Clean formatting and fix spacing issues instantly.",
+    "title": "Remove Extra Spaces Online",
+    "description": "Use this remove extra spaces online tool to quickly clean text by removing unnecessary and multiple spaces. This free tool helps you remove extra spaces instantly for better formatting. With our easy-to-use text space remover, you can clean up text by removing extra spaces, blank spaces, and unwanted gaps. Whether you need a text cleaner for documents or coding, this tool makes it simple. If you want to remove extra spaces from text, just paste your content and get clean output instantly. You can also use this tool to remove multiple spaces online. Our remove extra spaces tool is fast, accurate, and completely free to use.",
+    "meta_title": "Remove Extra Spaces Online – Clean Text Instantly Free | Sohelix",
+    "meta_description": "Use this remove extra spaces tool to clean text instantly. Remove multiple, unnecessary, and blank spaces from text online for free.",
     "faqs": [
-      { "q": "What does the Remove Extra Spaces tool do?", "a": "This tool removes extra whitespace, duplicate spaces, unnecessary tabs, and blank lines from your text while preserving normal spacing." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No sign-up required." },
-      { "q": "Are my texts uploaded to a server?", "a": "No. All processing happens locally in your browser. Your text is never transmitted." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side, so your content remains private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to remove extra spaces from text?", "a": "Paste your text and clean it instantly using this tool." },
+      { "q": "What is a text space remover?", "a": "It is a tool that removes unnecessary spaces from text." },
+      { "q": "Can I remove multiple spaces online?", "a": "Yes, this tool removes multiple spaces easily." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Writers, developers, and students can use it." }
     ]
   },
   "random-word-generator": {
-    "title": "Random Word Generator",
-    "description": "Our Random Word Generator allows you to generate random words online instantly. It is useful for writing, brainstorming, and testing purposes.",
-    "meta_title": "Random Word Generator – Generate Random Words | Sohelix",
-    "meta_description": "Generate random words online instantly. Use this free tool for creative writing and testing purposes.",
+    "title": "Random Word Generator Online",
+    "description": "Use this random word generator online to quickly generate random words for different purposes. This free tool helps you generate random word instantly with customizable options. With our easy-to-use random word picker, you can generate words for games, writing, brainstorming, or testing. Whether you need a random word generator tool or a word generator, this tool makes it simple. If you want to generate random word online, just click and get instant results. You can also use this tool as a random word picker online. Our random word generator tool is fast, simple, and completely free to use.",
+    "meta_title": "Random Word Generator Online – Generate Random Words Free | Sohelix",
+    "meta_description": "Use this random word generator online to generate random words instantly. Free random word picker tool for multiple uses.",
     "faqs": [
-      { "q": "What does the Random Word Generator do?", "a": "This tool generates random English words, useful for brainstorming, word games, testing, or creative writing prompts." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with no limits." },
-      { "q": "Are my inputs uploaded to a server?", "a": "No. All generation happens locally in your browser. Nothing is sent to any server." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to generate random word?", "a": "Click generate and get random words instantly." },
+      { "q": "What is a random word generator?", "a": "It is a tool that generates random words automatically." },
+      { "q": "Can I pick random words online?", "a": "Yes, this tool allows easy word selection." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Writers, students, and developers can use it." }
     ]
   },
   "text-to-slug": {
@@ -1050,6 +1050,19 @@
       { "q": "What is purchasing power?", "a": "It shows how much goods/services your money can buy." },
       { "q": "Is this inflation calculator free?", "a": "Yes, it is completely free and works online." },
       { "q": "Can I calculate inflation over years?", "a": "Yes, this tool supports year-based calculations." }
+    ]
+  },
+  "sip-calculator": {
+    "title": "SIP Calculator Online",
+    "description": "Use this SIP calculator online to quickly calculate your investment returns and future value of monthly investments. This free tool helps you calculate SIP returns instantly with accurate results. With our easy-to-use mutual fund SIP calculator, you can estimate returns based on monthly investment, interest rate, and time period. Whether you are planning long-term investments or savings, this tool makes it simple. If you want to calculate SIP investment growth, just enter your details and get instant results. You can also use this tool as a SIP return calculator. Our SIP calculator tool is fast, accurate, and completely free to use online.",
+    "meta_title": "SIP Calculator Online – Calculate SIP Returns & Investment Growth | Sohelix",
+    "meta_description": "Use this SIP calculator online to calculate SIP returns and investment growth instantly. Free mutual fund SIP calculator with accurate results.",
+    "faqs": [
+      { "q": "What is a SIP calculator?", "a": "It is a tool that calculates returns on systematic investment plans." },
+      { "q": "How to calculate SIP returns?", "a": "Enter monthly investment, rate, and time to calculate returns." },
+      { "q": "Can I use this for mutual funds?", "a": "Yes, it works for mutual fund SIP calculations." },
+      { "q": "Is this SIP calculator free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Does it show future investment value?", "a": "Yes, it calculates total investment and returns." }
     ]
   },
   "date-difference-calculator": {
