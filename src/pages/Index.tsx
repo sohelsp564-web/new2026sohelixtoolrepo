@@ -114,24 +114,6 @@ const Index = () => {
         </div>
       </section>
       
-  {/* SEO Content Section */}
-   <section className="mx-auto max-w-4xl px-4 py-16 text-center">
-  <h2 className="text-2xl font-bold mb-4">
-    Free Online Tools for Everyday Tasks
-  </h2>
-
-  <p className="text-muted-foreground leading-relaxed">
-    Sohelix Tools provides a powerful collection of free online tools
-    including PDF tools, image tools, developer tools, text utilities,
-    calculators and QR code generators. All tools run directly in your
-    browser without uploading files, ensuring complete privacy and security.
-
-    Whether you need to compress images, format JSON, convert PDFs,
-    generate QR codes or analyze text, Sohelix offers fast and secure
-    browser-based tools that work on any device.
-  </p>
-    </section>
-
       {/* Ad Slot: Homepage Top Banner */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
         <AdSlot id="ad-homepage-banner" size="banner" />
@@ -233,6 +215,24 @@ const Index = () => {
           {newTools.map((t, i) => <ToolCard key={t.slug} tool={t} index={i} />)}
         </div>
       </section>
+
+  {/* SEO Content Section */}
+   <section className="mx-auto max-w-4xl px-4 py-16 text-center">
+  <h2 className="text-2xl font-bold mb-4">
+    Free Online Tools for Everyday Tasks
+  </h2>
+
+  <p className="text-muted-foreground leading-relaxed">
+    Sohelix Tools provides a powerful collection of free online tools
+    including PDF tools, image tools, developer tools, text utilities,
+    calculators and QR code generators. All tools run directly in your
+    browser without uploading files, ensuring complete privacy and security.
+
+    Whether you need to compress images, format JSON, convert PDFs,
+    generate QR codes or analyze text, Sohelix offers fast and secure
+    browser-based tools that work on any device.
+  </p>
+    </section>
 
       {/* Why Sohelix */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
