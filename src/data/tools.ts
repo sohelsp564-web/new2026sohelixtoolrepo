@@ -325,17 +325,17 @@ export const tools: Tool[] = [
     meta_description: "Use this split PDF tool online to extract and split PDF pages instantly. Free PDF splitter with fast and secure processing.",
     keywords: ["split pdf", "split pdf online", "pdf splitter", "split pdf pages", "split pdf file", "extract pages from pdf", "pdf split online"],
     h2Sections: [
-      { title: "Split PDF Pages Online", content: "Upload your PDF and split pages into separate files instantly." },
-      { title: "Extract Pages from PDF", content: "Select and extract specific pages from any PDF document easily." },
-      { title: "PDF Splitter Tool", content: "Use this tool to split large PDF files quickly without software." },
-      { title: "Split PDF Without Software", content: "Split PDF files directly in your browser with no installation needed." },
+      { title: "Split PDF Pages Online", content: "Upload your PDF and split pages instantly." },
+      { title: "Extract Pages from PDF", content: "Select and extract specific pages easily." },
+      { title: "PDF Splitter Tool", content: "Use this tool to split PDF files quickly." },
+      { title: "Split PDF Without Software", content: "Split PDF files directly in your browser." },
     ],
     icon: "Scissors", howToUse: ["Upload a PDF file", "Select page range to extract", "Download the split PDF"], faqs: [
       { q: "How to split PDF online?", a: "Upload your PDF and extract pages instantly." },
       { q: "Can I extract specific pages from PDF?", a: "Yes, you can select and extract pages easily." },
       { q: "Is this PDF splitter free?", a: "Yes, it is completely free and works online." },
       { q: "Do I need software to split PDF?", a: "No, it works directly in your browser." },
-      { q: "Is my file secure?", a: "Yes, files are processed securely in your browser." },
+      { q: "Is my file secure?", a: "Yes, files are processed securely." },
     ], relatedSlugs: ["merge-pdf", "pdf-page-counter", "pdf-reader"], isNew: true },
 
   // IMAGE / TEXT TOOLS
@@ -475,10 +475,10 @@ export const tools: Tool[] = [
     meta_description: "Use this text sorter online to sort text lines and words alphabetically instantly. Free text sorting tool for quick results.",
     keywords: ["text sorter", "sort text online", "sort text lines", "sort lines alphabetically", "text sorting tool", "sort words alphabetically", "alphabetical order generator"],
     h2Sections: [
-      { title: "Sort Text Online Free", content: "Paste your text and sort it instantly into alphabetical order." },
-      { title: "Sort Text Lines Alphabetically", content: "Sort lines of text alphabetically for quick organization." },
-      { title: "Text Sorting Tool", content: "Use this tool to arrange text content in sorted order easily." },
-      { title: "Alphabetical Order Generator", content: "Generate alphabetically ordered lists from any text input." },
+      { title: "Sort Text Online Free", content: "Paste your text and sort it instantly." },
+      { title: "Sort Text Lines Alphabetically", content: "Arrange lines in alphabetical order easily." },
+      { title: "Text Sorting Tool", content: "Use this tool to organize text quickly." },
+      { title: "Alphabetical Order Generator", content: "Generate sorted text lists instantly." },
     ],
     icon: "ArrowDownAZ", howToUse: ["Paste lines of text", "Choose sort order", "Copy sorted text"], faqs: [
       { q: "How to sort text alphabetically?", a: "Paste your text and sort it instantly using this tool." },
@@ -533,10 +533,10 @@ export const tools: Tool[] = [
     meta_description: "Use this text reverse tool to reverse text, words, or sentences instantly. Free text reverser online for quick results.",
     keywords: ["text reverse", "reverse text", "reverse text online", "text reverser", "reverse words", "reverse string", "text reverse tool"],
     h2Sections: [
-      { title: "Reverse Text Online Free", content: "Paste your text and reverse it instantly with a single click." },
-      { title: "Reverse Words in Text", content: "Reverse individual words in a sentence quickly and easily." },
-      { title: "Text Reverser Tool", content: "Use this tool to flip text characters or word order instantly." },
-      { title: "Reverse String Tool", content: "Reverse any string online for coding, fun, or text manipulation." },
+      { title: "Reverse Text Online Free", content: "Paste your text and reverse it instantly." },
+      { title: "Reverse Words in Text", content: "Reverse words or sentences easily." },
+      { title: "Text Reverser Tool", content: "Use this tool to reverse text quickly." },
+      { title: "Reverse String Tool", content: "Reverse strings for coding or testing purposes." },
     ],
     icon: "Undo2", howToUse: ["Enter your text", "See reversed result", "Copy to clipboard"], faqs: [
       { q: "How to reverse text online?", a: "Paste your text and reverse it instantly using this tool." },
@@ -791,10 +791,10 @@ export const tools: Tool[] = [
     meta_description: "Use this time duration calculator online to calculate time difference between two times instantly. Free hours and minutes calculator tool.",
     keywords: ["time duration calculator", "time calculator", "calculate time difference", "time difference calculator", "duration calculator", "hours calculator", "time interval calculator"],
     h2Sections: [
-      { title: "Calculate Time Difference Online", content: "Enter two times and get the duration difference instantly." },
-      { title: "Time Duration Calculator Tool", content: "Calculate the exact duration between any two time values." },
-      { title: "Hours Calculator", content: "Find out how many hours and minutes are between two times." },
-      { title: "Time Interval Calculator", content: "Calculate time intervals accurately for any scheduling need." },
+      { title: "Calculate Time Difference Online", content: "Enter start and end time to calculate duration instantly." },
+      { title: "Time Duration Calculator Tool", content: "Calculate hours and minutes easily." },
+      { title: "Hours Calculator", content: "Find total hours between two times quickly." },
+      { title: "Time Interval Calculator", content: "Calculate time intervals accurately using this tool." },
     ],
     icon: "Timer", howToUse: ["Enter start and end time", "See duration", "Copy result"], faqs: [
       { q: "How to calculate time duration?", a: "Enter start and end time to calculate duration instantly." },
