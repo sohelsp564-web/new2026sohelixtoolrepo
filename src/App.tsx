@@ -25,6 +25,7 @@ const BlogPage = lazy(() => import("./pages/BlogPage"));
 const BlogPostPage = lazy(() => import("./pages/BlogPostPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const PerfDashboard = lazy(() => import("./components/PerfDashboard"));
+const ImageResizerPage = lazy(() => import("./pages/ImageResizerPage"));
 
 const queryClient = new QueryClient();
 
@@ -69,6 +70,7 @@ function App() {
                 <Suspense fallback={<PageFallback />}>
                   <Routes>
                     <Route path="/" element={<Index />} />
+                    <Route path="/tools/image-resizer" element={<ImageResizerPage />} />
                     <Route path="/tools/:slug" element={<ToolPage />} />
                     <Route path="/:lang/tools/:slug" element={<ToolPage />} />
                     <Route path="/category/:slug" element={<CategoryPage />} />
