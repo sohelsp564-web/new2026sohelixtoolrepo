@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useMemo } from "react";
 import { ChevronRight } from "lucide-react";
-import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getToolBySlug, getRelatedTools } from "@/data/tools";
 import AdSlot from "@/components/AdSlot";
@@ -14,6 +13,188 @@ import { motion } from "framer-motion";
 import { useToolTranslation, SUPPORTED_LANGS, LANG_NAMES, isValidLang, type SupportedLang } from "@/hooks/useToolTranslation";
 import { trackToolVisit } from "@/hooks/useRecentTools";
 
+// ─── Scoped styles matching Image Resizer layout ──────────────────────────────
+const toolPageStyles = `
+  .tp-page {
+    background: #f7f8fc;
+    min-height: 100vh;
+    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+  }
+
+  .tp-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* ── Language tabs ── */
+  .tp-lang-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 0 4px;
+  }
+  .tp-lang-pill {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.15s;
+    border: 1px solid #e5e7eb;
+    color: #6b7280;
+    background: #fff;
+  }
+  .tp-lang-pill:hover { border-color: #6c63ff; color: #6c63ff; }
+  .tp-lang-pill.active { background: #6c63ff; color: #fff; border-color: #6c63ff; }
+
+  /* ── Breadcrumb ── */
+  .tp-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: #6b7280;
+    padding: 16px 0 8px;
+    flex-wrap: wrap;
+  }
+  .tp-breadcrumb a { color: #6b7280; text-decoration: none; transition: color 0.15s; }
+  .tp-breadcrumb a:hover { color: #6c63ff; }
+  .tp-breadcrumb-sep { color: #d1d5db; }
+  .tp-breadcrumb-current { color: #374151; font-weight: 500; }
+
+  /* ── H1 ── */
+  .tp-h1 {
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 6px;
+    line-height: 1.25;
+  }
+
+  /* ── Hero block ── */
+  .tp-hero { padding: 20px 0 12px; }
+  .tp-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  /* ── Empty ad spaces ── */
+  .tp-ad-space {
+    margin: 20px 0;
+    min-height: 100px;
+    width: 100%;
+  }
+
+  /* ── Tool card ── */
+  .tp-tool-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  }
+
+  /* ── Section cards ── */
+  .tp-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    margin-top: 24px;
+  }
+  .tp-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 16px;
+  }
+
+  /* ── Description block ── */
+  .tp-description-text {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: #374151;
+    border-left: 4px solid #6c63ff;
+    padding-left: 16px;
+  }
+  .tp-description-text p { margin: 0 0 14px; }
+  .tp-description-text p:last-child { margin-bottom: 0; }
+
+  /* ── How-to steps ── */
+  .tp-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .tp-step { display: flex; align-items: flex-start; gap: 14px; }
+  .tp-step-num {
+    flex-shrink: 0;
+    width: 34px; height: 34px;
+    border-radius: 10px;
+    background: #ede9ff;
+    color: #6c63ff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .tp-step-text { color: #4b5563; font-size: 0.95rem; padding-top: 6px; line-height: 1.6; }
+
+  /* ── Benefits ── */
+  .tp-benefits { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .tp-benefit { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: #4b5563; }
+  .tp-benefit-check {
+    flex-shrink: 0;
+    width: 24px; height: 24px; border-radius: 8px;
+    background: #ede9ff; color: #6c63ff;
+    font-size: 0.75rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ── H2 SEO sections ── */
+  .tp-h2-section { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #f3f4f6; }
+  .tp-h2-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .tp-h2-title { font-size: 1rem; font-weight: 700; color: #1f2937; margin: 0 0 6px; }
+  .tp-h2-text { font-size: 0.9rem; color: #6b7280; line-height: 1.7; margin: 0; }
+
+  /* ── FAQ ── */
+  .tp-faq [data-state="open"] > button { color: #6c63ff; }
+
+  /* ── Popular searches chips ── */
+  .tp-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tp-tag {
+    background: #f3f4f8;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #333333;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    display: inline-block;
+    line-height: 1;
+    user-select: none;
+  }
+  .tp-tag:hover {
+    background: #6c63ff;
+    color: #ffffff;
+    border-color: #6c63ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(108, 99, 255, 0.25);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .tp-inner { padding: 0 15px 40px; }
+    .tp-tool-card { padding: 20px; border-radius: 16px; }
+    .tp-card { padding: 18px; }
+    .tp-h1 { font-size: 1.4rem; }
+    .tp-tag { padding: 8px 14px; font-size: 12px; }
+    .tp-tags { gap: 8px; }
+    .tp-ad-space { min-height: 80px; }
+  }
+`;
+
 const ToolPage = () => {
   const { slug, lang: langParam } = useParams<{ slug: string; lang?: string }>();
   const lang: SupportedLang = langParam && isValidLang(langParam) ? langParam : "en";
@@ -22,7 +203,6 @@ const ToolPage = () => {
 
   const related = useMemo(() => (tool ? getRelatedTools(tool) : []), [tool?.slug, tool?.categorySlug]);
 
-  // Track tool visit for "Recently Used" feature
   useEffect(() => {
     if (tool?.slug) trackToolVisit(tool.slug);
   }, [tool?.slug]);
@@ -37,23 +217,29 @@ const ToolPage = () => {
     );
   }
 
-// Use translated content or fallback to tool data
-const title = t?.title || tool.name;
-const description = t?.description || tool.description;
+  // Use translated content or fallback to tool data
+  const title = t?.title || tool.name;
+  const description = t?.description || tool.description;
 
-const metaTitle =
-  t?.meta_title ||
-  tool.meta_title ||
-  `${tool.name} | Sohelix`;
+  const metaTitle =
+    t?.meta_title ||
+    tool.meta_title ||
+    `${tool.name} | Sohelix`;
 
-const metaDescription =
-  t?.meta_description ||
-  tool.meta_description ||
-  tool.description;
+  const metaDescription =
+    t?.meta_description ||
+    tool.meta_description ||
+    tool.description;
 
-const faqs = t?.faqs || tool.faqs;
+  const faqs = t?.faqs || tool.faqs;
 
   const toolPath = lang === "en" ? `/tools/${tool.slug}` : `/${lang}/tools/${tool.slug}`;
+
+  // Split description into paragraphs
+  const descParagraphs = description
+    .split(/\n+/)
+    .map(p => p.trim())
+    .filter(Boolean);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -98,6 +284,8 @@ const faqs = t?.faqs || tool.faqs;
 
   return (
     <>
+      <style>{toolPageStyles}</style>
+
       <Helmet>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
@@ -129,109 +317,128 @@ const faqs = t?.faqs || tool.faqs;
         <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>
       </Helmet>
 
-      <div className="container mx-auto px-4 py-8">
-        {/* Language Selector */}
-        <div className="flex items-center gap-2 mb-4 flex-wrap">
-          {SUPPORTED_LANGS.map(l => (
-            <Link
-              key={l}
-              to={l === "en" ? `/tools/${tool.slug}` : `/${l}/tools/${tool.slug}`}
-              className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                l === lang
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:bg-muted/80"
-              }`}
-            >
-              {LANG_NAMES[l]}
-            </Link>
-          ))}
-        </div>
+      <div className="tp-page">
+        <div className="tp-inner">
 
-        {/* Breadcrumb */}
-        <nav className="flex items-center gap-1.5 text-sm text-muted-foreground mb-8">
-          <Link to="/" className="hover:text-foreground transition-colors">Home</Link>
-          <ChevronRight className="h-3 w-3" />
-          <Link to={`/category/${tool.categorySlug}`} className="hover:text-foreground transition-colors">{tool.category}</Link>
-          <ChevronRight className="h-3 w-3" />
-          <span className="text-foreground font-medium">{title}</span>
-        </nav>
+          {/* ── Language Selector ── */}
+          <div className="tp-lang-row">
+            {SUPPORTED_LANGS.map(l => (
+              <Link
+                key={l}
+                to={l === "en" ? `/tools/${tool.slug}` : `/${l}/tools/${tool.slug}`}
+                className={`tp-lang-pill${l === lang ? " active" : ""}`}
+              >
+                {LANG_NAMES[l]}
+              </Link>
+            ))}
+          </div>
 
-        {/* Title */}
-        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-          <h1 className="text-3xl font-bold mb-2 md:text-4xl" style={{ fontFamily: 'Space Grotesk' }}>{tool.h1Title || title}</h1>
-          <ToolRating />
-          <p className="text-muted-foreground mb-4 mt-3 text-lg leading-relaxed max-w-2xl">{description}</p>
-          <ShareButtons title={title} />
-          <div className="mb-10" />
-        </motion.div>
+          {/* ── Breadcrumb ── */}
+          <nav className="tp-breadcrumb" aria-label="Breadcrumb">
+            <Link to="/">Home</Link>
+            <span className="tp-breadcrumb-sep">›</span>
+            <Link to={`/category/${tool.categorySlug}`}>{tool.category}</Link>
+            <span className="tp-breadcrumb-sep">›</span>
+            <span className="tp-breadcrumb-current">{title}</span>
+          </nav>
 
-        {/* Ad Slot 1: Top Banner */}
-        <AdSlot id="ad-top-banner" size="banner" className="mb-8" />
+          {/* ══════════════════════════════════════════
+              1. H1 → Rating + Share (hero top)
+          ══════════════════════════════════════════ */}
+          <motion.div className="tp-hero" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+            <h1 className="tp-h1">{tool.h1Title || title}</h1>
+            <div className="tp-hero-meta">
+              <ToolRating />
+              <ShareButtons title={title} />
+            </div>
+          </motion.div>
 
-        <div className="grid gap-8 lg:grid-cols-[1fr_300px]">
-          <div>
-            {/* Tool Interface */}
-            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }}>
-              <Card className="p-6 mb-8 shadow-card border-transparent rounded-2xl">
-                <ToolInterface slug={tool.slug} />
-              </Card>
-            </motion.div>
+          {/* ── Ad Slot: Top Banner (existing) ── */}
+          <AdSlot id="ad-top-banner" size="banner" className="mb-0" />
 
-            {/* Ad Slot 2: Below Tool Interface */}
-            <AdSlot id="ad-below-tool" size="banner" className="mb-8" />
+          {/* ── Empty ad space above tool ── */}
+          <div className="tp-ad-space" aria-hidden="true" />
 
-            {/* How to Use */}
-            <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
-              <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>How to Use</h2>
-              <ol className="space-y-4">
-                {tool.howToUse.map((step, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 text-primary text-sm font-bold">{i + 1}</span>
-                    <span className="text-muted-foreground pt-1">{step}</span>
-                  </li>
-                ))}
-              </ol>
-            </Card>
+          {/* ══════════════════════════════════════════
+              2. TOOL UI — primary focus
+          ══════════════════════════════════════════ */}
+          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.08 }}>
+            <div className="tp-tool-card">
+              <ToolInterface slug={tool.slug} />
+            </div>
+          </motion.div>
 
-            {/* Benefits */}
-            <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
-              <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>Benefits</h2>
-              <ul className="space-y-3 text-muted-foreground">
-                {[
-                  "100% free to use",
-                  "No file uploads — everything runs in your browser",
-                  "Fast and instant processing",
-                  "No registration or sign-up required",
-                  "Works on mobile and desktop",
-                ].map((b, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent text-xs">✓</span>
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            </Card>
+          {/* ── Empty ad space below tool ── */}
+          <div className="tp-ad-space" aria-hidden="true" />
 
-            {/* H2 Sections */}
-            {tool.h2Sections && tool.h2Sections.length > 0 && (
-              <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
-                <div className="space-y-5">
-                  {tool.h2Sections.map((section, i) => (
-                    <div key={i}>
-                      <h2 className="text-lg font-semibold mb-1" style={{ fontFamily: 'Space Grotesk' }}>{section.title}</h2>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{section.content}</p>
-                    </div>
-                  ))}
+          {/* ── Ad Slot: Below Tool (existing) ── */}
+          <AdSlot id="ad-below-tool" size="banner" className="mb-0" />
+
+          {/* ══════════════════════════════════════════
+              3. DESCRIPTION CARD (below tool)
+          ══════════════════════════════════════════ */}
+          <div className="tp-card">
+            <div className="tp-description-text">
+              {descParagraphs.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* ── How to Use ── */}
+          <div className="tp-card">
+            <h2 className="tp-card-title">How to Use</h2>
+            <ol className="tp-steps">
+              {tool.howToUse.map((step, i) => (
+                <li key={i} className="tp-step">
+                  <span className="tp-step-num">{i + 1}</span>
+                  <span className="tp-step-text">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          {/* ── Benefits ── */}
+          <div className="tp-card">
+            <h2 className="tp-card-title">Benefits</h2>
+            <ul className="tp-benefits">
+              {[
+                "100% free to use",
+                "No file uploads — everything runs in your browser",
+                "Fast and instant processing",
+                "No registration or sign-up required",
+                "Works on mobile and desktop",
+              ].map((b, i) => (
+                <li key={i} className="tp-benefit">
+                  <span className="tp-benefit-check">✓</span>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* ── H2 SEO Sections ── */}
+          {tool.h2Sections && tool.h2Sections.length > 0 && (
+            <div className="tp-card">
+              {tool.h2Sections.map((section, i) => (
+                <div key={i} className="tp-h2-section">
+                  <h2 className="tp-h2-title">{section.title}</h2>
+                  <p className="tp-h2-text">{section.content}</p>
                 </div>
-              </Card>
-            )}
+              ))}
+            </div>
+          )}
 
-            {/* Ad Slot 3: Before FAQ */}
-            <AdSlot id="ad-before-faq" size="banner" className="mb-6" />
+          {/* ── Empty ad space before FAQ ── */}
+          <div className="tp-ad-space" aria-hidden="true" />
 
-            {/* FAQ */}
-            <Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
-              <h2 className="text-xl font-bold mb-5" style={{ fontFamily: 'Space Grotesk' }}>Frequently Asked Questions</h2>
+          {/* ── Ad Slot: Before FAQ (existing) ── */}
+          <AdSlot id="ad-before-faq" size="banner" className="mb-0" />
+
+          {/* ── FAQ ── */}
+          {faqs && faqs.length > 0 && (
+            <div className="tp-card tp-faq">
+              <h2 className="tp-card-title">Frequently Asked Questions</h2>
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, i) => (
                   <AccordionItem key={i} value={`faq-${i}`}>
@@ -239,55 +446,40 @@ const faqs = t?.faqs || tool.faqs;
                       {faq.q}
                     </AccordionTrigger>
                     <AccordionContent>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{faq.a}</p>
+                      <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{faq.a}</p>
                     </AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
-            </Card>
-
-            {/* Popular Searches */}
-{tool.keywords?.length > 0 && (
-<Card className="p-6 mb-6 shadow-card border-transparent rounded-2xl">
-
-<h2 className="text-xl font-bold mb-4">
-Popular Searches
-</h2>
-
-<div className="flex flex-wrap gap-2">
-
-{tool.keywords.map((k, i) => (
-<span
-key={i}
-className="bg-muted px-3 py-1 rounded text-sm"
->
-{k}
-</span>
-))}
-
-</div>
-
-</Card>
-)}
-          </div>
-
-          
-
-          {/* Sidebar */}
-          <aside className="space-y-4">
-            <div className="w-full bg-muted/30 text-center py-20 text-xs text-muted-foreground rounded-2xl border border-dashed border-border">{/* Ad Slot: Sidebar */}</div>
-          </aside>
-        </div>
-
-        {/* Related Tools */}
-        {related.length > 0 && (
-          <section className="mt-16">
-            <h2 className="text-xl font-bold mb-6" style={{ fontFamily: 'Space Grotesk' }}>Related Tools</h2>
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {related.map((t, i) => <ToolCard key={t.slug} tool={t} index={i} />)}
             </div>
-          </section>
-        )}
+          )}
+
+          {/* ── Popular Searches ── */}
+          {tool.keywords?.length > 0 && (
+            <div className="tp-card">
+              <h2 className="tp-card-title">Popular Searches</h2>
+              <div className="tp-tags">
+                {tool.keywords.map((k, i) => (
+                  <span key={i} className="tp-tag">{k}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* ── Empty ad space after popular searches ── */}
+          <div className="tp-ad-space" aria-hidden="true" />
+
+          {/* ── Related Tools ── */}
+          {related.length > 0 && (
+            <section>
+              <h2 className="tp-card-title" style={{ marginBottom: "16px", marginTop: "8px" }}>Related Tools</h2>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {related.map((t, i) => <ToolCard key={t.slug} tool={t} index={i} />)}
+              </div>
+            </section>
+          )}
+
+        </div>
       </div>
     </>
   );
