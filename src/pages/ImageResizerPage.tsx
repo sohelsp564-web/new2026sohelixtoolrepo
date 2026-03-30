@@ -1,6 +1,5 @@
 import { useMemo, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getToolBySlug, getRelatedTools } from "@/data/tools";
 import ToolInterface from "@/components/tools/ToolInterface";
@@ -10,7 +9,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { trackToolVisit } from "@/hooks/useRecentTools";
 
-// ─── Premium SaaS styles scoped only to this page ──────────────────────────
+// ─── Scoped styles — ONLY affects .ir-* classes ──────────────────────────────
 const styles = `
   .ir-page {
     background: #f7f8fc;
@@ -23,50 +22,6 @@ const styles = `
     margin: 0 auto;
     padding: 0 20px 60px;
   }
-
-  /* ── Hero / Tool Card ── */
-  .ir-tool-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 36px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-    margin-bottom: 28px;
-  }
-
-  /* ── Generic section card ── */
-  .ir-card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 28px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-    margin-bottom: 24px;
-  }
-
-  .ir-card-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #222;
-    margin-bottom: 16px;
-  }
-
-  /* ── Breadcrumb ── */
-  .ir-breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.82rem;
-    color: #6b7280;
-    padding: 24px 0 12px;
-    flex-wrap: wrap;
-  }
-  .ir-breadcrumb a {
-    color: #6b7280;
-    text-decoration: none;
-    transition: color 0.15s;
-  }
-  .ir-breadcrumb a:hover { color: #6c63ff; }
-  .ir-breadcrumb-sep { color: #d1d5db; }
-  .ir-breadcrumb-current { color: #374151; font-weight: 500; }
 
   /* ── Language tabs ── */
   .ir-lang-row {
@@ -89,35 +44,84 @@ const styles = `
   .ir-lang-pill:hover { border-color: #6c63ff; color: #6c63ff; }
   .ir-lang-pill.active { background: #6c63ff; color: #fff; border-color: #6c63ff; }
 
-  /* ── H1 area ── */
+  /* ── Breadcrumb ── */
+  .ir-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    color: #6b7280;
+    padding: 16px 0 8px;
+    flex-wrap: wrap;
+  }
+  .ir-breadcrumb a { color: #6b7280; text-decoration: none; transition: color 0.15s; }
+  .ir-breadcrumb a:hover { color: #6c63ff; }
+  .ir-breadcrumb-sep { color: #d1d5db; }
+  .ir-breadcrumb-current { color: #374151; font-weight: 500; }
+
+  /* ── H1 ── */
   .ir-h1 {
     font-size: clamp(1.5rem, 3vw, 2.1rem);
     font-weight: 800;
     color: #111827;
-    margin: 0 0 8px;
+    margin: 0 0 6px;
     line-height: 1.25;
   }
-  .ir-tagline {
-    font-size: 1rem;
-    color: #6b7280;
-    line-height: 1.7;
-    margin: 10px 0 16px;
-    max-width: 700px;
+
+  /* ── Hero block (H1 + rating + share) ── */
+  .ir-hero {
+    padding: 20px 0 12px;
+  }
+  .ir-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
   }
 
-  /* ── Ad slot placeholders ── */
-  .ir-ad-slot {
-    background: #f9fafb;
-    border: 1px dashed #d1d5db;
-    border-radius: 10px;
-    min-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.72rem;
-    color: #d1d5db;
-    margin-bottom: 24px;
+  /* ── Ad space — empty, no text, no border in production ── */
+  .ir-ad-space {
+    margin: 20px 0;
+    min-height: 100px;
+    width: 100%;
   }
+
+  /* ── Tool card ── */
+  .ir-tool-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    margin-bottom: 0;
+  }
+
+  /* ── Generic section card ── */
+  .ir-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    margin-top: 24px;
+  }
+
+  .ir-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 16px;
+  }
+
+  /* ── Description card ── */
+  .ir-description-text {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: #374151;
+    border-left: 4px solid #6c63ff;
+    padding-left: 16px;
+  }
+  .ir-description-text p { margin: 0 0 14px; }
+  .ir-description-text p:last-child { margin-bottom: 0; }
 
   /* ── How-to steps ── */
   .ir-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
@@ -145,32 +149,14 @@ const styles = `
     display: flex; align-items: center; justify-content: center;
   }
 
-  /* ── Description card with highlight border ── */
-  .ir-desc-block {
-    border-left: 4px solid #6c63ff;
-    padding-left: 16px;
-    font-size: 0.95rem;
-    line-height: 1.85;
-    color: #374151;
-  }
-  .ir-desc-block p { margin: 0 0 12px; }
-  .ir-desc-block p:last-child { margin-bottom: 0; }
-
   /* ── H2 sections ── */
   .ir-h2-section { margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #f3f4f6; }
   .ir-h2-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .ir-h2-title { font-size: 1rem; font-weight: 700; color: #1f2937; margin: 0 0 6px; }
   .ir-h2-text { font-size: 0.9rem; color: #6b7280; line-height: 1.7; margin: 0; }
 
-  /* ── FAQ accordion override ── */
-  .ir-faq [data-radix-accordion-trigger] {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: #1f2937;
-  }
-  .ir-faq [data-state="open"] > button {
-    color: #6c63ff;
-  }
+  /* ── FAQ ── */
+  .ir-faq [data-state="open"] > button { color: #6c63ff; }
 
   /* ── Popular searches chips ── */
   .ir-tags { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -221,20 +207,6 @@ const styles = `
     font-size: 1rem;
   }
 
-  /* ── CTA Button ── */
-  .ir-btn-primary {
-    background: #6c63ff;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    padding: 12px 24px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: background 0.18s;
-  }
-  .ir-btn-primary:hover { background: #7c74ff; }
-
   /* ── Responsive ── */
   @media (max-width: 768px) {
     .ir-inner { padding: 0 15px 40px; }
@@ -243,6 +215,7 @@ const styles = `
     .ir-h1 { font-size: 1.4rem; }
     .ir-related-grid { grid-template-columns: 1fr 1fr; }
     .ir-tag { padding: 6px 11px; font-size: 0.78rem; }
+    .ir-ad-space { min-height: 80px; }
   }
 
   @media (max-width: 480px) {
@@ -258,14 +231,14 @@ const styles = `
   }
 `;
 
-// ─── Helpers ────────────────────────────────────────────────────────────────
+// ─── Helpers ─────────────────────────────────────────────────────────────────
 const SUPPORTED_LANGS = ["en", "de", "es", "fr", "hi", "it", "pt"] as const;
 const LANG_NAMES: Record<string, string> = {
   en: "English", de: "Deutsch", es: "Español",
   fr: "Français", hi: "हिन्दी", it: "Italiano", pt: "Português",
 };
 
-// ─── Page ────────────────────────────────────────────────────────────────────
+// ─── Page ─────────────────────────────────────────────────────────────────────
 const ImageResizerPage = () => {
   const tool = getToolBySlug("image-resizer");
   const related = useMemo(() => (tool ? getRelatedTools(tool) : []), []);
@@ -281,14 +254,19 @@ const ImageResizerPage = () => {
     );
   }
 
-  const title        = tool.h1Title || tool.name;
-  const description  = tool.description;
-  const metaTitle    = tool.meta_title    || `${tool.name} | Sohelix`;
-  const metaDesc     = tool.meta_description || tool.description;
-  const faqs         = tool.faqs || [];
-  const h2Sections   = tool.h2Sections || [];
+  const title      = tool.h1Title || tool.name;
+  const description = tool.description;
+  const metaTitle  = tool.meta_title || `${tool.name} | Sohelix`;
+  const metaDesc   = tool.meta_description || tool.description;
+  const faqs       = tool.faqs || [];
+  const h2Sections = tool.h2Sections || [];
+  const toolPath   = `/tools/${tool.slug}`;
 
-  const toolPath = `/tools/${tool.slug}`;
+  // Split description into paragraphs for better readability
+  const descParagraphs = description
+    .split(/\n+/)
+    .map(p => p.trim())
+    .filter(Boolean);
 
   const jsonLd = {
     "@context": "https://schema.org", "@type": "SoftwareApplication",
@@ -302,9 +280,9 @@ const ImageResizerPage = () => {
   const breadcrumbJsonLd = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home",         item: "https://tools.sohelix.com/" },
-      { "@type": "ListItem", position: 2, name: tool.category,  item: `https://tools.sohelix.com/category/${tool.categorySlug}` },
-      { "@type": "ListItem", position: 3, name: title,          item: `https://tools.sohelix.com${toolPath}` },
+      { "@type": "ListItem", position: 1, name: "Home",        item: "https://tools.sohelix.com/" },
+      { "@type": "ListItem", position: 2, name: tool.category, item: `https://tools.sohelix.com/category/${tool.categorySlug}` },
+      { "@type": "ListItem", position: 3, name: title,         item: `https://tools.sohelix.com${toolPath}` },
     ],
   };
   const howToJsonLd = {
@@ -368,26 +346,42 @@ const ImageResizerPage = () => {
             <span className="ir-breadcrumb-current">{title}</span>
           </nav>
 
-          {/* ── H1 + description ── */}
-          <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+          {/* ══════════════════════════════════════════
+              HERO: H1 → Rating → Share
+          ══════════════════════════════════════════ */}
+          <motion.div className="ir-hero" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
             <h1 className="ir-h1">{title}</h1>
-            <ToolRating />
-            <p className="ir-tagline">{description}</p>
-            <ShareButtons title={title} />
+            <div className="ir-hero-meta">
+              <ToolRating />
+              <ShareButtons title={title} />
+            </div>
           </motion.div>
 
-          {/* ── Ad Slot: Top Banner ── */}
-          <div className="ir-ad-slot" aria-hidden="true">Advertisement</div>
+          {/* ── NEW: Empty ad space above tool ── */}
+          <div className="ir-ad-space" aria-hidden="true" />
 
-          {/* ── Main Tool Card ── */}
-          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }}>
+          {/* ══════════════════════════════════════════
+              TOOL UI — primary focus
+          ══════════════════════════════════════════ */}
+          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.08 }}>
             <div className="ir-tool-card">
               <ToolInterface slug={tool.slug} />
             </div>
           </motion.div>
 
-          {/* ── Ad Slot: Below Tool ── */}
-          <div className="ir-ad-slot" aria-hidden="true">Advertisement</div>
+          {/* ── NEW: Empty ad space below tool ── */}
+          <div className="ir-ad-space" aria-hidden="true" />
+
+          {/* ══════════════════════════════════════════
+              DESCRIPTION CARD (moved below tool)
+          ══════════════════════════════════════════ */}
+          <div className="ir-card">
+            <div className="ir-description-text">
+              {descParagraphs.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+          </div>
 
           {/* ── How to Use ── */}
           <div className="ir-card">
@@ -421,22 +415,20 @@ const ImageResizerPage = () => {
             </ul>
           </div>
 
-          {/* ── SEO Description (H2 Sections) ── */}
+          {/* ── H2 SEO Sections ── */}
           {h2Sections.length > 0 && (
             <div className="ir-card">
-              <div className="ir-desc-block">
-                {h2Sections.map((section, i) => (
-                  <div key={i} className="ir-h2-section">
-                    <h2 className="ir-h2-title">{section.title}</h2>
-                    <p className="ir-h2-text">{section.content}</p>
-                  </div>
-                ))}
-              </div>
+              {h2Sections.map((section, i) => (
+                <div key={i} className="ir-h2-section">
+                  <h2 className="ir-h2-title">{section.title}</h2>
+                  <p className="ir-h2-text">{section.content}</p>
+                </div>
+              ))}
             </div>
           )}
 
-          {/* ── Ad Slot: Before FAQ ── */}
-          <div className="ir-ad-slot" aria-hidden="true">Advertisement</div>
+          {/* ── NEW: Empty ad space before FAQ ── */}
+          <div className="ir-ad-space" aria-hidden="true" />
 
           {/* ── FAQ ── */}
           {faqs.length > 0 && (
@@ -469,13 +461,13 @@ const ImageResizerPage = () => {
             </div>
           )}
 
-          {/* ── Ad Slot: After Popular Searches ── */}
-          <div className="ir-ad-slot" aria-hidden="true">Advertisement</div>
+          {/* ── NEW: Empty ad space after popular searches ── */}
+          <div className="ir-ad-space" aria-hidden="true" />
 
           {/* ── Related Tools ── */}
           {related.length > 0 && (
             <section>
-              <h2 className="ir-card-title" style={{ marginBottom: "16px" }}>Related Tools</h2>
+              <h2 className="ir-card-title" style={{ marginBottom: "16px", marginTop: "8px" }}>Related Tools</h2>
               <div className="ir-related-grid">
                 {related.map((rt) => (
                   <Link key={rt.slug} to={`/tools/${rt.slug}`} className="ir-related-item">
