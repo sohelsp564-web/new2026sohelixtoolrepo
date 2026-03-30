@@ -78,16 +78,16 @@
     ]
   },
   "webp-to-jpg": {
-    "title": "WebP to JPG Converter",
-    "description": "Convert WebP images to JPG format.",
-    "meta_title": "Free WebP to JPG Converter Online — Sohelix Tools",
-    "meta_description": "Convert WebP images to JPG format. Free online converter.",
+    "title": "WebP to JPG Converter Online – Convert WebP to JPEG Instantly",
+    "description": "Use this WebP to JPG converter online to quickly convert WebP images into JPG format for better compatibility. This free tool helps you convert WebP to JPG instantly with fast results.\nWith our easy-to-use WebP to image converter, you can upload WebP files and convert them into JPG or JPEG format easily. Whether you want to open WebP files on unsupported devices or reduce compatibility issues, this tool makes it simple.\nIf you want to convert WebP to JPG online, just upload your image and get instant results. You can also use this tool as a WebP to JPEG converter.\nOur WebP to JPG converter tool is fast, secure, and completely free to use.",
+    "meta_title": "WebP to JPG Converter Online – Convert WebP to JPEG Free | Sohelix",
+    "meta_description": "Use this WebP to JPG converter online to convert WebP images into JPG or JPEG instantly. Free image converter tool.",
     "faqs": [
-      { "q": "What does the WebP to JPG Converter do?", "a": "This tool converts WebP images to the widely-supported JPG format, making them compatible with all image viewers and editors." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits on conversions." },
-      { "q": "Are my files uploaded to a server?", "a": "No. All processing happens locally in your browser. Your images never leave your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. Since it runs entirely in your browser, your files remain completely private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to convert WebP to JPG?", "a": "Upload your WebP image and convert it instantly." },
+      { "q": "Can I convert WebP to JPEG?", "a": "Yes, this tool supports both formats." },
+      { "q": "Is this WebP to JPG converter free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Why convert WebP to JPG?", "a": "JPG is more widely supported across devices." },
+      { "q": "Which formats are supported?", "a": "It supports WebP input and JPG/JPEG output." }
     ]
   },
   "jpg-to-webp": {
@@ -364,16 +364,16 @@
     ]
   },
   "word-counter": {
-    "title": "Word Counter Tool",
-    "description": "Our Word Counter helps you count words online and analyze text instantly. You can check word count, character count, sentences, and paragraphs in real time. This free word counter tool is perfect for writers, students, and professionals who need accurate text analysis. You can count words in text online, track writing progress, and improve content quality easily.",
-    "meta_title": "Word Counter – Count Words and Characters Online | Sohelix",
-    "meta_description": "Count words and characters online instantly. Use this free word counter tool to analyze text quickly.",
+    "title": "Word Counter Online – Count Words & Characters Instantly",
+    "description": "Use this word counter online to quickly count words, characters, and text length instantly. This free tool helps you count words accurately for writing, editing, and analysis.\nWith our easy-to-use word count tool, you can check word count, character count, and text length in seconds. Whether you are writing essays, articles, or content, this tool makes it simple.\nIf you want to count words online, just paste your text and get instant results. You can also use this tool as a word and character counter.\nOur word counter tool is fast, accurate, and completely free to use.",
+    "meta_title": "Word Counter Online – Count Words & Characters Instantly | Sohelix",
+    "meta_description": "Use this word counter online to count words, characters, and text instantly. Free word count tool with accurate results.",
     "faqs": [
-      { "q": "What does the Word Counter do?", "a": "This tool counts the number of words, characters, sentences, and paragraphs in any text you type or paste." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free. No sign-up or limits." },
-      { "q": "Are my texts uploaded to a server?", "a": "No. All counting happens locally in your browser. Your text is never sent anywhere." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool processes text entirely client-side, so your content remains private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to count words online?", "a": "Paste your text and count words instantly using this tool." },
+      { "q": "What is a word counter?", "a": "It is a tool that counts words and characters in text." },
+      { "q": "Can I count characters also?", "a": "Yes, this tool counts both words and characters." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Students, writers, and professionals can use it." }
     ]
   },
   "character-counter": {
@@ -416,16 +416,16 @@
     ]
   },
   "text-sorter": {
-    "title": "Text Sorter Tool",
-    "description": "Our Text Sorter allows you to sort text alphabetically online and organize lists quickly. You can alphabetize text, sort lines, and arrange data efficiently. This free text sorter tool is ideal for managing large text lists and organizing content.",
-    "meta_title": "Text Sorter – Sort Text Alphabetically Online | Sohelix",
-    "meta_description": "Sort text alphabetically online. Organize lists and text data quickly using this free text sorter tool.",
+    "title": "Text Sorter Online – Sort Text Lines Instantly",
+    "description": "Use this text sorter online to quickly sort text lines, words, or lists alphabetically. This free tool helps you sort text instantly with accurate results.\nWith our easy-to-use text sorting tool, you can arrange text in alphabetical order, sort lines, and organize content easily. Whether you need to sort words alphabetically or manage lists, this tool makes it simple.\nIf you want to sort text lines online, just paste your content and get sorted results instantly. You can also use this tool as an alphabetical order generator.\nOur text sorter tool is fast, accurate, and completely free to use.",
+    "meta_title": "Text Sorter Online – Sort Text & Lines Alphabetically Free | Sohelix",
+    "meta_description": "Use this text sorter online to sort text lines and words alphabetically instantly. Free text sorting tool for quick results.",
     "faqs": [
-      { "q": "What does the Text Sorter do?", "a": "This tool sorts lines of text alphabetically (A-Z or Z-A) or numerically. Great for organizing lists." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free with unlimited use." },
-      { "q": "Are my texts uploaded to a server?", "a": "No. All sorting happens locally in your browser. Your text is never sent anywhere." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your content private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to sort text alphabetically?", "a": "Paste your text and sort it instantly using this tool." },
+      { "q": "What is a text sorter?", "a": "It is a tool that arranges text in alphabetical order." },
+      { "q": "Can I sort text lines online?", "a": "Yes, this tool sorts lines easily." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Students, developers, and writers can use it." }
     ]
   },
   "lorem-ipsum-generator": {
@@ -468,16 +468,16 @@
     ]
   },
   "text-reverse": {
-    "title": "Text Reverse Tool",
-    "description": "Our Text Reverse Tool allows you to reverse text online instantly. You can reverse words, sentences, or characters with a single click. This free text reverser tool is useful for fun, coding, and text manipulation tasks.",
-    "meta_title": "Reverse Text Tool – Reverse Words Online | Sohelix",
-    "meta_description": "Reverse text online instantly. Flip words, sentences, or characters using this free text reverse tool.",
+    "title": "Reverse Text Online – Reverse Words & Text Instantly",
+    "description": "Use this text reverse tool online to quickly reverse text, words, or sentences instantly. This free tool helps you reverse text easily with accurate results.\nWith our easy-to-use text reverser, you can reverse characters, words, or full sentences instantly. Whether you need to reverse string for coding or fun, this tool makes it simple.\nIf you want to reverse text online free, just paste your content and get instant reversed output. You can also use this tool as a reverse words tool.\nOur text reverse tool is fast, simple, and completely free to use.",
+    "meta_title": "Reverse Text Online – Text Reverser Tool Free | Sohelix",
+    "meta_description": "Use this text reverse tool to reverse text, words, or sentences instantly. Free text reverser online for quick results.",
     "faqs": [
-      { "q": "What does the Text Reverse Tool do?", "a": "This tool reverses the characters or words in your text. You can choose between character-level or word-level reversal." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with no limits." },
-      { "q": "Are my texts uploaded to a server?", "a": "No. All processing happens locally in your browser. Your text never leaves your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. Everything runs client-side, keeping your content private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to reverse text online?", "a": "Paste your text and reverse it instantly using this tool." },
+      { "q": "What is a text reverser?", "a": "It is a tool that reverses text characters or words." },
+      { "q": "Can I reverse words in a sentence?", "a": "Yes, this tool supports word-level reversing." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Who can use this tool?", "a": "Developers, students, and writers can use it." }
     ]
   },
   "remove-extra-spaces": {
@@ -1079,16 +1079,16 @@
     ]
   },
   "time-duration-calculator": {
-    "title": "Time Duration Calculator",
-    "description": "Calculate duration between two times.",
-    "meta_title": "Free Time Duration Calculator — Sohelix Tools",
-    "meta_description": "Calculate duration between two times. Free tool.",
+    "title": "Time Duration Calculator Online – Calculate Time Difference Instantly",
+    "description": "Use this time duration calculator online to quickly calculate the difference between two times. This free tool helps you calculate time duration instantly with accurate results.\nWith our easy-to-use time difference calculator, you can find the duration between hours, minutes, or full time intervals. Whether you need to calculate hours between two times or track time intervals, this tool makes it simple.\nIf you want to calculate time duration online, just enter start and end time to get instant results. You can also use this tool as a hours calculator or time interval calculator.\nOur time duration calculator tool is fast, accurate, and completely free to use.",
+    "meta_title": "Time Duration Calculator Online – Calculate Time Difference Easily | Sohelix",
+    "meta_description": "Use this time duration calculator online to calculate time difference between two times instantly. Free hours and minutes calculator tool.",
     "faqs": [
-      { "q": "What does the Time Duration Calculator do?", "a": "This tool calculates the exact duration between two times in hours, minutes, and seconds." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free with unlimited use." },
-      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to calculate time duration?", "a": "Enter start and end time to calculate duration instantly." },
+      { "q": "What is a time duration calculator?", "a": "It is a tool that calculates difference between two times." },
+      { "q": "Can I calculate hours between two times?", "a": "Yes, this tool calculates hours and minutes." },
+      { "q": "Is this tool free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Does it support minutes and hours?", "a": "Yes, it calculates both accurately." }
     ]
   },
   "profit-margin-calculator": {
@@ -1105,16 +1105,16 @@
     ]
   },
   "tip-calculator": {
-    "title": "Tip Calculator",
-    "description": "Calculate tips and split bills.",
-    "meta_title": "Free Tip Calculator — Sohelix Tools",
-    "meta_description": "Calculate tips and split bills easily. Free tool.",
+    "title": "Tip Calculator Online – Calculate Tip & Split Bill Instantly",
+    "description": "Use this tip calculator online to quickly calculate tips and split bills easily. This free tool helps you calculate tip instantly based on your bill amount and selected percentage.\nWith our easy-to-use restaurant tip calculator, you can calculate tip amount, total bill, and per-person share in seconds. Whether you're dining out or managing group expenses, this tool makes it simple.\nIf you want to calculate tip and split bill, just enter your bill amount, choose a percentage, and get instant results. You can also use this tool as a tip percentage calculator.\nOur tip calculator tool is fast, accurate, and completely free to use online.",
+    "meta_title": "Tip Calculator Online – Calculate Tip & Split Bill Easily | Sohelix",
+    "meta_description": "Use this tip calculator online to calculate tip and split bills instantly. Free and accurate restaurant tip calculator.",
     "faqs": [
-      { "q": "What does the Tip Calculator do?", "a": "This tool calculates tip amounts based on bill total and tip percentage, and can split the bill evenly between any number of people." },
-      { "q": "Is this tool free to use?", "a": "Yes, it's completely free. No account needed." },
-      { "q": "Are my data uploaded to a server?", "a": "No. All calculations happen locally in your browser. Nothing is transmitted." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. The tool runs entirely client-side with no data transmission." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to calculate tip?", "a": "Enter your bill amount and tip percentage to calculate instantly." },
+      { "q": "What is a tip calculator?", "a": "It is a tool that calculates tip based on bill amount." },
+      { "q": "Can I split bill using this tool?", "a": "Yes, it calculates per-person share." },
+      { "q": "Is this tip calculator free?", "a": "Yes, it is completely free and works online." },
+      { "q": "What percentage tip should I give?", "a": "Usually between 10% to 20% depending on service quality." }
     ]
   },
   "average-calculator": {
@@ -1170,16 +1170,16 @@
     ]
   },
   "split-pdf": {
-    "title": "Split PDF Files",
-    "description": "Use our Split PDF tool to split PDF online and extract pages from your documents. You can easily separate PDF pages, split PDF documents, and divide files into smaller parts. This free PDF splitter tool allows you to extract specific pages or split large files quickly and efficiently.",
-    "meta_title": "Split PDF Online – Extract Pages From PDF Files | Sohelix",
-    "meta_description": "Split PDF files online easily. Extract pages or divide PDF documents into separate files instantly.",
+    "title": "Split PDF Online – Extract PDF Pages Instantly",
+    "description": "Use this split PDF online tool to quickly extract and split PDF pages into separate files. This free tool helps you split PDF instantly with accurate results.\nWith our easy-to-use PDF splitter, you can select specific pages and split them easily. Whether you want to extract pages from PDF or divide documents, this tool makes it simple.\nIf you want to split PDF pages online, just upload your file and get instant results. You can also use this tool as a PDF split tool without installing software.\nOur split PDF tool is fast, secure, and completely free to use.",
+    "meta_title": "Split PDF Online – Extract & Split PDF Pages Free | Sohelix",
+    "meta_description": "Use this split PDF tool online to extract and split PDF pages instantly. Free PDF splitter with fast and secure processing.",
     "faqs": [
-      { "q": "Can I extract specific pages?", "a": "Yes, enter any page range to extract." },
-      { "q": "Is this tool free to use?", "a": "Yes, completely free." },
-      { "q": "Are my files uploaded to a server?", "a": "No. Processing happens entirely in your browser. Your files never leave your device." },
-      { "q": "Is this tool safe and secure?", "a": "Yes. All processing is client-side, ensuring your files remain private." },
-      { "q": "Which devices and browsers are supported?", "a": "This tool works on modern browsers such as Chrome, Edge, Firefox, and Safari on desktop and mobile devices." }
+      { "q": "How to split PDF online?", "a": "Upload your PDF and extract pages instantly." },
+      { "q": "Can I extract specific pages from PDF?", "a": "Yes, you can select and extract pages easily." },
+      { "q": "Is this PDF splitter free?", "a": "Yes, it is completely free and works online." },
+      { "q": "Do I need software to split PDF?", "a": "No, it works directly in your browser." },
+      { "q": "Is my file secure?", "a": "Yes, files are processed securely." }
     ]
   }
 }
