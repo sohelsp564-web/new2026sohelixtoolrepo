@@ -193,6 +193,122 @@ const toolPageStyles = `
     .tp-tags { gap: 8px; }
     .tp-ad-space { min-height: 80px; }
   }
+
+  /* ══════════════════════════════════════════
+     DARK MODE OVERRIDES
+  ══════════════════════════════════════════ */
+
+  /* Page background */
+  .dark .tp-page {
+    background: #0F0F0F;
+  }
+
+  /* Tool card */
+  .dark .tp-tool-card {
+    background: #181818;
+    border: 1px solid #2A2A2A;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  }
+
+  /* Section cards */
+  .dark .tp-card {
+    background: #181818;
+    border: 1px solid #2A2A2A;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+
+  /* Headings */
+  .dark .tp-h1 { color: #FFFFFF; }
+  .dark .tp-card-title { color: #FFFFFF; }
+
+  /* Breadcrumb */
+  .dark .tp-breadcrumb { color: #999999; }
+  .dark .tp-breadcrumb a { color: #999999; }
+  .dark .tp-breadcrumb a:hover { color: #7c6fff; }
+  .dark .tp-breadcrumb-sep { color: #444444; }
+  .dark .tp-breadcrumb-current { color: #CCCCCC; }
+
+  /* Language pills */
+  .dark .tp-lang-pill {
+    background: #1E1E1E;
+    color: #CCCCCC;
+    border-color: #333333;
+  }
+  .dark .tp-lang-pill:hover { border-color: #7c6fff; color: #7c6fff; }
+  .dark .tp-lang-pill.active { background: #6c63ff; color: #fff; border-color: #6c63ff; }
+
+  /* Description text */
+  .dark .tp-description-text { color: #CCCCCC; }
+  .dark .tp-description-text p { color: #CCCCCC; }
+
+  /* How-to steps */
+  .dark .tp-step-text { color: #CCCCCC; }
+  .dark .tp-step-num {
+    background: #2A2A2A;
+    color: #7c6fff;
+  }
+
+  /* Benefits */
+  .dark .tp-benefit { color: #CCCCCC; }
+  .dark .tp-benefit-check {
+    background: #2A2A2A;
+    color: #7c6fff;
+  }
+
+  /* H2 SEO sections */
+  .dark .tp-h2-section { border-bottom-color: #2A2A2A; }
+  .dark .tp-h2-title { color: #FFFFFF; }
+  .dark .tp-h2-text { color: #999999; }
+
+  /* FAQ */
+  .dark .tp-faq [role="button"],
+  .dark .tp-faq button {
+    color: #CCCCCC;
+  }
+  .dark .tp-faq [data-state="open"] > button { color: #7c6fff; }
+  .dark .tp-faq [data-radix-collection-item] { border-color: #2A2A2A; }
+  .dark .tp-faq .border-b { border-color: #2A2A2A; }
+  .dark .tp-faq p { color: #CCCCCC !important; }
+
+  /* Popular searches tags */
+  .dark .tp-tag {
+    background: #222222;
+    color: #CCCCCC;
+    border-color: #2A2A2A;
+  }
+  .dark .tp-tag:hover {
+    background: #6c63ff;
+    color: #ffffff;
+    border-color: #6c63ff;
+  }
+
+  /* Input fields inside tool cards (dark mode) */
+  .dark .tp-tool-card input,
+  .dark .tp-tool-card textarea,
+  .dark .tp-tool-card select,
+  .dark .tp-tool-card input[type="date"],
+  .dark .tp-tool-card input[type="time"],
+  .dark .tp-tool-card input[type="text"],
+  .dark .tp-tool-card input[type="number"],
+  .dark .tp-tool-card input[type="email"] {
+    background: #1E1E1E !important;
+    color: #FFFFFF !important;
+    border: 1px solid #333333 !important;
+  }
+  .dark .tp-tool-card input::placeholder,
+  .dark .tp-tool-card textarea::placeholder {
+    color: #888888 !important;
+  }
+
+  /* Result / example sections inside tool cards */
+  .dark .tp-tool-card [class*="result"],
+  .dark .tp-tool-card [class*="output"],
+  .dark .tp-tool-card [class*="example"],
+  .dark .tp-tool-card [class*="preview"] {
+    background: #1A1A1A;
+    border-color: #2A2A2A;
+    color: #CCCCCC;
+  }
 `;
 
 const ToolPage = () => {
