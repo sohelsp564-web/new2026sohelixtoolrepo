@@ -159,18 +159,37 @@ const styles = `
   .ir-faq [data-state="open"] > button { color: #6c63ff; }
 
   /* ── Popular searches chips ── */
-  .ir-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-  .ir-tag {
-    background: #f1f3f9;
-    border-radius: 20px;
-    padding: 7px 14px;
-    font-size: 0.82rem;
-    color: #374151;
-    cursor: default;
-    transition: all 0.18s;
-    border: 1px solid transparent;
+  .ir-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  .ir-tag:hover { background: #6c63ff; color: #fff; border-color: #6c63ff; }
+  .ir-tag {
+    background: #f3f4f8;
+    color: #333333;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+    display: inline-block;
+    line-height: 1;
+    user-select: none;
+  }
+  .ir-tag:hover {
+    background: #6c63ff;
+    color: #ffffff;
+    border-color: #6c63ff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(108, 99, 255, 0.25);
+  }
+  @media (max-width: 768px) {
+    .ir-tag { padding: 8px 14px; font-size: 12px; }
+    .ir-tags { gap: 8px; }
+  }
 
   /* ── Related tools grid ── */
   .ir-related-grid {
