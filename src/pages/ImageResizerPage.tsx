@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getToolBySlug, getRelatedTools } from "@/data/tools";
 import ToolInterface from "@/components/tools/ToolInterface";
+import ToolCard from "@/components/ToolCard";
 import ShareButtons from "@/components/ShareButtons";
 import ToolRating from "@/components/ToolRating";
 import { Helmet } from "react-helmet-async";
@@ -194,36 +195,8 @@ const styles = `
   /* ── Related tools grid ── */
   .ir-related-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-    gap: 14px;
-  }
-  .ir-related-item {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 16px;
-    text-decoration: none;
-    color: #222;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-  .ir-related-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(108,99,255,0.12);
-    border-color: #6c63ff;
-    color: #6c63ff;
-  }
-  .ir-related-icon {
-    width: 36px; height: 36px;
-    border-radius: 9px;
-    background: #ede9ff;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    font-size: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
   }
 
   /* ── Responsive ── */
@@ -487,13 +460,8 @@ const ImageResizerPage = () => {
           {related.length > 0 && (
             <section>
               <h2 className="ir-card-title" style={{ marginBottom: "16px", marginTop: "8px" }}>Related Tools</h2>
-              <div className="ir-related-grid">
-                {related.map((rt) => (
-                  <Link key={rt.slug} to={`/tools/${rt.slug}`} className="ir-related-item">
-                    <span className="ir-related-icon">🖼</span>
-                    {rt.name}
-                  </Link>
-                ))}
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {related.map((rt, i) => <ToolCard key={rt.slug} tool={rt} index={i} />)}
               </div>
             </section>
           )}
