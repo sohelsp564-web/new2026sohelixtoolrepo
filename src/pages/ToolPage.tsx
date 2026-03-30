@@ -156,6 +156,7 @@ const toolPageStyles = `
   .tp-h2-text { font-size: 0.9rem; color: #6b7280; line-height: 1.7; margin: 0; }
 
   /* ── FAQ ── */
+  .tp-faq button { color: #1f2937; }
   .tp-faq [data-state="open"] > button { color: #6c63ff; }
 
   /* ── Popular searches chips ── */
