@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node generate-sitemap.js && vite build",
-    "postbuild": "node prerender.js",
+    "build": "node generate-sitemap.js && vite build && node prerender.js",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
