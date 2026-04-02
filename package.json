@@ -6,11 +6,22 @@
   "scripts": {
     "dev": "vite",
     "build": "node generate-sitemap.js && vite build",
+    "postbuild": "node prerender.js",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"
+  },
+  "reactSnap": {
+    "source": "dist",
+    "destination": "dist",
+    "crawl": false,
+    "waitFor": 500,
+    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "minifyHtml": false,
+    "removeBlobs": true,
+    "externalServer": false
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -90,6 +101,7 @@
     "jsdom": "^28.1.0",
     "lovable-tagger": "^1.1.13",
     "postcss": "^8.5.6",
+    "react-snap": "^1.23.0",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",
