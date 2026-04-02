@@ -2,18 +2,12 @@
  * Prerender script — runs after Vite build via "postbuild".
  * Extracts all routes from tools.ts / blogPosts.ts and passes
  * them to react-snap for full static HTML generation.
- *
- * Improvements over v1:
- *  - waitFor raised to 1000ms for lazy components + locale JSON
- *  - waitForSelector: "main" ensures page content has mounted
- *  - puppeteer.waitUntil: "networkidle0" waits for all async chunks
- *  - Additional Puppeteer flags for CI/sandbox compatibility
- *  - Per-category route counts and elapsed time logging
- *  - Graceful error exit
  */
 
 import { readFileSync } from 'fs';
 import { run } from 'react-snap';
+
+console.log('🚀 Starting prerender...');
 
 // ── Slug extractor (mirrors generate-sitemap.js logic) ────────────
 function extractSlugs(src, varName) {
@@ -65,17 +59,18 @@ const routes = [
 ];
 
 // ── Log route breakdown ───────────────────────────────────────────
-console.log('\n[prerender] Route breakdown:');
-console.log(`  Static pages : ${staticPages.length}`);
-console.log(`  Tool pages   : ${toolRoutes.length}`);
+console.log(`\n[prerender] Route breakdown:`);
+console.log(`  Static pages  : ${staticPages.length}`);
+console.log(`  Tool pages    : ${toolRoutes.length}`);
 console.log(`  Category pages: ${categoryRoutes.length}`);
-console.log(`  Blog posts   : ${blogRoutes.length}`);
-console.log(`  ─────────────────────────────`);
-console.log(`  Total        : ${routes.length} routes\n`);
+console.log(`  Blog posts    : ${blogRoutes.length}`);
+console.log(`  ────────────────────────────`);
+console.log(`  Total         : ${routes.length} routes\n`);
 
-console.log('[prerender] Routes to snapshot:');
-routes.forEach((r, i) => console.log(`  [${String(i + 1).padStart(3)}] ${r}`));
-console.log('\n[prerender] Starting react-snap...\n');
+// Log every route so Cloudflare build output shows what is being processed
+routes.forEach(route => console.log(`Processing route: ${route}`));
+
+console.log('');
 
 const startTime = Date.now();
 
@@ -128,8 +123,7 @@ run({
 
 }).then(() => {
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-  console.log(`\n[prerender] ✓ Successfully snapshotted ${routes.length} routes in ${elapsed}s`);
-  console.log('[prerender] ✓ dist/ now contains prerendered HTML for all pages\n');
+  console.log(`\n✅ Prerender completed — ${routes.length} routes in ${elapsed}s`);
 }).catch(err => {
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
   console.error(`\n[prerender] ✗ Failed after ${elapsed}s`);
