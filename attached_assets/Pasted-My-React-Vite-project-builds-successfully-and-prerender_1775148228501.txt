@@ -1,0 +1,97 @@
+My React + Vite project builds successfully, and prerender.js runs, but it is NOT generating static HTML pages for routes like /tools/*, /category/*, and /blog/*.
+
+Only dist/index.html is being generated.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🎯 GOAL
+━━━━━━━━━━━━━━━━━━━━━━━
+Fix prerender so that ALL routes generate static HTML files inside the dist folder.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+⚠️ CONDITIONS (VERY IMPORTANT)
+━━━━━━━━━━━━━━━━━━━━━━━
+
+* DO NOT change any app functionality
+* DO NOT modify React components
+* DO NOT change routing logic
+* DO NOT introduce SSR
+* ONLY fix prerender output
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🛠 REQUIRED FIXES
+━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Update prerender.js run() configuration:
+
+Add this property:
+
+homepage: "http://localhost:4173",
+
+This is required because react-snap runs a local server and needs the correct base URL to navigate routes.
+
+2. Keep existing settings unchanged:
+
+* include: routes
+* crawl: false
+* waitFor: 1500
+* waitForSelector: ".tp-page"
+* puppeteer.waitUntil: "networkidle0"
+* puppeteerArgs
+
+3. Ensure build script ALWAYS runs prerender:
+
+In package.json:
+
+"scripts": {
+"build": "node generate-sitemap.js && vite build && node prerender.js"
+}
+
+4. Ensure prerender.js logs execution:
+
+At the top:
+console.log("🚀 Starting prerender...");
+
+Before run:
+routes.forEach(route => console.log("Processing route:", route));
+
+After success:
+console.log("✅ Prerender completed");
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🧪 EXPECTED RESULT
+━━━━━━━━━━━━━━━━━━━━━━━
+
+After build:
+
+* dist/tools/images-to-pdf/index.html should exist
+* dist/tools/... all tool pages should exist
+* dist/category/... pages should exist
+* dist/blog/... pages should exist
+
+Each HTML file must contain:
+
+<h1>...</h1>
+<p>...</p>
+<h2>...</h2>
+
+NOT just:
+
+<div id="root"></div>
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🚫 DO NOT
+━━━━━━━━━━━━━━━━━━━━━━━
+
+* Do NOT rewrite prerender logic
+* Do NOT remove react-snap
+* Do NOT change app code
+
+━━━━━━━━━━━━━━━━━━━━━━━
+📦 OUTPUT REQUIRED
+━━━━━━━━━━━━━━━━━━━━━━━
+
+* Updated prerender.js
+* Confirmation that multiple HTML files are generated in dist/
+* Confirmation that SEO content is present in HTML
+
+Focus ONLY on fixing route prerendering and HTML generation.

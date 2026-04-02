@@ -76,8 +76,9 @@ const startTime = Date.now();
 
 // ── Run react-snap ────────────────────────────────────────────────
 run({
-  // Production URL — required for react-snap to resolve dynamic routes correctly
-  homepage: 'https://tools.sohelix.com',
+  // Local server URL — react-snap starts its own server and navigates routes
+  // against localhost, so this must point to localhost, not the production domain.
+  homepage: 'http://localhost:4173',
 
   // Vite outputs to dist/, not build/
   source:      'dist',
