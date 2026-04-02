@@ -93,12 +93,12 @@ run({
   //  1. Suspense lazy chunks to resolve
   //  2. useToolTranslation async locale JSON to load
   //  3. React Helmet to apply <title> / <meta> tags
-  waitFor: 1000,
+  waitFor: 1500,
 
-  // Ensure the main content area has mounted before snapshotting.
-  // "main" is the <main> element wrapping all page content in App.tsx
-  // and exists on every route, so it is safe as a universal selector.
-  waitForSelector: 'main',
+  // Wait for the tool page content container before snapshotting.
+  // .tp-page is the root element rendered by ToolPage.tsx and
+  // confirms H1, description, FAQ and H2 sections are in the DOM.
+  waitForSelector: '.tp-page',
 
   // Wait for all network requests (lazy JS chunks + locale JSON) to finish.
   // "networkidle0" = no connections for 500 ms — most thorough option.

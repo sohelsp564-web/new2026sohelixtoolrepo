@@ -1,0 +1,97 @@
+I already have react-snap prerendering implemented in my React + Vite project using a custom prerender.js script.
+
+Now I need to make small reliability improvements to ensure ALL content is fully rendered before snapshot.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🎯 GOAL
+━━━━━━━━━━━━━━━━━━━━━━━
+Improve prerender timing and ensure full SEO content (H1, description, FAQ, etc.) is captured in HTML.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+⚠️ STRICT CONDITIONS
+━━━━━━━━━━━━━━━━━━━━━━━
+
+* DO NOT change any functionality
+* DO NOT modify UI, layout, or styling
+* DO NOT change routing or data logic
+* DO NOT modify ToolPage or tools data
+* DO NOT introduce SSR
+* ONLY update prerender timing and selector logic
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🛠 REQUIRED CHANGES
+━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Update prerender.js run() configuration:
+
+* Increase wait time to 1500ms
+* Replace generic selector "main" with specific selector ".tp-page"
+* Keep networkidle0
+
+Final config should look like:
+
+await run({
+source: "dist",
+include: routes,
+puppeteerArgs: [
+"--no-sandbox",
+"--disable-setuid-sandbox",
+"--disable-dev-shm-usage",
+"--disable-gpu",
+"--no-first-run",
+"--no-zygote"
+],
+waitFor: 1500,
+waitForSelector: ".tp-page",
+puppeteer: {
+waitUntil: "networkidle0"
+}
+});
+
+2. OPTIONAL (only if any content loads on scroll):
+   Add a scroll trigger before snapshot:
+
+await page.evaluate(() => {
+window.scrollTo(0, document.body.scrollHeight);
+});
+
+Only add this if lazy-loaded content exists.
+
+━━━━━━━━━━━━━━━━━━━━━━━
+🚫 DO NOT
+━━━━━━━━━━━━━━━━━━━━━━━
+
+* Do NOT change main.tsx
+* Do NOT change hydration logic
+* Do NOT change route generation
+* Do NOT modify components
+* Do NOT refactor code
+
+━━━━━━━━━━━━━━━━━━━━━━━
+✅ EXPECTED RESULT
+━━━━━━━━━━━━━━━━━━━━━━━
+
+After build:
+
+* dist/tools/images-to-pdf/index.html should contain:
+
+  <h1>...</h1>
+  <p>...</p>
+  <h2>...</h2>
+
+* No page should contain only:
+
+  <div id="root"></div>
+
+* All SEO content must remain exactly the same
+
+━━━━━━━━━━━━━━━━━━━━━━━
+📦 OUTPUT REQUIRED
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Provide:
+
+* Updated prerender.js (only necessary changes)
+* Confirmation that functionality remains unchanged
+
+Focus ONLY on improving prerender completeness.
