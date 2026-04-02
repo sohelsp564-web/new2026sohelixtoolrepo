@@ -17,7 +17,10 @@
     "destination": "dist",
     "crawl": false,
     "waitFor": 500,
-    "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
     "minifyHtml": false,
     "removeBlobs": true,
     "externalServer": false
@@ -58,6 +61,7 @@
     "cmdk": "^1.1.1",
     "colorthief": "^3.3.1",
     "date-fns": "^3.6.0",
+    "dompurify": "^3.3.3",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.35.1",
     "input-otp": "^1.4.2",
