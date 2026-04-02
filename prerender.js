@@ -76,6 +76,9 @@ const startTime = Date.now();
 
 // ── Run react-snap ────────────────────────────────────────────────
 run({
+  // Production URL — required for react-snap to resolve dynamic routes correctly
+  homepage: 'https://tools.sohelix.com',
+
   // Vite outputs to dist/, not build/
   source:      'dist',
   destination: 'dist',
