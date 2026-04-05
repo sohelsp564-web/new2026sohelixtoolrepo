@@ -777,8 +777,8 @@ export const tools: Tool[] = [
   { name: "Loan EMI Calculator", slug: "loan-emi-calculator", category: "Calculator Tools", categorySlug: "calculator-tools",
     h1Title: "EMI Calculator Online – Calculate Your Loan EMI Instantly",
     description: "Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. This free and easy-to-use tool helps you calculate accurate monthly EMI based on your loan amount, interest rate, and repayment tenure. Whether you need a home loan EMI calculator or an EMI calculator for personal loan, this tool gives precise results instantly.",
-    meta_title: "EMI Calculator Online – Calculate Loan EMI for Home & Personal Loans | Sohelix",
-    meta_description: "Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. Get accurate monthly EMI with interest breakdown.",
+    meta_title: "Loan EMI Calculator – Calculate Home & Personal Loan EMI | Sohelix",
+    meta_description: "Calculate home loan and personal loan EMI instantly. Enter loan amount, interest rate, and tenure to get accurate monthly EMI with full interest breakdown.",
     keywords: ["emi calculator", "emi calculator online", "home loan emi calculator", "loan emi calculator", "calculate emi", "emi calculator for personal loan", "emi interest calculator"],
     h2Sections: [
       { title: "Loan EMI Calculator for Home & Personal Loans", content: "Calculate EMI for different types of loans including home loans and personal loans instantly." },
@@ -957,8 +957,8 @@ export const tools: Tool[] = [
   { name: "EMI Calculator", slug: "emi-calculator", category: "Calculator Tools", categorySlug: "calculator-tools",
     h1Title: "EMI Calculator Online – Calculate Your Loan EMI Instantly",
     description: "Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. This free and easy-to-use tool helps you calculate accurate monthly EMI based on your loan amount, interest rate, and repayment tenure. With our advanced loan EMI calculator, you can quickly estimate your monthly payments and plan your finances more effectively. Whether you need a home loan EMI calculator or an EMI calculator for personal loan, this tool gives precise results in seconds. If you want to calculate EMI, simply enter your loan details and get instant results with a clear monthly breakdown. You can also understand the EMI calculation formula and see how interest impacts your total repayment. Our online EMI calculator is fast, accurate, and designed to help you make better financial decisions with ease.",
-    meta_title: "EMI Calculator Online – Calculate Loan EMI for Home & Personal Loans | Sohelix",
-    meta_description: "Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. Get accurate monthly EMI with interest breakdown.",
+    meta_title: "EMI Calculator Online – Calculate Monthly Loan EMI Easily | Sohelix",
+    meta_description: "Use this free EMI calculator online to calculate monthly loan EMI easily. Get instant results with loan amount, interest rate, tenure, and full repayment schedule.",
     keywords: ["emi calculator", "emi calculator online", "home loan emi calculator", "loan emi calculator", "calculate emi", "emi calculator for personal loan", "emi interest calculator"],
     h2Sections: [
       { title: "Loan EMI Calculator for Home & Personal Loans", content: "Calculate EMI for different types of loans including home loans and personal loans instantly." },
