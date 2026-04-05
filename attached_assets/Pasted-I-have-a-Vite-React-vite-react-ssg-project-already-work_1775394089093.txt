@@ -1,0 +1,91 @@
+I have a Vite + React + vite-react-ssg project already working correctly. All tool pages are statically generated and SEO optimized.
+
+I want to improve performance and SEO further, but WITHOUT breaking anything.
+
+IMPORTANT RULES:
+
+* Do NOT change any tool functionality or logic
+* Do NOT modify tool components behavior
+* Do NOT break routing or SSG
+* Keep all existing scripts (AdSense, Analytics, Blink, etc.)
+* Only apply structural and SEO improvements
+
+Please implement the following:
+
+---
+
+1. MOVE INLINE CSS TO EXTERNAL FILE
+
+Currently, some tool pages include a large <style> block inside the HTML.
+
+Tasks:
+
+* Extract all inline CSS styles (like .tp-page, .tp-card, etc.)
+* Move them into a global CSS file (e.g., src/styles/tool-page.css or existing app.css)
+* Import that CSS file properly into the React app (main.jsx or App.jsx)
+* Ensure styling remains exactly the same
+* Remove the inline <style> block from rendered HTML
+
+Goal:
+Cleaner HTML, better performance, improved SEO
+
+---
+
+2. IMPROVE FAQ VISIBILITY FOR SEO
+
+Currently, FAQ items are collapsed by default (data-state="closed"), which may reduce SEO visibility.
+
+Tasks:
+
+* Modify FAQ component so that the FIRST 1 or 2 FAQ items are open by default
+* Keep remaining FAQs collapsible
+* Do NOT break existing accordion functionality
+* Ensure accessibility attributes remain intact
+
+Goal:
+Ensure Google can read FAQ content while keeping UI intact
+
+---
+
+3. ADD PROPER BREADCRUMB HTML STRUCTURE
+
+Breadcrumb UI already exists, but improve semantic SEO.
+
+Tasks:
+
+* Wrap breadcrumb navigation inside:
+
+  <nav aria-label="breadcrumb">
+* Ensure links are structured properly using semantic HTML
+* Keep existing design and styling unchanged
+* Do NOT remove current breadcrumb schema (JSON-LD)
+
+Goal:
+Improve semantic SEO and accessibility
+
+---
+
+4. AFTER CHANGES
+
+* Run build:
+  npm run build
+
+* Verify:
+
+  * No inline <style> blocks remain in generated HTML
+  * FAQ first items are visible (not hidden)
+  * Breadcrumb uses semantic <nav aria-label="breadcrumb">
+  * All pages still render correctly
+  * No functionality is broken
+
+---
+
+Final Output:
+
+* Show updated CSS file
+* Show updated FAQ component changes
+* Show updated breadcrumb markup
+* Confirm build success
+
+Goal:
+Improve performance, SEO visibility, and semantic structure without affecting functionality.
