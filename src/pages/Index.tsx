@@ -56,11 +56,16 @@ const Index = () => {
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-          <div className="mx-auto max-w-4xl text-center animate-hero">
-            <div className="animate-hero-badge inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-1.5 text-sm text-primary font-medium mb-8">
+          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mx-auto max-w-4xl text-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.1 }}
+              className="inline-flex items-center gap-2 rounded-full bg-primary/8 border border-primary/15 px-4 py-1.5 text-sm text-primary font-medium mb-8"
+            >
               <Sparkles className="h-3.5 w-3.5" />
               50+ Free Browser Tools
-            </div>
+            </motion.div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">
               All-in-One Free Online Tools for{" "}
               <span className="text-gradient">Images, PDFs, Text & Developers</span>
@@ -105,7 +110,7 @@ const Index = () => {
                 ) : null;
               })}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       

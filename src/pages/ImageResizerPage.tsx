@@ -7,6 +7,7 @@ import ToolCard from "@/components/ToolCard";
 import ShareButtons from "@/components/ShareButtons";
 import ToolRating from "@/components/ToolRating";
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import { trackToolVisit } from "@/hooks/useRecentTools";
 
 // ─── Scoped styles — ONLY affects .ir-* classes ──────────────────────────────
@@ -364,13 +365,13 @@ const ImageResizerPage = () => {
           {/* ══════════════════════════════════════════
               HERO: H1 → Rating → Share
           ══════════════════════════════════════════ */}
-          <div className="ir-hero animate-hero">
+          <motion.div className="ir-hero" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
             <h1 className="ir-h1">{title}</h1>
             <div className="ir-hero-meta">
               <ToolRating />
               <ShareButtons title={title} />
             </div>
-          </div>
+          </motion.div>
 
           {/* ── NEW: Empty ad space above tool ── */}
           <div className="ir-ad-space" aria-hidden="true" />
@@ -378,11 +379,11 @@ const ImageResizerPage = () => {
           {/* ══════════════════════════════════════════
               TOOL UI — primary focus
           ══════════════════════════════════════════ */}
-          <div className="animate-hero-delayed">
+          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.08 }}>
             <div className="ir-tool-card">
               <ToolInterface slug={tool.slug} />
             </div>
-          </div>
+          </motion.div>
 
           {/* ── NEW: Empty ad space below tool ── */}
           <div className="ir-ad-space" aria-hidden="true" />
