@@ -1,0 +1,65 @@
+I have an existing Vite + React project running in Replit with many working tools (image tools, PDF tools, text tools, etc.).
+
+IMPORTANT REQUIREMENTS:
+
+* Do NOT change any existing tool logic or functionality
+* Do NOT break UI or design
+* Do NOT modify tool working structure
+* Keep all existing scripts working (AdSense, Google Analytics, Blink script, etc.)
+* Only enhance SEO and rendering
+
+My current issue:
+
+* My HTML file only contains <div id="root"></div>
+* All content is rendered via React (CSR)
+* Google is not indexing pages properly
+
+I want to implement vite-plugin-ssg to convert my site into static HTML pages for SEO.
+
+Please do the following carefully:
+
+1. Install and configure vite-plugin-ssg in my project
+2. Modify ONLY the entry file (main.jsx or main.tsx) to use ViteSSG instead of ReactDOM
+3. Keep my existing App.jsx and components unchanged
+4. Integrate my existing React Router setup without breaking navigation
+5. Create a separate routes file (routes.js) based on my current pages
+6. Add static generation support for:
+
+   * Homepage (/)
+   * All tool pages (example: /image-resizer, /pdf-merger, /word-counter, etc.)
+7. Ensure ALL routes are included in static generation (very important)
+8. Fix SSR issues safely:
+
+   * Handle "window is not defined"
+   * Handle "document is not defined"
+     (without breaking tool functionality)
+9. Ensure compatibility with Node.js 22
+10. Keep all external scripts in index.html unchanged
+11. Ensure build generates static HTML files inside /dist for every route
+
+AFTER completing all setup:
+12. Run the build command automatically:
+npm run build
+
+13. Verify that static pages are generated inside /dist like:
+    /dist/index.html
+    /dist/image-resizer/index.html
+    /dist/pdf-merger/index.html
+
+DO NOT:
+
+* Remove or rewrite my tools
+* Change component structure
+* Remove scripts from index.html
+* Break routing
+
+Finally provide:
+
+* Updated main.jsx file
+* routes.js file
+* Any small required config changes
+* Build output confirmation
+* Instructions to preview the built site
+
+Goal:
+Each tool page should generate its own HTML file so Google can index content properly without affecting existing functionality.
