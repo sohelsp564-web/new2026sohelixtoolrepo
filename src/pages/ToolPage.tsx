@@ -52,6 +52,7 @@ const ToolPage = () => {
   const faqs = t?.faqs || tool.faqs;
 
   const toolPath = lang === "en" ? `/tools/${tool.slug}` : `/${lang}/tools/${tool.slug}`;
+  const toolUrl = `https://tools.sohelix.com${toolPath}`;
 
   // Split description into paragraphs
   const descParagraphs = description
@@ -64,20 +65,22 @@ const ToolPage = () => {
     "@type": "SoftwareApplication",
     name: title,
     description: description,
-    applicationCategory: "WebApplication",
-    operatingSystem: "Any",
+    url: toolUrl,
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Web",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
 
-  const faqJsonLd = {
+  const validFaqs = faqs.filter(f => f.q && f.a);
+  const faqJsonLd = validFaqs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map(f => ({
+    mainEntity: validFaqs.map(f => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
-  };
+  } : null;
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -85,20 +88,22 @@ const ToolPage = () => {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://tools.sohelix.com/" },
       { "@type": "ListItem", position: 2, name: tool.category, item: `https://tools.sohelix.com/category/${tool.categorySlug}` },
-      { "@type": "ListItem", position: 3, name: title, item: `https://tools.sohelix.com${toolPath}` },
+      { "@type": "ListItem", position: 3, name: title, item: toolUrl },
     ],
   };
 
-  const howToJsonLd = {
+  const howToSteps = tool.howToUse.filter(Boolean);
+  const howToJsonLd = howToSteps.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "HowTo",
     name: `How to Use ${title}`,
-    step: tool.howToUse.map((text, i) => ({
+    step: howToSteps.map((text, i) => ({
       "@type": "HowToStep",
       position: i + 1,
+      name: text,
       text,
     })),
-  };
+  } : null;
 
   return (
     <>
@@ -128,9 +133,9 @@ const ToolPage = () => {
         ))}
         <link rel="alternate" hrefLang="x-default" href={`https://tools.sohelix.com/tools/${tool.slug}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>
+        {howToJsonLd && <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>}
       </Helmet>
 
       <div className="tp-page">

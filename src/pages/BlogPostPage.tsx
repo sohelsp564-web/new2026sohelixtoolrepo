@@ -20,13 +20,38 @@ const BlogPostPage = () => {
     );
   }
 
+  const postUrl = `https://tools.sohelix.com/blog/${post.slug}`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.description,
+    url: postUrl,
     datePublished: post.date,
-    publisher: { "@type": "Organization", name: "Sohelix Tools" },
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Sohelix Tools",
+      url: "https://tools.sohelix.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Sohelix Tools",
+      url: "https://tools.sohelix.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://tools.sohelix.com/favicon-192x192.png",
+      },
+    },
+    image: {
+      "@type": "ImageObject",
+      url: "https://tools.sohelix.com/social-preview.webp",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
   };
 
   return (

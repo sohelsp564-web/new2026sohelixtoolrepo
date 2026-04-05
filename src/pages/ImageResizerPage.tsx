@@ -260,28 +260,52 @@ const ImageResizerPage = () => {
     .map(p => p.trim())
     .filter(Boolean);
 
+  const toolUrl = `https://tools.sohelix.com${toolPath}`;
+
   const jsonLd = {
-    "@context": "https://schema.org", "@type": "SoftwareApplication",
-    name: title, description, applicationCategory: "WebApplication",
-    operatingSystem: "Any", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: title,
+    description,
+    url: toolUrl,
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
   };
-  const faqJsonLd = {
-    "@context": "https://schema.org", "@type": "FAQPage",
-    mainEntity: faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
-  };
+
+  const validFaqs = faqs.filter(f => f.q && f.a);
+  const faqJsonLd = validFaqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: validFaqs.map(f => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  } : null;
+
   const breadcrumbJsonLd = {
-    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home",        item: "https://tools.sohelix.com/" },
       { "@type": "ListItem", position: 2, name: tool.category, item: `https://tools.sohelix.com/category/${tool.categorySlug}` },
-      { "@type": "ListItem", position: 3, name: title,         item: `https://tools.sohelix.com${toolPath}` },
+      { "@type": "ListItem", position: 3, name: title,         item: toolUrl },
     ],
   };
-  const howToJsonLd = {
-    "@context": "https://schema.org", "@type": "HowTo",
+
+  const howToSteps = tool.howToUse.filter(Boolean);
+  const howToJsonLd = howToSteps.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
     name: `How to Use ${title}`,
-    step: tool.howToUse.map((text, i) => ({ "@type": "HowToStep", position: i + 1, text })),
-  };
+    step: howToSteps.map((text, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: text,
+      text,
+    })),
+  } : null;
 
   return (
     <>
@@ -309,9 +333,9 @@ const ImageResizerPage = () => {
         ))}
         <link rel="alternate" hrefLang="x-default" href={`https://tools.sohelix.com/tools/${tool.slug}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        {faqJsonLd && <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>}
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
-        <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>
+        {howToJsonLd && <script type="application/ld+json">{JSON.stringify(howToJsonLd)}</script>}
       </Helmet>
 
       <div className="ir-page">
