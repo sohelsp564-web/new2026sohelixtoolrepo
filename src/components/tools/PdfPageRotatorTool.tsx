@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "@/hooks/use-toast";
-import { jsPDF } from "jspdf";
 import FileUploadZone from "@/components/FileUploadZone";
 import { Download } from "lucide-react";
 
@@ -40,11 +39,14 @@ const PdfPageRotatorTool = () => {
     if (!file) return;
     setLoading(true);
     try {
-      const pdfjsLib = await import("pdfjs-dist");
+      const [pdfjsLib, { jsPDF }] = await Promise.all([
+        import("pdfjs-dist"),
+        import("jspdf"),
+      ]);
       pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
       const pdf = await pdfjsLib.getDocument({ data: await file.arrayBuffer() }).promise;
       const deg = parseInt(rotation);
-      let newPdf: jsPDF | null = null;
+      let newPdf: InstanceType<typeof jsPDF> | null = null;
       for (let i = 1; i <= pdf.numPages; i++) {
         const page = await pdf.getPage(i);
         const viewport = page.getViewport({ scale: 2, rotation: deg });

@@ -59,17 +59,6 @@ export default defineConfig(({ mode }) => {
                 if (id.includes("/node_modules/react-helmet-async/")) {
                   return "vendor-helmet";
                 }
-                // Heavy PDF libs — only loaded by PDF tools (lazy)
-                if (
-                  id.includes("/node_modules/pdf-lib/") ||
-                  id.includes("/node_modules/jspdf/")
-                ) {
-                  return "vendor-pdf";
-                }
-                // pdfjs-dist is enormous — isolate it (lazy PDF tools only)
-                if (id.includes("/node_modules/pdfjs-dist/")) {
-                  return "vendor-pdfjs";
-                }
                 // All other deps: let Rollup decide — tool-specific libs
                 // will co-locate with their lazy tool chunk automatically
               },

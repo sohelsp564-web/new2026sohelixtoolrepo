@@ -44,3 +44,13 @@ An all-in-one collection of free browser-based tools for images, PDFs, text, and
 ## Deployment
 - Static site deployment: `npm run build` → `dist/` directory (regular SPA build)
 - SSG build: `VITE_SSG=true npx vite-react-ssg build` → `dist/` with pre-rendered HTML per page (preferred for SEO)
+
+## Performance Optimizations (Applied)
+- **AppLayout**: lazy-loads CommandPalette, Footer, Toaster, Sonner
+- **manualChunks**: vendor-react (142KB), vendor-radix (117KB), vendor-motion (116KB), vendor-icons (25KB), vendor-helmet (17KB), vendor-router (60KB)
+- **PDF libs NOT in manualChunks**: jsPDF and pdfjs-dist must NOT be in a separate named chunk. Having them in a named chunk (`vendor-pdf`, `vendor-pdfjs`) causes Vite to inject `__vite__mapDeps` preload helper into that chunk, which makes every other chunk statically import it — preloading 900KB+ of PDF libraries on every non-PDF page. Instead, jsPDF/pdf-lib/pdfjs are co-located with their lazy tool chunks.
+- **exportUtils.ts**: `exportPDF()` uses dynamic `await import("jspdf")` — NOT a static top-level import
+- **PdfPageRotatorTool.tsx**: jsPDF loaded via `await import("jspdf")` inside the rotate handler — NOT a static import
+- **index.html**: dns-prefetch + preconnect for GA/AdSense/fonts; non-blocking font load via print→all swap; GA uses `send_page_view: false`
+- **app.js gzip**: ~56KB after optimizations
+- **modulepreload hints** per page: only vendor-react, vendor-helmet, vendor-router, vendor-radix, vendor-icons (no PDF libs on non-PDF pages)

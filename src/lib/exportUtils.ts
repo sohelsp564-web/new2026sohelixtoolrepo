@@ -1,11 +1,10 @@
-import jsPDF from "jspdf";
-
 export function exportCSV(headers: string[], rows: (string | number)[][], filename: string) {
   const csv = [headers.join(","), ...rows.map(r => r.map(c => `"${c}"`).join(","))].join("\n");
   downloadBlob(new Blob([csv], { type: "text/csv" }), `${filename}.csv`);
 }
 
-export function exportPDF(title: string, sections: { label: string; value: string }[], filename: string) {
+export async function exportPDF(title: string, sections: { label: string; value: string }[], filename: string) {
+  const { default: jsPDF } = await import("jspdf");
   const doc = new jsPDF();
   doc.setFontSize(18);
   doc.text(title, 14, 20);
@@ -29,7 +28,6 @@ export function exportImage(elementId: string, filename: string) {
   const el = document.getElementById(elementId);
   if (!el) return;
   import("html2canvas" as any).catch(() => {
-    // Fallback: use canvas API on the element
     const canvas = document.createElement("canvas");
     const rect = el.getBoundingClientRect();
     canvas.width = rect.width * 2;
