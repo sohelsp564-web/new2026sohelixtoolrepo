@@ -4,7 +4,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getBlogPostBySlug } from "@/data/blogPosts";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -75,11 +74,11 @@ const BlogPostPage = () => {
           <span className="text-foreground font-medium truncate">{post.title}</span>
         </nav>
 
-        <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+        <div className="animate-hero">
           <time className="text-sm text-muted-foreground">{post.date}</time>
           <h1 className="text-3xl font-bold mt-2 mb-6 md:text-4xl" style={{ fontFamily: "Space Grotesk" }}>{post.title}</h1>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">{post.description}</p>
-        </motion.div>
+        </div>
 
         <Card className="p-6 sm:p-8 shadow-card border-transparent rounded-2xl">
           <div className="space-y-8">

@@ -9,7 +9,6 @@ import ToolRating from "@/components/ToolRating";
 import ShareButtons from "@/components/ShareButtons";
 import ToolInterface from "@/components/tools/ToolInterface";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
 import { useToolTranslation, SUPPORTED_LANGS, LANG_NAMES, isValidLang, type SupportedLang } from "@/hooks/useToolTranslation";
 import { trackToolVisit } from "@/hooks/useRecentTools";
 
@@ -166,13 +165,13 @@ const ToolPage = () => {
           {/* ══════════════════════════════════════════
               1. H1 → Rating + Share (hero top)
           ══════════════════════════════════════════ */}
-          <motion.div className="tp-hero" initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
+          <div className="tp-hero animate-hero">
             <h1 className="tp-h1">{tool.h1Title || title}</h1>
             <div className="tp-hero-meta">
               <ToolRating />
               <ShareButtons title={title} />
             </div>
-          </motion.div>
+          </div>
 
           {/* ── Ad Slot: Top Banner (existing) ── */}
           <AdSlot id="ad-top-banner" size="banner" className="mb-0" />
@@ -183,11 +182,11 @@ const ToolPage = () => {
           {/* ══════════════════════════════════════════
               2. TOOL UI — primary focus
           ══════════════════════════════════════════ */}
-          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.08 }}>
+          <div className="animate-hero-delayed">
             <div className="tp-tool-card">
               <ToolInterface slug={tool.slug} />
             </div>
-          </motion.div>
+          </div>
 
           {/* ── Empty ad space below tool ── */}
           <div className="tp-ad-space" aria-hidden="true" />
