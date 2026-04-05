@@ -30,22 +30,48 @@ export default defineConfig(({ mode }) => {
         output: {
           manualChunks: isSSGBuild
             ? undefined
-            : {
-                "vendor-react": ["react", "react-dom"],
-                "vendor-router": ["react-router-dom"],
-                "vendor-ui": [
-                  "@radix-ui/react-accordion",
-                  "@radix-ui/react-dialog",
-                  "@radix-ui/react-dropdown-menu",
-                  "@radix-ui/react-popover",
-                  "@radix-ui/react-tabs",
-                  "@radix-ui/react-tooltip",
-                  "@radix-ui/react-select",
-                ],
-                "vendor-motion": ["framer-motion"],
-                "vendor-pdf": ["pdf-lib", "jspdf"],
-                "vendor-query": ["@tanstack/react-query"],
-                "vendor-helmet": ["react-helmet-async"],
+            : (id) => {
+                // React core — always eagerly needed
+                if (
+                  id.includes("/node_modules/react/") ||
+                  id.includes("/node_modules/react-dom/") ||
+                  id.includes("/node_modules/scheduler/")
+                ) {
+                  return "vendor-react";
+                }
+                // React Router — eagerly needed
+                if (id.includes("/node_modules/react-router")) {
+                  return "vendor-router";
+                }
+                // Radix UI — eagerly needed (Header uses dropdowns)
+                if (id.includes("/node_modules/@radix-ui/")) {
+                  return "vendor-radix";
+                }
+                // lucide-react — eagerly needed (Header icons)
+                if (id.includes("/node_modules/lucide-react/")) {
+                  return "vendor-icons";
+                }
+                // framer-motion — eagerly needed (Index hero animations)
+                if (id.includes("/node_modules/framer-motion/")) {
+                  return "vendor-motion";
+                }
+                // react-helmet-async — eagerly needed (SSG meta tags)
+                if (id.includes("/node_modules/react-helmet-async/")) {
+                  return "vendor-helmet";
+                }
+                // Heavy PDF libs — only loaded by PDF tools (lazy)
+                if (
+                  id.includes("/node_modules/pdf-lib/") ||
+                  id.includes("/node_modules/jspdf/")
+                ) {
+                  return "vendor-pdf";
+                }
+                // pdfjs-dist is enormous — isolate it (lazy PDF tools only)
+                if (id.includes("/node_modules/pdfjs-dist/")) {
+                  return "vendor-pdfjs";
+                }
+                // All other deps: let Rollup decide — tool-specific libs
+                // will co-locate with their lazy tool chunk automatically
               },
         },
       },
