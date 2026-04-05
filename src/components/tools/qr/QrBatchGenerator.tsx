@@ -36,19 +36,32 @@ const QrBatchGenerator = () => {
 
   const downloadAll = useCallback(async () => {
     if (!previews.length) return;
-    const zip = new JSZip();
-    for (let i = 0; i < previews.length; i++) {
-      const res = await fetch(previews[i].dataUrl);
-      const blob = await res.blob();
-      zip.file(`qrcode-${i + 1}.png`, blob);
+    try {
+      const zip = new JSZip();
+      for (let i = 0; i < previews.length; i++) {
+        const res = await fetch(previews[i].dataUrl);
+        if (!res.ok) {
+          console.warn("[QrBatchGenerator] Failed to fetch QR blob:", res.status, res.statusText);
+          continue;
+        }
+        const contentType = res.headers.get("content-type") || "";
+        if (contentType.includes("text/html")) {
+          console.warn("[QrBatchGenerator] Unexpected HTML response instead of image blob");
+          continue;
+        }
+        const blob = await res.blob();
+        zip.file(`qrcode-${i + 1}.png`, blob);
+      }
+      const content = await zip.generateAsync({ type: "blob" });
+      const url = URL.createObjectURL(content);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "qrcodes.zip";
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("[QrBatchGenerator] Download error:", err);
     }
-    const content = await zip.generateAsync({ type: "blob" });
-    const url = URL.createObjectURL(content);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "qrcodes.zip";
-    a.click();
-    URL.revokeObjectURL(url);
   }, [previews]);
 
   return (

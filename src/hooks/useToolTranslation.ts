@@ -51,14 +51,19 @@ export function useToolTranslation(slug: string, lang: SupportedLang) {
   useEffect(() => {
     let cancelled = false;
     (async () => {
-      let bundle = await loadBundle(lang);
-      let translation = bundle[slug];
-      // Fallback to English
-      if (!translation && lang !== "en") {
-        bundle = await loadBundle("en");
-        translation = bundle[slug];
+      try {
+        let bundle = await loadBundle(lang);
+        let translation = bundle[slug];
+        // Fallback to English
+        if (!translation && lang !== "en") {
+          bundle = await loadBundle("en");
+          translation = bundle[slug];
+        }
+        if (!cancelled) setT(translation || null);
+      } catch (err) {
+        console.warn("[useToolTranslation] Failed to load locale bundle:", lang, err);
+        if (!cancelled) setT(null);
       }
-      if (!cancelled) setT(translation || null);
     })();
     return () => { cancelled = true; };
   }, [slug, lang]);

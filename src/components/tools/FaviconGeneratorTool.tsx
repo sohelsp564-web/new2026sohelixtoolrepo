@@ -53,6 +53,15 @@ const FaviconGeneratorTool = () => {
       const zip = new JSZip();
       for (const p of previews) {
         const res = await fetch(p.dataUrl);
+        if (!res.ok) {
+          console.warn("[FaviconGenerator] Failed to fetch favicon blob:", res.status, res.statusText);
+          continue;
+        }
+        const contentType = res.headers.get("content-type") || "";
+        if (contentType.includes("text/html")) {
+          console.warn("[FaviconGenerator] Unexpected HTML response instead of image blob");
+          continue;
+        }
         const blob = await res.blob();
         zip.file(`favicon-${p.size}x${p.size}.png`, blob);
       }
