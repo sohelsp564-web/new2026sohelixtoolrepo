@@ -775,7 +775,7 @@ export const tools: Tool[] = [
     ],
     icon: "Percent", howToUse: ["Enter values", "See percentage", "Copy result"], faqs: [{ q: "How to calculate percentage?", a: "Enter values and use this tool to calculate percentage instantly." }, { q: "What is a percentage calculator?", a: "It is a tool that calculates percentage values easily." }, { q: "Can I calculate percentage increase?", a: "Yes, this tool supports increase calculations." }, { q: "Can I calculate percentage decrease?", a: "Yes, it also calculates decrease values." }, { q: "Is this tool free?", a: "Yes, it is completely free and works online." }], relatedSlugs: ["discount-calculator", "profit-margin-calculator", "tip-calculator"] },
   { name: "Loan EMI Calculator", slug: "loan-emi-calculator", category: "Calculator Tools", categorySlug: "calculator-tools",
-    h1Title: "EMI Calculator Online – Calculate Your Loan EMI Instantly",
+    h1Title: "Loan EMI Calculator – Calculate Home & Personal Loan EMI Instantly",
     description: "Use this EMI calculator online to calculate loan EMI instantly for home and personal loans. This free and easy-to-use tool helps you calculate accurate monthly EMI based on your loan amount, interest rate, and repayment tenure. Whether you need a home loan EMI calculator or an EMI calculator for personal loan, this tool gives precise results instantly.",
     meta_title: "Loan EMI Calculator – Calculate Home & Personal Loan EMI | Sohelix",
     meta_description: "Calculate home loan and personal loan EMI instantly. Enter loan amount, interest rate, and tenure to get accurate monthly EMI with full interest breakdown.",

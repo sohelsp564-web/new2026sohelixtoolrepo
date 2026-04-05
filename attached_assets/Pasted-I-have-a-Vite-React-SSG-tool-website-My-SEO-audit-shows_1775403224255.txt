@@ -1,0 +1,115 @@
+I have a Vite + React + SSG tool website. My SEO audit shows minor remaining issues that need to be fixed safely without breaking anything.
+
+IMPORTANT RULES:
+
+* Do NOT change tool functionality
+* Do NOT break UI or routing
+* Do NOT modify core logic
+* Only fix SEO and structure issues
+* Keep everything stable and production-safe
+
+Please fix the following issues globally:
+
+---
+
+1. FIX llms.txt FORMAT
+
+* Locate or create /public/llms.txt
+* Replace content with:
+
+User-agent: *
+Allow: /
+
+# AI Crawlers
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+* Ensure file is accessible at /llms.txt
+
+---
+
+2. FIX HEADING HIERARCHY (CATEGORY PAGES)
+
+Affected pages:
+
+* calculator-tools
+* image-tools
+* pdf-tools
+* text-tools
+
+Rules:
+
+* Only ONE <h1> per page
+* Use <h2> for main sections
+* Use <h3> for subsections
+* Do NOT skip heading levels (no h1 → h3 directly)
+
+Fix any incorrect heading structure without changing design.
+
+---
+
+3. FIX DUPLICATE TITLES (IF ANY)
+
+* Ensure every page has a UNIQUE <title>
+* Specifically ensure:
+
+  * emi-calculator and loan-emi-calculator have different titles
+* Keep titles keyword-optimized
+
+---
+
+4. VALIDATE STRUCTURED DATA
+
+* Ensure all JSON-LD is valid
+* Fix:
+
+  * Missing required fields
+  * Invalid JSON format
+  * Remove undefined/null values
+* Ensure proper schema:
+
+  * FAQPage
+  * SoftwareApplication
+  * HowTo (if used)
+
+---
+
+5. GENERAL SEO SAFETY CHECK
+
+* Ensure:
+
+  * Only one <title> per page
+  * Only one meta description
+  * No duplicate meta tags
+  * Clean HTML output in SSG build
+
+---
+
+6. BUILD AND VERIFY
+
+* Run:
+  npm run build
+
+* Ensure:
+
+  * No errors
+  * All pages render correctly
+  * SEO tags are present in final HTML
+
+---
+
+GOAL:
+
+* Remove all remaining SEO audit issues
+* Improve site health to 90–95%+
+* Keep website fully functional and stable

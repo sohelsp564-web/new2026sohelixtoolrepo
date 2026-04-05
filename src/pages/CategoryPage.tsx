@@ -65,6 +65,7 @@ const CategoryPage = () => {
           <p className="text-muted-foreground mb-10 text-lg leading-relaxed">{category.description}</p>
         </motion.div>
 
+        <h2 className="sr-only">Tools in {category.name}</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {categoryTools.map((t, i) => <ToolCard key={t.slug} tool={t} index={i} />)}
         </div>
