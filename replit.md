@@ -1,56 +1,50 @@
 # Sohelix Tools
 
-## Overview
-An all-in-one collection of free browser-based tools for images, PDFs, text, and developers. Built with React + Vite + TypeScript, originally from Lovable, now running on Replit.
+A comprehensive web-based platform offering 50+ free online utilities across multiple categories, built with React, Vite, and TypeScript.
 
-## Architecture
-- **Frontend only** — pure client-side React SPA (no backend server)
-- **Router**: React Router DOM v6 with lazy-loaded pages
-- **Styling**: Tailwind CSS + Radix UI primitives (shadcn/ui)
-- **State**: TanStack React Query
-- **PDF tools**: pdf-lib, jspdf, pdfjs-dist
-- **QR tools**: qr-code-styling, qrcode-react
-- **Image tools**: browser-image-compression, colorthief, tesseract.js (OCR)
+## Project Overview
 
-## Project Structure
-- `src/pages/` — top-level pages (Index, ToolPage, CategoryPage, BlogPage, etc.)
-- `src/components/` — shared UI components and tool implementations
-- `src/data/` — static data for tools and categories
-- `src/hooks/` — custom React hooks
-- `src/lib/` — utility helpers
-- `src/locales/` — i18n locale files
-- `src/types/` — TypeScript type definitions
-- `public/` — static assets
+All tools run entirely in the browser — no file uploads to a server, no registration required. This ensures privacy and speed for users.
 
-## Dev Server
-- Runs on port **5000** via `npm run dev`
-- Workflow: "Start application" (`npm run dev`)
+## Tech Stack
 
-## Key Configuration
-- `vite.config.ts` — Vite config, host set to `0.0.0.0` for Replit proxy compatibility
-- `tailwind.config.ts` — Tailwind configuration
-- `components.json` — shadcn/ui component config
+- **Framework**: React 18 + TypeScript
+- **Build Tool**: Vite (dev server on port 5000)
+- **Styling**: Tailwind CSS + shadcn/ui + Radix UI primitives
+- **Routing**: React Router v6
+- **SSG**: vite-react-ssg (for production static site generation)
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **SEO**: react-helmet-async
 
-## Static Site Generation (SSG)
-- **SSG via `vite-react-ssg`** — pre-renders all 128 pages (102 tools + 8 categories + 15 blog posts + static pages) into static HTML with correct meta tags for each page
-- **Build command**: `VITE_SSG=true npx vite-react-ssg build` → generates `dist/` with one HTML file per route
-- **Entry**: `src/main.tsx` exports `createRoot = ViteReactSSG({ routes })` (from `src/routes.tsx`)
-- **Routes**: `src/routes.tsx` defines all 128 routes with `getStaticPaths` for dynamic tool/category/blog routes
-- **react-helmet-async**: Must stay at `^1.3.0` (NOT v3.x) — vite-react-ssg peer dep requires this version for SSR context compatibility
-- **index.html**: No hardcoded `<title>`, OG, or description meta — all injected per-page by react-helmet-async at SSG time
-- **vite.config.ts**: `ssgOptions.entry: "src/main.tsx"` explicitly set (Blink script is first module script in index.html, which detectEntry() would wrongly pick)
-- **manualChunks**: Skipped when `VITE_SSG=true` env var is set (conflicts with SSR externals)
+## Tool Categories
 
-## Deployment
-- Static site deployment: `npm run build` → `dist/` directory (regular SPA build)
-- SSG build: `VITE_SSG=true npx vite-react-ssg build` → `dist/` with pre-rendered HTML per page (preferred for SEO)
+- **Image Tools**: Image compressor, resizer, converter, color extractor, etc.
+- **PDF Tools**: PDF rotate, merge, split, compress, image-to-PDF, etc.
+- **Text Tools**: Word counter, case converter, text diff, etc.
+- **Developer Tools**: JSON formatter, Base64 encoder, QR code generator, etc.
+- **Calculators**: BMI, age, percentage, mortgage, etc.
 
-## Performance Optimizations (Applied)
-- **AppLayout**: lazy-loads CommandPalette, Footer, Toaster, Sonner
-- **manualChunks**: vendor-react (142KB), vendor-radix (117KB), vendor-motion (116KB), vendor-icons (25KB), vendor-helmet (17KB), vendor-router (60KB)
-- **PDF libs NOT in manualChunks**: jsPDF and pdfjs-dist must NOT be in a separate named chunk. Having them in a named chunk (`vendor-pdf`, `vendor-pdfjs`) causes Vite to inject `__vite__mapDeps` preload helper into that chunk, which makes every other chunk statically import it — preloading 900KB+ of PDF libraries on every non-PDF page. Instead, jsPDF/pdf-lib/pdfjs are co-located with their lazy tool chunks.
-- **exportUtils.ts**: `exportPDF()` uses dynamic `await import("jspdf")` — NOT a static top-level import
-- **PdfPageRotatorTool.tsx**: jsPDF loaded via `await import("jspdf")` inside the rotate handler — NOT a static import
-- **index.html**: dns-prefetch + preconnect for GA/AdSense/fonts; non-blocking font load via print→all swap; GA uses `send_page_view: false`
-- **app.js gzip**: ~56KB after optimizations
-- **modulepreload hints** per page: only vendor-react, vendor-helmet, vendor-router, vendor-radix, vendor-icons (no PDF libs on non-PDF pages)
+## Key Files
+
+- `src/data/tools.ts` — Central registry for all tools (metadata, slugs, SEO info)
+- `src/routes.tsx` — App routing and SSG path generation
+- `src/pages/ToolPage.tsx` — Dynamic route handler rendering tools by slug
+- `src/components/tools/` — Individual tool implementations
+- `src/components/ui/` — Reusable shadcn/ui components
+- `src/locales/` — i18n JSON files (en, de, es, fr, hi, it, pt)
+- `public/` — Static assets, sitemaps, robots.txt
+- `generate-sitemap.js` — Generates sitemap XML files before build
+
+## Running the Project
+
+- **Dev**: `npm run dev` — starts Vite dev server on port 5000
+- **Build**: `npm run build` — generates sitemap then runs SSG build
+- **Preview**: `npm run preview` — preview the production build
+
+## Architecture Notes
+
+- Tools are lazy-loaded via `safeLazy` wrapper in `ToolInterface.tsx` for performance
+- `vite.config.ts` configures `host: "0.0.0.0"`, `port: 5000`, `allowedHosts: true` for Replit compatibility
+- Manual chunk splitting separates vendor libs (React, Router, Radix, etc.) from tool-specific code
+- Internationalization via `/src/locales/` JSON files
