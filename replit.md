@@ -34,17 +34,27 @@ All tools run entirely in the browser — no file uploads to a server, no regist
 - `src/components/ui/` — Reusable shadcn/ui components
 - `src/locales/` — i18n JSON files (en, de, es, fr, hi, it, pt)
 - `public/` — Static assets, sitemaps, robots.txt
+- `public/_headers` — CDN/Netlify/Cloudflare response headers config (includes `Content-Type: application/xml` for `.xml` files)
 - `generate-sitemap.js` — Generates sitemap XML files before build
+- `server.cjs` — Production CJS server; copied to `dist/index.cjs` during build, serves static files with correct XML headers and SPA fallback
 
 ## Running the Project
 
-- **Dev**: `npm run dev` — starts Vite dev server on port 5000
-- **Build**: `npm run build` — generates sitemap then runs SSG build
-- **Preview**: `npm run preview` — preview the production build
+- **Dev**: `npm run dev` — starts Vite dev server on port 5000 (XML middleware plugin ensures correct Content-Type)
+- **Build**: `npm run build` — generates sitemaps, runs SSG build, copies server to `dist/index.cjs`
+- **Production**: Replit runs `node ./dist/index.cjs` which serves `dist/` as static files
 
 ## Architecture Notes
 
 - Tools are lazy-loaded via `safeLazy` wrapper in `ToolInterface.tsx` for performance
 - `vite.config.ts` configures `host: "0.0.0.0"`, `port: 5000`, `allowedHosts: true` for Replit compatibility
+- `vite.config.ts` has a custom `xml-content-type` plugin that sets `Content-Type: application/xml` for all `.xml` requests in dev
 - Manual chunk splitting separates vendor libs (React, Router, Radix, etc.) from tool-specific code
 - Internationalization via `/src/locales/` JSON files
+
+## Sitemap / SEO Notes
+
+- Sitemaps: `public/sitemap.xml` (index), `public/pages-sitemap.xml`, `public/tools-sitemap.xml`
+- All `.xml` routes are served with `Content-Type: application/xml; charset=utf-8` — never as HTML
+- The production `server.cjs` explicitly checks the file extension and sets the correct MIME type, preventing the SPA from intercepting sitemap URLs
+- `public/_headers` sets XML content-type for Netlify/Cloudflare deployments

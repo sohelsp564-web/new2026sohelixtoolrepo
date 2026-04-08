@@ -14,7 +14,22 @@ export default defineConfig(({ mode }) => {
         overlay: false,
       },
     },
-    plugins: [react()],
+    plugins: [
+      react(),
+      {
+        name: "xml-content-type",
+        configureServer(server) {
+          server.middlewares.use((req, res, next) => {
+            if (req.url && /\.xml(\?.*)?$/.test(req.url)) {
+              res.setHeader("Content-Type", "application/xml; charset=utf-8");
+              res.setHeader("X-Content-Type-Options", "nosniff");
+              res.setHeader("Cache-Control", "public, max-age=3600");
+            }
+            next();
+          });
+        },
+      },
+    ],
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "./src"),

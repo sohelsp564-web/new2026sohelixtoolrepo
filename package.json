@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node generate-sitemap.js && vite-react-ssg build",
+    "build": "node generate-sitemap.js && vite-react-ssg build && cp server.cjs dist/index.cjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
